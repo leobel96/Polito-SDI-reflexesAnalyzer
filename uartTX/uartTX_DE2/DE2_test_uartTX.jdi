@@ -1,0 +1,8 @@
+<sld_project_info>
+  <file_info>
+    <file checksum="0x003012CC" device="EP2C35F672C6" path="DE2_test_uartTX.sof" usercode="0xFFFFFFFF"/>
+    <file checksum="0x1C789EC9" device="EPCS16" path="DE2_test_uartTX.pof" usercode="0x00000000"/>
+  </file_info>
+  <hub_info ir_width="0" node_count="0"/>
+  <node_info/>
+</sld_project_info>

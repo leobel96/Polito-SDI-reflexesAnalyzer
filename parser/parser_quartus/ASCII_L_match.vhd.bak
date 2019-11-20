@@ -1,0 +1,21 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity ASCII_L_match is
+	port
+		(	CHAR : in std_logic_vector(7 downto 0);
+			matchL : out std_logic
+		);
+end entity L_ASCII_match;
+
+architecture structure of L_ASCII_match is
+	begin
+		matchL <= not CHAR(0) and 
+					 not CHAR(1) and 
+						  CHAR(2) and 
+						  CHAR(3) and 
+					 not CHAR(4) and 
+					 not CHAR(5) and 
+						  CHAR(6) and 
+					 not CHAR(7);
+end architecture structure;

@@ -1,0 +1,69 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
+
+ENTITY modelsim_test_uartRX IS
+--Entity is empty
+END ENTITY modelsim_test_uartRX;
+
+ARCHITECTURE behaviour OF modelsim_test_uartRX IS
+--Device under test component declaration
+COMPONENT uartRX
+	PORT
+	( 
+		CK, RST :  IN STD_LOGIC;
+		RD :  IN STD_LOGIC;
+		RX :  IN STD_LOGIC;
+		DOUT :  OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+		DAV :  OUT STD_LOGIC
+	);
+END COMPONENT uartRX;
+--Clock and reset signals
+SIGNAL ck_25MHz, reset, ck_115_2kHz : STD_LOGIC:='0';
+--Uart signals
+SIGNAL rd, rx, dav : STD_LOGIC;
+SIGNAL datain, dataout : STD_LOGIC_VECTOR (7 DOWNTO 0);
+
+BEGIN
+	--Clock generation
+	ck_25Mhz <= NOT ck_25Mhz AFTER 20 ns; 
+	ck_115_2kHz <= NOT ck_115_2kHz AFTER 4340278 ps;
+	--Reset generation.
+	reset <= '1' AFTER 30 ns, '0' AFTER 70 ns;
+	--RD generation and data initialization
+	rd <= '0';--, '1' AFTER 75 us, '0' AFTER 75020 ns;
+	datain <= "01010011";
+	
+	rx_generation:PROCESS (ck_115_2kHz, reset, datain, dav) IS
+		VARIABLE index : integer := 0;
+		BEGIN
+			IF reset = '1' THEN
+				index := 0;
+			ELSIF ck_115_2kHz'EVENT AND ck_115_2kHz = '1' THEN
+				CASE (index) IS
+					WHEN 0 =>
+						rx <= '1';
+					WHEN 1 =>
+						rx <= '0';
+					WHEN 10 =>
+						rx <= '1';
+					WHEN OTHERS =>
+						rx <= datain(index-1);
+				END CASE;
+				IF index < 11 and dav = '0' THEN
+					index := index + 1;
+				ELSE
+					index := 0;
+				END IF;
+			END IF;
+	END PROCESS;
+	--DUT declaration
+	DUT:uartRX PORT MAP
+		(CK=>ck_25Mhz,
+		 RST=>reset,
+		 RD=>rd,
+		 RX=>rx,
+		 DOUT=>dataout,
+		 DAV=>dav
+		 );
+END ARCHITECTURE behaviour;

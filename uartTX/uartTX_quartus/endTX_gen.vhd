@@ -1,0 +1,16 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all; 
+
+ENTITY endTX_gen IS 
+	PORT
+	(
+		Q_TX_REG :  IN  STD_LOGIC_VECTOR (9 DOWNTO 0);
+		END_TX :  OUT STD_LOGIC
+	);
+END ENTITY endTX_gen;
+
+ARCHITECTURE structural OF endTX_gen IS 
+BEGIN
+	END_TX <= NOT( NOT Q_TX_REG(0) OR Q_TX_REG(1) OR Q_TX_REG(2) OR Q_TX_REG(3) OR Q_TX_REG(4) OR  
+				Q_TX_REG(5) OR Q_TX_REG(6) OR Q_TX_REG(7) OR Q_TX_REG(8) OR Q_TX_REG(9) ); 
+END ARCHITECTURE structural;

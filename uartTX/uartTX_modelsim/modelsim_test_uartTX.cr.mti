@@ -1,0 +1,73 @@
+C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/uartTX_DP.vhd {1 {vcom -work work -2002 -explicit C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/uartTX_DP.vhd
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity uartTX_DP
+-- Compiling architecture bdf_type of uartTX_DP
+
+} {} {}} C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/uartTX_CU.vhd {1 {vcom -work work -2002 -explicit C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/uartTX_CU.vhd
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity uartTX_CU
+-- Compiling architecture behavioural of uartTX_CU
+
+} {} {}} C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/D_FF.vhd {1 {vcom -work work -2002 -explicit C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/D_FF.vhd
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity D_FF
+-- Compiling architecture SYN of d_ff
+
+} {} {}} C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/uartTX.vhd {1 {vcom -work work -2002 -explicit C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/uartTX.vhd
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity uartTX
+-- Compiling architecture bdf_type of uartTX
+
+} {} {}} C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/terminal_count_216.vhd {1 {vcom -work work -2002 -explicit C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/terminal_count_216.vhd
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity terminal_count_216
+-- Compiling architecture structural of terminal_count_216
+
+} {} {}} C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/modelsim_test_uartTX.vhd {1 {vcom -work work -2002 -explicit C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/modelsim_test_uartTX.vhd
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity modelsim_test_uartTX
+-- Compiling architecture behaviour of modelsim_test_uartTX
+
+} {} {}} C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/endTX_gen.vhd {1 {vcom -work work -2002 -explicit C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/endTX_gen.vhd
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity endTX_gen
+-- Compiling architecture structural of endTX_gen
+
+} {} {}} C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/TX_REG.vhd {1 {vcom -work work -2002 -explicit C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/TX_REG.vhd
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity TX_REG
+-- Compiling architecture SYN of tx_reg
+
+} {} {}} C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/CNT_216.vhd {1 {vcom -work work -2002 -explicit C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/CNT_216.vhd
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity CNT_216
+-- Compiling architecture SYN of cnt_216
+
+} {} {}}

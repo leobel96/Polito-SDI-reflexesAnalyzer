@@ -1,0 +1,21 @@
+{signal: [
+  {name: 'CK', wave: 'p.......'},
+  {name: 'TC_12', wave: '0.1.0...', node:'..a.f'},
+  {name: 'Q_CNT_8', wave:'=...=...', data:[8,0], node:'....h'},
+  {name: 'TC_8', wave: '1...0...', node:'..b.i'},
+  {name: 'VOTER_OUT', wave:'x1......', node:'..c'},
+  {name: 'DAV', wave: '0..1.0..', node:'...d.k'},
+  {name: 'RD', wave: '0...10..', node:'....j'},
+  {name: 'DOUT', wave:'=.....=.', data: ['DDDDDDDD','00000000'], node:'......m'}, 
+  {name: 'SCLEAR_ALL', wave: '0..1.0..', node:'...e'},
+  {name: 'SCLEAR_CNT_8', wave: '0..1.0..', node:'...g'},
+  {name: 'SCLEAR_DOUT_REG', wave: '0....10.', node:'.....l'},
+  
+  ],
+  edge:[
+	'a-~>d', 'b-~>d',
+  	'c-~>d', 'e~->f',
+  	'g-~>h', 'g-~>i',
+  	'j-~>k', 'j-~>l',
+  	'l-~>m'
+]}

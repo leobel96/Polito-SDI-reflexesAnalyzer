@@ -1,0 +1,451 @@
+Quartus II 32-bit
+Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
+14
+1343
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+parser
+# storage
+db|parser.(0).cnf
+db|parser.(0).cnf
+# case_insensitive
+# source_file
+parser.bdf
+9fead98c12defe3ba0ca37eb37b278fe
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+parser_DP
+# storage
+db|parser.(2).cnf
+db|parser.(2).cnf
+# case_insensitive
+# source_file
+parser_dp.bdf
+67413cd47acd865d46c6eb322a7e536
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+parser_DP:inst1
+}
+# macro_sequence
+
+# end
+# entity
+ff_L
+# storage
+db|parser.(3).cnf
+db|parser.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+ff_l.vhd
+4ee9db11eb1ed54b9d1fb2e8b89ec
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+parser_DP:inst1|ff_L:inst1
+}
+# macro_sequence
+
+# end
+# entity
+lpm_shiftreg
+# storage
+db|parser.(4).cnf
+db|parser.(4).cnf
+# case_insensitive
+# source_file
+lpm_shiftreg.tdf
+785d51ce6e8bbbd53bb4aa58bf413de
+7
+# user_parameter {
+LPM_WIDTH
+1
+PARAMETER_SIGNED_DEC
+USR
+LPM_DIRECTION
+LEFT
+PARAMETER_UNKNOWN
+USR
+LPM_AVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_SVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+DEVICE_FAMILY
+Cyclone II
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+sclr
+-1
+3
+q0
+-1
+3
+load
+-1
+3
+enable
+-1
+3
+data0
+-1
+3
+clock
+-1
+3
+}
+# include_file {
+lpm_constant.inc
+97ffb7e3fef9ce9fce4eff8455d5da5
+dffeea.inc
+f11711657cd42ee78437f4349496034
+aglobal111.inc
+9cc1f9de5ad83fc94dd171c3f7986bd
+}
+# hierarchies {
+parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component
+}
+# macro_sequence
+
+# end
+# entity
+ASCII_L_match
+# storage
+db|parser.(5).cnf
+db|parser.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+ascii_l_match.vhd
+e29c31a272fd44a92f989040d0e5757
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+parser_DP:inst1|ASCII_L_match:inst2
+}
+# macro_sequence
+
+# end
+# entity
+reg_char
+# storage
+db|parser.(6).cnf
+db|parser.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+reg_char.vhd
+a4328b423b641a3bde6863e65217672
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+parser_DP:inst1|reg_char:inst
+}
+# macro_sequence
+
+# end
+# entity
+lpm_shiftreg
+# storage
+db|parser.(7).cnf
+db|parser.(7).cnf
+# case_insensitive
+# source_file
+lpm_shiftreg.tdf
+785d51ce6e8bbbd53bb4aa58bf413de
+7
+# user_parameter {
+LPM_WIDTH
+8
+PARAMETER_SIGNED_DEC
+USR
+LPM_DIRECTION
+LEFT
+PARAMETER_UNKNOWN
+USR
+LPM_AVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_SVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+DEVICE_FAMILY
+Cyclone II
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+sclr
+-1
+3
+q7
+-1
+3
+q6
+-1
+3
+q5
+-1
+3
+q4
+-1
+3
+q3
+-1
+3
+q2
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+load
+-1
+3
+enable
+-1
+3
+data7
+-1
+3
+data6
+-1
+3
+data5
+-1
+3
+data4
+-1
+3
+data3
+-1
+3
+data2
+-1
+3
+data1
+-1
+3
+data0
+-1
+3
+clock
+-1
+3
+}
+# include_file {
+lpm_constant.inc
+97ffb7e3fef9ce9fce4eff8455d5da5
+dffeea.inc
+f11711657cd42ee78437f4349496034
+aglobal111.inc
+9cc1f9de5ad83fc94dd171c3f7986bd
+}
+# hierarchies {
+parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component
+}
+# macro_sequence
+
+# end
+# entity
+ASCII_1_2_3_4_match
+# storage
+db|parser.(8).cnf
+db|parser.(8).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+ascii_1_2_3_4_match.vhd
+fa9d1f7339779b3df76c0a5ce8ee132
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+parser_DP:inst1|ASCII_1_2_3_4_match:inst3
+}
+# macro_sequence
+
+# end
+# entity
+cmd_encoder
+# storage
+db|parser.(9).cnf
+db|parser.(9).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+cmd_encoder.vhd
+a052a7ac29a9923b60879f21c4682
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+parser_DP:inst1|cmd_encoder:inst4
+}
+# macro_sequence
+
+# end
+# entity
+parser_CU
+# storage
+db|parser.(1).cnf
+db|parser.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+parser_cu.vhd
+62154290227bfe2ba6e044219abb7e30
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+parser_CU:inst
+}
+# macro_sequence
+
+# end
+# complete
+

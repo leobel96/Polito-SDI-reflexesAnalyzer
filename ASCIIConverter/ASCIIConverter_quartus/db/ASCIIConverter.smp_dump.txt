@@ -1,0 +1,12 @@
+
+State Machine - |ASCIIConverter|MainFSM:inst|CurrentState
+Name CurrentState.Idle CurrentState.WaitForData CurrentState.DoneState CurrentState.SendD CurrentState.SendC CurrentState.SendB CurrentState.SendA CurrentState.SendT CurrentState.ResetState 
+CurrentState.ResetState 0 0 0 0 0 0 0 0 0 
+CurrentState.SendT 0 0 0 0 0 0 0 1 1 
+CurrentState.SendA 0 0 0 0 0 0 1 0 1 
+CurrentState.SendB 0 0 0 0 0 1 0 0 1 
+CurrentState.SendC 0 0 0 0 1 0 0 0 1 
+CurrentState.SendD 0 0 0 1 0 0 0 0 1 
+CurrentState.DoneState 0 0 1 0 0 0 0 0 1 
+CurrentState.WaitForData 0 1 0 0 0 0 0 0 1 
+CurrentState.Idle 1 0 0 0 0 0 0 0 1 

@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="reflexes">
+		<CBX_INST_ENTRY INSTANCE_NAME="|reflexes|reflexes_DP:b2v_inst1|random_10000:inst|MULT_10000:inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]" CBX_FILE_NAME="add_sub_9ch.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|reflexes|reflexes_DP:b2v_inst1|ADD_45535:inst24|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_fph.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|reflexes|reflexes_DP:b2v_inst1|CNT_16bit:inst19|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_3pj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|reflexes|reflexes_DP:b2v_inst1|CNT_1ms:inst3|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_lpi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|reflexes|reflexes_DP:b2v_inst1|DEC_LED:inst6|lpm_decode:lpm_decode_component" CBX_FILE_NAME="decode_uqf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|reflexes|reflexes_DP:b2v_inst1|random_10000:inst|MULT_10000:inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_9ch.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|reflexes|reflexes_DP:b2v_inst1|random_10000:inst|MULT_10000:inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_4ch.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

@@ -1,0 +1,2133 @@
+Quartus II 32-bit
+Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
+14
+1343
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+MainFSM
+# storage
+db|ASCIIConverter.(1).cnf
+db|ASCIIConverter.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+fsm.vhd
+94c78b3c8807777f14713f681cbff72
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+MainFSM:inst
+}
+# macro_sequence
+
+# end
+# entity
+out_cmp
+# storage
+db|ASCIIConverter.(2).cnf
+db|ASCIIConverter.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+components|out_cmp.vhd
+5b12eda8546dc88997b7c3ca2f4819d
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+out_cmp:out_cmp_imp
+}
+# macro_sequence
+
+# end
+# entity
+lpm_compare
+# storage
+db|ASCIIConverter.(3).cnf
+db|ASCIIConverter.(3).cnf
+# case_insensitive
+# source_file
+lpm_compare.tdf
+90e93c16835498bccd15da685a8ee53c
+7
+# user_parameter {
+lpm_width
+8
+PARAMETER_SIGNED_DEC
+USR
+LPM_REPRESENTATION
+UNSIGNED
+PARAMETER_UNKNOWN
+USR
+LPM_PIPELINE
+0
+PARAMETER_UNKNOWN
+DEF
+CHAIN_SIZE
+8
+PARAMETER_UNKNOWN
+DEF
+ONE_INPUT_IS_CONSTANT
+YES
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CASCADE_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN_LENGTH
+48
+CARRY_CHAIN_LENGTH
+USR
+CASCADE_CHAIN_LENGTH
+2
+CASCADE_CHAIN_LENGTH
+USR
+DEVICE_FAMILY
+Cyclone II
+PARAMETER_UNKNOWN
+USR
+CBXI_PARAMETER
+cmpr_m7j
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+dataa7
+-1
+3
+dataa6
+-1
+3
+dataa5
+-1
+3
+dataa4
+-1
+3
+dataa3
+-1
+3
+dataa2
+-1
+3
+dataa1
+-1
+3
+dataa0
+-1
+3
+agb
+-1
+3
+datab7
+-1
+1
+datab6
+-1
+1
+datab5
+-1
+1
+datab4
+-1
+1
+datab2
+-1
+1
+datab1
+-1
+1
+datab3
+-1
+2
+datab0
+-1
+2
+}
+# include_file {
+comptree.inc
+17f2438ef7f3db194fa362eabd6d61a
+aglobal111.inc
+9cc1f9de5ad83fc94dd171c3f7986bd
+altshift.inc
+5c767a29f11db3f131fc886ea42a52bd
+}
+# hierarchies {
+out_cmp:out_cmp_imp|lpm_compare:LPM_COMPARE_component
+}
+# macro_sequence
+
+# end
+# entity
+cmpr_m7j
+# storage
+db|ASCIIConverter.(4).cnf
+db|ASCIIConverter.(4).cnf
+# case_insensitive
+# source_file
+db|cmpr_m7j.tdf
+fa8854bffacf218da28c5c699214342
+7
+# used_port {
+datab7
+-1
+3
+datab6
+-1
+3
+datab5
+-1
+3
+datab4
+-1
+3
+datab3
+-1
+3
+datab2
+-1
+3
+datab1
+-1
+3
+datab0
+-1
+3
+dataa7
+-1
+3
+dataa6
+-1
+3
+dataa5
+-1
+3
+dataa4
+-1
+3
+dataa3
+-1
+3
+dataa2
+-1
+3
+dataa1
+-1
+3
+dataa0
+-1
+3
+agb
+-1
+3
+}
+# hierarchies {
+out_cmp:out_cmp_imp|lpm_compare:LPM_COMPARE_component|cmpr_m7j:auto_generated
+}
+# macro_sequence
+
+# end
+# entity
+reg_out_mux
+# storage
+db|ASCIIConverter.(5).cnf
+db|ASCIIConverter.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+components|reg_out_mux.vhd
+f3d64d55d12d30d3ae7e25f837d1201f
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+reg_out_mux:reg_out_mux_imp
+}
+# macro_sequence
+
+# end
+# entity
+LPM_MUX
+# storage
+db|ASCIIConverter.(6).cnf
+db|ASCIIConverter.(6).cnf
+# case_insensitive
+# source_file
+lpm_mux.tdf
+8097bab138c4365d841209eee837c
+7
+# user_parameter {
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+LPM_WIDTH
+4
+PARAMETER_SIGNED_DEC
+USR
+LPM_SIZE
+4
+PARAMETER_SIGNED_DEC
+USR
+LPM_WIDTHS
+2
+PARAMETER_SIGNED_DEC
+USR
+LPM_PIPELINE
+0
+PARAMETER_SIGNED_DEC
+USR
+CBXI_PARAMETER
+mux_63e
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+Cyclone II
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+SEL1
+-1
+3
+SEL0
+-1
+3
+RESULT3
+-1
+3
+RESULT2
+-1
+3
+RESULT1
+-1
+3
+RESULT0
+-1
+3
+DATA3_3
+-1
+3
+DATA3_2
+-1
+3
+DATA3_1
+-1
+3
+DATA3_0
+-1
+3
+DATA2_3
+-1
+3
+DATA2_2
+-1
+3
+DATA2_1
+-1
+3
+DATA2_0
+-1
+3
+DATA1_3
+-1
+3
+DATA1_2
+-1
+3
+DATA1_1
+-1
+3
+DATA1_0
+-1
+3
+DATA0_3
+-1
+3
+DATA0_2
+-1
+3
+DATA0_1
+-1
+3
+DATA0_0
+-1
+3
+}
+# include_file {
+muxlut.inc
+301e88484af1e8d67bcd099bb975882
+aglobal111.inc
+9cc1f9de5ad83fc94dd171c3f7986bd
+altshift.inc
+5c767a29f11db3f131fc886ea42a52bd
+bypassff.inc
+42d08f243d3471f724fd61ea21a0eb9f
+}
+# hierarchies {
+reg_out_mux:reg_out_mux_imp|lpm_mux:LPM_MUX_component
+}
+# macro_sequence
+
+# end
+# entity
+mux_63e
+# storage
+db|ASCIIConverter.(7).cnf
+db|ASCIIConverter.(7).cnf
+# case_insensitive
+# source_file
+db|mux_63e.tdf
+462637b3ae56e8456d7897f2741bef
+7
+# used_port {
+sel1
+-1
+3
+sel0
+-1
+3
+result3
+-1
+3
+result2
+-1
+3
+result1
+-1
+3
+result0
+-1
+3
+data9
+-1
+3
+data8
+-1
+3
+data7
+-1
+3
+data6
+-1
+3
+data5
+-1
+3
+data4
+-1
+3
+data3
+-1
+3
+data2
+-1
+3
+data15
+-1
+3
+data14
+-1
+3
+data13
+-1
+3
+data12
+-1
+3
+data11
+-1
+3
+data10
+-1
+3
+data1
+-1
+3
+data0
+-1
+3
+}
+# hierarchies {
+reg_out_mux:reg_out_mux_imp|lpm_mux:LPM_MUX_component|mux_63e:auto_generated
+}
+# macro_sequence
+
+# end
+# entity
+reg_in
+# storage
+db|ASCIIConverter.(8).cnf
+db|ASCIIConverter.(8).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+components|reg_in.vhd
+d21194e916f377a872ad5498359d37f
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+reg_in:reg_in_imp
+}
+# macro_sequence
+
+# end
+# entity
+lpm_shiftreg
+# storage
+db|ASCIIConverter.(9).cnf
+db|ASCIIConverter.(9).cnf
+# case_insensitive
+# source_file
+lpm_shiftreg.tdf
+785d51ce6e8bbbd53bb4aa58bf413de
+7
+# user_parameter {
+LPM_WIDTH
+16
+PARAMETER_SIGNED_DEC
+USR
+LPM_DIRECTION
+LEFT
+PARAMETER_UNKNOWN
+USR
+LPM_AVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_SVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+DEVICE_FAMILY
+Cyclone II
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+sclr
+-1
+3
+q9
+-1
+3
+q8
+-1
+3
+q7
+-1
+3
+q6
+-1
+3
+q5
+-1
+3
+q4
+-1
+3
+q3
+-1
+3
+q2
+-1
+3
+q15
+-1
+3
+q14
+-1
+3
+q13
+-1
+3
+q12
+-1
+3
+q11
+-1
+3
+q10
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+load
+-1
+3
+enable
+-1
+3
+data9
+-1
+3
+data8
+-1
+3
+data7
+-1
+3
+data6
+-1
+3
+data5
+-1
+3
+data4
+-1
+3
+data3
+-1
+3
+data2
+-1
+3
+data15
+-1
+3
+data14
+-1
+3
+data13
+-1
+3
+data12
+-1
+3
+data11
+-1
+3
+data10
+-1
+3
+data1
+-1
+3
+data0
+-1
+3
+clock
+-1
+3
+}
+# include_file {
+lpm_constant.inc
+97ffb7e3fef9ce9fce4eff8455d5da5
+aglobal111.inc
+9cc1f9de5ad83fc94dd171c3f7986bd
+dffeea.inc
+f11711657cd42ee78437f4349496034
+}
+# hierarchies {
+reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component
+}
+# macro_sequence
+
+# end
+# entity
+reg_mux_in
+# storage
+db|ASCIIConverter.(10).cnf
+db|ASCIIConverter.(10).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+components|reg_mux_in.vhd
+df593f761e2721df18b135cac46a62
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+reg_mux_in:reg_mux_in_imp
+}
+# macro_sequence
+
+# end
+# entity
+LPM_MUX
+# storage
+db|ASCIIConverter.(11).cnf
+db|ASCIIConverter.(11).cnf
+# case_insensitive
+# source_file
+lpm_mux.tdf
+8097bab138c4365d841209eee837c
+7
+# user_parameter {
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+LPM_WIDTH
+16
+PARAMETER_SIGNED_DEC
+USR
+LPM_SIZE
+2
+PARAMETER_SIGNED_DEC
+USR
+LPM_WIDTHS
+1
+PARAMETER_SIGNED_DEC
+USR
+LPM_PIPELINE
+0
+PARAMETER_SIGNED_DEC
+USR
+CBXI_PARAMETER
+mux_m4e
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+Cyclone II
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+SEL0
+-1
+3
+RESULT9
+-1
+3
+RESULT8
+-1
+3
+RESULT7
+-1
+3
+RESULT6
+-1
+3
+RESULT5
+-1
+3
+RESULT4
+-1
+3
+RESULT3
+-1
+3
+RESULT2
+-1
+3
+RESULT15
+-1
+3
+RESULT14
+-1
+3
+RESULT13
+-1
+3
+RESULT12
+-1
+3
+RESULT11
+-1
+3
+RESULT10
+-1
+3
+RESULT1
+-1
+3
+RESULT0
+-1
+3
+DATA1_9
+-1
+3
+DATA1_8
+-1
+3
+DATA1_7
+-1
+3
+DATA1_6
+-1
+3
+DATA1_5
+-1
+3
+DATA1_4
+-1
+3
+DATA1_3
+-1
+3
+DATA1_2
+-1
+3
+DATA1_15
+-1
+3
+DATA1_14
+-1
+3
+DATA1_13
+-1
+3
+DATA1_12
+-1
+3
+DATA1_11
+-1
+3
+DATA1_10
+-1
+3
+DATA1_1
+-1
+3
+DATA1_0
+-1
+3
+DATA0_9
+-1
+3
+DATA0_8
+-1
+3
+DATA0_7
+-1
+3
+DATA0_6
+-1
+3
+DATA0_5
+-1
+3
+DATA0_4
+-1
+3
+DATA0_3
+-1
+3
+DATA0_2
+-1
+3
+DATA0_15
+-1
+3
+DATA0_14
+-1
+3
+DATA0_13
+-1
+3
+DATA0_12
+-1
+3
+DATA0_11
+-1
+3
+DATA0_10
+-1
+3
+DATA0_1
+-1
+3
+DATA0_0
+-1
+3
+}
+# include_file {
+muxlut.inc
+301e88484af1e8d67bcd099bb975882
+aglobal111.inc
+9cc1f9de5ad83fc94dd171c3f7986bd
+altshift.inc
+5c767a29f11db3f131fc886ea42a52bd
+bypassff.inc
+42d08f243d3471f724fd61ea21a0eb9f
+}
+# hierarchies {
+reg_mux_in:reg_mux_in_imp|lpm_mux:LPM_MUX_component
+}
+# macro_sequence
+
+# end
+# entity
+mux_m4e
+# storage
+db|ASCIIConverter.(12).cnf
+db|ASCIIConverter.(12).cnf
+# case_insensitive
+# source_file
+db|mux_m4e.tdf
+b4f4ac16632cc146ccec4cf4d3d715
+7
+# used_port {
+sel0
+-1
+3
+result9
+-1
+3
+result8
+-1
+3
+result7
+-1
+3
+result6
+-1
+3
+result5
+-1
+3
+result4
+-1
+3
+result3
+-1
+3
+result2
+-1
+3
+result15
+-1
+3
+result14
+-1
+3
+result13
+-1
+3
+result12
+-1
+3
+result11
+-1
+3
+result10
+-1
+3
+result1
+-1
+3
+result0
+-1
+3
+data9
+-1
+3
+data8
+-1
+3
+data7
+-1
+3
+data6
+-1
+3
+data5
+-1
+3
+data4
+-1
+3
+data31
+-1
+3
+data30
+-1
+3
+data3
+-1
+3
+data29
+-1
+3
+data28
+-1
+3
+data27
+-1
+3
+data26
+-1
+3
+data25
+-1
+3
+data24
+-1
+3
+data23
+-1
+3
+data22
+-1
+3
+data21
+-1
+3
+data20
+-1
+3
+data2
+-1
+3
+data19
+-1
+3
+data18
+-1
+3
+data17
+-1
+3
+data16
+-1
+3
+data15
+-1
+3
+data14
+-1
+3
+data13
+-1
+3
+data12
+-1
+3
+data11
+-1
+3
+data10
+-1
+3
+data1
+-1
+3
+data0
+-1
+3
+}
+# hierarchies {
+reg_mux_in:reg_mux_in_imp|lpm_mux:LPM_MUX_component|mux_m4e:auto_generated
+}
+# macro_sequence
+
+# end
+# entity
+out_mux
+# storage
+db|ASCIIConverter.(13).cnf
+db|ASCIIConverter.(13).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+components|out_mux.vhd
+2498af77a97717d151e67d76fa3a45
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+out_mux:out_mux_imp
+}
+# macro_sequence
+
+# end
+# entity
+LPM_MUX
+# storage
+db|ASCIIConverter.(14).cnf
+db|ASCIIConverter.(14).cnf
+# case_insensitive
+# source_file
+lpm_mux.tdf
+8097bab138c4365d841209eee837c
+7
+# user_parameter {
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+LPM_WIDTH
+8
+PARAMETER_SIGNED_DEC
+USR
+LPM_SIZE
+2
+PARAMETER_SIGNED_DEC
+USR
+LPM_WIDTHS
+1
+PARAMETER_SIGNED_DEC
+USR
+LPM_PIPELINE
+0
+PARAMETER_SIGNED_DEC
+USR
+CBXI_PARAMETER
+mux_73e
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+Cyclone II
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+SEL0
+-1
+3
+RESULT7
+-1
+3
+RESULT6
+-1
+3
+RESULT5
+-1
+3
+RESULT4
+-1
+3
+RESULT3
+-1
+3
+RESULT2
+-1
+3
+RESULT1
+-1
+3
+RESULT0
+-1
+3
+DATA1_7
+-1
+3
+DATA1_6
+-1
+3
+DATA1_5
+-1
+3
+DATA1_4
+-1
+3
+DATA1_3
+-1
+3
+DATA1_2
+-1
+3
+DATA1_1
+-1
+3
+DATA1_0
+-1
+3
+DATA0_7
+-1
+3
+DATA0_6
+-1
+3
+DATA0_5
+-1
+3
+DATA0_4
+-1
+3
+DATA0_3
+-1
+3
+DATA0_2
+-1
+3
+DATA0_1
+-1
+3
+DATA0_0
+-1
+3
+}
+# include_file {
+muxlut.inc
+301e88484af1e8d67bcd099bb975882
+aglobal111.inc
+9cc1f9de5ad83fc94dd171c3f7986bd
+altshift.inc
+5c767a29f11db3f131fc886ea42a52bd
+bypassff.inc
+42d08f243d3471f724fd61ea21a0eb9f
+}
+# hierarchies {
+out_mux:out_mux_imp|lpm_mux:LPM_MUX_component
+add_in_mux:add_in_mux_imp|lpm_mux:LPM_MUX_component
+}
+# macro_sequence
+
+# end
+# entity
+mux_73e
+# storage
+db|ASCIIConverter.(15).cnf
+db|ASCIIConverter.(15).cnf
+# case_insensitive
+# source_file
+db|mux_73e.tdf
+69c3605d83f72afa1dd03c7349f0cf2b
+7
+# used_port {
+sel0
+-1
+3
+result7
+-1
+3
+result6
+-1
+3
+result5
+-1
+3
+result4
+-1
+3
+result3
+-1
+3
+result2
+-1
+3
+result1
+-1
+3
+result0
+-1
+3
+data9
+-1
+3
+data8
+-1
+3
+data7
+-1
+3
+data6
+-1
+3
+data5
+-1
+3
+data4
+-1
+3
+data3
+-1
+3
+data2
+-1
+3
+data15
+-1
+3
+data14
+-1
+3
+data13
+-1
+3
+data12
+-1
+3
+data11
+-1
+3
+data10
+-1
+3
+data1
+-1
+3
+data0
+-1
+3
+}
+# hierarchies {
+out_mux:out_mux_imp|lpm_mux:LPM_MUX_component|mux_73e:auto_generated
+add_in_mux:add_in_mux_imp|lpm_mux:LPM_MUX_component|mux_73e:auto_generated
+}
+# macro_sequence
+
+# end
+# entity
+const84
+# storage
+db|ASCIIConverter.(16).cnf
+db|ASCIIConverter.(16).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+components|const84.vhd
+e330dd4246c75ac6bdbe4764cfffa50
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+const84:const84_imp
+}
+# macro_sequence
+
+# end
+# entity
+lpm_constant
+# storage
+db|ASCIIConverter.(17).cnf
+db|ASCIIConverter.(17).cnf
+# case_insensitive
+# source_file
+lpm_constant.tdf
+39f6198d2fd534fc24ec55db94a24819
+7
+# user_parameter {
+LPM_WIDTH
+8
+PARAMETER_SIGNED_DEC
+USR
+LPM_CVALUE
+84
+PARAMETER_SIGNED_DEC
+USR
+ENABLE_RUNTIME_MOD
+NO
+PARAMETER_UNKNOWN
+USR
+CBXI_PARAMETER
+lpm_constant_3g6
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+result7
+-1
+3
+result6
+-1
+3
+result5
+-1
+3
+result4
+-1
+3
+result3
+-1
+3
+result2
+-1
+3
+result1
+-1
+3
+result0
+-1
+3
+}
+# hierarchies {
+const84:const84_imp|lpm_constant:LPM_CONSTANT_component
+}
+# macro_sequence
+
+# end
+# entity
+main_adder
+# storage
+db|ASCIIConverter.(18).cnf
+db|ASCIIConverter.(18).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+components|main_adder.vhd
+1a191409878d44a84858a468f6e23c
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+main_adder:main_adder_imp
+}
+# macro_sequence
+
+# end
+# entity
+lpm_add_sub
+# storage
+db|ASCIIConverter.(19).cnf
+db|ASCIIConverter.(19).cnf
+# case_insensitive
+# source_file
+lpm_add_sub.tdf
+949e55aeeca9519b02e7ca837d13e17
+7
+# user_parameter {
+LPM_WIDTH
+8
+PARAMETER_SIGNED_DEC
+USR
+LPM_REPRESENTATION
+UNSIGNED
+PARAMETER_UNKNOWN
+USR
+LPM_DIRECTION
+ADD
+PARAMETER_UNKNOWN
+USR
+ONE_INPUT_IS_CONSTANT
+NO
+PARAMETER_UNKNOWN
+USR
+LPM_PIPELINE
+0
+PARAMETER_UNKNOWN
+DEF
+MAXIMIZE_SPEED
+5
+PARAMETER_UNKNOWN
+DEF
+REGISTERED_AT_END
+0
+PARAMETER_UNKNOWN
+DEF
+OPTIMIZE_FOR_SPEED
+5
+PARAMETER_UNKNOWN
+USR
+USE_CS_BUFFERS
+1
+PARAMETER_UNKNOWN
+DEF
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN_LENGTH
+48
+CARRY_CHAIN_LENGTH
+USR
+DEVICE_FAMILY
+Cyclone II
+PARAMETER_UNKNOWN
+USR
+USE_WYS
+OFF
+PARAMETER_UNKNOWN
+DEF
+STYLE
+FAST
+PARAMETER_UNKNOWN
+USR
+CBXI_PARAMETER
+add_sub_ckh
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+result7
+-1
+3
+result6
+-1
+3
+result5
+-1
+3
+result4
+-1
+3
+result3
+-1
+3
+result2
+-1
+3
+result1
+-1
+3
+result0
+-1
+3
+datab7
+-1
+3
+datab6
+-1
+3
+datab5
+-1
+3
+datab4
+-1
+3
+datab3
+-1
+3
+datab2
+-1
+3
+datab1
+-1
+3
+datab0
+-1
+3
+dataa7
+-1
+3
+dataa6
+-1
+3
+dataa5
+-1
+3
+dataa4
+-1
+3
+dataa3
+-1
+3
+dataa2
+-1
+3
+dataa1
+-1
+3
+dataa0
+-1
+3
+}
+# include_file {
+alt_stratix_add_sub.inc
+16df31198e4f1dce2b8df944fbafaefe
+aglobal111.inc
+9cc1f9de5ad83fc94dd171c3f7986bd
+addcore.inc
+e15993f131a5367862d6283fbb5a133
+altshift.inc
+5c767a29f11db3f131fc886ea42a52bd
+look_add.inc
+9091c394592369a07bdf7fbf1ce9ced6
+bypassff.inc
+42d08f243d3471f724fd61ea21a0eb9f
+}
+# hierarchies {
+main_adder:main_adder_imp|lpm_add_sub:LPM_ADD_SUB_component
+}
+# macro_sequence
+
+# end
+# entity
+add_sub_ckh
+# storage
+db|ASCIIConverter.(20).cnf
+db|ASCIIConverter.(20).cnf
+# case_insensitive
+# source_file
+db|add_sub_ckh.tdf
+bbc15863624d6521b554de91775ae9ec
+7
+# used_port {
+result7
+-1
+3
+result6
+-1
+3
+result5
+-1
+3
+result4
+-1
+3
+result3
+-1
+3
+result2
+-1
+3
+result1
+-1
+3
+result0
+-1
+3
+datab7
+-1
+3
+datab6
+-1
+3
+datab5
+-1
+3
+datab4
+-1
+3
+datab3
+-1
+3
+datab2
+-1
+3
+datab1
+-1
+3
+datab0
+-1
+3
+dataa7
+-1
+3
+dataa6
+-1
+3
+dataa5
+-1
+3
+dataa4
+-1
+3
+dataa3
+-1
+3
+dataa2
+-1
+3
+dataa1
+-1
+3
+dataa0
+-1
+3
+}
+# hierarchies {
+main_adder:main_adder_imp|lpm_add_sub:LPM_ADD_SUB_component|add_sub_ckh:auto_generated
+}
+# macro_sequence
+
+# end
+# entity
+add_in_mux
+# storage
+db|ASCIIConverter.(21).cnf
+db|ASCIIConverter.(21).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+components|add_in_mux.vhd
+80da9aec46aca52e8d326e567c8d5c6d
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+add_in_mux:add_in_mux_imp
+}
+# macro_sequence
+
+# end
+# entity
+const48
+# storage
+db|ASCIIConverter.(22).cnf
+db|ASCIIConverter.(22).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+components|const48.vhd
+12e6152ab7d3dc1cae575fdf762d447
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+const48:coinst48_imp
+}
+# macro_sequence
+
+# end
+# entity
+lpm_constant
+# storage
+db|ASCIIConverter.(23).cnf
+db|ASCIIConverter.(23).cnf
+# case_insensitive
+# source_file
+lpm_constant.tdf
+39f6198d2fd534fc24ec55db94a24819
+7
+# user_parameter {
+LPM_WIDTH
+8
+PARAMETER_SIGNED_DEC
+USR
+LPM_CVALUE
+48
+PARAMETER_SIGNED_DEC
+USR
+ENABLE_RUNTIME_MOD
+NO
+PARAMETER_UNKNOWN
+USR
+CBXI_PARAMETER
+lpm_constant_tf6
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+result7
+-1
+3
+result6
+-1
+3
+result5
+-1
+3
+result4
+-1
+3
+result3
+-1
+3
+result2
+-1
+3
+result1
+-1
+3
+result0
+-1
+3
+}
+# hierarchies {
+const48:coinst48_imp|lpm_constant:LPM_CONSTANT_component
+}
+# macro_sequence
+
+# end
+# entity
+const55
+# storage
+db|ASCIIConverter.(24).cnf
+db|ASCIIConverter.(24).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+components|const55.vhd
+1fa7231de642dd2236c49996718ce1c
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# macro_sequence
+
+# end
+# entity
+lpm_constant
+# storage
+db|ASCIIConverter.(25).cnf
+db|ASCIIConverter.(25).cnf
+# case_insensitive
+# source_file
+lpm_constant.tdf
+39f6198d2fd534fc24ec55db94a24819
+7
+# user_parameter {
+LPM_WIDTH
+8
+PARAMETER_SIGNED_DEC
+USR
+LPM_CVALUE
+55
+PARAMETER_SIGNED_DEC
+USR
+ENABLE_RUNTIME_MOD
+NO
+PARAMETER_UNKNOWN
+USR
+CBXI_PARAMETER
+lpm_constant_4g6
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+result7
+-1
+3
+result6
+-1
+3
+result5
+-1
+3
+result4
+-1
+3
+result3
+-1
+3
+result2
+-1
+3
+result1
+-1
+3
+result0
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+lpm_constant
+# storage
+db|ASCIIConverter.(27).cnf
+db|ASCIIConverter.(27).cnf
+# case_insensitive
+# source_file
+lpm_constant.tdf
+39f6198d2fd534fc24ec55db94a24819
+7
+# user_parameter {
+LPM_WIDTH
+8
+PARAMETER_SIGNED_DEC
+USR
+LPM_CVALUE
+87
+PARAMETER_SIGNED_DEC
+USR
+ENABLE_RUNTIME_MOD
+NO
+PARAMETER_UNKNOWN
+USR
+CBXI_PARAMETER
+lpm_constant_6g6
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+result7
+-1
+3
+result6
+-1
+3
+result5
+-1
+3
+result4
+-1
+3
+result3
+-1
+3
+result2
+-1
+3
+result1
+-1
+3
+result0
+-1
+3
+}
+# hierarchies {
+const87:const87_imp|lpm_constant:LPM_CONSTANT_component
+}
+# macro_sequence
+
+# end
+# entity
+ASCIIConverter
+# storage
+db|ASCIIConverter.(0).cnf
+db|ASCIIConverter.(0).cnf
+# case_insensitive
+# source_file
+asciiconverter.bdf
+6fa5e0c3a80ce1e45eda59cb4f427b7
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+const87
+# storage
+db|ASCIIConverter.(26).cnf
+db|ASCIIConverter.(26).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+components|const87.vhd
+35bdd8175a29de8c7272ea35d9696455
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+const87:const87_imp
+}
+# macro_sequence
+
+# end
+# complete
+

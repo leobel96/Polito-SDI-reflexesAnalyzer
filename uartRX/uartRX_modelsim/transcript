@@ -1,0 +1,59 @@
+# Reading C:/altera/11.1sp2/modelsim_ase/tcl/vsim/pref.tcl 
+# OpenFile {C:/Users/Edoardo Bollea/Desktop/RR_project/uart/uartRX/uartRX_modelsim/modelsim_test_uartRX.mpf} 
+# Loading project modelsim_test_uartRX
+#  
+# 0 compiles, 13 failed with no errors. 
+# Compile of lpm_counter0.vhd was successful.
+# Compile of lpm_counter1.vhd was successful.
+# Compile of lpm_counter2.vhd was successful.
+# Compile of lpm_shiftreg0.vhd was successful.
+# Compile of modelsim_test_uartRX.vhd was successful.
+# Compile of start_bit_detector.vhd was successful.
+# Compile of terminal_counter_8.vhd was successful.
+# Compile of terminal_counter_12.vhd was successful.
+# Compile of terminal_counter_26.vhd was successful.
+# Compile of uartRX.vhd was successful.
+# Compile of uartRX_CU.vhd was successful.
+# Compile of uartRX_DP.vhd was successful.
+# Compile of voter.vhd was successful.
+# 13 compiles, 0 failed with no errors. 
+# Load canceled
+work -t ns vsim.testbench
+# invalid command name "work"
+vsim -t ns work.testbench
+# vsim -t ns work.testbench 
+# ** Error: (vsim-3170) Could not find 'C:\Users\Edoardo Bollea\Desktop\RR_project\uart\uartRX\uartRX_modelsim\work.testbench'.
+# Error loading design
+vsim -t ns work.modelsim_test_uart_RX
+# vsim -t ns work.modelsim_test_uart_RX 
+# ** Error: (vsim-3170) Could not find 'C:\Users\Edoardo Bollea\Desktop\RR_project\uart\uartRX\uartRX_modelsim\work.modelsim_test_uart_RX'.
+# Error loading design
+vsim -t ns work.modelsim_test_uartRX
+# vsim -t ns work.modelsim_test_uartRX 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.modelsim_test_uartrx(behaviour)
+# Loading work.uartrx(bdf_type)
+# Loading work.uartrx_dp(bdf_type)
+# Loading work.lpm_counter2(syn)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_components
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_counter(lpm_syn)
+# Loading work.lpm_counter0(syn)
+# Loading work.lpm_counter1(syn)
+# Loading work.start_bit_detector(structural)
+# Loading work.voter(structural)
+# Loading work.terminal_counter_26(structural)
+# Loading work.terminal_counter_8(structural)
+# Loading work.terminal_counter_12(structural)
+# Loading work.lpm_shiftreg0(syn)
+# Loading lpm.lpm_shiftreg(lpm_syn)
+# Loading work.uartrx_cu(behavioural)
+# ** Warning: (vsim-3479) Time unit 'ps' is less than the simulator resolution (1ns).
+#    Time: 0 ns  Iteration: 0  Root: /
+add wave *
+run 955 us

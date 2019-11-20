@@ -1,0 +1,164 @@
+{C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/MULT_10000.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/MULT_10000.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity MULT_10000
+-- Compiling architecture SYN of mult_10000
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/XOR_4bit.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/XOR_4bit.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package LPM_COMPONENTS
+-- Compiling entity XOR_4bit
+-- Compiling architecture SYN of xor_4bit
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/rshifter_14.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/rshifter_14.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity rshifter_14
+-- Compiling architecture structural of rshifter_14
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/CNT_1ms.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/CNT_1ms.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity CNT_1ms
+-- Compiling architecture SYN of cnt_1ms
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/ADD_45535.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/ADD_45535.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity ADD_45535
+-- Compiling architecture SYN of add_45535
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/testbench.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/testbench.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity testbench
+-- Compiling architecture behavioural of testbench
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/AND_16bit.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/AND_16bit.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package LPM_COMPONENTS
+-- Compiling entity AND_16bit
+-- Compiling architecture SYN of and_16bit
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/DEC_LED.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/DEC_LED.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity DEC_LED
+-- Compiling architecture SYN of dec_led
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/CNT_16bit.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/CNT_16bit.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity CNT_16bit
+-- Compiling architecture SYN of cnt_16bit
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/FF_1bit.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/FF_1bit.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity FF_1bit
+-- Compiling architecture SYN of ff_1bit
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/reflexes_CU.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/reflexes_CU.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Reflexes_CU
+-- Compiling architecture behavioural of Reflexes_CU
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/reflexes.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/reflexes.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity reflexes
+-- Compiling architecture bdf_type of reflexes
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/mux2to1_1bit.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/mux2to1_1bit.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux2to1_1bit
+-- Compiling architecture behavioural of mux2to1_1bit
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/mux_2to1.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/mux_2to1.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux_2to1
+-- Compiling architecture behavior of mux_2to1
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/FF_LNUM.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/FF_LNUM.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity FF_LNUM
+-- Compiling architecture SYN of ff_lnum
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/FF_BUTTON.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/FF_BUTTON.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity FF_BUTTON
+-- Compiling architecture SYN of ff_button
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/AND_15bit.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/AND_15bit.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package LPM_COMPONENTS
+-- Compiling entity AND_15bit
+-- Compiling architecture SYN of and_15bit
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/mux4to1_1bit.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/mux4to1_1bit.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux4to1_1bit
+-- Compiling architecture behavioural of mux4to1_1bit
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/random_10000.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/random_10000.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity random_10000
+-- Compiling architecture bdf_type of random_10000
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/reflexes_dp.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/reflexes_dp.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity reflexes_dp
+-- Compiling architecture bdf_type of reflexes_dp
+
+} {} {}}

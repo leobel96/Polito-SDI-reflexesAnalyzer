@@ -1,0 +1,16 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all; 
+
+ENTITY terminal_count_216 IS 
+	PORT
+	(
+		Q_CNT_216 :  IN  STD_LOGIC_VECTOR (7 DOWNTO 0);
+		TC_216 :  OUT STD_LOGIC
+	);
+END ENTITY terminal_count_216;
+
+ARCHITECTURE structural OF terminal_count_216 IS 
+BEGIN
+	TC_216 <= Q_CNT_216(0) AND Q_CNT_216(1) AND Q_CNT_216(2) AND NOT Q_CNT_216(3) AND Q_CNT_216(4) AND  
+				NOT Q_CNT_216(5) AND Q_CNT_216(6) AND Q_CNT_216(7); 
+END ARCHITECTURE structural;

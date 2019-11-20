@@ -1,0 +1,18 @@
+{signal: [
+  {name: 'CK', wave: 'p.......'},
+  {name: 'RST', wave: '010.....', node:'.a'},
+  {name: 'SCLEAR_ALL', wave: '0.10....', node:'..b'},
+  {name: 'SCLEAR_CNT_216', wave: '0.10....', node:'..c'},
+  {name: 'TXRDY', wave: '0..1..0.', node:'......e'},
+  {name: 'WR', wave: '0...10..', node:'....d'},
+  {name: 'DIN',wave:'x...=x..', data:'DTX', node:'....g'},
+  {name: 'EN_LOAD_TX_REG', wave: '0....10.', node:'.....f'},
+  {name: 'Q_D_FF', wave: 'x....=x.',data:'DTX', node:'.....h'},
+  {name: 'Q_TX_REG', wave: 'x.....=x',data:'DTX', node:'......i'},
+],
+  edge:[
+	'a-~>b', 'a-~>c',
+  	'd-~>e', 'd-~>f',
+  	'g-~>h', 'g~->i'
+]
+}

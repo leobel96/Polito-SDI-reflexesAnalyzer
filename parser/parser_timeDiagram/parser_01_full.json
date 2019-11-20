@@ -1,0 +1,16 @@
+{signal: [
+  {name: 'CK', wave: 'p........|......'},
+  {name: 'RST', wave: '010......|......'},
+  {name: 's_clear_reg/ff', wave: '010......|......'},
+  {name: 'START', wave: '0..10....|10....'}, 
+  {name: 'CHARIN', wave:'x...=x...|.=x...', data: ['L','1']},
+  {name: 'en_reg_char', wave: '0...10...|.10...'},
+  {name: 'out_reg_char', wave: 'xxxxx=...|..=...', data: ['L','1']},
+  {name: 'match_L', wave: '0....1...|..0...'},
+  {name: 'out_ff_L', wave: '0......1.|....0.'},
+  {name: 'en_ff_L', wave: '0.....10.|...10.'},
+  {name: 'DONE', wave: '0......10|....10'},
+  {name: 'match_1234', wave: '0........|..1...'},
+  {name: 'CMD', wave: 'x........|...=..', data: ['00']},
+  {name: 'CMDAV', wave: '0........|...1..'}
+  ]}

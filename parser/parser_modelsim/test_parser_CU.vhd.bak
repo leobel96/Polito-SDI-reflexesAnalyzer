@@ -1,0 +1,97 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity test_parser_CU is
+	port
+		(	ck, rst : in std_logic;
+			dut_done, cnt_256_TC : in std_logic;
+			out_cnt256 : in std_logic_vector(7 downto 0);
+			cnt256_en, mux_L_sel : out std_logic;
+			dut_start : out std_logic --, fwrite_en
+		);
+end entity test_parser_CU;
+
+architecture state_machine of test_parser_CU is
+	type STATE_TYPE is (RESET, send_test_1, send_test_2, send_test_2_L, wait_dut_1, wait_dut_2, wait_dut_2_L);
+									 
+	signal PRESENT_STATE : STATE_TYPE;
+	signal NEXT_STATE : STATE_TYPE;
+  
+	begin
+	
+		state_update:process (ck, rst) is
+			begin
+				if ck'event and ck = '1' then
+					if rst = '1' then
+						PRESENT_STATE <= RESET;
+					else
+						PRESENT_STATE <= NEXT_STATE;
+					end if;
+				end if;
+		end process state_update;
+  
+		state_progression:process (PRESENT_STATE, dut_done, cnt_256_TC, out_cnt256) is
+			begin
+				cnt256_en <= '0';
+				mux_L_sel <= '0';
+				dut_start <= '0';
+				case (PRESENT_STATE) is
+				
+					when RESET =>
+						NEXT_STATE <= send_test_1;
+						
+					when send_test_1 =>
+						dut_start <= '1';
+						cnt256_en <= '1';
+						NEXT_STATE <= wait_dut_1;
+						
+					when wait_dut_1 =>
+						if dut_done = '1' then
+							if out_cnt256 = "01001100" then
+								NEXT_STATE <= skip_L;
+							else
+								if cnt_256_TC = '1' then
+									NEXT_STATE <= send_test_2_L;
+								else
+									NEXT_STATE <= send_test_1:
+								end if;
+							end if;
+						else
+							NEXT_STATE <= wait_dut_1;
+						end if;
+					
+					when skip_L =>
+						cnt256_en <= '1';
+						NEXT_STATE <= send_test_1;
+						
+					when send_test_2_L =>
+						mux_L_sel <= '1';
+						dut_start <= '1';
+						NEXT_STATE <= wait_dut_2_L;
+					
+					when wait_dut_2_L =>
+						if dut_done = '1' then
+							NEXT_STATE <= send_test_2;
+						else
+							NEXT_STATE <= wait_dut_2_L;
+						end if;
+						
+					when send_test_2 =>
+						cnt256_en <= '1';
+						dut_start <= '1';
+						NEXT_STATE <= wait_dut_2;
+					
+					when wait_dut_2 =>
+						if dut_done = '1' then
+							NEXT_STATE <= send_test_2_L;
+						else
+							NEXT_STATE <= wait_dut_2;
+						end if;
+
+					when others =>
+						NEXT_STATE <= RESET;
+						
+				end case;
+			end process state_progression;
+			
+end architecture state_machine;

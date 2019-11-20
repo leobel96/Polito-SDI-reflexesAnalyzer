@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Jan 18 18:23:09 2019
+Quartus II 32-bit Version : 11.1 Build 259 01/25/2012 SP 2 SJ Web Edition
+Revision Name : ASCIIConverter
+Top-level Entity Name : ASCIIConverter
+Family : Cyclone II
+Total logic elements : 53
+    Total combinational functions : 32
+    Dedicated logic registers : 24
+Total registers : 24
+Total pins : 30
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

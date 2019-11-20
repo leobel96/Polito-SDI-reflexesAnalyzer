@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="uartTX">
+		<CBX_INST_ENTRY INSTANCE_NAME="|uartTX|uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_7oi.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

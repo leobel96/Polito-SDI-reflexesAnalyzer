@@ -1,0 +1,175 @@
+|parser
+CK => parser_CU:inst.CK
+CK => parser_DP:inst1.CK
+RST => parser_CU:inst.RST
+START => parser_CU:inst.START
+CHARIN[0] => parser_DP:inst1.CHARIN[0]
+CHARIN[1] => parser_DP:inst1.CHARIN[1]
+CHARIN[2] => parser_DP:inst1.CHARIN[2]
+CHARIN[3] => parser_DP:inst1.CHARIN[3]
+CHARIN[4] => parser_DP:inst1.CHARIN[4]
+CHARIN[5] => parser_DP:inst1.CHARIN[5]
+CHARIN[6] => parser_DP:inst1.CHARIN[6]
+CHARIN[7] => parser_DP:inst1.CHARIN[7]
+
+
+|parser|parser_CU:inst
+CK => PRESENT_STATE~1.DATAIN
+RST => PRESENT_STATE.OUTPUTSELECT
+RST => PRESENT_STATE.OUTPUTSELECT
+RST => PRESENT_STATE.OUTPUTSELECT
+RST => PRESENT_STATE.OUTPUTSELECT
+RST => PRESENT_STATE.OUTPUTSELECT
+RST => PRESENT_STATE.OUTPUTSELECT
+RST => PRESENT_STATE.OUTPUTSELECT
+RST => PRESENT_STATE.OUTPUTSELECT
+START => NEXT_STATE.STORE_CHAR.DATAB
+START => Selector0.IN2
+START => Selector2.IN2
+out_ff_L => NEXT_STATE.OUTPUTSELECT
+out_ff_L => NEXT_STATE.OUTPUTSELECT
+out_ff_L => NEXT_STATE.OUTPUTSELECT
+match_L => NEXT_STATE.DATAA
+match_L => NEXT_STATE.DATAA
+match_1234 => NEXT_STATE.DATAB
+match_1234 => NEXT_STATE.DATAB
+
+
+|parser|parser_DP:inst1
+sclr_ff_L => ff_L:inst1.sclr
+en_ff_L => ff_L:inst1.load
+en_ff_L => ff_L:inst1.enable
+CK => ff_L:inst1.clock
+CK => reg_char:inst.clock
+sclr_reg_char => reg_char:inst.sclr
+en_reg_char => reg_char:inst.load
+en_reg_char => reg_char:inst.enable
+CHARIN[0] => reg_char:inst.data[0]
+CHARIN[1] => reg_char:inst.data[1]
+CHARIN[2] => reg_char:inst.data[2]
+CHARIN[3] => reg_char:inst.data[3]
+CHARIN[4] => reg_char:inst.data[4]
+CHARIN[5] => reg_char:inst.data[5]
+CHARIN[6] => reg_char:inst.data[6]
+CHARIN[7] => reg_char:inst.data[7]
+
+
+|parser|parser_DP:inst1|ff_L:inst1
+clock => lpm_shiftreg:LPM_SHIFTREG_component.clock
+data[0] => lpm_shiftreg:LPM_SHIFTREG_component.data[0]
+enable => lpm_shiftreg:LPM_SHIFTREG_component.enable
+load => lpm_shiftreg:LPM_SHIFTREG_component.load
+sclr => lpm_shiftreg:LPM_SHIFTREG_component.sclr
+
+
+|parser|parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component
+data[0] => _.IN1
+clock => dffs[0].CLK
+enable => dffs[0].ENA
+shiftin => _.IN1
+load => _.IN0
+load => _.IN0
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+sclr => _.IN0
+sset => _.IN0
+
+
+|parser|parser_DP:inst1|ASCII_L_match:inst2
+char_in[0] => match.IN0
+char_in[1] => match.IN1
+char_in[2] => match.IN1
+char_in[3] => match.IN1
+char_in[4] => match.IN1
+char_in[5] => match.IN1
+char_in[6] => match.IN1
+char_in[7] => match.IN1
+
+
+|parser|parser_DP:inst1|reg_char:inst
+clock => lpm_shiftreg:LPM_SHIFTREG_component.clock
+data[0] => lpm_shiftreg:LPM_SHIFTREG_component.data[0]
+data[1] => lpm_shiftreg:LPM_SHIFTREG_component.data[1]
+data[2] => lpm_shiftreg:LPM_SHIFTREG_component.data[2]
+data[3] => lpm_shiftreg:LPM_SHIFTREG_component.data[3]
+data[4] => lpm_shiftreg:LPM_SHIFTREG_component.data[4]
+data[5] => lpm_shiftreg:LPM_SHIFTREG_component.data[5]
+data[6] => lpm_shiftreg:LPM_SHIFTREG_component.data[6]
+data[7] => lpm_shiftreg:LPM_SHIFTREG_component.data[7]
+enable => lpm_shiftreg:LPM_SHIFTREG_component.enable
+load => lpm_shiftreg:LPM_SHIFTREG_component.load
+sclr => lpm_shiftreg:LPM_SHIFTREG_component.sclr
+
+
+|parser|parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component
+data[0] => _.IN1
+data[1] => _.IN1
+data[2] => _.IN1
+data[3] => _.IN1
+data[4] => _.IN1
+data[5] => _.IN1
+data[6] => _.IN1
+data[7] => _.IN1
+clock => dffs[7].CLK
+clock => dffs[6].CLK
+clock => dffs[5].CLK
+clock => dffs[4].CLK
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[7].ENA
+enable => dffs[6].ENA
+enable => dffs[5].ENA
+enable => dffs[4].ENA
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+shiftin => _.IN1
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+sclr => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+
+
+|parser|parser_DP:inst1|ASCII_1_2_3_4_match:inst3
+char_in[0] => matchSingleChar[1].IN1
+char_in[0] => matchSingleChar[3].IN1
+char_in[0] => matchSingleChar[2].IN1
+char_in[0] => matchSingleChar[4].IN1
+char_in[1] => matchSingleChar.IN0
+char_in[1] => matchSingleChar.IN0
+char_in[1] => matchSingleChar.IN0
+char_in[2] => matchSingleChar.IN1
+char_in[2] => matchSingleChar.IN1
+char_in[2] => matchSingleChar.IN1
+char_in[3] => matchSingleChar[0].IN1
+char_in[4] => matchSingleChar.IN1
+char_in[5] => matchSingleChar.IN1
+char_in[6] => matchSingleChar.IN0
+char_in[7] => matchSingleChar.IN1
+
+
+|parser|parser_DP:inst1|cmd_encoder:inst4
+char_1to0_in[0] => cmd.IN0
+char_1to0_in[0] => cmd[0].DATAIN
+char_1to0_in[1] => cmd.IN1
+
+

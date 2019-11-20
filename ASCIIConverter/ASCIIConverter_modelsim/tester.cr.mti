@@ -1,0 +1,287 @@
+{C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/terminal_counter_26.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/terminal_counter_26.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity terminal_counter_26
+-- Compiling architecture structural of terminal_counter_26
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/terminal_counter_8.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/terminal_counter_8.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity terminal_counter_8
+-- Compiling architecture structural of terminal_counter_8
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/lpm_counter2.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/lpm_counter2.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity lpm_counter2
+-- Compiling architecture SYN of lpm_counter2
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/main_adder.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/main_adder.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity main_adder
+-- Compiling architecture SYN of main_adder
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/reg_in.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/reg_in.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity reg_in
+-- Compiling architecture SYN of reg_in
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/uartTX_CU.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/uartTX_CU.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity uartTX_CU
+-- Compiling architecture behavioural of uartTX_CU
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/D_FF.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/D_FF.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity D_FF
+-- Compiling architecture SYN of d_ff
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/reg_mux_in.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/reg_mux_in.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package LPM_COMPONENTS
+-- Compiling entity reg_mux_in
+-- Compiling architecture SYN of reg_mux_in
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/CNT_8.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/CNT_8.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity CNT_8
+-- Compiling architecture SYN of cnt_8
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/uartTX.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/uartTX.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity uartTX
+-- Compiling architecture bdf_type of uartTX
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/const87.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/const87.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity const87
+-- Compiling architecture SYN of const87
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/reg_out_mux.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/reg_out_mux.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package LPM_COMPONENTS
+-- Compiling entity reg_out_mux
+-- Compiling architecture SYN of reg_out_mux
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/tester.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/tester.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity Tester
+-- Compiling architecture Imp of Tester
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/start_bit_detector.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/start_bit_detector.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity start_bit_detector
+-- Compiling architecture structural of start_bit_detector
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/terminal_counter_12.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/terminal_counter_12.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity terminal_counter_12
+-- Compiling architecture structural of terminal_counter_12
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/add_in_mux.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/add_in_mux.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package LPM_COMPONENTS
+-- Compiling entity add_in_mux
+-- Compiling architecture SYN of add_in_mux
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/modelsim_test_uartRX.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/modelsim_test_uartRX.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity modelsim_test_uartRX
+-- Compiling architecture behaviour of modelsim_test_uartRX
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/out_mux.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/out_mux.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package LPM_COMPONENTS
+-- Compiling entity out_mux
+-- Compiling architecture SYN of out_mux
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/ASCIIConverter.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/ASCIIConverter.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity ASCIIConverter
+-- Compiling architecture bdf_type of ASCIIConverter
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/uartTX_DP.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/uartTX_DP.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity uartTX_DP
+-- Compiling architecture bdf_type of uartTX_DP
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/fsm.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/fsm.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity MainFSM
+-- Compiling architecture MainFSMImp of MainFSM
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/modelsim_test_uartTX.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/modelsim_test_uartTX.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity modelsim_test_uartTX
+-- Compiling architecture behaviour of modelsim_test_uartTX
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/out_cmp.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/out_cmp.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity out_cmp
+-- Compiling architecture SYN of out_cmp
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/TX_REG.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/TX_REG.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity TX_REG
+-- Compiling architecture SYN of tx_reg
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/uartRX_CU.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/uartRX_CU.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity uartRX_CU
+-- Compiling architecture behavioural of uartRX_CU
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/uartRX.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/uartRX.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity uartRX
+-- Compiling architecture bdf_type of uartRX
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/endTX_gen.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/endTX_gen.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity endTX_gen
+-- Compiling architecture structural of endTX_gen
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/terminal_count_216.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/terminal_count_216.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity terminal_count_216
+-- Compiling architecture structural of terminal_count_216
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/lpm_counter0.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/lpm_counter0.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity lpm_counter0
+-- Compiling architecture SYN of lpm_counter0
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/voter.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/voter.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity voter
+-- Compiling architecture structural of voter
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/const84.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/const84.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity const84
+-- Compiling architecture SYN of const84
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/const48.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/const48.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity const48
+-- Compiling architecture SYN of const48
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/CNT_216.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/CNT_216.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity CNT_216
+-- Compiling architecture SYN of cnt_216
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/DOUT_REG.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/DOUT_REG.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity DOUT_REG
+-- Compiling architecture SYN of dout_reg
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/uartRX_DP.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/uartRX_DP.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity uartRX_DP
+-- Compiling architecture bdf_type of uartRX_DP
+
+} {} {}}

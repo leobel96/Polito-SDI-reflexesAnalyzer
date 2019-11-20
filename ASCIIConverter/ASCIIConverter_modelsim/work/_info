@@ -1,0 +1,1172 @@
+m255
+K3
+13
+cModel Technology
+dC:\Users\Edoardo Bollea\Desktop\RR_project\parser\parser_modelsim
+Eadd_in_mux
+Z0 w1547215706
+Z1 DPx3 lpm 14 lpm_components 0 22 mRRNnLG1BL;^5k5IEBX593
+Z2 DPx3 std 6 textio 0 22 G^o2zK;Vh4eVdKTVo98653
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\Edoardo Bollea\Desktop\RR_project\ASCIIConverter\ASCIIConverter_modelsim
+Z5 8C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/add_in_mux.vhd
+Z6 FC:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/add_in_mux.vhd
+l0
+L42
+VHW3K>]Pz]`R9Jb3h8U=Jj0
+Z7 OV;C;10.0c;49
+32
+Z8 !s108 1547832688.039000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/add_in_mux.vhd|
+Z10 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/add_in_mux.vhd|
+Z11 o-work work -2002 -explicit -O0
+Z12 tExplicit 1
+!s100 8GL2R[i1HVck<Do7TQGzn3
+Asyn
+R1
+R2
+R3
+DEx4 work 10 add_in_mux 0 22 HW3K>]Pz]`R9Jb3h8U=Jj0
+l64
+L53
+V1;Yc`UA4d@]]bbiIzH`GV0
+R7
+32
+R8
+R9
+R10
+R11
+R12
+!s100 kbHDLCB9a>_Ld:3H:V2k20
+Easciiconverter
+Z13 w1547832103
+R2
+R3
+R4
+Z14 8C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/ASCIIConverter.vhd
+Z15 FC:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/ASCIIConverter.vhd
+l0
+L24
+VT=D5S7MaH^VgW<Q1On:m;2
+R7
+32
+Z16 !s108 1547832688.149000
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/ASCIIConverter.vhd|
+Z18 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/ASCIIConverter.vhd|
+R11
+R12
+!s100 l8LTVNP4jf4KbQ4:QXXT_2
+Abdf_type
+R2
+R3
+DEx4 work 14 asciiconverter 0 22 T=D5S7MaH^VgW<Q1On:m;2
+l147
+L38
+V1i4ZX9l9jHJAKO1[EWY_O0
+R7
+32
+R16
+R17
+R18
+R11
+R12
+!s100 [:dJD1lmXljZkGNLMEd<c1
+Ecnt_216
+Z19 w1543925936
+R2
+R3
+R4
+Z20 8C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/CNT_216.vhd
+Z21 FC:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/CNT_216.vhd
+l0
+L42
+V:koo8NgU=3<F3:SzXaFSg2
+R7
+32
+Z22 !s108 1547832689.273000
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/CNT_216.vhd|
+Z24 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/CNT_216.vhd|
+R11
+R12
+!s100 Di<_FaAfz9TQEl;eKAz>02
+Asyn
+R2
+R3
+DEx4 work 7 cnt_216 0 22 :koo8NgU=3<F3:SzXaFSg2
+l74
+L53
+V9I:Ynz8?EoYH3aG72enLo0
+R7
+32
+R22
+R23
+R24
+R11
+R12
+!s100 cme9YZ_Z7KcnR:N4cOgW<3
+Ecnt_8
+Z25 w1547197407
+R2
+R3
+R4
+Z26 8C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/CNT_8.vhd
+Z27 FC:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/CNT_8.vhd
+l0
+L42
+V=hD][>N8jih1fBc=J8eZ^2
+R7
+32
+Z28 !s108 1547832690.093000
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/CNT_8.vhd|
+Z30 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/CNT_8.vhd|
+R11
+R12
+!s100 VOh06o=YTP<OZjl;lcLWV2
+Asyn
+R2
+R3
+DEx4 work 5 cnt_8 0 22 =hD][>N8jih1fBc=J8eZ^2
+l74
+L53
+V0nYFJgH]<3miZX:maHzYk3
+R7
+32
+R28
+R29
+R30
+R11
+R12
+!s100 a9fei7E?SboS=Y>8b9XGB0
+Econst48
+Z31 w1547215714
+R2
+R3
+R4
+Z32 8C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/const48.vhd
+Z33 FC:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/const48.vhd
+l0
+L42
+VT[[2T0Jo;BdEPbgZSMkEb1
+R7
+32
+Z34 !s108 1547832688.247000
+Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/const48.vhd|
+Z36 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/const48.vhd|
+R11
+R12
+!s100 VoMBC?<Bk?]<1W^fUOEW;0
+Asyn
+R2
+R3
+DEx4 work 7 const48 0 22 T[[2T0Jo;BdEPbgZSMkEb1
+l68
+L50
+VhdeM4d1HVRll<BBY:D8kT3
+R7
+32
+R34
+R35
+R36
+R11
+R12
+!s100 97HY@JL3BSS@96MV6Gn0X3
+Econst84
+Z37 w1547215716
+R2
+R3
+R4
+Z38 8C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/const84.vhd
+Z39 FC:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/const84.vhd
+l0
+L42
+Vd?Tck9k7PZJ?7`o:G<Oa53
+R7
+32
+Z40 !s108 1547832688.337000
+Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/const84.vhd|
+Z42 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/const84.vhd|
+R11
+R12
+!s100 UKlREiNJlLO]koC773z9U2
+Asyn
+R2
+R3
+DEx4 work 7 const84 0 22 d?Tck9k7PZJ?7`o:G<Oa53
+l68
+L50
+V_H2?^Bc0ca=?@iU3P:JIm3
+R7
+32
+R40
+R41
+R42
+R11
+R12
+!s100 ASEJnUA;IXcX_79LbJ3@g0
+Econst87
+Z43 w1547831946
+R2
+R3
+R4
+Z44 8C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/const87.vhd
+Z45 FC:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/const87.vhd
+l0
+L42
+VB5NN<kL^27[AhejF@D5bF1
+R7
+32
+Z46 !s108 1547832688.429000
+Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/const87.vhd|
+Z48 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/const87.vhd|
+R11
+R12
+!s100 aSb6FKO<eb7`zZcEoVdf=1
+Asyn
+R2
+R3
+DEx4 work 7 const87 0 22 B5NN<kL^27[AhejF@D5bF1
+l68
+L50
+V066eQ=d6jfG=SA9?DL:k<3
+R7
+32
+R46
+R47
+R48
+R11
+R12
+!s100 LTOhaG3@cKkPgC]WOFQJ?0
+Ed_ff
+Z49 w1543925531
+R2
+R3
+R4
+Z50 8C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/D_FF.vhd
+Z51 FC:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/D_FF.vhd
+l0
+L42
+VVikoa;=e[N_39<O0IZjdU3
+R7
+32
+Z52 !s108 1547832689.364000
+Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/D_FF.vhd|
+Z54 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/D_FF.vhd|
+R11
+R12
+!s100 Z^LU6eWKO>YMF7US11dWO0
+Asyn
+R2
+R3
+DEx4 work 4 d_ff 0 22 Vikoa;=e[N_39<O0IZjdU3
+l77
+L55
+VBA[Tf3X16aiY2>D6f6]>l2
+R7
+32
+R52
+R53
+R54
+R11
+R12
+!s100 GVR24fH;b1i88V^>JgRS51
+Edout_reg
+Z55 w1547197275
+R2
+R3
+R4
+Z56 8C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/DOUT_REG.vhd
+Z57 FC:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/DOUT_REG.vhd
+l0
+L42
+VEAXn0KLgbGN4N^B=nl=Bg3
+R7
+32
+Z58 !s108 1547832690.185000
+Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/DOUT_REG.vhd|
+Z60 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/DOUT_REG.vhd|
+R11
+R12
+!s100 j0B4<CF@_634:S8CNc`B41
+Asyn
+R2
+R3
+DEx4 work 8 dout_reg 0 22 EAXn0KLgbGN4N^B=nl=Bg3
+l75
+L54
+V4Hb8VddDPMWlg^]e10TO:2
+R7
+32
+R58
+R59
+R60
+R11
+R12
+!s100 >FE[[Sf]kP]DlJIO=bzS_3
+Eendtx_gen
+Z61 w1544105208
+R2
+R3
+R4
+Z62 8C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/endTX_gen.vhd
+Z63 FC:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/endTX_gen.vhd
+l0
+L4
+V=QN;9cIR9X^]jkM>>g3?I2
+R7
+32
+Z64 !s108 1547832689.455000
+Z65 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/endTX_gen.vhd|
+Z66 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/endTX_gen.vhd|
+R11
+R12
+!s100 C^Z9Io1dKV9d]l6Wca>In3
+Astructural
+R2
+R3
+DEx4 work 9 endtx_gen 0 22 =QN;9cIR9X^]jkM>>g3?I2
+l13
+L12
+VTkfiaLZQLlYKR5kgh8z9_3
+R7
+32
+R64
+R65
+R66
+R11
+R12
+!s100 SdFjOOLQ1P5ENP2GFd9hK1
+Elpm_counter0
+Z67 w1543241494
+R2
+R3
+R4
+Z68 8C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/lpm_counter0.vhd
+Z69 FC:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/lpm_counter0.vhd
+l0
+L42
+V`2O@i1_]NkaVZP2DURY7I1
+R7
+32
+Z70 !s108 1547832690.284000
+Z71 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/lpm_counter0.vhd|
+Z72 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/lpm_counter0.vhd|
+R11
+R12
+!s100 JOKgIJ`zLlg9:K;9Zn6XA3
+Asyn
+R2
+R3
+DEx4 work 12 lpm_counter0 0 22 `2O@i1_]NkaVZP2DURY7I1
+l74
+L53
+V@CB1d_;n18b6U?63nE@432
+R7
+32
+R70
+R71
+R72
+R11
+R12
+!s100 bBehB^1e4OOgE0FSGUnzn1
+Elpm_counter2
+Z73 w1543516969
+R2
+R3
+R4
+Z74 8C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/lpm_counter2.vhd
+Z75 FC:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/lpm_counter2.vhd
+l0
+L42
+Vz<<Rj^bYVUfXlhPZ^><?E0
+R7
+32
+Z76 !s108 1547832690.381000
+Z77 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/lpm_counter2.vhd|
+Z78 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/lpm_counter2.vhd|
+R11
+R12
+!s100 N=dzld_SiIRIRMFG0Vc_l0
+Asyn
+R2
+R3
+DEx4 work 12 lpm_counter2 0 22 z<<Rj^bYVUfXlhPZ^><?E0
+l78
+L55
+VFGKmWO1KWa5h<1oh_=^Q23
+R7
+32
+R76
+R77
+R78
+R11
+R12
+!s100 nWV0?z1]JSn[`;M<C0ke42
+Emain_adder
+R37
+R2
+R3
+R4
+Z79 8C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/main_adder.vhd
+Z80 FC:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/main_adder.vhd
+l0
+L42
+V<VR_`]EHedhUNJRj0ShcQ3
+R7
+32
+Z81 !s108 1547832688.610000
+Z82 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/main_adder.vhd|
+Z83 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/main_adder.vhd|
+R11
+R12
+!s100 <9A[0Oh62m9JoN`BOLnF@1
+Asyn
+R2
+R3
+DEx4 work 10 main_adder 0 22 <VR_`]EHedhUNJRj0ShcQ3
+l73
+L52
+VRNO^R^Vg6@>lGUQ;[T0JM1
+R7
+32
+R81
+R82
+R83
+R11
+R12
+!s100 ?0R<373S[Zk?P_RTiCN3H2
+Emainfsm
+Z84 w1547215706
+R2
+R3
+R4
+Z85 8C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/fsm.vhd
+Z86 FC:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/fsm.vhd
+l0
+L5
+VkAI3m0^NQiGk;7cAgiJN=2
+R7
+32
+Z87 !s108 1547832688.518000
+Z88 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/fsm.vhd|
+Z89 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/fsm.vhd|
+R11
+R12
+!s100 9Z1Ee@N_PH2S3m@1@1JjD2
+Amainfsmimp
+R2
+R3
+DEx4 work 7 mainfsm 0 22 kAI3m0^NQiGk;7cAgiJN=2
+l37
+L33
+VLN]TdaUjFKUO4I@?MdlYX3
+R7
+32
+R87
+R88
+R89
+R11
+R12
+!s100 2Pe=3791US^OWJ[4B_CCa1
+Emodelsim_test_uartrx
+Z90 w1544363903
+Z91 DPx4 ieee 11 numeric_std 0 22 k7B<7GmYYYmX;0X]XHFD10
+R2
+R3
+R4
+Z92 8C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/modelsim_test_uartRX.vhd
+Z93 FC:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/modelsim_test_uartRX.vhd
+l0
+L5
+V`[lgEZgOI1A4>hadJiKY[1
+R7
+32
+Z94 !s108 1547832690.478000
+Z95 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/modelsim_test_uartRX.vhd|
+Z96 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/modelsim_test_uartRX.vhd|
+R11
+R12
+!s100 5JCfnYo>4CG;SlA9KY6U[0
+Abehaviour
+R91
+R2
+R3
+DEx4 work 20 modelsim_test_uartrx 0 22 `[lgEZgOI1A4>hadJiKY[1
+l34
+L13
+Vm8hjY[4HdVz4g=:NO4UZi0
+R7
+32
+R94
+R95
+R96
+R11
+R12
+!s100 <GJ:S>zl9zM?0MkU9n1bU1
+Emodelsim_test_uarttx
+Z97 w1544353109
+R2
+R3
+R4
+Z98 8C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/modelsim_test_uartTX.vhd
+Z99 FC:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/modelsim_test_uartTX.vhd
+l0
+L4
+VlH`7me=TSjC?;lGJ8Pe;H2
+R7
+32
+Z100 !s108 1547832689.546000
+Z101 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/modelsim_test_uartTX.vhd|
+Z102 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/modelsim_test_uartTX.vhd|
+R11
+R12
+!s100 zE9<1X=0fdmC?88G8cBM41
+Abehaviour
+R2
+R3
+DEx4 work 20 modelsim_test_uarttx 0 22 lH`7me=TSjC?;lGJ8Pe;H2
+l23
+L8
+VLVRaN8SED8m13Mmz6e7E71
+R7
+32
+R100
+R101
+R102
+R11
+R12
+!s100 FT9Q=7]BoS5NN76B_XzAz2
+Eout_cmp
+Z103 w1547215718
+R2
+R3
+R4
+Z104 8C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/out_cmp.vhd
+Z105 FC:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/out_cmp.vhd
+l0
+L42
+VA69BD^;:azMnVmfnE>5F`0
+R7
+32
+Z106 !s108 1547832688.703000
+Z107 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/out_cmp.vhd|
+Z108 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/out_cmp.vhd|
+R11
+R12
+!s100 d4PE8OA`7heAlZmnmdQ;P3
+Asyn
+R2
+R3
+DEx4 work 7 out_cmp 0 22 A69BD^;:azMnVmfnE>5F`0
+l73
+L51
+VQUE8E[829lNal0]L0BIzg3
+R7
+32
+R106
+R107
+R108
+R11
+R12
+!s100 NR4IU;OhY;HaeK^MAThWT1
+Eout_mux
+Z109 w1547215720
+R1
+R2
+R3
+R4
+Z110 8C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/out_mux.vhd
+Z111 FC:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/out_mux.vhd
+l0
+L42
+VT^o_5d6XTn[WhA^VSgH@c0
+R7
+32
+Z112 !s108 1547832688.796000
+Z113 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/out_mux.vhd|
+Z114 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/out_mux.vhd|
+R11
+R12
+!s100 5Qz0_0P1>n[KfLT_2L@jG1
+Asyn
+R1
+R2
+R3
+DEx4 work 7 out_mux 0 22 T^o_5d6XTn[WhA^VSgH@c0
+l64
+L53
+VOMN4fb[Aa_;?XldeRVah70
+R7
+32
+R112
+R113
+R114
+R11
+R12
+!s100 3SfiWISRB7^dg2BXA]R>^1
+Ereg_in
+R109
+R2
+R3
+R4
+Z115 8C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/reg_in.vhd
+Z116 FC:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/reg_in.vhd
+l0
+L42
+VMe`[e`ObKfXZPKIadaI:b0
+R7
+32
+Z117 !s108 1547832688.893000
+Z118 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/reg_in.vhd|
+Z119 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/reg_in.vhd|
+R11
+R12
+!s100 7?8BSe=5H?Ezj0D>TYA;72
+Asyn
+R2
+R3
+DEx4 work 6 reg_in 0 22 Me`[e`ObKfXZPKIadaI:b0
+l77
+L55
+VMNLe5;Rl22j@11l0meL]Q0
+R7
+32
+R117
+R118
+R119
+R11
+R12
+!s100 [`k@eJM;JQ=_K??3?d:@n2
+Ereg_mux_in
+R109
+R1
+R2
+R3
+R4
+Z120 8C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/reg_mux_in.vhd
+Z121 FC:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/reg_mux_in.vhd
+l0
+L42
+V;CZgba5z_4Z5gk9W9ZK=d2
+R7
+32
+Z122 !s108 1547832688.985000
+Z123 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/reg_mux_in.vhd|
+Z124 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/reg_mux_in.vhd|
+R11
+R12
+!s100 Qd0@K?L@jOmLMZ_a:ehFl3
+Asyn
+R1
+R2
+R3
+DEx4 work 10 reg_mux_in 0 22 ;CZgba5z_4Z5gk9W9ZK=d2
+l64
+L53
+VgPzdiET=Lf7mmaa^fJ;6T1
+R7
+32
+R122
+R123
+R124
+R11
+R12
+!s100 4nRdZOa126Q]@_TV?7hTD0
+Ereg_out_mux
+Z125 w1547215722
+R1
+R2
+R3
+R4
+Z126 8C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/reg_out_mux.vhd
+Z127 FC:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/reg_out_mux.vhd
+l0
+L42
+VB1RCSa89<LB`D^Q9[o@gk1
+R7
+32
+Z128 !s108 1547832689.082000
+Z129 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/reg_out_mux.vhd|
+Z130 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/reg_out_mux.vhd|
+R11
+R12
+!s100 nlCihUdXI@=j]?Cl_5@372
+Asyn
+R1
+R2
+R3
+DEx4 work 11 reg_out_mux 0 22 B1RCSa89<LB`D^Q9[o@gk1
+l66
+L55
+VYl^mGC1G6YHLYE8cXfMQ02
+R7
+32
+R128
+R129
+R130
+R11
+R12
+!s100 5BHHTQAM5:2ClD6f7XZ671
+Estart_bit_detector
+Z131 w1543513678
+R2
+R3
+R4
+Z132 8C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/start_bit_detector.vhd
+Z133 FC:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/start_bit_detector.vhd
+l0
+L4
+V46[7dlDVk6obQ@=6OPoHL2
+R7
+32
+Z134 !s108 1547832690.593000
+Z135 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/start_bit_detector.vhd|
+Z136 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/start_bit_detector.vhd|
+R11
+R12
+!s100 UlUSjzYOmEMV3ghiz]NzG0
+Astructural
+R2
+R3
+DEx4 work 18 start_bit_detector 0 22 46[7dlDVk6obQ@=6OPoHL2
+l13
+L12
+V6@jeW[]a>gXjB8^Z8FFH[2
+R7
+32
+R134
+R135
+R136
+R11
+R12
+!s100 Z>lMEYG@KCg0M77CZJP7:2
+Eterminal_count_216
+Z137 w1544104291
+R2
+R3
+R4
+Z138 8C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/terminal_count_216.vhd
+Z139 FC:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/terminal_count_216.vhd
+l0
+L4
+Vk@=aKHzXDI<l;_LN_ISTB0
+R7
+32
+Z140 !s108 1547832689.634000
+Z141 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/terminal_count_216.vhd|
+Z142 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/terminal_count_216.vhd|
+R11
+R12
+!s100 L[ciTDEdFR=g=nB==B3`T1
+Astructural
+R2
+R3
+DEx4 work 18 terminal_count_216 0 22 k@=aKHzXDI<l;_LN_ISTB0
+l13
+L12
+V`UzKEGUA>?1bnUnT``mLG0
+R7
+32
+R140
+R141
+R142
+R11
+R12
+!s100 b@e:D?m3`DE0njOgd?5P>3
+Eterminal_counter_12
+Z143 w1543513702
+R2
+R3
+R4
+Z144 8C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/terminal_counter_12.vhd
+Z145 FC:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/terminal_counter_12.vhd
+l0
+L4
+V]^GR>VMH;P:HF>5@ZLDoD1
+R7
+32
+Z146 !s108 1547832690.790000
+Z147 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/terminal_counter_12.vhd|
+Z148 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/terminal_counter_12.vhd|
+R11
+R12
+!s100 2dMFLEPm;i<VbLWGI1U7e1
+Astructural
+R2
+R3
+DEx4 work 19 terminal_counter_12 0 22 ]^GR>VMH;P:HF>5@ZLDoD1
+l13
+L12
+V][Ee5iV`8EP9c0oOij_iK0
+R7
+32
+R146
+R147
+R148
+R11
+R12
+!s100 N1IK^HOSU^lcaXE0^K[[h3
+Eterminal_counter_26
+Z149 w1543513699
+R2
+R3
+R4
+Z150 8C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/terminal_counter_26.vhd
+Z151 FC:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/terminal_counter_26.vhd
+l0
+L4
+V7f=Rz0gBi9lND3?I@Z8gn2
+R7
+32
+Z152 !s108 1547832690.898000
+Z153 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/terminal_counter_26.vhd|
+Z154 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/terminal_counter_26.vhd|
+R11
+R12
+!s100 kVTVld96O4PEX<96ZfebS3
+Astructural
+R2
+R3
+DEx4 work 19 terminal_counter_26 0 22 7f=Rz0gBi9lND3?I@Z8gn2
+l13
+L12
+VbSQ7FYXU3Um1UG[f?I1e50
+R7
+32
+R152
+R153
+R154
+R11
+R12
+!s100 cg6G4f0X7Wa_;148zba_Y3
+Eterminal_counter_8
+Z155 w1543513709
+R2
+R3
+R4
+Z156 8C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/terminal_counter_8.vhd
+Z157 FC:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/terminal_counter_8.vhd
+l0
+L4
+V49MMJMOX:BX:Q[=S8h4N>2
+R7
+32
+Z158 !s108 1547832690.694000
+Z159 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/terminal_counter_8.vhd|
+Z160 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/terminal_counter_8.vhd|
+R11
+R12
+!s100 c1`<9OWbKDOSDR<F3XRaF1
+Astructural
+R2
+R3
+DEx4 work 18 terminal_counter_8 0 22 49MMJMOX:BX:Q[=S8h4N>2
+l13
+L12
+V[Ehd=]`cm[Bz^z2^h?bC:1
+R7
+32
+R158
+R159
+R160
+R11
+R12
+!s100 GP:bM[=K1F`aECWlzZo350
+Etester
+R125
+Z161 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+R2
+R3
+R4
+Z162 8C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/tester.vhd
+Z163 FC:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/tester.vhd
+l0
+L5
+VRG3WRoMD`RchCRD4U3kmW0
+R7
+32
+Z164 !s108 1547832689.177000
+Z165 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/tester.vhd|
+Z166 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/ASCIIConverter/ASCIIConverter_modelsim/tester.vhd|
+R11
+R12
+!s100 mZb8i>_m;fZ:DE`CNZin23
+Aimp
+R161
+R2
+R3
+DEx4 work 6 tester 0 22 RG3WRoMD`RchCRD4U3kmW0
+l64
+L8
+V9gEKZ[bgliGPaX]ElYeST0
+R7
+32
+R164
+R165
+R166
+R11
+R12
+!s100 4:JcLG[OYN7nXG7^Q3e6B0
+Etx_reg
+Z167 w1543925616
+R2
+R3
+R4
+Z168 8C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/TX_REG.vhd
+Z169 FC:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/TX_REG.vhd
+l0
+L42
+V_K1998:cZcdoNMUnPV?7P1
+R7
+32
+Z170 !s108 1547832689.725000
+Z171 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/TX_REG.vhd|
+Z172 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/TX_REG.vhd|
+R11
+R12
+!s100 zoQXJVm0>CJI:NmQd[hNI0
+Asyn
+R2
+R3
+DEx4 work 6 tx_reg 0 22 _K1998:cZcdoNMUnPV?7P1
+l82
+L57
+VLj^7[IliFE[UWfdJ0nmI21
+R7
+32
+R170
+R171
+R172
+R11
+R12
+!s100 K58aK8IFi@AieJe4`oEdF3
+Euartrx
+Z173 w1543576960
+R2
+R3
+R4
+Z174 8C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/uartRX.vhd
+Z175 FC:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/uartRX.vhd
+l0
+L24
+VT;f9P^=;AhAMK;;nm[mUl1
+R7
+32
+Z176 !s108 1547832690.985000
+Z177 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/uartRX.vhd|
+Z178 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/uartRX.vhd|
+R11
+R12
+!s100 H;[YiPnWk1XI35^ecdXId3
+Abdf_type
+R2
+R3
+DEx4 work 6 uartrx 0 22 T;f9P^=;AhAMK;;nm[mUl1
+l97
+L36
+VUFGTn2zaS]W6UXI1CFlF32
+R7
+32
+R176
+R177
+R178
+R11
+R12
+!s100 B6n2P7Ao9LKgllGH6;_HV3
+Euartrx_cu
+Z179 w1547375117
+R2
+R3
+R4
+Z180 8C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/uartRX_CU.vhd
+Z181 FC:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/uartRX_CU.vhd
+l0
+L4
+VbMCk4BK]MBZa950RYk5Hm2
+R7
+32
+Z182 !s108 1547832691.090000
+Z183 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/uartRX_CU.vhd|
+Z184 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/uartRX_CU.vhd|
+R11
+R12
+!s100 `gz4LGb9JHC4z7cXZHRe:0
+Abehavioural
+R2
+R3
+DEx4 work 9 uartrx_cu 0 22 bMCk4BK]MBZa950RYk5Hm2
+l30
+L19
+VD9Ge>[]7i1YM=<`lXORMb3
+R7
+32
+R182
+R183
+R184
+R11
+R12
+!s100 36h0MI1eOZILndT6khnL13
+Euartrx_dp
+Z185 w1547832629
+R2
+R3
+R4
+Z186 8C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/uartRX_DP.vhd
+Z187 FC:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/uartRX_DP.vhd
+l0
+L24
+V:Y6n7Kdc?Yn4?BB[Wb7j02
+R7
+32
+Z188 !s108 1547832691.187000
+Z189 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/uartRX_DP.vhd|
+Z190 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/uartRX_DP.vhd|
+R11
+R12
+!s100 U9;K9R0c9?]CZcbOJjz_Y1
+Abdf_type
+R2
+R3
+DEx4 work 9 uartrx_dp 0 22 :Y6n7Kdc?Yn4?BB[Wb7j02
+l122
+L47
+V@3KBMJUFfMA43MWV7LQ]A3
+R7
+32
+R188
+R189
+R190
+R11
+R12
+!s100 N0H0H_KFe[GeEn;OI<JdH1
+Euarttx
+Z191 w1544105316
+R2
+R3
+R4
+Z192 8C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/uartTX.vhd
+Z193 FC:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/uartTX.vhd
+l0
+L24
+V^d<VPTifSDT7laWQYzPD81
+R7
+32
+Z194 !s108 1547832689.817000
+Z195 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/uartTX.vhd|
+Z196 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/uartTX.vhd|
+R11
+R12
+!s100 AFUJ5NheKLc[bH1BnL1V53
+Abdf_type
+R2
+R3
+DEx4 work 6 uarttx 0 22 ^d<VPTifSDT7laWQYzPD81
+l79
+L36
+VnDADG8LISk168c02LgR`51
+R7
+32
+R194
+R195
+R196
+R11
+R12
+!s100 nJ_<h1z_J2_P^dYF<IN;>3
+Euarttx_cu
+Z197 w1544285561
+R2
+R3
+R4
+Z198 8C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/uartTX_CU.vhd
+Z199 FC:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/uartTX_CU.vhd
+l0
+L4
+V;jfKDn_fT6l@ChaJ97D^W3
+R7
+32
+Z200 !s108 1547832689.909000
+Z201 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/uartTX_CU.vhd|
+Z202 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/uartTX_CU.vhd|
+R11
+R12
+!s100 C8dTd[7h]AiBcSW1Tm=gB1
+Abehavioural
+R2
+R3
+DEx4 work 9 uarttx_cu 0 22 ;jfKDn_fT6l@ChaJ97D^W3
+l26
+L19
+V2nRZ3`mcBBk:TZjIkb8Tz3
+R7
+32
+R200
+R201
+R202
+R11
+R12
+!s100 ]ghiRS=dDLWRIo5R1fQ@?3
+Euarttx_dp
+Z203 w1544105260
+R2
+R3
+R4
+Z204 8C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/uartTX_DP.vhd
+Z205 FC:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/uartTX_DP.vhd
+l0
+L24
+VKk2Z<iY52GfO87E?Rf^i^3
+R7
+32
+Z206 !s108 1547832690.002000
+Z207 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/uartTX_DP.vhd|
+Z208 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/uartTX/uartTX_modelsim/uartTX_DP.vhd|
+R11
+R12
+!s100 PH^oKTQ]gP1JkSCCQk54:2
+Abdf_type
+R2
+R3
+DEx4 work 9 uarttx_dp 0 22 Kk2Z<iY52GfO87E?Rf^i^3
+l94
+L42
+V5:Zn82=;zD8FiA<12nS880
+R7
+32
+R206
+R207
+R208
+R11
+R12
+!s100 ;Udn=iUzj4BM_cJ37Z;Um3
+Evoter
+Z209 w1543514454
+R2
+R3
+R4
+Z210 8C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/voter.vhd
+Z211 FC:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/voter.vhd
+l0
+L4
+VO=eK>igAdXPl?[fc]kW>K1
+!s100 _mI]ZnXngMK[];F@C1D3z1
+R7
+32
+Z212 !s108 1547832691.287000
+Z213 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/voter.vhd|
+Z214 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/uartRX/uartRX_modelsim/voter.vhd|
+R11
+R12
+Astructural
+R2
+R3
+DEx4 work 5 voter 0 22 O=eK>igAdXPl?[fc]kW>K1
+l13
+L12
+V<=81898`Ob1>9:ATY07DN0
+!s100 2<6^h[;1X=WAX:UnId4J;1
+R7
+32
+R212
+R213
+R214
+R11
+R12

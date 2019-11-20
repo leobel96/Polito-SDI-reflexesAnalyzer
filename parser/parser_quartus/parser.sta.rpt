@@ -1,0 +1,910 @@
+TimeQuest Timing Analyzer report for parser
+Wed Jan 02 15:20:19 2019
+Quartus II 32-bit Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'CK'
+ 12. Slow Model Hold: 'CK'
+ 13. Slow Model Minimum Pulse Width: 'CK'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'CK'
+ 24. Fast Model Hold: 'CK'
+ 25. Fast Model Minimum Pulse Width: 'CK'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                    ;
++--------------------+-----------------------------------------------------------------+
+; Quartus II Version ; Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition ;
+; Revision Name      ; parser                                                          ;
+; Device Family      ; Cyclone II                                                      ;
+; Device Name        ; EP2C35F672C6                                                    ;
+; Timing Models      ; Final                                                           ;
+; Delay Model        ; Combined                                                        ;
+; Rise/Fall Delays   ; Unavailable                                                     ;
++--------------------+-----------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; CK         ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CK }  ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 399.68 MHz ; 399.68 MHz      ; CK         ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; CK    ; -1.502 ; -9.138        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CK    ; 0.391 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; CK    ; -1.380 ; -18.380               ;
++-------+--------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CK'                                                                                                                                                                                                               ;
++--------+---------------------------------------------------------------------------+---------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                 ; To Node                                                                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------------------------------------+---------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.502 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 1.000        ; 0.000      ; 2.538      ;
+; -1.500 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 1.000        ; 0.000      ; 2.536      ;
+; -1.434 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 1.000        ; 0.000      ; 2.470      ;
+; -1.389 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7] ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 1.000        ; 0.000      ; 2.425      ;
+; -1.382 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 1.000        ; 0.000      ; 2.418      ;
+; -1.380 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 1.000        ; 0.000      ; 2.416      ;
+; -1.361 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 1.000        ; 0.000      ; 2.397      ;
+; -1.359 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 1.000        ; 0.000      ; 2.395      ;
+; -1.319 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 1.000        ; 0.000      ; 2.355      ;
+; -1.317 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 1.000        ; 0.000      ; 2.353      ;
+; -1.301 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1] ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 1.000        ; 0.000      ; 2.337      ;
+; -1.242 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2] ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 1.000        ; 0.000      ; 2.278      ;
+; -1.217 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 1.000        ; 0.000      ; 2.253      ;
+; -1.215 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 1.000        ; 0.000      ; 2.251      ;
+; -1.087 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0] ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 1.000        ; 0.000      ; 2.123      ;
+; -1.046 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 1.000        ; 0.000      ; 2.082      ;
+; -1.044 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 1.000        ; 0.000      ; 2.080      ;
+; -1.023 ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]    ; CK           ; CK          ; 1.000        ; 0.000      ; 2.059      ;
+; -1.023 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 1.000        ; 0.000      ; 2.059      ;
+; -1.022 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5] ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 1.000        ; 0.000      ; 2.058      ;
+; -0.993 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4] ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 1.000        ; 0.000      ; 2.029      ;
+; -0.978 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3] ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 1.000        ; 0.000      ; 2.014      ;
+; -0.974 ; parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]    ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 1.000        ; 0.000      ; 2.010      ;
+; -0.972 ; parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]    ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 1.000        ; 0.000      ; 2.008      ;
+; -0.851 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6] ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 1.000        ; 0.000      ; 1.887      ;
+; -0.761 ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]    ; CK           ; CK          ; 1.000        ; 0.000      ; 1.797      ;
+; -0.758 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 1.000        ; 0.000      ; 1.794      ;
+; -0.599 ; parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]    ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 1.000        ; 0.000      ; 1.635      ;
+; -0.413 ; parser_CU:inst|PRESENT_STATE.RESET                                        ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR                                    ; CK           ; CK          ; 1.000        ; 0.000      ; 1.449      ;
+; -0.399 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1] ; CK           ; CK          ; 1.000        ; 0.000      ; 1.435      ;
+; -0.399 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2] ; CK           ; CK          ; 1.000        ; 0.000      ; 1.435      ;
+; -0.399 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0] ; CK           ; CK          ; 1.000        ; 0.000      ; 1.435      ;
+; -0.399 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7] ; CK           ; CK          ; 1.000        ; 0.000      ; 1.435      ;
+; -0.399 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5] ; CK           ; CK          ; 1.000        ; 0.000      ; 1.435      ;
+; -0.399 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3] ; CK           ; CK          ; 1.000        ; 0.000      ; 1.435      ;
+; -0.399 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4] ; CK           ; CK          ; 1.000        ; 0.000      ; 1.435      ;
+; -0.399 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6] ; CK           ; CK          ; 1.000        ; 0.000      ; 1.435      ;
+; -0.360 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 1.000        ; 0.000      ; 1.396      ;
+; -0.338 ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR                                    ; CK           ; CK          ; 1.000        ; 0.000      ; 1.374      ;
+; -0.271 ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR                                    ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR                                    ; CK           ; CK          ; 1.000        ; 0.000      ; 1.307      ;
+; -0.259 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 1.000        ; 0.000      ; 1.295      ;
+; -0.257 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 1.000        ; 0.000      ; 1.293      ;
+; -0.257 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 1.000        ; 0.000      ; 1.293      ;
+; -0.094 ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; parser_CU:inst|PRESENT_STATE.DONE_STATE_AV                                ; CK           ; CK          ; 1.000        ; 0.000      ; 1.130      ;
+; -0.025 ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR                                    ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; CK           ; CK          ; 1.000        ; 0.000      ; 1.061      ;
+; 0.042  ; parser_CU:inst|PRESENT_STATE.DONE_STATE_AV                                ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR_AV                                 ; CK           ; CK          ; 1.000        ; 0.000      ; 0.994      ;
+; 0.225  ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 1.000        ; 0.000      ; 0.811      ;
+; 0.245  ; parser_CU:inst|PRESENT_STATE.RESET                                        ; parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]    ; CK           ; CK          ; 1.000        ; 0.000      ; 0.791      ;
+; 0.249  ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR_AV                                 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; CK           ; CK          ; 1.000        ; 0.000      ; 0.787      ;
+; 0.379  ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR_AV                                 ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR_AV                                 ; CK           ; CK          ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]    ; parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]    ; CK           ; CK          ; 1.000        ; 0.000      ; 0.657      ;
++--------+---------------------------------------------------------------------------+---------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CK'                                                                                                                                                                                                               ;
++-------+---------------------------------------------------------------------------+---------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                 ; To Node                                                                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------------------------------------+---------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]    ; parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]    ; CK           ; CK          ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR_AV                                 ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR_AV                                 ; CK           ; CK          ; 0.000        ; 0.000      ; 0.657      ;
+; 0.521 ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR_AV                                 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; CK           ; CK          ; 0.000        ; 0.000      ; 0.787      ;
+; 0.525 ; parser_CU:inst|PRESENT_STATE.RESET                                        ; parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]    ; CK           ; CK          ; 0.000        ; 0.000      ; 0.791      ;
+; 0.545 ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 0.000        ; 0.000      ; 0.811      ;
+; 0.728 ; parser_CU:inst|PRESENT_STATE.DONE_STATE_AV                                ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR_AV                                 ; CK           ; CK          ; 0.000        ; 0.000      ; 0.994      ;
+; 0.795 ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR                                    ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; CK           ; CK          ; 0.000        ; 0.000      ; 1.061      ;
+; 0.864 ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; parser_CU:inst|PRESENT_STATE.DONE_STATE_AV                                ; CK           ; CK          ; 0.000        ; 0.000      ; 1.130      ;
+; 1.027 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 0.000        ; 0.000      ; 1.293      ;
+; 1.027 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 0.000        ; 0.000      ; 1.293      ;
+; 1.029 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 0.000        ; 0.000      ; 1.295      ;
+; 1.041 ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR                                    ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR                                    ; CK           ; CK          ; 0.000        ; 0.000      ; 1.307      ;
+; 1.108 ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR                                    ; CK           ; CK          ; 0.000        ; 0.000      ; 1.374      ;
+; 1.128 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 0.000        ; 0.000      ; 1.394      ;
+; 1.130 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 0.000        ; 0.000      ; 1.396      ;
+; 1.169 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.435      ;
+; 1.169 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.435      ;
+; 1.169 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.435      ;
+; 1.169 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.435      ;
+; 1.169 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.435      ;
+; 1.169 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.435      ;
+; 1.169 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.435      ;
+; 1.169 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.435      ;
+; 1.183 ; parser_CU:inst|PRESENT_STATE.RESET                                        ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR                                    ; CK           ; CK          ; 0.000        ; 0.000      ; 1.449      ;
+; 1.369 ; parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]    ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 0.000        ; 0.000      ; 1.635      ;
+; 1.414 ; parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]    ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 0.000        ; 0.000      ; 1.680      ;
+; 1.526 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 0.000        ; 0.000      ; 1.792      ;
+; 1.528 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 0.000        ; 0.000      ; 1.794      ;
+; 1.531 ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]    ; CK           ; CK          ; 0.000        ; 0.000      ; 1.797      ;
+; 1.621 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6] ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 0.000        ; 0.000      ; 1.887      ;
+; 1.666 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 0.000        ; 0.000      ; 1.932      ;
+; 1.744 ; parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]    ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 0.000        ; 0.000      ; 2.010      ;
+; 1.748 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3] ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 0.000        ; 0.000      ; 2.014      ;
+; 1.763 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4] ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 0.000        ; 0.000      ; 2.029      ;
+; 1.792 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5] ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 0.000        ; 0.000      ; 2.058      ;
+; 1.793 ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]    ; CK           ; CK          ; 0.000        ; 0.000      ; 2.059      ;
+; 1.808 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 0.000        ; 0.000      ; 2.074      ;
+; 1.816 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 0.000        ; 0.000      ; 2.082      ;
+; 1.837 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 0.000        ; 0.000      ; 2.103      ;
+; 1.857 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0] ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 0.000        ; 0.000      ; 2.123      ;
+; 1.902 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 0.000        ; 0.000      ; 2.168      ;
+; 1.987 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 0.000        ; 0.000      ; 2.253      ;
+; 2.012 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2] ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 0.000        ; 0.000      ; 2.278      ;
+; 2.057 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 0.000        ; 0.000      ; 2.323      ;
+; 2.071 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1] ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 0.000        ; 0.000      ; 2.337      ;
+; 2.089 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 0.000        ; 0.000      ; 2.355      ;
+; 2.116 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 0.000        ; 0.000      ; 2.382      ;
+; 2.131 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 0.000        ; 0.000      ; 2.397      ;
+; 2.152 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 0.000        ; 0.000      ; 2.418      ;
+; 2.159 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7] ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 0.000        ; 0.000      ; 2.425      ;
+; 2.272 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 0.000        ; 0.000      ; 2.538      ;
++-------+---------------------------------------------------------------------------+---------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CK'                                                                                                                       ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                    ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CK    ; Rise       ; CK                                                                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; parser_CU:inst|PRESENT_STATE.DONE_STATE_AV                                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; parser_CU:inst|PRESENT_STATE.DONE_STATE_AV                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; parser_CU:inst|PRESENT_STATE.RESET                                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; parser_CU:inst|PRESENT_STATE.RESET                                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR                                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR                                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR_AV                                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR_AV                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; CK|combout                                                                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; CK|combout                                                                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; CK~clkctrl|inclk[0]                                                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; CK~clkctrl|inclk[0]                                                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; CK~clkctrl|outclk                                                         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; CK~clkctrl|outclk                                                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[0]|clk                            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[0]|clk                            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst|LPM_SHIFTREG_component|dffs[0]|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst|LPM_SHIFTREG_component|dffs[0]|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst|LPM_SHIFTREG_component|dffs[1]|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst|LPM_SHIFTREG_component|dffs[1]|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst|LPM_SHIFTREG_component|dffs[2]|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst|LPM_SHIFTREG_component|dffs[2]|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst|LPM_SHIFTREG_component|dffs[3]|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst|LPM_SHIFTREG_component|dffs[3]|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst|LPM_SHIFTREG_component|dffs[4]|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst|LPM_SHIFTREG_component|dffs[4]|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst|LPM_SHIFTREG_component|dffs[5]|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst|LPM_SHIFTREG_component|dffs[5]|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst|LPM_SHIFTREG_component|dffs[6]|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst|LPM_SHIFTREG_component|dffs[6]|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst|LPM_SHIFTREG_component|dffs[7]|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst|LPM_SHIFTREG_component|dffs[7]|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst|PRESENT_STATE.DONE_STATE_AV|clk                                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst|PRESENT_STATE.DONE_STATE_AV|clk                                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst|PRESENT_STATE.DONE_STATE|clk                                         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst|PRESENT_STATE.DONE_STATE|clk                                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst|PRESENT_STATE.RESET|clk                                              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst|PRESENT_STATE.RESET|clk                                              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst|PRESENT_STATE.STORE_CHAR|clk                                         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst|PRESENT_STATE.STORE_CHAR|clk                                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst|PRESENT_STATE.TOGGLE_FF_AV|clk                                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst|PRESENT_STATE.TOGGLE_FF_AV|clk                                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst|PRESENT_STATE.TOGGLE_FF|clk                                          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst|PRESENT_STATE.TOGGLE_FF|clk                                          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst|PRESENT_STATE.WAIT_CHAR_AV|clk                                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst|PRESENT_STATE.WAIT_CHAR_AV|clk                                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst|PRESENT_STATE.WAIT_CHAR|clk                                          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst|PRESENT_STATE.WAIT_CHAR|clk                                          ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Setup Times                                                            ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; CHARIN[*]  ; CK         ; 4.464 ; 4.464 ; Rise       ; CK              ;
+;  CHARIN[0] ; CK         ; 3.656 ; 3.656 ; Rise       ; CK              ;
+;  CHARIN[1] ; CK         ; 3.737 ; 3.737 ; Rise       ; CK              ;
+;  CHARIN[2] ; CK         ; 3.523 ; 3.523 ; Rise       ; CK              ;
+;  CHARIN[3] ; CK         ; 4.043 ; 4.043 ; Rise       ; CK              ;
+;  CHARIN[4] ; CK         ; 3.525 ; 3.525 ; Rise       ; CK              ;
+;  CHARIN[5] ; CK         ; 4.317 ; 4.317 ; Rise       ; CK              ;
+;  CHARIN[6] ; CK         ; 3.563 ; 3.563 ; Rise       ; CK              ;
+;  CHARIN[7] ; CK         ; 4.464 ; 4.464 ; Rise       ; CK              ;
+; RST        ; CK         ; 0.077 ; 0.077 ; Rise       ; CK              ;
+; START      ; CK         ; 0.450 ; 0.450 ; Rise       ; CK              ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Hold Times                                                               ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; CHARIN[*]  ; CK         ; -3.293 ; -3.293 ; Rise       ; CK              ;
+;  CHARIN[0] ; CK         ; -3.426 ; -3.426 ; Rise       ; CK              ;
+;  CHARIN[1] ; CK         ; -3.507 ; -3.507 ; Rise       ; CK              ;
+;  CHARIN[2] ; CK         ; -3.293 ; -3.293 ; Rise       ; CK              ;
+;  CHARIN[3] ; CK         ; -3.813 ; -3.813 ; Rise       ; CK              ;
+;  CHARIN[4] ; CK         ; -3.295 ; -3.295 ; Rise       ; CK              ;
+;  CHARIN[5] ; CK         ; -4.087 ; -4.087 ; Rise       ; CK              ;
+;  CHARIN[6] ; CK         ; -3.333 ; -3.333 ; Rise       ; CK              ;
+;  CHARIN[7] ; CK         ; -4.234 ; -4.234 ; Rise       ; CK              ;
+; RST        ; CK         ; 0.436  ; 0.436  ; Rise       ; CK              ;
+; START      ; CK         ; 0.386  ; 0.386  ; Rise       ; CK              ;
++------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; CMD[*]    ; CK         ; 7.387 ; 7.387 ; Rise       ; CK              ;
+;  CMD[0]   ; CK         ; 6.667 ; 6.667 ; Rise       ; CK              ;
+;  CMD[1]   ; CK         ; 7.387 ; 7.387 ; Rise       ; CK              ;
+; CMDAV     ; CK         ; 8.107 ; 8.107 ; Rise       ; CK              ;
+; DONE      ; CK         ; 8.386 ; 8.386 ; Rise       ; CK              ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; CMD[*]    ; CK         ; 6.667 ; 6.667 ; Rise       ; CK              ;
+;  CMD[0]   ; CK         ; 6.667 ; 6.667 ; Rise       ; CK              ;
+;  CMD[1]   ; CK         ; 7.078 ; 7.078 ; Rise       ; CK              ;
+; CMDAV     ; CK         ; 7.799 ; 7.799 ; Rise       ; CK              ;
+; DONE      ; CK         ; 8.103 ; 8.103 ; Rise       ; CK              ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; CK    ; -0.135 ; -0.298        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CK    ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; CK    ; -1.380 ; -18.380               ;
++-------+--------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CK'                                                                                                                                                                                                               ;
++--------+---------------------------------------------------------------------------+---------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                 ; To Node                                                                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------------------------------------+---------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.135 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 1.000        ; 0.000      ; 1.167      ;
+; -0.110 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 1.000        ; 0.000      ; 1.142      ;
+; -0.086 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 1.000        ; 0.000      ; 1.118      ;
+; -0.081 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 1.000        ; 0.000      ; 1.113      ;
+; -0.080 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 1.000        ; 0.000      ; 1.112      ;
+; -0.061 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 1.000        ; 0.000      ; 1.093      ;
+; -0.056 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 1.000        ; 0.000      ; 1.088      ;
+; -0.053 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7] ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 1.000        ; 0.000      ; 1.085      ;
+; -0.048 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 1.000        ; 0.000      ; 1.080      ;
+; -0.023 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 1.000        ; 0.000      ; 1.055      ;
+; -0.014 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 1.000        ; 0.000      ; 1.046      ;
+; -0.009 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1] ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 1.000        ; 0.000      ; 1.041      ;
+; 0.005  ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]    ; CK           ; CK          ; 1.000        ; 0.000      ; 1.027      ;
+; 0.011  ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 1.000        ; 0.000      ; 1.021      ;
+; 0.020  ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2] ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 1.000        ; 0.000      ; 1.012      ;
+; 0.056  ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 1.000        ; 0.000      ; 0.976      ;
+; 0.073  ; parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]    ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 1.000        ; 0.000      ; 0.959      ;
+; 0.075  ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0] ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 1.000        ; 0.000      ; 0.957      ;
+; 0.081  ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 1.000        ; 0.000      ; 0.951      ;
+; 0.098  ; parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]    ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 1.000        ; 0.000      ; 0.934      ;
+; 0.101  ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 1.000        ; 0.000      ; 0.931      ;
+; 0.109  ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5] ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 1.000        ; 0.000      ; 0.923      ;
+; 0.111  ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]    ; CK           ; CK          ; 1.000        ; 0.000      ; 0.921      ;
+; 0.111  ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4] ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 1.000        ; 0.000      ; 0.921      ;
+; 0.128  ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3] ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 1.000        ; 0.000      ; 0.904      ;
+; 0.151  ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6] ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 1.000        ; 0.000      ; 0.881      ;
+; 0.160  ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 1.000        ; 0.000      ; 0.872      ;
+; 0.259  ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1] ; CK           ; CK          ; 1.000        ; 0.000      ; 0.773      ;
+; 0.259  ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2] ; CK           ; CK          ; 1.000        ; 0.000      ; 0.773      ;
+; 0.259  ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0] ; CK           ; CK          ; 1.000        ; 0.000      ; 0.773      ;
+; 0.259  ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7] ; CK           ; CK          ; 1.000        ; 0.000      ; 0.773      ;
+; 0.259  ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5] ; CK           ; CK          ; 1.000        ; 0.000      ; 0.773      ;
+; 0.259  ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3] ; CK           ; CK          ; 1.000        ; 0.000      ; 0.773      ;
+; 0.259  ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4] ; CK           ; CK          ; 1.000        ; 0.000      ; 0.773      ;
+; 0.259  ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6] ; CK           ; CK          ; 1.000        ; 0.000      ; 0.773      ;
+; 0.280  ; parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]    ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 1.000        ; 0.000      ; 0.752      ;
+; 0.326  ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 1.000        ; 0.000      ; 0.706      ;
+; 0.360  ; parser_CU:inst|PRESENT_STATE.RESET                                        ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR                                    ; CK           ; CK          ; 1.000        ; 0.000      ; 0.672      ;
+; 0.388  ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR                                    ; CK           ; CK          ; 1.000        ; 0.000      ; 0.644      ;
+; 0.403  ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 1.000        ; 0.000      ; 0.629      ;
+; 0.404  ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 1.000        ; 0.000      ; 0.628      ;
+; 0.410  ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 1.000        ; 0.000      ; 0.622      ;
+; 0.430  ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR                                    ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR                                    ; CK           ; CK          ; 1.000        ; 0.000      ; 0.602      ;
+; 0.466  ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; parser_CU:inst|PRESENT_STATE.DONE_STATE_AV                                ; CK           ; CK          ; 1.000        ; 0.000      ; 0.566      ;
+; 0.519  ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR                                    ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; CK           ; CK          ; 1.000        ; 0.000      ; 0.513      ;
+; 0.548  ; parser_CU:inst|PRESENT_STATE.DONE_STATE_AV                                ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR_AV                                 ; CK           ; CK          ; 1.000        ; 0.000      ; 0.484      ;
+; 0.625  ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 1.000        ; 0.000      ; 0.407      ;
+; 0.637  ; parser_CU:inst|PRESENT_STATE.RESET                                        ; parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]    ; CK           ; CK          ; 1.000        ; 0.000      ; 0.395      ;
+; 0.642  ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR_AV                                 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; CK           ; CK          ; 1.000        ; 0.000      ; 0.390      ;
+; 0.665  ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR_AV                                 ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR_AV                                 ; CK           ; CK          ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665  ; parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]    ; parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]    ; CK           ; CK          ; 1.000        ; 0.000      ; 0.367      ;
++--------+---------------------------------------------------------------------------+---------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CK'                                                                                                                                                                                                               ;
++-------+---------------------------------------------------------------------------+---------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                 ; To Node                                                                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------------------------------------+---------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]    ; parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]    ; CK           ; CK          ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR_AV                                 ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR_AV                                 ; CK           ; CK          ; 0.000        ; 0.000      ; 0.367      ;
+; 0.238 ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR_AV                                 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; CK           ; CK          ; 0.000        ; 0.000      ; 0.390      ;
+; 0.243 ; parser_CU:inst|PRESENT_STATE.RESET                                        ; parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]    ; CK           ; CK          ; 0.000        ; 0.000      ; 0.395      ;
+; 0.255 ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 0.000        ; 0.000      ; 0.407      ;
+; 0.332 ; parser_CU:inst|PRESENT_STATE.DONE_STATE_AV                                ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR_AV                                 ; CK           ; CK          ; 0.000        ; 0.000      ; 0.484      ;
+; 0.361 ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR                                    ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; CK           ; CK          ; 0.000        ; 0.000      ; 0.513      ;
+; 0.414 ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; parser_CU:inst|PRESENT_STATE.DONE_STATE_AV                                ; CK           ; CK          ; 0.000        ; 0.000      ; 0.566      ;
+; 0.450 ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR                                    ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR                                    ; CK           ; CK          ; 0.000        ; 0.000      ; 0.602      ;
+; 0.470 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 0.000        ; 0.000      ; 0.622      ;
+; 0.476 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 0.000        ; 0.000      ; 0.628      ;
+; 0.477 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 0.000        ; 0.000      ; 0.629      ;
+; 0.492 ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR                                    ; CK           ; CK          ; 0.000        ; 0.000      ; 0.644      ;
+; 0.520 ; parser_CU:inst|PRESENT_STATE.RESET                                        ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR                                    ; CK           ; CK          ; 0.000        ; 0.000      ; 0.672      ;
+; 0.529 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 0.000        ; 0.000      ; 0.681      ;
+; 0.554 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 0.000        ; 0.000      ; 0.706      ;
+; 0.600 ; parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]    ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 0.000        ; 0.000      ; 0.752      ;
+; 0.621 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.773      ;
+; 0.621 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.773      ;
+; 0.621 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.773      ;
+; 0.621 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.773      ;
+; 0.621 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.773      ;
+; 0.621 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.773      ;
+; 0.621 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.773      ;
+; 0.621 ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.773      ;
+; 0.627 ; parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]    ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 0.000        ; 0.000      ; 0.779      ;
+; 0.695 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 0.000        ; 0.000      ; 0.847      ;
+; 0.720 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 0.000        ; 0.000      ; 0.872      ;
+; 0.729 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6] ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 0.000        ; 0.000      ; 0.881      ;
+; 0.752 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3] ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 0.000        ; 0.000      ; 0.904      ;
+; 0.756 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 0.000        ; 0.000      ; 0.908      ;
+; 0.769 ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]    ; CK           ; CK          ; 0.000        ; 0.000      ; 0.921      ;
+; 0.769 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4] ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 0.000        ; 0.000      ; 0.921      ;
+; 0.771 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5] ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 0.000        ; 0.000      ; 0.923      ;
+; 0.796 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 0.000        ; 0.000      ; 0.948      ;
+; 0.798 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 0.000        ; 0.000      ; 0.950      ;
+; 0.805 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0] ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 0.000        ; 0.000      ; 0.957      ;
+; 0.807 ; parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]    ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 0.000        ; 0.000      ; 0.959      ;
+; 0.824 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 0.000        ; 0.000      ; 0.976      ;
+; 0.832 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 0.000        ; 0.000      ; 0.984      ;
+; 0.860 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2] ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 0.000        ; 0.000      ; 1.012      ;
+; 0.875 ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]    ; CK           ; CK          ; 0.000        ; 0.000      ; 1.027      ;
+; 0.887 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 0.000        ; 0.000      ; 1.039      ;
+; 0.889 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1] ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 0.000        ; 0.000      ; 1.041      ;
+; 0.894 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 0.000        ; 0.000      ; 1.046      ;
+; 0.916 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ; CK           ; CK          ; 0.000        ; 0.000      ; 1.068      ;
+; 0.928 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 0.000        ; 0.000      ; 1.080      ;
+; 0.933 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7] ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ; CK           ; CK          ; 0.000        ; 0.000      ; 1.085      ;
+; 0.961 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 0.000        ; 0.000      ; 1.113      ;
+; 0.966 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 0.000        ; 0.000      ; 1.118      ;
+; 1.015 ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1] ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ; CK           ; CK          ; 0.000        ; 0.000      ; 1.167      ;
++-------+---------------------------------------------------------------------------+---------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CK'                                                                                                                       ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                    ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CK    ; Rise       ; CK                                                                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; parser_CU:inst|PRESENT_STATE.DONE_STATE                                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; parser_CU:inst|PRESENT_STATE.DONE_STATE_AV                                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; parser_CU:inst|PRESENT_STATE.DONE_STATE_AV                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; parser_CU:inst|PRESENT_STATE.RESET                                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; parser_CU:inst|PRESENT_STATE.RESET                                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; parser_CU:inst|PRESENT_STATE.STORE_CHAR                                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF                                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; parser_CU:inst|PRESENT_STATE.TOGGLE_FF_AV                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR                                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR                                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR_AV                                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; parser_CU:inst|PRESENT_STATE.WAIT_CHAR_AV                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; CK|combout                                                                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; CK|combout                                                                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; CK~clkctrl|inclk[0]                                                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; CK~clkctrl|inclk[0]                                                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; CK~clkctrl|outclk                                                         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; CK~clkctrl|outclk                                                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[0]|clk                            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[0]|clk                            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst|LPM_SHIFTREG_component|dffs[0]|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst|LPM_SHIFTREG_component|dffs[0]|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst|LPM_SHIFTREG_component|dffs[1]|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst|LPM_SHIFTREG_component|dffs[1]|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst|LPM_SHIFTREG_component|dffs[2]|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst|LPM_SHIFTREG_component|dffs[2]|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst|LPM_SHIFTREG_component|dffs[3]|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst|LPM_SHIFTREG_component|dffs[3]|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst|LPM_SHIFTREG_component|dffs[4]|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst|LPM_SHIFTREG_component|dffs[4]|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst|LPM_SHIFTREG_component|dffs[5]|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst|LPM_SHIFTREG_component|dffs[5]|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst|LPM_SHIFTREG_component|dffs[6]|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst|LPM_SHIFTREG_component|dffs[6]|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst|LPM_SHIFTREG_component|dffs[7]|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst|LPM_SHIFTREG_component|dffs[7]|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst|PRESENT_STATE.DONE_STATE_AV|clk                                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst|PRESENT_STATE.DONE_STATE_AV|clk                                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst|PRESENT_STATE.DONE_STATE|clk                                         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst|PRESENT_STATE.DONE_STATE|clk                                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst|PRESENT_STATE.RESET|clk                                              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst|PRESENT_STATE.RESET|clk                                              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst|PRESENT_STATE.STORE_CHAR|clk                                         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst|PRESENT_STATE.STORE_CHAR|clk                                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst|PRESENT_STATE.TOGGLE_FF_AV|clk                                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst|PRESENT_STATE.TOGGLE_FF_AV|clk                                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst|PRESENT_STATE.TOGGLE_FF|clk                                          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst|PRESENT_STATE.TOGGLE_FF|clk                                          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst|PRESENT_STATE.WAIT_CHAR_AV|clk                                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst|PRESENT_STATE.WAIT_CHAR_AV|clk                                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst|PRESENT_STATE.WAIT_CHAR|clk                                          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst|PRESENT_STATE.WAIT_CHAR|clk                                          ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Setup Times                                                              ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; CHARIN[*]  ; CK         ; 2.448  ; 2.448  ; Rise       ; CK              ;
+;  CHARIN[0] ; CK         ; 1.984  ; 1.984  ; Rise       ; CK              ;
+;  CHARIN[1] ; CK         ; 2.065  ; 2.065  ; Rise       ; CK              ;
+;  CHARIN[2] ; CK         ; 1.914  ; 1.914  ; Rise       ; CK              ;
+;  CHARIN[3] ; CK         ; 2.219  ; 2.219  ; Rise       ; CK              ;
+;  CHARIN[4] ; CK         ; 1.911  ; 1.911  ; Rise       ; CK              ;
+;  CHARIN[5] ; CK         ; 2.389  ; 2.389  ; Rise       ; CK              ;
+;  CHARIN[6] ; CK         ; 1.934  ; 1.934  ; Rise       ; CK              ;
+;  CHARIN[7] ; CK         ; 2.448  ; 2.448  ; Rise       ; CK              ;
+; RST        ; CK         ; -0.266 ; -0.266 ; Rise       ; CK              ;
+; START      ; CK         ; -0.088 ; -0.088 ; Rise       ; CK              ;
++------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Hold Times                                                               ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; CHARIN[*]  ; CK         ; -1.791 ; -1.791 ; Rise       ; CK              ;
+;  CHARIN[0] ; CK         ; -1.864 ; -1.864 ; Rise       ; CK              ;
+;  CHARIN[1] ; CK         ; -1.945 ; -1.945 ; Rise       ; CK              ;
+;  CHARIN[2] ; CK         ; -1.794 ; -1.794 ; Rise       ; CK              ;
+;  CHARIN[3] ; CK         ; -2.099 ; -2.099 ; Rise       ; CK              ;
+;  CHARIN[4] ; CK         ; -1.791 ; -1.791 ; Rise       ; CK              ;
+;  CHARIN[5] ; CK         ; -2.269 ; -2.269 ; Rise       ; CK              ;
+;  CHARIN[6] ; CK         ; -1.814 ; -1.814 ; Rise       ; CK              ;
+;  CHARIN[7] ; CK         ; -2.328 ; -2.328 ; Rise       ; CK              ;
+; RST        ; CK         ; 0.518  ; 0.518  ; Rise       ; CK              ;
+; START      ; CK         ; 0.445  ; 0.445  ; Rise       ; CK              ;
++------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; CMD[*]    ; CK         ; 4.080 ; 4.080 ; Rise       ; CK              ;
+;  CMD[0]   ; CK         ; 3.776 ; 3.776 ; Rise       ; CK              ;
+;  CMD[1]   ; CK         ; 4.080 ; 4.080 ; Rise       ; CK              ;
+; CMDAV     ; CK         ; 4.390 ; 4.390 ; Rise       ; CK              ;
+; DONE      ; CK         ; 4.569 ; 4.569 ; Rise       ; CK              ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; CMD[*]    ; CK         ; 3.776 ; 3.776 ; Rise       ; CK              ;
+;  CMD[0]   ; CK         ; 3.776 ; 3.776 ; Rise       ; CK              ;
+;  CMD[1]   ; CK         ; 3.949 ; 3.949 ; Rise       ; CK              ;
+; CMDAV     ; CK         ; 4.258 ; 4.258 ; Rise       ; CK              ;
+; DONE      ; CK         ; 4.449 ; 4.449 ; Rise       ; CK              ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                          ;
++------------------+--------+-------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -1.502 ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+;  CK              ; -1.502 ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+; Design-wide TNS  ; -9.138 ; 0.0   ; 0.0      ; 0.0     ; -18.38              ;
+;  CK              ; -9.138 ; 0.000 ; N/A      ; N/A     ; -18.380             ;
++------------------+--------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------+
+; Setup Times                                                            ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; CHARIN[*]  ; CK         ; 4.464 ; 4.464 ; Rise       ; CK              ;
+;  CHARIN[0] ; CK         ; 3.656 ; 3.656 ; Rise       ; CK              ;
+;  CHARIN[1] ; CK         ; 3.737 ; 3.737 ; Rise       ; CK              ;
+;  CHARIN[2] ; CK         ; 3.523 ; 3.523 ; Rise       ; CK              ;
+;  CHARIN[3] ; CK         ; 4.043 ; 4.043 ; Rise       ; CK              ;
+;  CHARIN[4] ; CK         ; 3.525 ; 3.525 ; Rise       ; CK              ;
+;  CHARIN[5] ; CK         ; 4.317 ; 4.317 ; Rise       ; CK              ;
+;  CHARIN[6] ; CK         ; 3.563 ; 3.563 ; Rise       ; CK              ;
+;  CHARIN[7] ; CK         ; 4.464 ; 4.464 ; Rise       ; CK              ;
+; RST        ; CK         ; 0.077 ; 0.077 ; Rise       ; CK              ;
+; START      ; CK         ; 0.450 ; 0.450 ; Rise       ; CK              ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Hold Times                                                               ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; CHARIN[*]  ; CK         ; -1.791 ; -1.791 ; Rise       ; CK              ;
+;  CHARIN[0] ; CK         ; -1.864 ; -1.864 ; Rise       ; CK              ;
+;  CHARIN[1] ; CK         ; -1.945 ; -1.945 ; Rise       ; CK              ;
+;  CHARIN[2] ; CK         ; -1.794 ; -1.794 ; Rise       ; CK              ;
+;  CHARIN[3] ; CK         ; -2.099 ; -2.099 ; Rise       ; CK              ;
+;  CHARIN[4] ; CK         ; -1.791 ; -1.791 ; Rise       ; CK              ;
+;  CHARIN[5] ; CK         ; -2.269 ; -2.269 ; Rise       ; CK              ;
+;  CHARIN[6] ; CK         ; -1.814 ; -1.814 ; Rise       ; CK              ;
+;  CHARIN[7] ; CK         ; -2.328 ; -2.328 ; Rise       ; CK              ;
+; RST        ; CK         ; 0.518  ; 0.518  ; Rise       ; CK              ;
+; START      ; CK         ; 0.445  ; 0.445  ; Rise       ; CK              ;
++------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; CMD[*]    ; CK         ; 7.387 ; 7.387 ; Rise       ; CK              ;
+;  CMD[0]   ; CK         ; 6.667 ; 6.667 ; Rise       ; CK              ;
+;  CMD[1]   ; CK         ; 7.387 ; 7.387 ; Rise       ; CK              ;
+; CMDAV     ; CK         ; 8.107 ; 8.107 ; Rise       ; CK              ;
+; DONE      ; CK         ; 8.386 ; 8.386 ; Rise       ; CK              ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; CMD[*]    ; CK         ; 3.776 ; 3.776 ; Rise       ; CK              ;
+;  CMD[0]   ; CK         ; 3.776 ; 3.776 ; Rise       ; CK              ;
+;  CMD[1]   ; CK         ; 3.949 ; 3.949 ; Rise       ; CK              ;
+; CMDAV     ; CK         ; 4.258 ; 4.258 ; Rise       ; CK              ;
+; DONE      ; CK         ; 4.449 ; 4.449 ; Rise       ; CK              ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CK         ; CK       ; 60       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CK         ; CK       ; 60       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 10    ; 10   ;
+; Unconstrained Input Port Paths  ; 19    ; 19   ;
+; Unconstrained Output Ports      ; 4     ; 4    ;
+; Unconstrained Output Port Paths ; 8     ; 8    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit TimeQuest Timing Analyzer
+    Info: Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
+    Info: Processing started: Wed Jan 02 15:20:18 2019
+Info: Command: quartus_sta parser -c parser
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'parser.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CK CK
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.502
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.502        -9.138 CK 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 CK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -18.380 CK 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (306004): Started post-fitting delay annotation
+Warning (306006): Found 4 output pins without output pin load capacitance assignment
+    Info (306007): Pin "DONE" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "CMDAV" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "CMD[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "CMD[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+Info (306005): Delay annotation completed successfully
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.135
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.135        -0.298 CK 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 CK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -18.380 CK 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 32-bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 302 megabytes
+    Info: Processing ended: Wed Jan 02 15:20:19 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
+
+

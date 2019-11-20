@@ -1,0 +1,16 @@
+
+State Machine - |DE2_test_uartTX|presentState
+Name presentState.waitState presentState.writeState presentState.startTxState presentState.idle presentState.resetState 
+presentState.resetState 0 0 0 0 0 
+presentState.idle 0 0 0 1 1 
+presentState.startTxState 0 0 1 0 1 
+presentState.writeState 0 1 0 0 1 
+presentState.waitState 1 0 0 0 1 
+
+State Machine - |DE2_test_uartTX|uartTX:DUT|uartTX_CU:inst|PRESENT_STATE
+Name PRESENT_STATE.NEXT_TX PRESENT_STATE.START_TX PRESENT_STATE.LOAD PRESENT_STATE.IDLE PRESENT_STATE.RESET 
+PRESENT_STATE.RESET 0 0 0 0 0 
+PRESENT_STATE.IDLE 0 0 0 1 1 
+PRESENT_STATE.LOAD 0 0 1 0 1 
+PRESENT_STATE.START_TX 0 1 0 0 1 
+PRESENT_STATE.NEXT_TX 1 0 0 0 1 

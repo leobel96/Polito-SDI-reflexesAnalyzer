@@ -1,0 +1,137 @@
+LIBRARY ieee;
+USE ieee.STD_LOGIC_1164.all;
+
+ENTITY DE2_test_uartTX IS
+	PORT
+	(
+		CLOCK_50	:	IN	STD_LOGIC;
+		SW			:	IN	STD_LOGIC_VECTOR(11 DOWNTO 0);
+		
+		GPIO_1	:	OUT	STD_LOGIC_VECTOR(2 DOWNTO 0);
+		UART_TXD	:	OUT	STD_LOGIC;
+		LEDR		:	OUT	STD_LOGIC_VECTOR(11 DOWNTO 0);
+		LEDG		:	OUT	STD_LOGIC_VECTOR(7 DOWNTO 6)
+	);
+END ENTITY DE2_test_uartTX;
+
+
+ARCHITECTURE behavioural OF DE2_test_uartTX IS 
+
+	COMPONENT uartTX IS
+		PORT
+		(
+			CK		:	IN	STD_LOGIC;
+			RST	:	IN	STD_LOGIC;
+			
+			WR		:	IN	STD_LOGIC;
+			DIN	:	IN	STD_LOGIC_VECTOR(7 DOWNTO 0);
+			
+			TX		:	OUT	STD_LOGIC;
+			TXRDY	:	OUT	STD_LOGIC
+		);
+	END COMPONENT uartTX;
+
+	COMPONENT clockDiv2 IS
+		PORT
+		(
+			CK_in	:	IN	STD_LOGIC;
+			reset	:	IN	STD_LOGIC;
+			CK_out	:	OUT	STD_LOGIC
+		);
+	END COMPONENT clockDiv2;
+
+	TYPE STATE_TYPE IS (resetState, idle, startTxState, writeState, waitState);
+	SIGNAL presentState, nextState : STATE_TYPE;
+
+	SIGNAL TXRDY : STD_LOGIC;
+	SIGNAL reset : STD_LOGIC;
+	SIGNAL CK_25 : STD_LOGIC;
+	SIGNAL WR : STD_LOGIC;
+	SIGNAL DIN : STD_LOGIC_VECTOR (7 DOWNTO 0);
+	SIGNAL TX : STD_LOGIC;
+	SIGNAL startTx : STD_LOGIC;
+	SIGNAL endTx : STD_LOGIC;
+
+	BEGIN
+
+		LEDR <= SW;
+		
+		GPIO_1(0) <= CLOCK_50;
+		GPIO_1(1) <= CK_25;
+		
+		GPIO_1(2) <= TX;
+		
+		DIN <= SW(7 DOWNTO 0);
+		reset <= SW(9);
+		startTx <= SW(10);
+		endTx <= SW(11);
+		UART_TXD <= TX;
+		LEDG(7) <= TXRDY;
+		
+		clockDivider:clockDiv2 PORT MAP
+		(
+			CK_in	=>	CLOCK_50,
+			reset	=>	reset,
+			CK_out => CK_25
+		);
+
+		DUT:uartTX PORT MAP
+		(
+			CK => CK_25, 
+			WR => WR,
+			RST => reset,
+			DIN => DIN,
+			TX	=> TX,
+			TXRDY => TXRDY
+		);
+
+		stateUpdate:PROCESS (CK_25, reset) IS
+			BEGIN
+				IF reset = '1' THEN
+					presentState <= resetState;
+				ELSIF CK_25'EVENT AND CK_25 = '1' THEN
+					presentState <= nextState;
+				END IF;
+		END PROCESS stateUpdate;
+
+		stateProgression:PROCESS (presentState, TXRDY, startTx, endTx) IS
+			BEGIN
+			
+			WR  <= '0';
+
+			CASE (presentState) IS
+			
+				WHEN resetState =>
+					nextState <= idle;
+					
+				WHEN idle => 
+					IF TXRDY = '1' THEN
+						nextState <= startTxState;
+					ELSE
+						nextState <= idle;
+					END IF;
+					
+				WHEN startTxState => 
+					IF startTx = '1' THEN
+						nextState <= writeState;
+					ELSE
+						nextState <= startTxState;
+					END IF;
+				
+				WHEN writeState =>
+					WR <= '1';
+					nextState <= waitState;
+					
+				WHEN waitState =>
+					IF endTx = '1' THEN
+						nextState <= idle;
+					ELSE
+						nextState <= waitState;
+					END IF;
+					
+				WHEN OTHERS => 	
+					nextState <= idle; 
+			END CASE;
+		END PROCESS stateProgression;
+
+END ARCHITECTURE behavioural;

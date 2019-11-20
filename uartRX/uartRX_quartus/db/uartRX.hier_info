@@ -1,0 +1,359 @@
+|uartRX
+CK => uartRX_CU:inst6.CK
+CK => uartRX_DP:inst.CK
+RST => uartRX_CU:inst6.RST
+RD => uartRX_CU:inst6.RD
+RX => uartRX_DP:inst.RX
+
+
+|uartRX|uartRX_CU:inst6
+CK => PRESENT_STATE~1.DATAIN
+RST => PRESENT_STATE~3.DATAIN
+RD => NEXT_STATE.DATAB
+RD => NEXT_STATE.DATAA
+RD => Selector6.IN3
+RD => NEXT_STATE.DATAA
+RD => Selector5.IN2
+RD => NEXT_STATE.DATAB
+TC_8 => NEXT_STATE.OUTPUTSELECT
+TC_8 => NEXT_STATE.OUTPUTSELECT
+TC_8 => NEXT_STATE.DATAB
+TC_12 => NEXT_STATE.OUTPUTSELECT
+TC_12 => NEXT_STATE.OUTPUTSELECT
+TC_12 => NEXT_STATE.OUTPUTSELECT
+TC_12 => NEXT_STATE.OUTPUTSELECT
+TC_12 => NEXT_STATE.OUTPUTSELECT
+TC_26 => NEXT_STATE.OUTPUTSELECT
+TC_26 => NEXT_STATE.OUTPUTSELECT
+TC_26 => NEXT_STATE.DATAA
+TC_26 => NEXT_STATE.OUTPUTSELECT
+TC_26 => NEXT_STATE.OUTPUTSELECT
+TC_26 => NEXT_STATE.OUTPUTSELECT
+TC_26 => NEXT_STATE.OUTPUTSELECT
+TC_26 => Selector1.IN3
+TC_26 => NEXT_STATE.SHIFT_IN_3.DATAB
+TC_26 => Selector0.IN2
+TC_26 => Selector0.IN3
+TC_26 => NEXT_STATE.DATAA
+TC_26 => Selector4.IN2
+VOTER_OUT => NEXT_STATE.DATAB
+VOTER_OUT => NEXT_STATE.DATAB
+START_BIT_CHECK => NEXT_STATE.DATAB
+START_BIT_CHECK => NEXT_STATE.DATAB
+
+
+|uartRX|uartRX_DP:inst
+SCLEAR_ALL => RX_REG:inst8.sclr
+SCLEAR_ALL => CNT_8:inst3.sclr
+SCLEAR_ALL => CNT_12:inst15.sclr
+CK => RX_REG:inst8.clock
+CK => CNT_26:inst14.clock
+CK => CNT_8:inst3.clock
+CK => CNT_12:inst15.clock
+CK => DOUT_REG:inst9.clock
+EN_RX_REG => RX_REG:inst8.enable
+RX => RX_REG:inst8.shiftin
+SCLEAR_CNT_26 => CNT_26:inst14.sclr
+EN_CNT_26 => CNT_26:inst14.cnt_en
+EN_CNT_8 => CNT_8:inst3.cnt_en
+LOAD_CNT_12 => CNT_12:inst15.sload
+EN_CNT_12 => CNT_12:inst15.cnt_en
+SCLEAR_DOUT_REG => DOUT_REG:inst9.sclr
+EN_DOUT_REG => DOUT_REG:inst9.enable
+
+
+|uartRX|uartRX_DP:inst|voter:inst1
+Q_RX_REG[0] => ~NO_FANOUT~
+Q_RX_REG[1] => ~NO_FANOUT~
+Q_RX_REG[2] => VOTER_OUT.IN0
+Q_RX_REG[2] => VOTER_OUT.IN0
+Q_RX_REG[2] => VOTER_OUT.IN0
+Q_RX_REG[3] => VOTER_OUT.IN0
+Q_RX_REG[3] => VOTER_OUT.IN0
+Q_RX_REG[3] => VOTER_OUT.IN1
+Q_RX_REG[4] => VOTER_OUT.IN0
+Q_RX_REG[4] => VOTER_OUT.IN1
+Q_RX_REG[4] => VOTER_OUT.IN1
+Q_RX_REG[4] => VOTER_OUT.IN1
+Q_RX_REG[5] => VOTER_OUT.IN1
+Q_RX_REG[5] => VOTER_OUT.IN1
+Q_RX_REG[5] => VOTER_OUT.IN1
+Q_RX_REG[5] => VOTER_OUT.IN1
+Q_RX_REG[5] => VOTER_OUT.IN1
+Q_RX_REG[5] => VOTER_OUT.IN1
+Q_RX_REG[6] => VOTER_OUT.IN1
+Q_RX_REG[6] => VOTER_OUT.IN1
+Q_RX_REG[6] => VOTER_OUT.IN1
+Q_RX_REG[6] => VOTER_OUT.IN1
+Q_RX_REG[6] => VOTER_OUT.IN1
+Q_RX_REG[6] => VOTER_OUT.IN1
+Q_RX_REG[7] => ~NO_FANOUT~
+
+
+|uartRX|uartRX_DP:inst|RX_REG:inst8
+clock => lpm_shiftreg:LPM_SHIFTREG_component.clock
+enable => lpm_shiftreg:LPM_SHIFTREG_component.enable
+sclr => lpm_shiftreg:LPM_SHIFTREG_component.sclr
+shiftin => lpm_shiftreg:LPM_SHIFTREG_component.shiftin
+
+
+|uartRX|uartRX_DP:inst|RX_REG:inst8|lpm_shiftreg:LPM_SHIFTREG_component
+data[0] => _.IN1
+data[1] => _.IN1
+data[2] => _.IN1
+data[3] => _.IN1
+data[4] => _.IN1
+data[5] => _.IN1
+data[6] => _.IN1
+data[7] => _.IN1
+clock => dffs[7].CLK
+clock => dffs[6].CLK
+clock => dffs[5].CLK
+clock => dffs[4].CLK
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[7].ENA
+enable => dffs[6].ENA
+enable => dffs[5].ENA
+enable => dffs[4].ENA
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+shiftin => _.IN1
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+sclr => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+
+
+|uartRX|uartRX_DP:inst|start_bit_detector:inst
+Q_RX_REG[0] => START_BIT_CHECK.IN0
+Q_RX_REG[1] => START_BIT_CHECK.IN1
+Q_RX_REG[2] => START_BIT_CHECK.IN1
+Q_RX_REG[3] => START_BIT_CHECK.IN1
+Q_RX_REG[4] => START_BIT_CHECK.IN1
+Q_RX_REG[5] => START_BIT_CHECK.IN1
+Q_RX_REG[6] => START_BIT_CHECK.IN1
+Q_RX_REG[7] => START_BIT_CHECK.IN1
+
+
+|uartRX|uartRX_DP:inst|terminal_counter_26:inst4
+Q_CNT_26[0] => TC_26.IN0
+Q_CNT_26[1] => TC_26.IN1
+Q_CNT_26[2] => TC_26.IN1
+Q_CNT_26[3] => TC_26.IN1
+Q_CNT_26[4] => TC_26.IN1
+
+
+|uartRX|uartRX_DP:inst|CNT_26:inst14
+clock => lpm_counter:LPM_COUNTER_component.clock
+cnt_en => lpm_counter:LPM_COUNTER_component.cnt_en
+sclr => lpm_counter:LPM_COUNTER_component.sclr
+
+
+|uartRX|uartRX_DP:inst|CNT_26:inst14|lpm_counter:LPM_COUNTER_component
+clock => cntr_4oi:auto_generated.clock
+clk_en => ~NO_FANOUT~
+cnt_en => cntr_4oi:auto_generated.cnt_en
+updown => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => cntr_4oi:auto_generated.sclr
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+data[0] => ~NO_FANOUT~
+data[1] => ~NO_FANOUT~
+data[2] => ~NO_FANOUT~
+data[3] => ~NO_FANOUT~
+data[4] => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+
+
+|uartRX|uartRX_DP:inst|CNT_26:inst14|lpm_counter:LPM_COUNTER_component|cntr_4oi:auto_generated
+clock => counter_reg_bit1a[4].CLK
+clock => counter_reg_bit1a[3].CLK
+clock => counter_reg_bit1a[2].CLK
+clock => counter_reg_bit1a[1].CLK
+clock => counter_reg_bit1a[0].CLK
+cnt_en => _.IN1
+sclr => _.IN0
+sclr => _.IN0
+sclr => _.IN0
+
+
+|uartRX|uartRX_DP:inst|terminal_counter_8:inst5
+Q_CNT_8[0] => TC_8.IN0
+Q_CNT_8[1] => TC_8.IN1
+Q_CNT_8[2] => TC_8.IN1
+Q_CNT_8[3] => TC_8.IN1
+
+
+|uartRX|uartRX_DP:inst|CNT_8:inst3
+clock => lpm_counter:LPM_COUNTER_component.clock
+cnt_en => lpm_counter:LPM_COUNTER_component.cnt_en
+sclr => lpm_counter:LPM_COUNTER_component.sclr
+
+
+|uartRX|uartRX_DP:inst|CNT_8:inst3|lpm_counter:LPM_COUNTER_component
+clock => cntr_3oi:auto_generated.clock
+clk_en => ~NO_FANOUT~
+cnt_en => cntr_3oi:auto_generated.cnt_en
+updown => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => cntr_3oi:auto_generated.sclr
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+data[0] => ~NO_FANOUT~
+data[1] => ~NO_FANOUT~
+data[2] => ~NO_FANOUT~
+data[3] => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+
+
+|uartRX|uartRX_DP:inst|CNT_8:inst3|lpm_counter:LPM_COUNTER_component|cntr_3oi:auto_generated
+clock => counter_reg_bit1a[3].CLK
+clock => counter_reg_bit1a[2].CLK
+clock => counter_reg_bit1a[1].CLK
+clock => counter_reg_bit1a[0].CLK
+cnt_en => _.IN1
+sclr => _.IN0
+sclr => _.IN0
+sclr => _.IN0
+
+
+|uartRX|uartRX_DP:inst|terminal_counter_12:inst6
+Q_CNT_12[0] => TC_12.IN0
+Q_CNT_12[1] => TC_12.IN1
+Q_CNT_12[2] => TC_12.IN1
+Q_CNT_12[3] => TC_12.IN1
+
+
+|uartRX|uartRX_DP:inst|CNT_12:inst15
+clock => lpm_counter:LPM_COUNTER_component.clock
+cnt_en => lpm_counter:LPM_COUNTER_component.cnt_en
+data[0] => lpm_counter:LPM_COUNTER_component.data[0]
+data[1] => lpm_counter:LPM_COUNTER_component.data[1]
+data[2] => lpm_counter:LPM_COUNTER_component.data[2]
+data[3] => lpm_counter:LPM_COUNTER_component.data[3]
+sclr => lpm_counter:LPM_COUNTER_component.sclr
+sload => lpm_counter:LPM_COUNTER_component.sload
+
+
+|uartRX|uartRX_DP:inst|CNT_12:inst15|lpm_counter:LPM_COUNTER_component
+clock => cntr_gnj:auto_generated.clock
+clk_en => ~NO_FANOUT~
+cnt_en => cntr_gnj:auto_generated.cnt_en
+updown => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => cntr_gnj:auto_generated.sclr
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => cntr_gnj:auto_generated.sload
+data[0] => cntr_gnj:auto_generated.data[0]
+data[1] => cntr_gnj:auto_generated.data[1]
+data[2] => cntr_gnj:auto_generated.data[2]
+data[3] => cntr_gnj:auto_generated.data[3]
+cin => ~NO_FANOUT~
+
+
+|uartRX|uartRX_DP:inst|CNT_12:inst15|lpm_counter:LPM_COUNTER_component|cntr_gnj:auto_generated
+clock => counter_reg_bit1a[3].CLK
+clock => counter_reg_bit1a[2].CLK
+clock => counter_reg_bit1a[1].CLK
+clock => counter_reg_bit1a[0].CLK
+cnt_en => _.IN1
+data[0] => _.IN1
+data[1] => _.IN1
+data[2] => _.IN1
+data[3] => _.IN1
+sclr => _.IN0
+sclr => _.IN0
+sclr => _.IN0
+sload => _.IN1
+sload => counter_reg_bit1a[3].IN1
+
+
+|uartRX|uartRX_DP:inst|DOUT_REG:inst9
+clock => lpm_shiftreg:LPM_SHIFTREG_component.clock
+enable => lpm_shiftreg:LPM_SHIFTREG_component.enable
+sclr => lpm_shiftreg:LPM_SHIFTREG_component.sclr
+shiftin => lpm_shiftreg:LPM_SHIFTREG_component.shiftin
+
+
+|uartRX|uartRX_DP:inst|DOUT_REG:inst9|lpm_shiftreg:LPM_SHIFTREG_component
+data[0] => _.IN1
+data[1] => _.IN1
+data[2] => _.IN1
+data[3] => _.IN1
+data[4] => _.IN1
+data[5] => _.IN1
+data[6] => _.IN1
+data[7] => _.IN1
+clock => dffs[7].CLK
+clock => dffs[6].CLK
+clock => dffs[5].CLK
+clock => dffs[4].CLK
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[7].ENA
+enable => dffs[6].ENA
+enable => dffs[5].ENA
+enable => dffs[4].ENA
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+shiftin => _.IN1
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+sclr => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+
+

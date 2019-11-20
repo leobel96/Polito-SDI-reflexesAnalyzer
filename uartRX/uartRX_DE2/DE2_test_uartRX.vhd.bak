@@ -1,0 +1,74 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+
+entity BoardRX is
+port
+(
+	CLOCK_50 : in std_logic;
+	SW       : in std_logic_vector(17 downto 0);
+	GPIO_1   : out std_logic_vector(36 downto 0);
+	UART_RXD : in std_logic;
+	LEDR		: out std_logic_vector(17 downto 0);
+  LEDG		: out std_logic_vector(7 downto 0)
+);
+end entity;
+
+
+architecture behaviour of BoardRx is 
+
+component UartRX
+port
+(
+  CK :  IN  STD_LOGIC;
+  RD :  IN  STD_LOGIC;
+  RST :  IN  STD_LOGIC;
+  DOUT :  OUT  STD_LOGIC_VECTOR(7 DOWNTO 0);
+  RX :  IN  STD_LOGIC;
+  SCLEAR_DOUT_REG : OUT STD_LOGIC;
+  DAV :  OUT  STD_LOGIC
+);
+end component;
+
+component ClockDiv
+    port (
+      ck_50_in : in std_logic;
+      reset_in : in std_logic;
+      ck_25_out : out std_logic
+    );
+end component;
+
+signal Clk25 : std_logic;
+signal RD : std_logic;
+signal reset : std_logic;
+signal DOUT : std_logic_vector (7 downto 0);
+signal RX : std_logic;
+signal DAV, SCLEAR : std_logic;
+
+begin
+
+reset <= SW(9);
+LEDR(17 downto 1)<=SW(17 downto 1);
+RX <= UART_RXD;
+LEDG <= DOUT;
+LEDR(0) <= DAV;
+GPIO_1(0) <= UART_RXD;
+RD <= SW(8);
+GPIO_1(1)<=SCLEAR;
+
+CKDIV: ClockDiv port map 
+    (ck_50_in => CLOCK_50, 
+     reset_in =>NOT reset, 
+     ck_25_out => Clk25);
+
+
+DUT: uartRX PORT MAP
+		(CK => Clk25, 
+		 RD => RD,
+		 RST => reset,
+		 DOUT => DOUT,
+		 RX => RX,
+		 DAV => DAV,
+		 SCLEAR_DOUT_REG=>SCLEAR);
+
+end behaviour;

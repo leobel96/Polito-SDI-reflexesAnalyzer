@@ -1,0 +1,671 @@
+m255
+K3
+13
+cModel Technology
+dC:\Users\Edoardo Bollea\Desktop\RR_project\ASCIIConverter\ASCIIConverter_modelsim
+Eadd_45535
+Z0 w1547227850
+Z1 DPx3 std 6 textio 0 22 G^o2zK;Vh4eVdKTVo98653
+Z2 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z3 dC:\Users\Edoardo Bollea\Desktop\RR_project\reflexes\reflexes_modelsim
+Z4 8C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/ADD_45535.vhd
+Z5 FC:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/ADD_45535.vhd
+l0
+L42
+VHO?eThlQ42BWmBmFU9^om1
+Z6 OV;C;10.0c;49
+32
+Z7 !s108 1547833410.726000
+Z8 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/ADD_45535.vhd|
+Z9 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/ADD_45535.vhd|
+Z10 o-work work -2002 -explicit -O0
+Z11 tExplicit 1
+!s100 oUB7P_7=:BAL78Gj7imUS2
+Asyn
+R1
+R2
+DEx4 work 9 add_45535 0 22 HO?eThlQ42BWmBmFU9^om1
+l74
+L51
+VgRQSlb1L`9^AM_0k5Oi9a0
+R6
+32
+R7
+R8
+R9
+R10
+R11
+!s100 2YP6a<EFg?2[<@ZRZd5>C2
+Eand_15bit
+Z12 w1547227413
+Z13 DPx3 lpm 14 lpm_components 0 22 mRRNnLG1BL;^5k5IEBX593
+R1
+R2
+R3
+Z14 8C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/AND_15bit.vhd
+Z15 FC:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/AND_15bit.vhd
+l0
+L42
+V^LF0jh>oUJlI=BZ`L_jY<2
+R6
+32
+Z16 !s108 1547833410.825000
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/AND_15bit.vhd|
+Z18 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/AND_15bit.vhd|
+R10
+R11
+!s100 <Y`A4>j:lLf3a`5486h=L3
+Asyn
+R13
+R1
+R2
+DEx4 work 9 and_15bit 0 22 ^LF0jh>oUJlI=BZ`L_jY<2
+l88
+L65
+VAIlzCRz5HDV]6InfYo>Rm3
+R6
+32
+R16
+R17
+R18
+R10
+R11
+!s100 1NBUjoYHhlFBXPG27;[=n2
+Eand_16bit
+Z19 w1547227297
+R13
+R1
+R2
+R3
+Z20 8C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/AND_16bit.vhd
+Z21 FC:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/AND_16bit.vhd
+l0
+L42
+V=9h6R>T_9Lo_3Dcj17fLT1
+R6
+32
+Z22 !s108 1547833410.928000
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/AND_16bit.vhd|
+Z24 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/AND_16bit.vhd|
+R10
+R11
+!s100 aUM6^id:FgzN;>UmXn_R51
+Asyn
+R13
+R1
+R2
+DEx4 work 9 and_16bit 0 22 =9h6R>T_9Lo_3Dcj17fLT1
+l90
+L66
+VO0hj3oS<YSSNmKAhaVF6n3
+R6
+32
+R22
+R23
+R24
+R10
+R11
+!s100 PoJ0e^ICWBfmdeL>`mYe=1
+Ecnt_16bit
+Z25 w1547227066
+R1
+R2
+R3
+Z26 8C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/CNT_16bit.vhd
+Z27 FC:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/CNT_16bit.vhd
+l0
+L42
+VL>BW<F5?cN`0DFkE4eOIW3
+R6
+32
+Z28 !s108 1547833411.125000
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/CNT_16bit.vhd|
+Z30 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/CNT_16bit.vhd|
+R10
+R11
+!s100 GT_zF:9<fNliam?`nQWV;0
+Asyn
+R1
+R2
+DEx4 work 9 cnt_16bit 0 22 L>BW<F5?cN`0DFkE4eOIW3
+l78
+L55
+VkZ?Q2[>U;:[I^ik^ZV@[d1
+R6
+32
+R28
+R29
+R30
+R10
+R11
+!s100 2z5lT2VTK]8C5J8[ofDG53
+Ecnt_1ms
+Z31 w1547225681
+R1
+R2
+R3
+Z32 8C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/CNT_1ms.vhd
+Z33 FC:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/CNT_1ms.vhd
+l0
+L42
+V1bl>VG<S;cJH]0XOkf;@62
+R6
+32
+Z34 !s108 1547833411.029000
+Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/CNT_1ms.vhd|
+Z36 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/CNT_1ms.vhd|
+R10
+R11
+!s100 ^SFo6:0n@b?6AmSm[jlmG0
+Asyn
+R1
+R2
+DEx4 work 7 cnt_1ms 0 22 1bl>VG<S;cJH]0XOkf;@62
+l74
+L53
+VMzooWYZN1=DX8ejQjE_e21
+R6
+32
+R34
+R35
+R36
+R10
+R11
+!s100 EO_7bOHd>K59<4n5b^biQ3
+Edec_led
+Z37 w1547226264
+R1
+R2
+R3
+Z38 8C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/DEC_LED.vhd
+Z39 FC:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/DEC_LED.vhd
+l0
+L42
+VPQcLlYV0U00LF4GC^Sh4b0
+R6
+32
+Z40 !s108 1547833411.221000
+Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/DEC_LED.vhd|
+Z42 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/DEC_LED.vhd|
+R10
+R11
+!s100 WfNNR>J3oEmCE_<z2W:<h0
+Asyn
+R1
+R2
+DEx4 work 7 dec_led 0 22 PQcLlYV0U00LF4GC^Sh4b0
+l78
+L55
+VdfDb:o_kncPGITGgiQb>E1
+R6
+32
+R40
+R41
+R42
+R10
+R11
+!s100 TWP`NDd[^[lRFJSP@Of9L0
+Eff_1bit
+Z43 w1547228275
+R1
+R2
+R3
+Z44 8C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/FF_1bit.vhd
+Z45 FC:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/FF_1bit.vhd
+l0
+L42
+VnKPR_]Af`f[BD:Y`K[RDU2
+R6
+32
+Z46 !s108 1547833411.317000
+Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/FF_1bit.vhd|
+Z48 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/FF_1bit.vhd|
+R10
+R11
+!s100 TRj3;b<[?O[28@5aP]bli2
+Asyn
+R1
+R2
+DEx4 work 7 ff_1bit 0 22 nKPR_]Af`f[BD:Y`K[RDU2
+l74
+L52
+Va=`OY^SMVI?f>nZ34?Mhi1
+R6
+32
+R46
+R47
+R48
+R10
+R11
+!s100 gdDdafM]c0SFM[RLYJKh61
+Eff_button
+Z49 w1547225846
+R1
+R2
+R3
+Z50 8C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/FF_BUTTON.vhd
+Z51 FC:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/FF_BUTTON.vhd
+l0
+L42
+V@bNLbfI9`NIi=LfH3c5gg1
+R6
+32
+Z52 !s108 1547833411.414000
+Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/FF_BUTTON.vhd|
+Z54 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/FF_BUTTON.vhd|
+R10
+R11
+!s100 ]c^>h9kcdi>[L3=I0azGz1
+Asyn
+R1
+R2
+DEx4 work 9 ff_button 0 22 @bNLbfI9`NIi=LfH3c5gg1
+l76
+L53
+V<l@NZSN6I^SKPD99>UnAP2
+R6
+32
+R52
+R53
+R54
+R10
+R11
+!s100 ZYGAckbP:HLKgQ72Y01bC0
+Eff_lnum
+Z55 w1547491350
+R1
+R2
+R3
+Z56 8C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/FF_LNUM.vhd
+Z57 FC:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/FF_LNUM.vhd
+l0
+L42
+VNo^le=kf0MS9]HX<ni^mB2
+R6
+32
+Z58 !s108 1547833411.505000
+Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/FF_LNUM.vhd|
+Z60 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/FF_LNUM.vhd|
+R10
+R11
+!s100 `hSnXVno:P`nI`jUk`Gmj0
+Asyn
+R1
+R2
+DEx4 work 7 ff_lnum 0 22 No^le=kf0MS9]HX<ni^mB2
+l75
+L54
+VDFRd_VMD0iNoOe`NP6_CE0
+R6
+32
+R58
+R59
+R60
+R10
+R11
+!s100 NHjRTlWG05@X;L@ZM>o_o0
+Emult_10000
+Z61 w1547229287
+R1
+R2
+R3
+Z62 8C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/MULT_10000.vhd
+Z63 FC:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/MULT_10000.vhd
+l0
+L42
+VKKIAoSj=R66C:egG[9WWF2
+R6
+32
+Z64 !s108 1547833411.603000
+Z65 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/MULT_10000.vhd|
+Z66 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/MULT_10000.vhd|
+R10
+R11
+!s100 0iT]<AdhTaT>09[G5h9eP3
+Asyn
+R1
+R2
+DEx4 work 10 mult_10000 0 22 KKIAoSj=R66C:egG[9WWF2
+l75
+L51
+VZIN@=NoAZh899:;J^d=1S2
+R6
+32
+R64
+R65
+R66
+R10
+R11
+!s100 HQeIb[lkfen[C_TfmMR=i0
+Emux2to1_1bit
+Z67 w1547225266
+R1
+R2
+R3
+Z68 8C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/mux2to1_1bit.vhd
+Z69 FC:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/mux2to1_1bit.vhd
+l0
+L4
+VOhUM0HmmJEN><4Xan0n_l0
+R6
+32
+Z70 !s108 1547833411.801000
+Z71 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/mux2to1_1bit.vhd|
+Z72 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/mux2to1_1bit.vhd|
+R10
+R11
+!s100 dHJmk;;3bUgj_?UH>9IIg0
+Abehavioural
+R1
+R2
+DEx4 work 12 mux2to1_1bit 0 22 OhUM0HmmJEN><4Xan0n_l0
+l11
+L10
+V[m2gBdH<@;zNX91G3>5l[2
+R6
+32
+R70
+R71
+R72
+R10
+R11
+!s100 dEWiI:jl=c`=dghF<OdE41
+Emux4to1_1bit
+R67
+R1
+R2
+R3
+Z73 8C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/mux4to1_1bit.vhd
+Z74 FC:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/mux4to1_1bit.vhd
+l0
+L4
+VYZ9Vmf@`W>HZb7Kj?z`lK3
+R6
+32
+Z75 !s108 1547833411.910000
+Z76 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/mux4to1_1bit.vhd|
+Z77 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/mux4to1_1bit.vhd|
+R10
+R11
+!s100 =cDYXC?B:Fm59<2;?l8V[1
+Abehavioural
+R1
+R2
+DEx4 work 12 mux4to1_1bit 0 22 YZ9Vmf@`W>HZb7Kj?z`lK3
+l11
+L10
+Vz6WOTam7[HQ;3af2=WWPA2
+R6
+32
+R75
+R76
+R77
+R10
+R11
+!s100 ClOP3ghiQV4]>8>8N7naY0
+Emux_2to1
+R67
+R1
+R2
+R3
+Z78 8C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/mux_2to1.vhd
+Z79 FC:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/mux_2to1.vhd
+l0
+L4
+V5_CML4QjhL82zf_onD>mV2
+R6
+32
+Z80 !s108 1547833411.701000
+Z81 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/mux_2to1.vhd|
+Z82 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/mux_2to1.vhd|
+R10
+R11
+!s100 4X]zlN^eN93J2gC5Km`;40
+Abehavior
+R1
+R2
+DEx4 work 8 mux_2to1 0 22 5_CML4QjhL82zf_onD>mV2
+l12
+L11
+VJ[m;6TD0UMcM=<NllER^U1
+R6
+32
+R80
+R81
+R82
+R10
+R11
+!s100 FBUa018DHooR`[KE5801c0
+Erandom_10000
+Z83 w1547229544
+R1
+R2
+R3
+Z84 8C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/random_10000.vhd
+Z85 FC:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/random_10000.vhd
+l0
+L24
+VE;X`h>;o3BJ:FaJO9bh321
+R6
+32
+Z86 !s108 1547833412.022000
+Z87 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/random_10000.vhd|
+Z88 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/random_10000.vhd|
+R10
+R11
+!s100 01VE]X;OHON5j@PDYbNn`2
+Abdf_type
+R1
+R2
+DEx4 work 12 random_10000 0 22 E;X`h>;o3BJ:FaJO9bh321
+l104
+L33
+VoieU3Me9:KW`:Km`LS8AI2
+R6
+32
+R86
+R87
+R88
+R10
+R11
+!s100 `O<nHR3nLT8mUMYH?E<4M2
+Ereflexes
+Z89 w1547492891
+R1
+R2
+R3
+Z90 8C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/reflexes.vhd
+Z91 FC:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/reflexes.vhd
+l0
+L24
+VUFC^L34d=7[_Oo<8oNfZM3
+R6
+32
+Z92 !s108 1547833412.124000
+Z93 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/reflexes.vhd|
+Z94 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/reflexes.vhd|
+R10
+R11
+!s100 WXJ0^2^l`cXCbGH8HYHJH2
+Abdf_type
+R1
+R2
+DEx4 work 8 reflexes 0 22 UFC^L34d=7[_Oo<8oNfZM3
+l115
+L45
+Voe509ABKWF<a44@ABhUTl1
+R6
+32
+R92
+R93
+R94
+R10
+R11
+!s100 iGgB449clC^4W5a:hoea43
+Ereflexes_cu
+Z95 w1547492497
+R1
+R2
+R3
+Z96 8C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/reflexes_CU.vhd
+Z97 FC:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/reflexes_CU.vhd
+l0
+L4
+V0]QPiVZ^Bk1hBe5PTa9SS3
+R6
+32
+Z98 !s108 1547833412.223000
+Z99 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/reflexes_CU.vhd|
+Z100 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/reflexes_CU.vhd|
+R10
+R11
+!s100 <FOEjLl@3iG2gJ8Ujod873
+Abehavioural
+R1
+R2
+DEx4 work 11 reflexes_cu 0 22 0]QPiVZ^Bk1hBe5PTa9SS3
+l24
+L20
+VfO=oTEL@;5C1;^d3@HBWJ1
+R6
+32
+R98
+R99
+R100
+R10
+R11
+!s100 nJ`kb`d[gCKXn;P6ZQ65k1
+Ereflexes_dp
+Z101 w1547492538
+R1
+R2
+R3
+Z102 8C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/reflexes_dp.vhd
+Z103 FC:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/reflexes_dp.vhd
+l0
+L24
+VFHFb[c<@aMYC==fWhh:o:0
+R6
+32
+Z104 !s108 1547833412.316000
+Z105 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/reflexes_dp.vhd|
+Z106 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/reflexes_dp.vhd|
+R10
+R11
+!s100 WYl<JE7^<lB9TDai0C:k92
+Abdf_type
+R1
+R2
+DEx4 work 11 reflexes_dp 0 22 FHFb[c<@aMYC==fWhh:o:0
+l181
+L55
+VXIJ=iB14MK1jA8;zoUaKb2
+R6
+32
+R104
+R105
+R106
+R10
+R11
+!s100 E3hUzPSUoYY5JLBBG^V^<3
+Ershifter_14
+R67
+R1
+R2
+R3
+Z107 8C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/rshifter_14.vhd
+Z108 FC:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/rshifter_14.vhd
+l0
+L4
+VR4^_ke=NBzZHhW;K=S3jK1
+R6
+32
+Z109 !s108 1547833412.413000
+Z110 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/rshifter_14.vhd|
+Z111 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/rshifter_14.vhd|
+R10
+R11
+!s100 @OGN>Gk_n>iloY9HZHP8V3
+Astructural
+R1
+R2
+DEx4 work 11 rshifter_14 0 22 R4^_ke=NBzZHhW;K=S3jK1
+l10
+L9
+VZl=M1_oZ;Jo1b7R@loPC>1
+R6
+32
+R109
+R110
+R111
+R10
+R11
+!s100 RUUHz`gQVmb3Ej^zT=WJL1
+Etestbench
+Z112 w1547225263
+R1
+R2
+R3
+Z113 8C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/testbench.vhd
+Z114 FC:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/testbench.vhd
+l0
+L4
+VOFT64ZnWgXiW4bK=NNT>d1
+R6
+32
+Z115 !s108 1547833412.507000
+Z116 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/testbench.vhd|
+Z117 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/testbench.vhd|
+R10
+R11
+!s100 fIY3L?_lBfDFZ=DHe135G1
+Abehavioural
+R1
+R2
+DEx4 work 9 testbench 0 22 OFT64ZnWgXiW4bK=NNT>d1
+l32
+L7
+V=Hz]Ejd[e2c`imAB?WN^P1
+R6
+32
+R115
+R116
+R117
+R10
+R11
+!s100 Pmfja^L]=?a0E:=A^J79l2
+Exor_4bit
+Z118 w1547229433
+R13
+R1
+R2
+R3
+Z119 8C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/XOR_4bit.vhd
+Z120 FC:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/XOR_4bit.vhd
+l0
+L42
+VNW=d`BL2^4AERil=_FXGF1
+!s100 Xo3Q1baWkP261PfA<fT:E0
+R6
+32
+Z121 !s108 1547833412.610000
+Z122 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/XOR_4bit.vhd|
+Z123 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/reflexes/reflexes_modelsim/XOR_4bit.vhd|
+R10
+R11
+Asyn
+R13
+R1
+R2
+DEx4 work 8 xor_4bit 0 22 NW=d`BL2^4AERil=_FXGF1
+l66
+L54
+VjCAQIEeE`2VAPX4R]kNQ?2
+!s100 z;5LBYdR3gAXn@Kn]:Ggm2
+R6
+32
+R121
+R122
+R123
+R10
+R11

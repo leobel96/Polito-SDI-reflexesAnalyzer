@@ -1,0 +1,1108 @@
+Quartus II 32-bit
+Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
+14
+1343
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+DE2_test_uartRX
+# storage
+db|DE2_test_uartRX.(0).cnf
+db|DE2_test_uartRX.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+de2_test_uartrx.vhd
+4b86c4f5fb5eafe597fde55664a1bbcd
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+clockDiv2
+# storage
+db|DE2_test_uartRX.(1).cnf
+db|DE2_test_uartRX.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+clockdiv2.vhd
+96547ff3a8e8f231af1c41a371c308e
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+clockDiv2:clockDiv
+}
+# macro_sequence
+
+# end
+# entity
+lpm_shiftreg
+# storage
+db|DE2_test_uartRX.(7).cnf
+db|DE2_test_uartRX.(7).cnf
+# case_insensitive
+# source_file
+lpm_shiftreg.tdf
+785d51ce6e8bbbd53bb4aa58bf413de
+7
+# user_parameter {
+LPM_WIDTH
+8
+PARAMETER_SIGNED_DEC
+USR
+LPM_DIRECTION
+RIGHT
+PARAMETER_UNKNOWN
+USR
+LPM_AVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_SVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+DEVICE_FAMILY
+Cyclone II
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+shiftin
+-1
+3
+sclr
+-1
+3
+q7
+-1
+3
+q6
+-1
+3
+q5
+-1
+3
+q4
+-1
+3
+q3
+-1
+3
+q2
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+enable
+-1
+3
+clock
+-1
+3
+}
+# include_file {
+lpm_constant.inc
+97ffb7e3fef9ce9fce4eff8455d5da5
+dffeea.inc
+f11711657cd42ee78437f4349496034
+aglobal111.inc
+9cc1f9de5ad83fc94dd171c3f7986bd
+}
+# hierarchies {
+uartRX:DUT|uartRX_DP:inst|RX_REG:inst8|lpm_shiftreg:LPM_SHIFTREG_component
+uartRX:DUT|uartRX_DP:inst|DOUT_REG:inst9|lpm_shiftreg:LPM_SHIFTREG_component
+}
+# macro_sequence
+
+# end
+# entity
+lpm_counter
+# storage
+db|DE2_test_uartRX.(10).cnf
+db|DE2_test_uartRX.(10).cnf
+# case_insensitive
+# source_file
+lpm_counter.tdf
+b243fc5a1355e8ba9c5f2f8eae4612a
+7
+# user_parameter {
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+LPM_WIDTH
+5
+PARAMETER_SIGNED_DEC
+USR
+LPM_DIRECTION
+UP
+PARAMETER_UNKNOWN
+USR
+LPM_MODULUS
+0
+PARAMETER_UNKNOWN
+DEF
+LPM_AVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_SVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_PORT_UPDOWN
+PORT_UNUSED
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+Cyclone II
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN_LENGTH
+48
+CARRY_CHAIN_LENGTH
+USR
+NOT_GATE_PUSH_BACK
+ON
+NOT_GATE_PUSH_BACK
+USR
+CARRY_CNT_EN
+SMART
+PARAMETER_UNKNOWN
+DEF
+LABWIDE_SCLR
+ON
+PARAMETER_UNKNOWN
+DEF
+USE_NEW_VERSION
+TRUE
+PARAMETER_UNKNOWN
+DEF
+CBXI_PARAMETER
+cntr_4oi
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+sclr
+-1
+3
+q4
+-1
+3
+q3
+-1
+3
+q2
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+cnt_en
+-1
+3
+clock
+-1
+3
+}
+# include_file {
+lpm_constant.inc
+97ffb7e3fef9ce9fce4eff8455d5da5
+dffeea.inc
+f11711657cd42ee78437f4349496034
+aglobal111.inc
+9cc1f9de5ad83fc94dd171c3f7986bd
+alt_counter_stratix.inc
+3e1db420f0a6e888a1525f4eff14d5be
+lpm_compare.inc
+bbd3e8c93afb7320934629e5fb11566
+lpm_decode.inc
+10da69a8bbd590d66779e7a142f73790
+lpm_counter.inc
+c5cfeeabc5f2ab60b3453f6abbc42b41
+lpm_add_sub.inc
+144a73b61081a2a03554ff5acc5e8842
+cmpconst.inc
+fe4bfdfa5310384231b99c696fe2e348
+}
+# hierarchies {
+uartRX:DUT|uartRX_DP:inst|CNT_26:inst14|lpm_counter:LPM_COUNTER_component
+}
+# macro_sequence
+
+# end
+# entity
+cntr_4oi
+# storage
+db|DE2_test_uartRX.(11).cnf
+db|DE2_test_uartRX.(11).cnf
+# case_insensitive
+# source_file
+db|cntr_4oi.tdf
+974cc04c245e154cf3ced0f5954e74ff
+7
+# used_port {
+sclr
+-1
+3
+q4
+-1
+3
+q3
+-1
+3
+q2
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+cnt_en
+-1
+3
+clock
+-1
+3
+}
+# hierarchies {
+uartRX:DUT|uartRX_DP:inst|CNT_26:inst14|lpm_counter:LPM_COUNTER_component|cntr_4oi:auto_generated
+}
+# macro_sequence
+
+# end
+# entity
+lpm_counter
+# storage
+db|DE2_test_uartRX.(14).cnf
+db|DE2_test_uartRX.(14).cnf
+# case_insensitive
+# source_file
+lpm_counter.tdf
+b243fc5a1355e8ba9c5f2f8eae4612a
+7
+# user_parameter {
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+LPM_WIDTH
+4
+PARAMETER_SIGNED_DEC
+USR
+LPM_DIRECTION
+UP
+PARAMETER_UNKNOWN
+USR
+LPM_MODULUS
+0
+PARAMETER_UNKNOWN
+DEF
+LPM_AVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_SVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_PORT_UPDOWN
+PORT_UNUSED
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+Cyclone II
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN_LENGTH
+48
+CARRY_CHAIN_LENGTH
+USR
+NOT_GATE_PUSH_BACK
+ON
+NOT_GATE_PUSH_BACK
+USR
+CARRY_CNT_EN
+SMART
+PARAMETER_UNKNOWN
+DEF
+LABWIDE_SCLR
+ON
+PARAMETER_UNKNOWN
+DEF
+USE_NEW_VERSION
+TRUE
+PARAMETER_UNKNOWN
+DEF
+CBXI_PARAMETER
+cntr_3oi
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+sclr
+-1
+3
+q3
+-1
+3
+q2
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+cnt_en
+-1
+3
+clock
+-1
+3
+}
+# include_file {
+lpm_constant.inc
+97ffb7e3fef9ce9fce4eff8455d5da5
+dffeea.inc
+f11711657cd42ee78437f4349496034
+aglobal111.inc
+9cc1f9de5ad83fc94dd171c3f7986bd
+alt_counter_stratix.inc
+3e1db420f0a6e888a1525f4eff14d5be
+lpm_compare.inc
+bbd3e8c93afb7320934629e5fb11566
+lpm_decode.inc
+10da69a8bbd590d66779e7a142f73790
+lpm_counter.inc
+c5cfeeabc5f2ab60b3453f6abbc42b41
+lpm_add_sub.inc
+144a73b61081a2a03554ff5acc5e8842
+cmpconst.inc
+fe4bfdfa5310384231b99c696fe2e348
+}
+# hierarchies {
+uartRX:DUT|uartRX_DP:inst|CNT_8:inst3|lpm_counter:LPM_COUNTER_component
+}
+# macro_sequence
+
+# end
+# entity
+cntr_3oi
+# storage
+db|DE2_test_uartRX.(15).cnf
+db|DE2_test_uartRX.(15).cnf
+# case_insensitive
+# source_file
+db|cntr_3oi.tdf
+6a37f2f27d65c84f16bb17012ed4b6
+7
+# used_port {
+sclr
+-1
+3
+q3
+-1
+3
+q2
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+cnt_en
+-1
+3
+clock
+-1
+3
+}
+# hierarchies {
+uartRX:DUT|uartRX_DP:inst|CNT_8:inst3|lpm_counter:LPM_COUNTER_component|cntr_3oi:auto_generated
+}
+# macro_sequence
+
+# end
+# entity
+lpm_counter
+# storage
+db|DE2_test_uartRX.(18).cnf
+db|DE2_test_uartRX.(18).cnf
+# case_insensitive
+# source_file
+lpm_counter.tdf
+b243fc5a1355e8ba9c5f2f8eae4612a
+7
+# user_parameter {
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+LPM_WIDTH
+4
+PARAMETER_SIGNED_DEC
+USR
+LPM_DIRECTION
+UP
+PARAMETER_UNKNOWN
+USR
+LPM_MODULUS
+0
+PARAMETER_UNKNOWN
+DEF
+LPM_AVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_SVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_PORT_UPDOWN
+PORT_UNUSED
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+Cyclone II
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN_LENGTH
+48
+CARRY_CHAIN_LENGTH
+USR
+NOT_GATE_PUSH_BACK
+ON
+NOT_GATE_PUSH_BACK
+USR
+CARRY_CNT_EN
+SMART
+PARAMETER_UNKNOWN
+DEF
+LABWIDE_SCLR
+ON
+PARAMETER_UNKNOWN
+DEF
+USE_NEW_VERSION
+TRUE
+PARAMETER_UNKNOWN
+DEF
+CBXI_PARAMETER
+cntr_gnj
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+sload
+-1
+3
+sclr
+-1
+3
+q3
+-1
+3
+q2
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+data3
+-1
+3
+data2
+-1
+3
+data1
+-1
+3
+data0
+-1
+3
+cnt_en
+-1
+3
+clock
+-1
+3
+}
+# include_file {
+lpm_constant.inc
+97ffb7e3fef9ce9fce4eff8455d5da5
+dffeea.inc
+f11711657cd42ee78437f4349496034
+aglobal111.inc
+9cc1f9de5ad83fc94dd171c3f7986bd
+alt_counter_stratix.inc
+3e1db420f0a6e888a1525f4eff14d5be
+lpm_compare.inc
+bbd3e8c93afb7320934629e5fb11566
+lpm_decode.inc
+10da69a8bbd590d66779e7a142f73790
+lpm_counter.inc
+c5cfeeabc5f2ab60b3453f6abbc42b41
+lpm_add_sub.inc
+144a73b61081a2a03554ff5acc5e8842
+cmpconst.inc
+fe4bfdfa5310384231b99c696fe2e348
+}
+# hierarchies {
+uartRX:DUT|uartRX_DP:inst|CNT_12:inst15|lpm_counter:LPM_COUNTER_component
+}
+# macro_sequence
+
+# end
+# entity
+cntr_gnj
+# storage
+db|DE2_test_uartRX.(19).cnf
+db|DE2_test_uartRX.(19).cnf
+# case_insensitive
+# source_file
+db|cntr_gnj.tdf
+4dbb0242bafef3f6f711e7e5c85714
+7
+# used_port {
+sload
+-1
+3
+sclr
+-1
+3
+q3
+-1
+3
+q2
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+data3
+-1
+3
+data2
+-1
+3
+data1
+-1
+3
+data0
+-1
+3
+cnt_en
+-1
+3
+clock
+-1
+3
+}
+# hierarchies {
+uartRX:DUT|uartRX_DP:inst|CNT_12:inst15|lpm_counter:LPM_COUNTER_component|cntr_gnj:auto_generated
+}
+# macro_sequence
+
+# end
+# entity
+uartRX
+# storage
+db|DE2_test_uartRX.(2).cnf
+db|DE2_test_uartRX.(2).cnf
+# case_insensitive
+# source_file
+|users|edoardo bollea|desktop|rr_project|uartrx|uartrx_quartus|uartrx.bdf
+85f042d71e31b2606693247efce76079
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+uartRX:DUT
+}
+# macro_sequence
+
+# end
+# entity
+uartRX_CU
+# storage
+db|DE2_test_uartRX.(3).cnf
+db|DE2_test_uartRX.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|users|edoardo bollea|desktop|rr_project|uartrx|uartrx_quartus|uartrx_cu.vhd
+169327e8f3f4b27a9e1c7a5cb4dcc27
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+uartRX:DUT|uartRX_CU:inst6
+}
+# macro_sequence
+
+# end
+# entity
+uartRX_DP
+# storage
+db|DE2_test_uartRX.(4).cnf
+db|DE2_test_uartRX.(4).cnf
+# case_insensitive
+# source_file
+|users|edoardo bollea|desktop|rr_project|uartrx|uartrx_quartus|uartrx_dp.bdf
+4c5899625ad04de35f386d2921c99
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+uartRX:DUT|uartRX_DP:inst
+}
+# macro_sequence
+
+# end
+# entity
+voter
+# storage
+db|DE2_test_uartRX.(5).cnf
+db|DE2_test_uartRX.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|users|edoardo bollea|desktop|rr_project|uartrx|uartrx_quartus|voter.vhd
+686b34b54575f7a802cc939854a23a5
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+uartRX:DUT|uartRX_DP:inst|voter:inst1
+}
+# macro_sequence
+
+# end
+# entity
+RX_REG
+# storage
+db|DE2_test_uartRX.(6).cnf
+db|DE2_test_uartRX.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|users|edoardo bollea|desktop|rr_project|uartrx|uartrx_quartus|rx_reg.vhd
+cf419445f178b65f23835928575278d
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+uartRX:DUT|uartRX_DP:inst|RX_REG:inst8
+}
+# macro_sequence
+
+# end
+# entity
+start_bit_detector
+# storage
+db|DE2_test_uartRX.(8).cnf
+db|DE2_test_uartRX.(8).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|users|edoardo bollea|desktop|rr_project|uartrx|uartrx_quartus|start_bit_detector.vhd
+4527ba8bdf8b387d8cdff74c76653ef9
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+uartRX:DUT|uartRX_DP:inst|start_bit_detector:inst
+}
+# macro_sequence
+
+# end
+# entity
+terminal_counter_26
+# storage
+db|DE2_test_uartRX.(9).cnf
+db|DE2_test_uartRX.(9).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|users|edoardo bollea|desktop|rr_project|uartrx|uartrx_quartus|terminal_counter_26.vhd
+be9b98995c5acc03b63d31c25b7485a
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+uartRX:DUT|uartRX_DP:inst|terminal_counter_26:inst4
+}
+# macro_sequence
+
+# end
+# entity
+CNT_26
+# storage
+db|DE2_test_uartRX.(12).cnf
+db|DE2_test_uartRX.(12).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|users|edoardo bollea|desktop|rr_project|uartrx|uartrx_quartus|cnt_26.vhd
+6674475fc121f42b4b5cc90ac46f2f
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+uartRX:DUT|uartRX_DP:inst|CNT_26:inst14
+}
+# macro_sequence
+
+# end
+# entity
+terminal_counter_8
+# storage
+db|DE2_test_uartRX.(13).cnf
+db|DE2_test_uartRX.(13).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|users|edoardo bollea|desktop|rr_project|uartrx|uartrx_quartus|terminal_counter_8.vhd
+5e7ce5d6688eec754eadd2233253a8c0
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+uartRX:DUT|uartRX_DP:inst|terminal_counter_8:inst5
+}
+# macro_sequence
+
+# end
+# entity
+CNT_8
+# storage
+db|DE2_test_uartRX.(16).cnf
+db|DE2_test_uartRX.(16).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|users|edoardo bollea|desktop|rr_project|uartrx|uartrx_quartus|cnt_8.vhd
+6a7adbe18c714a457dd13ff14e6418f8
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+uartRX:DUT|uartRX_DP:inst|CNT_8:inst3
+}
+# macro_sequence
+
+# end
+# entity
+terminal_counter_12
+# storage
+db|DE2_test_uartRX.(17).cnf
+db|DE2_test_uartRX.(17).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|users|edoardo bollea|desktop|rr_project|uartrx|uartrx_quartus|terminal_counter_12.vhd
+17c98e62e249c7578f8d86cdfd407c
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+uartRX:DUT|uartRX_DP:inst|terminal_counter_12:inst6
+}
+# macro_sequence
+
+# end
+# entity
+CNT_12
+# storage
+db|DE2_test_uartRX.(20).cnf
+db|DE2_test_uartRX.(20).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|users|edoardo bollea|desktop|rr_project|uartrx|uartrx_quartus|cnt_12.vhd
+68c235d5681b541099523d551531d590
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+uartRX:DUT|uartRX_DP:inst|CNT_12:inst15
+}
+# macro_sequence
+
+# end
+# entity
+DOUT_REG
+# storage
+db|DE2_test_uartRX.(21).cnf
+db|DE2_test_uartRX.(21).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|users|edoardo bollea|desktop|rr_project|uartrx|uartrx_quartus|dout_reg.vhd
+c06128c97d9bf96d59c8c82697d34c6
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+uartRX:DUT|uartRX_DP:inst|DOUT_REG:inst9
+}
+# macro_sequence
+
+# end
+# complete
+

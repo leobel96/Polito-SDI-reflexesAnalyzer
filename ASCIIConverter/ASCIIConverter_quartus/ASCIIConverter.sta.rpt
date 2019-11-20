@@ -1,0 +1,1078 @@
+TimeQuest Timing Analyzer report for ASCIIConverter
+Fri Jan 18 18:23:19 2019
+Quartus II 32-bit Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'CLK'
+ 12. Slow Model Hold: 'CLK'
+ 13. Slow Model Minimum Pulse Width: 'CLK'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'CLK'
+ 24. Fast Model Hold: 'CLK'
+ 25. Fast Model Minimum Pulse Width: 'CLK'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                    ;
++--------------------+-----------------------------------------------------------------+
+; Quartus II Version ; Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition ;
+; Revision Name      ; ASCIIConverter                                                  ;
+; Device Family      ; Cyclone II                                                      ;
+; Device Name        ; EP2C35F672C6                                                    ;
+; Timing Models      ; Final                                                           ;
+; Delay Model        ; Combined                                                        ;
+; Rise/Fall Delays   ; Unavailable                                                     ;
++--------------------+-----------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; CLK        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLK } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                   ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 513.08 MHz ; 420.17 MHz      ; CLK        ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; CLK   ; -0.949 ; -15.186       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CLK   ; 0.391 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; CLK   ; -1.380 ; -25.380               ;
++-------+--------+-----------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CLK'                                                                                                                                                               ;
++--------+---------------------------------------+----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                             ; To Node                                                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------+----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.949 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.986      ;
+; -0.949 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.986      ;
+; -0.949 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[12] ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.986      ;
+; -0.949 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.986      ;
+; -0.852 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.889      ;
+; -0.852 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.889      ;
+; -0.852 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[12] ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.889      ;
+; -0.852 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.889      ;
+; -0.812 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.848      ;
+; -0.812 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.848      ;
+; -0.812 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.848      ;
+; -0.812 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[11] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.848      ;
+; -0.812 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.848      ;
+; -0.812 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[9]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.848      ;
+; -0.812 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[14] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.848      ;
+; -0.812 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[10] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.848      ;
+; -0.812 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[15] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.848      ;
+; -0.812 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.848      ;
+; -0.812 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[13] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.848      ;
+; -0.812 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.848      ;
+; -0.718 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.755      ;
+; -0.718 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.755      ;
+; -0.718 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[12] ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.755      ;
+; -0.718 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.755      ;
+; -0.715 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.751      ;
+; -0.715 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.751      ;
+; -0.715 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.751      ;
+; -0.715 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[11] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.751      ;
+; -0.715 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.751      ;
+; -0.715 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[9]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.751      ;
+; -0.715 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[14] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.751      ;
+; -0.715 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[10] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.751      ;
+; -0.715 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[15] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.751      ;
+; -0.715 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.751      ;
+; -0.715 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[13] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.751      ;
+; -0.715 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.751      ;
+; -0.646 ; MainFSM:inst|CurrentState.SendT       ; MainFSM:inst|CurrentState.SendA                                ; CLK          ; CLK         ; 1.000        ; -0.023     ; 1.659      ;
+; -0.581 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.617      ;
+; -0.581 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.617      ;
+; -0.581 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.617      ;
+; -0.581 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[11] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.617      ;
+; -0.581 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.617      ;
+; -0.581 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[9]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.617      ;
+; -0.581 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[14] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.617      ;
+; -0.581 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[10] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.617      ;
+; -0.581 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[15] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.617      ;
+; -0.581 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.617      ;
+; -0.581 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[13] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.617      ;
+; -0.581 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.617      ;
+; -0.325 ; MainFSM:inst|CurrentState.SendD       ; MainFSM:inst|CurrentState.DoneState                            ; CLK          ; CLK         ; 1.000        ; -0.001     ; 1.360      ;
+; -0.298 ; MainFSM:inst|CurrentState.SendB       ; MainFSM:inst|CurrentState.SendC                                ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.334      ;
+; -0.216 ; MainFSM:inst|CurrentState.WaitForData ; MainFSM:inst|CurrentState.SendT                                ; CLK          ; CLK         ; 1.000        ; 0.024      ; 1.276      ;
+; -0.161 ; MainFSM:inst|CurrentState.DoneState   ; MainFSM:inst|CurrentState.WaitForData                          ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.197      ;
+; -0.030 ; MainFSM:inst|CurrentState.ResetState  ; MainFSM:inst|CurrentState.WaitForData                          ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.066      ;
+; 0.083  ; MainFSM:inst|CurrentState.SendC       ; MainFSM:inst|CurrentState.SendD                                ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.953      ;
+; 0.088  ; MainFSM:inst|CurrentState.SendA       ; MainFSM:inst|CurrentState.SendB                                ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.948      ;
+; 0.379  ; MainFSM:inst|CurrentState.SendT       ; MainFSM:inst|CurrentState.SendT                                ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; MainFSM:inst|CurrentState.WaitForData ; MainFSM:inst|CurrentState.WaitForData                          ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.657      ;
++--------+---------------------------------------+----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CLK'                                                                                                                                                               ;
++-------+---------------------------------------+----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                             ; To Node                                                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------+----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; MainFSM:inst|CurrentState.WaitForData ; MainFSM:inst|CurrentState.WaitForData                          ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; MainFSM:inst|CurrentState.SendT       ; MainFSM:inst|CurrentState.SendT                                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.682 ; MainFSM:inst|CurrentState.SendA       ; MainFSM:inst|CurrentState.SendB                                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.948      ;
+; 0.687 ; MainFSM:inst|CurrentState.SendC       ; MainFSM:inst|CurrentState.SendD                                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.953      ;
+; 0.800 ; MainFSM:inst|CurrentState.ResetState  ; MainFSM:inst|CurrentState.WaitForData                          ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.066      ;
+; 0.931 ; MainFSM:inst|CurrentState.DoneState   ; MainFSM:inst|CurrentState.WaitForData                          ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.197      ;
+; 0.986 ; MainFSM:inst|CurrentState.WaitForData ; MainFSM:inst|CurrentState.SendT                                ; CLK          ; CLK         ; 0.000        ; 0.024      ; 1.276      ;
+; 1.068 ; MainFSM:inst|CurrentState.SendB       ; MainFSM:inst|CurrentState.SendC                                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.334      ;
+; 1.095 ; MainFSM:inst|CurrentState.SendD       ; MainFSM:inst|CurrentState.DoneState                            ; CLK          ; CLK         ; 0.000        ; -0.001     ; 1.360      ;
+; 1.351 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.617      ;
+; 1.351 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.617      ;
+; 1.351 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.617      ;
+; 1.351 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[11] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.617      ;
+; 1.351 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.617      ;
+; 1.351 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[9]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.617      ;
+; 1.351 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[14] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.617      ;
+; 1.351 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[10] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.617      ;
+; 1.351 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[15] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.617      ;
+; 1.351 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.617      ;
+; 1.351 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[13] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.617      ;
+; 1.351 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.617      ;
+; 1.416 ; MainFSM:inst|CurrentState.SendT       ; MainFSM:inst|CurrentState.SendA                                ; CLK          ; CLK         ; 0.000        ; -0.023     ; 1.659      ;
+; 1.485 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.751      ;
+; 1.485 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.751      ;
+; 1.485 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.751      ;
+; 1.485 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[11] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.751      ;
+; 1.485 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.751      ;
+; 1.485 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[9]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.751      ;
+; 1.485 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[14] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.751      ;
+; 1.485 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[10] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.751      ;
+; 1.485 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[15] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.751      ;
+; 1.485 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.751      ;
+; 1.485 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[13] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.751      ;
+; 1.485 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.751      ;
+; 1.488 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]  ; CLK          ; CLK         ; 0.000        ; 0.001      ; 1.755      ;
+; 1.488 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]  ; CLK          ; CLK         ; 0.000        ; 0.001      ; 1.755      ;
+; 1.488 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[12] ; CLK          ; CLK         ; 0.000        ; 0.001      ; 1.755      ;
+; 1.488 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]  ; CLK          ; CLK         ; 0.000        ; 0.001      ; 1.755      ;
+; 1.582 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.848      ;
+; 1.582 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.848      ;
+; 1.582 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.848      ;
+; 1.582 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[11] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.848      ;
+; 1.582 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.848      ;
+; 1.582 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[9]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.848      ;
+; 1.582 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[14] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.848      ;
+; 1.582 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[10] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.848      ;
+; 1.582 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[15] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.848      ;
+; 1.582 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.848      ;
+; 1.582 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[13] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.848      ;
+; 1.582 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.848      ;
+; 1.622 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]  ; CLK          ; CLK         ; 0.000        ; 0.001      ; 1.889      ;
+; 1.622 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]  ; CLK          ; CLK         ; 0.000        ; 0.001      ; 1.889      ;
+; 1.622 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[12] ; CLK          ; CLK         ; 0.000        ; 0.001      ; 1.889      ;
+; 1.622 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]  ; CLK          ; CLK         ; 0.000        ; 0.001      ; 1.889      ;
+; 1.719 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]  ; CLK          ; CLK         ; 0.000        ; 0.001      ; 1.986      ;
+; 1.719 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]  ; CLK          ; CLK         ; 0.000        ; 0.001      ; 1.986      ;
+; 1.719 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[12] ; CLK          ; CLK         ; 0.000        ; 0.001      ; 1.986      ;
+; 1.719 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]  ; CLK          ; CLK         ; 0.000        ; 0.001      ; 1.986      ;
++-------+---------------------------------------+----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLK'                                                                                                           ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                         ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLK   ; Rise       ; CLK                                                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; MainFSM:inst|CurrentState.DoneState                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; MainFSM:inst|CurrentState.DoneState                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; MainFSM:inst|CurrentState.ResetState                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; MainFSM:inst|CurrentState.ResetState                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; MainFSM:inst|CurrentState.SendA                                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; MainFSM:inst|CurrentState.SendA                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; MainFSM:inst|CurrentState.SendB                                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; MainFSM:inst|CurrentState.SendB                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; MainFSM:inst|CurrentState.SendC                                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; MainFSM:inst|CurrentState.SendC                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; MainFSM:inst|CurrentState.SendD                                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; MainFSM:inst|CurrentState.SendD                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; MainFSM:inst|CurrentState.SendT                                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; MainFSM:inst|CurrentState.SendT                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; MainFSM:inst|CurrentState.WaitForData                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; MainFSM:inst|CurrentState.WaitForData                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[9]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK|combout                                                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK|combout                                                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK~clkctrl|inclk[0]                                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK~clkctrl|inclk[0]                                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK~clkctrl|outclk                                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK~clkctrl|outclk                                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|CurrentState.DoneState|clk                                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|CurrentState.DoneState|clk                                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|CurrentState.ResetState|clk                               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|CurrentState.ResetState|clk                               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|CurrentState.SendA|clk                                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|CurrentState.SendA|clk                                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|CurrentState.SendB|clk                                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|CurrentState.SendB|clk                                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|CurrentState.SendC|clk                                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|CurrentState.SendC|clk                                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|CurrentState.SendD|clk                                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|CurrentState.SendD|clk                                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|CurrentState.SendT|clk                                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|CurrentState.SendT|clk                                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|CurrentState.WaitForData|clk                              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|CurrentState.WaitForData|clk                              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[10]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[10]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[11]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[11]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[12]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[12]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[13]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[13]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[14]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[14]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[15]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[15]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[2]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[2]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[4]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[4]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[5]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[5]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[6]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[6]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[7]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[7]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[8]|clk                  ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; TAV       ; CLK        ; 0.273 ; 0.273 ; Rise       ; CLK             ;
+; TOUT[*]   ; CLK        ; 4.395 ; 4.395 ; Rise       ; CLK             ;
+;  TOUT[0]  ; CLK        ; 3.700 ; 3.700 ; Rise       ; CLK             ;
+;  TOUT[1]  ; CLK        ; 3.513 ; 3.513 ; Rise       ; CLK             ;
+;  TOUT[2]  ; CLK        ; 4.395 ; 4.395 ; Rise       ; CLK             ;
+;  TOUT[3]  ; CLK        ; 3.914 ; 3.914 ; Rise       ; CLK             ;
+;  TOUT[4]  ; CLK        ; 3.738 ; 3.738 ; Rise       ; CLK             ;
+;  TOUT[5]  ; CLK        ; 3.955 ; 3.955 ; Rise       ; CLK             ;
+;  TOUT[6]  ; CLK        ; 4.265 ; 4.265 ; Rise       ; CLK             ;
+;  TOUT[7]  ; CLK        ; 3.727 ; 3.727 ; Rise       ; CLK             ;
+;  TOUT[8]  ; CLK        ; 3.976 ; 3.976 ; Rise       ; CLK             ;
+;  TOUT[9]  ; CLK        ; 3.735 ; 3.735 ; Rise       ; CLK             ;
+;  TOUT[10] ; CLK        ; 3.669 ; 3.669 ; Rise       ; CLK             ;
+;  TOUT[11] ; CLK        ; 3.900 ; 3.900 ; Rise       ; CLK             ;
+;  TOUT[12] ; CLK        ; 3.675 ; 3.675 ; Rise       ; CLK             ;
+;  TOUT[13] ; CLK        ; 3.704 ; 3.704 ; Rise       ; CLK             ;
+;  TOUT[14] ; CLK        ; 3.540 ; 3.540 ; Rise       ; CLK             ;
+;  TOUT[15] ; CLK        ; 3.683 ; 3.683 ; Rise       ; CLK             ;
+; TX_RDY    ; CLK        ; 0.409 ; 0.409 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; TAV       ; CLK        ; 0.062  ; 0.062  ; Rise       ; CLK             ;
+; TOUT[*]   ; CLK        ; -3.283 ; -3.283 ; Rise       ; CLK             ;
+;  TOUT[0]  ; CLK        ; -3.470 ; -3.470 ; Rise       ; CLK             ;
+;  TOUT[1]  ; CLK        ; -3.283 ; -3.283 ; Rise       ; CLK             ;
+;  TOUT[2]  ; CLK        ; -4.165 ; -4.165 ; Rise       ; CLK             ;
+;  TOUT[3]  ; CLK        ; -3.684 ; -3.684 ; Rise       ; CLK             ;
+;  TOUT[4]  ; CLK        ; -3.508 ; -3.508 ; Rise       ; CLK             ;
+;  TOUT[5]  ; CLK        ; -3.725 ; -3.725 ; Rise       ; CLK             ;
+;  TOUT[6]  ; CLK        ; -4.035 ; -4.035 ; Rise       ; CLK             ;
+;  TOUT[7]  ; CLK        ; -3.497 ; -3.497 ; Rise       ; CLK             ;
+;  TOUT[8]  ; CLK        ; -3.746 ; -3.746 ; Rise       ; CLK             ;
+;  TOUT[9]  ; CLK        ; -3.505 ; -3.505 ; Rise       ; CLK             ;
+;  TOUT[10] ; CLK        ; -3.439 ; -3.439 ; Rise       ; CLK             ;
+;  TOUT[11] ; CLK        ; -3.670 ; -3.670 ; Rise       ; CLK             ;
+;  TOUT[12] ; CLK        ; -3.445 ; -3.445 ; Rise       ; CLK             ;
+;  TOUT[13] ; CLK        ; -3.474 ; -3.474 ; Rise       ; CLK             ;
+;  TOUT[14] ; CLK        ; -3.310 ; -3.310 ; Rise       ; CLK             ;
+;  TOUT[15] ; CLK        ; -3.453 ; -3.453 ; Rise       ; CLK             ;
+; TX_RDY    ; CLK        ; 0.345  ; 0.345  ; Rise       ; CLK             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; DIN[*]    ; CLK        ; 14.767 ; 14.767 ; Rise       ; CLK             ;
+;  DIN[0]   ; CLK        ; 12.672 ; 12.672 ; Rise       ; CLK             ;
+;  DIN[1]   ; CLK        ; 14.767 ; 14.767 ; Rise       ; CLK             ;
+;  DIN[2]   ; CLK        ; 13.617 ; 13.617 ; Rise       ; CLK             ;
+;  DIN[3]   ; CLK        ; 13.311 ; 13.311 ; Rise       ; CLK             ;
+;  DIN[4]   ; CLK        ; 13.723 ; 13.723 ; Rise       ; CLK             ;
+;  DIN[5]   ; CLK        ; 13.382 ; 13.382 ; Rise       ; CLK             ;
+;  DIN[6]   ; CLK        ; 14.145 ; 14.145 ; Rise       ; CLK             ;
+;  DIN[7]   ; CLK        ; 13.918 ; 13.918 ; Rise       ; CLK             ;
+; FIN       ; CLK        ; 6.948  ; 6.948  ; Rise       ; CLK             ;
+; WR        ; CLK        ; 7.519  ; 7.519  ; Rise       ; CLK             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; DIN[*]    ; CLK        ; 7.466 ; 7.466 ; Rise       ; CLK             ;
+;  DIN[0]   ; CLK        ; 7.466 ; 7.466 ; Rise       ; CLK             ;
+;  DIN[1]   ; CLK        ; 9.518 ; 9.518 ; Rise       ; CLK             ;
+;  DIN[2]   ; CLK        ; 8.334 ; 8.334 ; Rise       ; CLK             ;
+;  DIN[3]   ; CLK        ; 7.954 ; 7.954 ; Rise       ; CLK             ;
+;  DIN[4]   ; CLK        ; 8.030 ; 8.030 ; Rise       ; CLK             ;
+;  DIN[5]   ; CLK        ; 7.861 ; 7.861 ; Rise       ; CLK             ;
+;  DIN[6]   ; CLK        ; 8.540 ; 8.540 ; Rise       ; CLK             ;
+;  DIN[7]   ; CLK        ; 7.953 ; 7.953 ; Rise       ; CLK             ;
+; FIN       ; CLK        ; 6.948 ; 6.948 ; Rise       ; CLK             ;
+; WR        ; CLK        ; 7.288 ; 7.288 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------+
+; Fast Model Setup Summary      ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CLK   ; 0.011 ; 0.000         ;
++-------+-------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CLK   ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; CLK   ; -1.380 ; -25.380               ;
++-------+--------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CLK'                                                                                                                                                              ;
++-------+---------------------------------------+----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                             ; To Node                                                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------+----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.011 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.022      ;
+; 0.011 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.022      ;
+; 0.011 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[12] ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.022      ;
+; 0.011 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.022      ;
+; 0.077 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.955      ;
+; 0.077 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.955      ;
+; 0.077 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.955      ;
+; 0.077 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[11] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.955      ;
+; 0.077 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.955      ;
+; 0.077 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[9]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.955      ;
+; 0.077 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[14] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.955      ;
+; 0.077 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[10] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.955      ;
+; 0.077 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[15] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.955      ;
+; 0.077 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.955      ;
+; 0.077 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[13] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.955      ;
+; 0.077 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.955      ;
+; 0.082 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 0.951      ;
+; 0.082 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 0.951      ;
+; 0.082 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[12] ; CLK          ; CLK         ; 1.000        ; 0.001      ; 0.951      ;
+; 0.082 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 0.951      ;
+; 0.130 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 0.903      ;
+; 0.130 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 0.903      ;
+; 0.130 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[12] ; CLK          ; CLK         ; 1.000        ; 0.001      ; 0.903      ;
+; 0.130 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 0.903      ;
+; 0.148 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.884      ;
+; 0.148 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.884      ;
+; 0.148 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.884      ;
+; 0.148 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[11] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.884      ;
+; 0.148 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.884      ;
+; 0.148 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[9]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.884      ;
+; 0.148 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[14] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.884      ;
+; 0.148 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[10] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.884      ;
+; 0.148 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[15] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.884      ;
+; 0.148 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.884      ;
+; 0.148 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[13] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.884      ;
+; 0.148 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.884      ;
+; 0.194 ; MainFSM:inst|CurrentState.SendT       ; MainFSM:inst|CurrentState.SendA                                ; CLK          ; CLK         ; 1.000        ; -0.021     ; 0.817      ;
+; 0.196 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.836      ;
+; 0.196 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.836      ;
+; 0.196 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.836      ;
+; 0.196 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[11] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.836      ;
+; 0.196 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.836      ;
+; 0.196 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[9]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.836      ;
+; 0.196 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[14] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.836      ;
+; 0.196 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[10] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.836      ;
+; 0.196 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[15] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.836      ;
+; 0.196 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.836      ;
+; 0.196 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[13] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.836      ;
+; 0.196 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.836      ;
+; 0.347 ; MainFSM:inst|CurrentState.SendD       ; MainFSM:inst|CurrentState.DoneState                            ; CLK          ; CLK         ; 1.000        ; -0.001     ; 0.684      ;
+; 0.373 ; MainFSM:inst|CurrentState.SendB       ; MainFSM:inst|CurrentState.SendC                                ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.659      ;
+; 0.437 ; MainFSM:inst|CurrentState.WaitForData ; MainFSM:inst|CurrentState.SendT                                ; CLK          ; CLK         ; 1.000        ; 0.022      ; 0.617      ;
+; 0.460 ; MainFSM:inst|CurrentState.DoneState   ; MainFSM:inst|CurrentState.WaitForData                          ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.572      ;
+; 0.516 ; MainFSM:inst|CurrentState.ResetState  ; MainFSM:inst|CurrentState.WaitForData                          ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.516      ;
+; 0.541 ; MainFSM:inst|CurrentState.SendC       ; MainFSM:inst|CurrentState.SendD                                ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.491      ;
+; 0.544 ; MainFSM:inst|CurrentState.SendA       ; MainFSM:inst|CurrentState.SendB                                ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.488      ;
+; 0.665 ; MainFSM:inst|CurrentState.SendT       ; MainFSM:inst|CurrentState.SendT                                ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; MainFSM:inst|CurrentState.WaitForData ; MainFSM:inst|CurrentState.WaitForData                          ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.367      ;
++-------+---------------------------------------+----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CLK'                                                                                                                                                               ;
++-------+---------------------------------------+----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                             ; To Node                                                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------+----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; MainFSM:inst|CurrentState.WaitForData ; MainFSM:inst|CurrentState.WaitForData                          ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; MainFSM:inst|CurrentState.SendT       ; MainFSM:inst|CurrentState.SendT                                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.336 ; MainFSM:inst|CurrentState.SendA       ; MainFSM:inst|CurrentState.SendB                                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.488      ;
+; 0.339 ; MainFSM:inst|CurrentState.SendC       ; MainFSM:inst|CurrentState.SendD                                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.491      ;
+; 0.364 ; MainFSM:inst|CurrentState.ResetState  ; MainFSM:inst|CurrentState.WaitForData                          ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.516      ;
+; 0.420 ; MainFSM:inst|CurrentState.DoneState   ; MainFSM:inst|CurrentState.WaitForData                          ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.572      ;
+; 0.443 ; MainFSM:inst|CurrentState.WaitForData ; MainFSM:inst|CurrentState.SendT                                ; CLK          ; CLK         ; 0.000        ; 0.022      ; 0.617      ;
+; 0.507 ; MainFSM:inst|CurrentState.SendB       ; MainFSM:inst|CurrentState.SendC                                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.659      ;
+; 0.533 ; MainFSM:inst|CurrentState.SendD       ; MainFSM:inst|CurrentState.DoneState                            ; CLK          ; CLK         ; 0.000        ; -0.001     ; 0.684      ;
+; 0.684 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.836      ;
+; 0.684 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.836      ;
+; 0.684 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.836      ;
+; 0.684 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[11] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.836      ;
+; 0.684 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.836      ;
+; 0.684 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[9]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.836      ;
+; 0.684 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[14] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.836      ;
+; 0.684 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[10] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.836      ;
+; 0.684 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[15] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.836      ;
+; 0.684 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.836      ;
+; 0.684 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[13] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.836      ;
+; 0.684 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.836      ;
+; 0.686 ; MainFSM:inst|CurrentState.SendT       ; MainFSM:inst|CurrentState.SendA                                ; CLK          ; CLK         ; 0.000        ; -0.021     ; 0.817      ;
+; 0.732 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.884      ;
+; 0.732 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.884      ;
+; 0.732 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.884      ;
+; 0.732 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[11] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.884      ;
+; 0.732 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.884      ;
+; 0.732 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[9]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.884      ;
+; 0.732 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[14] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.884      ;
+; 0.732 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[10] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.884      ;
+; 0.732 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[15] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.884      ;
+; 0.732 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.884      ;
+; 0.732 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[13] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.884      ;
+; 0.732 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.884      ;
+; 0.750 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]  ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.903      ;
+; 0.750 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]  ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.903      ;
+; 0.750 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[12] ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.903      ;
+; 0.750 ; MainFSM:inst|CurrentState.ResetState  ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]  ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.903      ;
+; 0.798 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]  ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.951      ;
+; 0.798 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]  ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.951      ;
+; 0.798 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[12] ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.951      ;
+; 0.798 ; MainFSM:inst|CurrentState.DoneState   ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]  ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.951      ;
+; 0.803 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.955      ;
+; 0.803 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.955      ;
+; 0.803 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.955      ;
+; 0.803 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[11] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.955      ;
+; 0.803 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.955      ;
+; 0.803 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[9]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.955      ;
+; 0.803 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[14] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.955      ;
+; 0.803 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[10] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.955      ;
+; 0.803 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[15] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.955      ;
+; 0.803 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.955      ;
+; 0.803 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[13] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.955      ;
+; 0.803 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.955      ;
+; 0.869 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]  ; CLK          ; CLK         ; 0.000        ; 0.001      ; 1.022      ;
+; 0.869 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]  ; CLK          ; CLK         ; 0.000        ; 0.001      ; 1.022      ;
+; 0.869 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[12] ; CLK          ; CLK         ; 0.000        ; 0.001      ; 1.022      ;
+; 0.869 ; MainFSM:inst|CurrentState.WaitForData ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]  ; CLK          ; CLK         ; 0.000        ; 0.001      ; 1.022      ;
++-------+---------------------------------------+----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLK'                                                                                                           ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                         ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLK   ; Rise       ; CLK                                                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; MainFSM:inst|CurrentState.DoneState                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; MainFSM:inst|CurrentState.DoneState                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; MainFSM:inst|CurrentState.ResetState                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; MainFSM:inst|CurrentState.ResetState                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; MainFSM:inst|CurrentState.SendA                                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; MainFSM:inst|CurrentState.SendA                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; MainFSM:inst|CurrentState.SendB                                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; MainFSM:inst|CurrentState.SendB                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; MainFSM:inst|CurrentState.SendC                                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; MainFSM:inst|CurrentState.SendC                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; MainFSM:inst|CurrentState.SendD                                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; MainFSM:inst|CurrentState.SendD                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; MainFSM:inst|CurrentState.SendT                                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; MainFSM:inst|CurrentState.SendT                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; MainFSM:inst|CurrentState.WaitForData                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; MainFSM:inst|CurrentState.WaitForData                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component|dffs[9]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK|combout                                                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK|combout                                                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK~clkctrl|inclk[0]                                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK~clkctrl|inclk[0]                                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK~clkctrl|outclk                                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK~clkctrl|outclk                                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|CurrentState.DoneState|clk                                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|CurrentState.DoneState|clk                                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|CurrentState.ResetState|clk                               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|CurrentState.ResetState|clk                               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|CurrentState.SendA|clk                                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|CurrentState.SendA|clk                                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|CurrentState.SendB|clk                                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|CurrentState.SendB|clk                                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|CurrentState.SendC|clk                                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|CurrentState.SendC|clk                                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|CurrentState.SendD|clk                                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|CurrentState.SendD|clk                                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|CurrentState.SendT|clk                                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|CurrentState.SendT|clk                                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|CurrentState.WaitForData|clk                              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|CurrentState.WaitForData|clk                              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[10]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[10]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[11]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[11]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[12]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[12]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[13]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[13]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[14]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[14]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[15]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[15]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[2]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[2]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[4]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[4]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[5]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[5]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[6]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[6]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[7]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[7]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; reg_in_imp|LPM_SHIFTREG_component|dffs[8]|clk                  ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; TAV       ; CLK        ; -0.176 ; -0.176 ; Rise       ; CLK             ;
+; TOUT[*]   ; CLK        ; 2.401  ; 2.401  ; Rise       ; CLK             ;
+;  TOUT[0]  ; CLK        ; 2.009  ; 2.009  ; Rise       ; CLK             ;
+;  TOUT[1]  ; CLK        ; 1.905  ; 1.905  ; Rise       ; CLK             ;
+;  TOUT[2]  ; CLK        ; 2.401  ; 2.401  ; Rise       ; CLK             ;
+;  TOUT[3]  ; CLK        ; 2.117  ; 2.117  ; Rise       ; CLK             ;
+;  TOUT[4]  ; CLK        ; 2.052  ; 2.052  ; Rise       ; CLK             ;
+;  TOUT[5]  ; CLK        ; 2.169  ; 2.169  ; Rise       ; CLK             ;
+;  TOUT[6]  ; CLK        ; 2.333  ; 2.333  ; Rise       ; CLK             ;
+;  TOUT[7]  ; CLK        ; 2.037  ; 2.037  ; Rise       ; CLK             ;
+;  TOUT[8]  ; CLK        ; 2.160  ; 2.160  ; Rise       ; CLK             ;
+;  TOUT[9]  ; CLK        ; 2.030  ; 2.030  ; Rise       ; CLK             ;
+;  TOUT[10] ; CLK        ; 2.005  ; 2.005  ; Rise       ; CLK             ;
+;  TOUT[11] ; CLK        ; 2.097  ; 2.097  ; Rise       ; CLK             ;
+;  TOUT[12] ; CLK        ; 2.013  ; 2.013  ; Rise       ; CLK             ;
+;  TOUT[13] ; CLK        ; 2.025  ; 2.025  ; Rise       ; CLK             ;
+;  TOUT[14] ; CLK        ; 1.920  ; 1.920  ; Rise       ; CLK             ;
+;  TOUT[15] ; CLK        ; 1.992  ; 1.992  ; Rise       ; CLK             ;
+; TX_RDY    ; CLK        ; -0.050 ; -0.050 ; Rise       ; CLK             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; TAV       ; CLK        ; 0.364  ; 0.364  ; Rise       ; CLK             ;
+; TOUT[*]   ; CLK        ; -1.785 ; -1.785 ; Rise       ; CLK             ;
+;  TOUT[0]  ; CLK        ; -1.889 ; -1.889 ; Rise       ; CLK             ;
+;  TOUT[1]  ; CLK        ; -1.785 ; -1.785 ; Rise       ; CLK             ;
+;  TOUT[2]  ; CLK        ; -2.281 ; -2.281 ; Rise       ; CLK             ;
+;  TOUT[3]  ; CLK        ; -1.997 ; -1.997 ; Rise       ; CLK             ;
+;  TOUT[4]  ; CLK        ; -1.932 ; -1.932 ; Rise       ; CLK             ;
+;  TOUT[5]  ; CLK        ; -2.049 ; -2.049 ; Rise       ; CLK             ;
+;  TOUT[6]  ; CLK        ; -2.213 ; -2.213 ; Rise       ; CLK             ;
+;  TOUT[7]  ; CLK        ; -1.917 ; -1.917 ; Rise       ; CLK             ;
+;  TOUT[8]  ; CLK        ; -2.040 ; -2.040 ; Rise       ; CLK             ;
+;  TOUT[9]  ; CLK        ; -1.910 ; -1.910 ; Rise       ; CLK             ;
+;  TOUT[10] ; CLK        ; -1.885 ; -1.885 ; Rise       ; CLK             ;
+;  TOUT[11] ; CLK        ; -1.977 ; -1.977 ; Rise       ; CLK             ;
+;  TOUT[12] ; CLK        ; -1.893 ; -1.893 ; Rise       ; CLK             ;
+;  TOUT[13] ; CLK        ; -1.905 ; -1.905 ; Rise       ; CLK             ;
+;  TOUT[14] ; CLK        ; -1.800 ; -1.800 ; Rise       ; CLK             ;
+;  TOUT[15] ; CLK        ; -1.872 ; -1.872 ; Rise       ; CLK             ;
+; TX_RDY    ; CLK        ; 0.503  ; 0.503  ; Rise       ; CLK             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; DIN[*]    ; CLK        ; 7.352 ; 7.352 ; Rise       ; CLK             ;
+;  DIN[0]   ; CLK        ; 6.408 ; 6.408 ; Rise       ; CLK             ;
+;  DIN[1]   ; CLK        ; 7.352 ; 7.352 ; Rise       ; CLK             ;
+;  DIN[2]   ; CLK        ; 6.807 ; 6.807 ; Rise       ; CLK             ;
+;  DIN[3]   ; CLK        ; 6.650 ; 6.650 ; Rise       ; CLK             ;
+;  DIN[4]   ; CLK        ; 6.879 ; 6.879 ; Rise       ; CLK             ;
+;  DIN[5]   ; CLK        ; 6.711 ; 6.711 ; Rise       ; CLK             ;
+;  DIN[6]   ; CLK        ; 7.068 ; 7.068 ; Rise       ; CLK             ;
+;  DIN[7]   ; CLK        ; 7.012 ; 7.012 ; Rise       ; CLK             ;
+; FIN       ; CLK        ; 3.915 ; 3.915 ; Rise       ; CLK             ;
+; WR        ; CLK        ; 4.169 ; 4.169 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; DIN[*]    ; CLK        ; 4.174 ; 4.174 ; Rise       ; CLK             ;
+;  DIN[0]   ; CLK        ; 4.174 ; 4.174 ; Rise       ; CLK             ;
+;  DIN[1]   ; CLK        ; 5.091 ; 5.091 ; Rise       ; CLK             ;
+;  DIN[2]   ; CLK        ; 4.529 ; 4.529 ; Rise       ; CLK             ;
+;  DIN[3]   ; CLK        ; 4.337 ; 4.337 ; Rise       ; CLK             ;
+;  DIN[4]   ; CLK        ; 4.411 ; 4.411 ; Rise       ; CLK             ;
+;  DIN[5]   ; CLK        ; 4.303 ; 4.303 ; Rise       ; CLK             ;
+;  DIN[6]   ; CLK        ; 4.624 ; 4.624 ; Rise       ; CLK             ;
+;  DIN[7]   ; CLK        ; 4.446 ; 4.446 ; Rise       ; CLK             ;
+; FIN       ; CLK        ; 3.915 ; 3.915 ; Rise       ; CLK             ;
+; WR        ; CLK        ; 4.050 ; 4.050 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -0.949  ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+;  CLK             ; -0.949  ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+; Design-wide TNS  ; -15.186 ; 0.0   ; 0.0      ; 0.0     ; -25.38              ;
+;  CLK             ; -15.186 ; 0.000 ; N/A      ; N/A     ; -25.380             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; TAV       ; CLK        ; 0.273 ; 0.273 ; Rise       ; CLK             ;
+; TOUT[*]   ; CLK        ; 4.395 ; 4.395 ; Rise       ; CLK             ;
+;  TOUT[0]  ; CLK        ; 3.700 ; 3.700 ; Rise       ; CLK             ;
+;  TOUT[1]  ; CLK        ; 3.513 ; 3.513 ; Rise       ; CLK             ;
+;  TOUT[2]  ; CLK        ; 4.395 ; 4.395 ; Rise       ; CLK             ;
+;  TOUT[3]  ; CLK        ; 3.914 ; 3.914 ; Rise       ; CLK             ;
+;  TOUT[4]  ; CLK        ; 3.738 ; 3.738 ; Rise       ; CLK             ;
+;  TOUT[5]  ; CLK        ; 3.955 ; 3.955 ; Rise       ; CLK             ;
+;  TOUT[6]  ; CLK        ; 4.265 ; 4.265 ; Rise       ; CLK             ;
+;  TOUT[7]  ; CLK        ; 3.727 ; 3.727 ; Rise       ; CLK             ;
+;  TOUT[8]  ; CLK        ; 3.976 ; 3.976 ; Rise       ; CLK             ;
+;  TOUT[9]  ; CLK        ; 3.735 ; 3.735 ; Rise       ; CLK             ;
+;  TOUT[10] ; CLK        ; 3.669 ; 3.669 ; Rise       ; CLK             ;
+;  TOUT[11] ; CLK        ; 3.900 ; 3.900 ; Rise       ; CLK             ;
+;  TOUT[12] ; CLK        ; 3.675 ; 3.675 ; Rise       ; CLK             ;
+;  TOUT[13] ; CLK        ; 3.704 ; 3.704 ; Rise       ; CLK             ;
+;  TOUT[14] ; CLK        ; 3.540 ; 3.540 ; Rise       ; CLK             ;
+;  TOUT[15] ; CLK        ; 3.683 ; 3.683 ; Rise       ; CLK             ;
+; TX_RDY    ; CLK        ; 0.409 ; 0.409 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; TAV       ; CLK        ; 0.364  ; 0.364  ; Rise       ; CLK             ;
+; TOUT[*]   ; CLK        ; -1.785 ; -1.785 ; Rise       ; CLK             ;
+;  TOUT[0]  ; CLK        ; -1.889 ; -1.889 ; Rise       ; CLK             ;
+;  TOUT[1]  ; CLK        ; -1.785 ; -1.785 ; Rise       ; CLK             ;
+;  TOUT[2]  ; CLK        ; -2.281 ; -2.281 ; Rise       ; CLK             ;
+;  TOUT[3]  ; CLK        ; -1.997 ; -1.997 ; Rise       ; CLK             ;
+;  TOUT[4]  ; CLK        ; -1.932 ; -1.932 ; Rise       ; CLK             ;
+;  TOUT[5]  ; CLK        ; -2.049 ; -2.049 ; Rise       ; CLK             ;
+;  TOUT[6]  ; CLK        ; -2.213 ; -2.213 ; Rise       ; CLK             ;
+;  TOUT[7]  ; CLK        ; -1.917 ; -1.917 ; Rise       ; CLK             ;
+;  TOUT[8]  ; CLK        ; -2.040 ; -2.040 ; Rise       ; CLK             ;
+;  TOUT[9]  ; CLK        ; -1.910 ; -1.910 ; Rise       ; CLK             ;
+;  TOUT[10] ; CLK        ; -1.885 ; -1.885 ; Rise       ; CLK             ;
+;  TOUT[11] ; CLK        ; -1.977 ; -1.977 ; Rise       ; CLK             ;
+;  TOUT[12] ; CLK        ; -1.893 ; -1.893 ; Rise       ; CLK             ;
+;  TOUT[13] ; CLK        ; -1.905 ; -1.905 ; Rise       ; CLK             ;
+;  TOUT[14] ; CLK        ; -1.800 ; -1.800 ; Rise       ; CLK             ;
+;  TOUT[15] ; CLK        ; -1.872 ; -1.872 ; Rise       ; CLK             ;
+; TX_RDY    ; CLK        ; 0.503  ; 0.503  ; Rise       ; CLK             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; DIN[*]    ; CLK        ; 14.767 ; 14.767 ; Rise       ; CLK             ;
+;  DIN[0]   ; CLK        ; 12.672 ; 12.672 ; Rise       ; CLK             ;
+;  DIN[1]   ; CLK        ; 14.767 ; 14.767 ; Rise       ; CLK             ;
+;  DIN[2]   ; CLK        ; 13.617 ; 13.617 ; Rise       ; CLK             ;
+;  DIN[3]   ; CLK        ; 13.311 ; 13.311 ; Rise       ; CLK             ;
+;  DIN[4]   ; CLK        ; 13.723 ; 13.723 ; Rise       ; CLK             ;
+;  DIN[5]   ; CLK        ; 13.382 ; 13.382 ; Rise       ; CLK             ;
+;  DIN[6]   ; CLK        ; 14.145 ; 14.145 ; Rise       ; CLK             ;
+;  DIN[7]   ; CLK        ; 13.918 ; 13.918 ; Rise       ; CLK             ;
+; FIN       ; CLK        ; 6.948  ; 6.948  ; Rise       ; CLK             ;
+; WR        ; CLK        ; 7.519  ; 7.519  ; Rise       ; CLK             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; DIN[*]    ; CLK        ; 4.174 ; 4.174 ; Rise       ; CLK             ;
+;  DIN[0]   ; CLK        ; 4.174 ; 4.174 ; Rise       ; CLK             ;
+;  DIN[1]   ; CLK        ; 5.091 ; 5.091 ; Rise       ; CLK             ;
+;  DIN[2]   ; CLK        ; 4.529 ; 4.529 ; Rise       ; CLK             ;
+;  DIN[3]   ; CLK        ; 4.337 ; 4.337 ; Rise       ; CLK             ;
+;  DIN[4]   ; CLK        ; 4.411 ; 4.411 ; Rise       ; CLK             ;
+;  DIN[5]   ; CLK        ; 4.303 ; 4.303 ; Rise       ; CLK             ;
+;  DIN[6]   ; CLK        ; 4.624 ; 4.624 ; Rise       ; CLK             ;
+;  DIN[7]   ; CLK        ; 4.446 ; 4.446 ; Rise       ; CLK             ;
+; FIN       ; CLK        ; 3.915 ; 3.915 ; Rise       ; CLK             ;
+; WR        ; CLK        ; 4.050 ; 4.050 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLK        ; CLK      ; 58       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLK        ; CLK      ; 58       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 19    ; 19   ;
+; Unconstrained Input Port Paths  ; 32    ; 32   ;
+; Unconstrained Output Ports      ; 10    ; 10   ;
+; Unconstrained Output Port Paths ; 164   ; 164  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit TimeQuest Timing Analyzer
+    Info: Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
+    Info: Processing started: Fri Jan 18 18:23:17 2019
+Info: Command: quartus_sta ASCIIConverter -c ASCIIConverter
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'ASCIIConverter.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLK CLK
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.949
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.949       -15.186 CLK 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 CLK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -25.380 CLK 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (306004): Started post-fitting delay annotation
+Warning (306006): Found 10 output pins without output pin load capacitance assignment
+    Info (306007): Pin "FIN" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "WR" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "DIN[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "DIN[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "DIN[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "DIN[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "DIN[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "DIN[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "DIN[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "DIN[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+Info (306005): Delay annotation completed successfully
+Info (332146): Worst-case setup slack is 0.011
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.011         0.000 CLK 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 CLK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -25.380 CLK 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 32-bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 303 megabytes
+    Info: Processing ended: Fri Jan 18 18:23:19 2019
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

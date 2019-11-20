@@ -1,0 +1,1130 @@
+TimeQuest Timing Analyzer report for uartTX
+Sun Dec 09 11:21:01 2018
+Quartus II 32-bit Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'CK'
+ 12. Slow Model Hold: 'CK'
+ 13. Slow Model Minimum Pulse Width: 'CK'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'CK'
+ 24. Fast Model Hold: 'CK'
+ 25. Fast Model Minimum Pulse Width: 'CK'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                    ;
++--------------------+-----------------------------------------------------------------+
+; Quartus II Version ; Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition ;
+; Revision Name      ; uartTX                                                          ;
+; Device Family      ; Cyclone II                                                      ;
+; Device Name        ; EP2C35F672C6                                                    ;
+; Timing Models      ; Final                                                           ;
+; Delay Model        ; Combined                                                        ;
+; Rise/Fall Delays   ; Unavailable                                                     ;
++--------------------+-----------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; CK         ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CK }  ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 419.64 MHz ; 419.64 MHz      ; CK         ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; CK    ; -1.383 ; -26.450       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CK    ; 0.532 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; CK    ; -1.380 ; -32.380               ;
++-------+--------+-----------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CK'                                                                                                                                                                                                                                                             ;
++--------+--------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                                        ; To Node                                                                                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.383 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]                         ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; 0.001      ; 2.420      ;
+; -1.372 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]                         ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; 0.001      ; 2.409      ;
+; -1.258 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; -0.001     ; 2.293      ;
+; -1.219 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; -0.001     ; 2.254      ;
+; -1.197 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ; CK           ; CK          ; 1.000        ; 0.012      ; 2.245      ;
+; -1.197 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ; CK           ; CK          ; 1.000        ; 0.012      ; 2.245      ;
+; -1.197 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; CK           ; CK          ; 1.000        ; 0.012      ; 2.245      ;
+; -1.197 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ; CK           ; CK          ; 1.000        ; 0.012      ; 2.245      ;
+; -1.197 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[0] ; CK           ; CK          ; 1.000        ; 0.012      ; 2.245      ;
+; -1.197 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[1] ; CK           ; CK          ; 1.000        ; 0.012      ; 2.245      ;
+; -1.197 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ; CK           ; CK          ; 1.000        ; 0.012      ; 2.245      ;
+; -1.197 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ; CK           ; CK          ; 1.000        ; 0.012      ; 2.245      ;
+; -1.169 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[0] ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; -0.001     ; 2.204      ;
+; -1.141 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[1] ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; -0.001     ; 2.176      ;
+; -1.128 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]                         ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; 0.001      ; 2.165      ;
+; -1.081 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]                         ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; 0.001      ; 2.118      ;
+; -1.072 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; -0.001     ; 2.107      ;
+; -1.068 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; -0.001     ; 2.103      ;
+; -1.059 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]                         ; CK           ; CK          ; 1.000        ; -0.001     ; 2.094      ;
+; -1.059 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]                         ; CK           ; CK          ; 1.000        ; -0.001     ; 2.094      ;
+; -1.059 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]                         ; CK           ; CK          ; 1.000        ; -0.001     ; 2.094      ;
+; -1.059 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]                         ; CK           ; CK          ; 1.000        ; -0.001     ; 2.094      ;
+; -1.059 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]                         ; CK           ; CK          ; 1.000        ; -0.001     ; 2.094      ;
+; -1.059 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]                         ; CK           ; CK          ; 1.000        ; -0.001     ; 2.094      ;
+; -1.059 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]                         ; CK           ; CK          ; 1.000        ; -0.001     ; 2.094      ;
+; -1.059 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]                         ; CK           ; CK          ; 1.000        ; -0.001     ; 2.094      ;
+; -1.047 ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ; CK           ; CK          ; 1.000        ; 0.001      ; 2.084      ;
+; -1.047 ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ; CK           ; CK          ; 1.000        ; 0.001      ; 2.084      ;
+; -1.047 ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; CK           ; CK          ; 1.000        ; 0.001      ; 2.084      ;
+; -1.047 ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ; CK           ; CK          ; 1.000        ; 0.001      ; 2.084      ;
+; -1.047 ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[0] ; CK           ; CK          ; 1.000        ; 0.001      ; 2.084      ;
+; -1.047 ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[1] ; CK           ; CK          ; 1.000        ; 0.001      ; 2.084      ;
+; -1.047 ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ; CK           ; CK          ; 1.000        ; 0.001      ; 2.084      ;
+; -1.047 ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ; CK           ; CK          ; 1.000        ; 0.001      ; 2.084      ;
+; -1.035 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ; CK           ; CK          ; 1.000        ; 0.001      ; 2.072      ;
+; -1.035 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ; CK           ; CK          ; 1.000        ; 0.001      ; 2.072      ;
+; -1.035 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; CK           ; CK          ; 1.000        ; 0.001      ; 2.072      ;
+; -1.035 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ; CK           ; CK          ; 1.000        ; 0.001      ; 2.072      ;
+; -1.035 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[0] ; CK           ; CK          ; 1.000        ; 0.001      ; 2.072      ;
+; -1.035 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[1] ; CK           ; CK          ; 1.000        ; 0.001      ; 2.072      ;
+; -1.035 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ; CK           ; CK          ; 1.000        ; 0.001      ; 2.072      ;
+; -1.035 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ; CK           ; CK          ; 1.000        ; 0.001      ; 2.072      ;
+; -1.000 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; -0.001     ; 2.035      ;
+; -0.978 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; -0.001     ; 2.013      ;
+; -0.971 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]                         ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 1.000        ; 0.001      ; 2.008      ;
+; -0.968 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[0] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ; CK           ; CK          ; 1.000        ; 0.000      ; 2.004      ;
+; -0.960 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]                         ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 1.000        ; 0.001      ; 1.997      ;
+; -0.917 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[0] ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; CK           ; CK          ; 1.000        ; -0.001     ; 1.952      ;
+; -0.905 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]                         ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; 0.000      ; 1.941      ;
+; -0.897 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[0] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ; CK           ; CK          ; 1.000        ; 0.000      ; 1.933      ;
+; -0.889 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[1] ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; CK           ; CK          ; 1.000        ; -0.001     ; 1.924      ;
+; -0.880 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]                         ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; 0.001      ; 1.917      ;
+; -0.876 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[9]                         ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; 0.000      ; 1.912      ;
+; -0.875 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]                         ; CK           ; CK          ; 1.000        ; 0.000      ; 1.911      ;
+; -0.875 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[9]                         ; CK           ; CK          ; 1.000        ; 0.000      ; 1.911      ;
+; -0.858 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[1] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ; CK           ; CK          ; 1.000        ; 0.000      ; 1.894      ;
+; -0.827 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ; CK           ; CK          ; 1.000        ; 0.000      ; 1.863      ;
+; -0.826 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[0] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ; CK           ; CK          ; 1.000        ; 0.000      ; 1.862      ;
+; -0.816 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; CK           ; CK          ; 1.000        ; -0.001     ; 1.851      ;
+; -0.787 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[1] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ; CK           ; CK          ; 1.000        ; 0.000      ; 1.823      ;
+; -0.779 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]                         ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; 0.001      ; 1.816      ;
+; -0.769 ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]                         ; CK           ; CK          ; 1.000        ; -0.001     ; 1.804      ;
+; -0.769 ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]                         ; CK           ; CK          ; 1.000        ; -0.001     ; 1.804      ;
+; -0.769 ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]                         ; CK           ; CK          ; 1.000        ; -0.001     ; 1.804      ;
+; -0.769 ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]                         ; CK           ; CK          ; 1.000        ; -0.001     ; 1.804      ;
+; -0.769 ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]                         ; CK           ; CK          ; 1.000        ; -0.001     ; 1.804      ;
+; -0.769 ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]                         ; CK           ; CK          ; 1.000        ; -0.001     ; 1.804      ;
+; -0.769 ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]                         ; CK           ; CK          ; 1.000        ; -0.001     ; 1.804      ;
+; -0.769 ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]                         ; CK           ; CK          ; 1.000        ; -0.001     ; 1.804      ;
+; -0.767 ; uartTX_CU:inst|PRESENT_STATE.LOAD                                                                ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; 0.001      ; 1.804      ;
+; -0.761 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; CK           ; CK          ; 1.000        ; -0.001     ; 1.796      ;
+; -0.756 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ; CK           ; CK          ; 1.000        ; 0.000      ; 1.792      ;
+; -0.756 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ; CK           ; CK          ; 1.000        ; 0.000      ; 1.792      ;
+; -0.749 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]                         ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 1.000        ; 0.001      ; 1.786      ;
+; -0.748 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; CK           ; CK          ; 1.000        ; -0.001     ; 1.783      ;
+; -0.742 ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 1.000        ; 0.000      ; 1.778      ;
+; -0.722 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; CK           ; CK          ; 1.000        ; -0.001     ; 1.757      ;
+; -0.716 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; 0.000      ; 1.752      ;
+; -0.716 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]                         ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 1.000        ; 0.001      ; 1.753      ;
+; -0.716 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[1] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ; CK           ; CK          ; 1.000        ; 0.000      ; 1.752      ;
+; -0.715 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 1.000        ; 0.011      ; 1.762      ;
+; -0.685 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ; CK           ; CK          ; 1.000        ; 0.000      ; 1.721      ;
+; -0.685 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ; CK           ; CK          ; 1.000        ; 0.000      ; 1.721      ;
+; -0.669 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]                         ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 1.000        ; 0.001      ; 1.706      ;
+; -0.667 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[0] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; CK           ; CK          ; 1.000        ; 0.000      ; 1.703      ;
+; -0.649 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ; CK           ; CK          ; 1.000        ; 0.000      ; 1.685      ;
+; -0.638 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]                         ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; 0.001      ; 1.675      ;
+; -0.623 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]                         ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 1.000        ; 0.001      ; 1.660      ;
+; -0.614 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ; CK           ; CK          ; 1.000        ; 0.000      ; 1.650      ;
+; -0.596 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[0] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ; CK           ; CK          ; 1.000        ; 0.000      ; 1.632      ;
+; -0.585 ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]                         ; CK           ; CK          ; 1.000        ; 0.000      ; 1.621      ;
+; -0.585 ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[9]                         ; CK           ; CK          ; 1.000        ; 0.000      ; 1.621      ;
+; -0.578 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ; CK           ; CK          ; 1.000        ; 0.000      ; 1.614      ;
+; -0.575 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; CK           ; CK          ; 1.000        ; -0.001     ; 1.610      ;
+; -0.557 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]                           ; CK           ; CK          ; 1.000        ; 0.010      ; 1.603      ;
+; -0.557 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[1] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; CK           ; CK          ; 1.000        ; 0.000      ; 1.593      ;
+; -0.551 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ; CK           ; CK          ; 1.000        ; 0.000      ; 1.587      ;
+; -0.550 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]                           ; CK           ; CK          ; 1.000        ; 0.010      ; 1.596      ;
+; -0.547 ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 1.000        ; 0.000      ; 1.583      ;
+; -0.526 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; CK           ; CK          ; 1.000        ; 0.000      ; 1.562      ;
++--------+--------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CK'                                                                                                                                                                                                                                                             ;
++-------+--------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                                        ; To Node                                                                                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.532 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]                         ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 0.798      ;
+; 0.559 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; CK           ; CK          ; 0.000        ; 0.000      ; 0.825      ;
+; 0.575 ; uartTX_CU:inst|PRESENT_STATE.LOAD                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 0.841      ;
+; 0.575 ; uartTX_CU:inst|PRESENT_STATE.LOAD                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 0.841      ;
+; 0.577 ; uartTX_CU:inst|PRESENT_STATE.LOAD                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 0.843      ;
+; 0.582 ; uartTX_CU:inst|PRESENT_STATE.LOAD                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 0.848      ;
+; 0.585 ; uartTX_CU:inst|PRESENT_STATE.LOAD                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 0.851      ;
+; 0.585 ; uartTX_CU:inst|PRESENT_STATE.LOAD                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 0.851      ;
+; 0.645 ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]                           ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 0.911      ;
+; 0.651 ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]                           ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 0.917      ;
+; 0.652 ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]                           ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 0.918      ;
+; 0.714 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[9]                         ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]                         ; CK           ; CK          ; 0.000        ; -0.001     ; 0.979      ;
+; 0.795 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.061      ;
+; 0.796 ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]                           ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 1.062      ;
+; 0.801 ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]                           ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 1.067      ;
+; 0.802 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.068      ;
+; 0.802 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[1] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[1] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.068      ;
+; 0.803 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]                         ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 1.069      ;
+; 0.803 ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]                           ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 1.069      ;
+; 0.832 ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]                           ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 1.098      ;
+; 0.838 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[0] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[0] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]                         ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 1.104      ;
+; 0.839 ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 0.000        ; 0.000      ; 1.105      ;
+; 0.839 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.105      ;
+; 0.839 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.105      ;
+; 0.842 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]                         ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 1.108      ;
+; 0.844 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]                         ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 1.110      ;
+; 0.845 ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; uartTX_CU:inst|PRESENT_STATE.LOAD                                                                ; CK           ; CK          ; 0.000        ; -0.001     ; 1.110      ;
+; 0.849 ; uartTX_CU:inst|PRESENT_STATE.LOAD                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 1.115      ;
+; 0.857 ; uartTX_CU:inst|PRESENT_STATE.LOAD                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 1.123      ;
+; 0.864 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.130      ;
+; 0.865 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.131      ;
+; 0.868 ; uartTX_CU:inst|PRESENT_STATE.LOAD                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]                         ; CK           ; CK          ; 0.000        ; 0.001      ; 1.135      ;
+; 0.875 ; uartTX_CU:inst|PRESENT_STATE.LOAD                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[9]                         ; CK           ; CK          ; 0.000        ; 0.001      ; 1.142      ;
+; 0.959 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]                         ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]                         ; CK           ; CK          ; 0.000        ; 0.001      ; 1.226      ;
+; 0.981 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]                         ; CK           ; CK          ; 0.000        ; 0.011      ; 1.258      ;
+; 1.026 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]                         ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 1.292      ;
+; 1.026 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]                         ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 1.292      ;
+; 1.042 ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]                           ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]                         ; CK           ; CK          ; 0.000        ; 0.001      ; 1.309      ;
+; 1.085 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]                           ; CK           ; CK          ; 0.000        ; 0.009      ; 1.360      ;
+; 1.139 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]                         ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 0.000        ; 0.001      ; 1.406      ;
+; 1.144 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]                           ; CK           ; CK          ; 0.000        ; 0.010      ; 1.420      ;
+; 1.145 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]                           ; CK           ; CK          ; 0.000        ; 0.010      ; 1.421      ;
+; 1.146 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]                           ; CK           ; CK          ; 0.000        ; 0.010      ; 1.422      ;
+; 1.148 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]                           ; CK           ; CK          ; 0.000        ; 0.010      ; 1.424      ;
+; 1.151 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]                           ; CK           ; CK          ; 0.000        ; 0.010      ; 1.427      ;
+; 1.178 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.444      ;
+; 1.185 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[1] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.451      ;
+; 1.224 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[0] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[1] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.490      ;
+; 1.225 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.491      ;
+; 1.225 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.491      ;
+; 1.228 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]                         ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 0.000        ; 0.001      ; 1.495      ;
+; 1.236 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[9]                         ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 0.000        ; 0.000      ; 1.502      ;
+; 1.240 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]                         ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 0.000        ; 0.001      ; 1.507      ;
+; 1.250 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.516      ;
+; 1.251 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; CK           ; CK          ; 0.000        ; -0.001     ; 1.516      ;
+; 1.256 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[1] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.522      ;
+; 1.265 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]                         ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 0.000        ; 0.000      ; 1.531      ;
+; 1.277 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.543      ;
+; 1.278 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]                         ; CK           ; CK          ; 0.000        ; 0.010      ; 1.554      ;
+; 1.278 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]                         ; CK           ; CK          ; 0.000        ; 0.010      ; 1.554      ;
+; 1.278 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]                         ; CK           ; CK          ; 0.000        ; 0.010      ; 1.554      ;
+; 1.278 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]                         ; CK           ; CK          ; 0.000        ; 0.010      ; 1.554      ;
+; 1.278 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]                         ; CK           ; CK          ; 0.000        ; 0.010      ; 1.554      ;
+; 1.278 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]                         ; CK           ; CK          ; 0.000        ; 0.010      ; 1.554      ;
+; 1.278 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]                         ; CK           ; CK          ; 0.000        ; 0.010      ; 1.554      ;
+; 1.278 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]                         ; CK           ; CK          ; 0.000        ; 0.010      ; 1.554      ;
+; 1.295 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[0] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.561      ;
+; 1.296 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.562      ;
+; 1.317 ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 0.000        ; 0.000      ; 1.583      ;
+; 1.320 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]                           ; CK           ; CK          ; 0.000        ; 0.010      ; 1.596      ;
+; 1.321 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.587      ;
+; 1.327 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]                           ; CK           ; CK          ; 0.000        ; 0.010      ; 1.603      ;
+; 1.327 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[1] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.593      ;
+; 1.345 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; CK           ; CK          ; 0.000        ; -0.001     ; 1.610      ;
+; 1.348 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.614      ;
+; 1.355 ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 1.621      ;
+; 1.355 ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[9]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 1.621      ;
+; 1.366 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[0] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.632      ;
+; 1.384 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.650      ;
+; 1.393 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]                         ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 0.000        ; 0.001      ; 1.660      ;
+; 1.408 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]                         ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 0.000        ; 0.001      ; 1.675      ;
+; 1.419 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.685      ;
+; 1.437 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[0] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.703      ;
+; 1.439 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]                         ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 0.000        ; 0.001      ; 1.706      ;
+; 1.455 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.721      ;
+; 1.455 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.721      ;
+; 1.485 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 0.000        ; 0.011      ; 1.762      ;
+; 1.486 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 0.000        ; 0.000      ; 1.752      ;
+; 1.486 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]                         ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 0.000        ; 0.001      ; 1.753      ;
+; 1.486 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[1] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.752      ;
+; 1.492 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; CK           ; CK          ; 0.000        ; -0.001     ; 1.757      ;
+; 1.512 ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 0.000        ; 0.000      ; 1.778      ;
+; 1.518 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; CK           ; CK          ; 0.000        ; -0.001     ; 1.783      ;
+; 1.519 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]                         ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 0.000        ; 0.001      ; 1.786      ;
+; 1.526 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.792      ;
+; 1.526 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ; CK           ; CK          ; 0.000        ; 0.000      ; 1.792      ;
+; 1.531 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; CK           ; CK          ; 0.000        ; -0.001     ; 1.796      ;
+; 1.537 ; uartTX_CU:inst|PRESENT_STATE.LOAD                                                                ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 0.000        ; 0.001      ; 1.804      ;
+; 1.539 ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]                         ; CK           ; CK          ; 0.000        ; -0.001     ; 1.804      ;
++-------+--------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CK'                                                                                                                                              ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                                           ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CK    ; Rise       ; CK                                                                                               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_CU:inst|PRESENT_STATE.LOAD                                                                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_CU:inst|PRESENT_STATE.LOAD                                                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[9]                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[9]                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; CK|combout                                                                                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; CK|combout                                                                                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; CK~clkctrl|inclk[0]                                                                              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; CK~clkctrl|inclk[0]                                                                              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; CK~clkctrl|outclk                                                                                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; CK~clkctrl|outclk                                                                                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[0]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[0]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[1]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[1]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[2]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[2]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[3]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[3]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[4]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[4]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[5]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[5]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[6]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[6]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[7]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[7]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[8]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[8]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[9]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[9]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst8|LPM_SHIFTREG_component|dffs[0]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst8|LPM_SHIFTREG_component|dffs[0]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst8|LPM_SHIFTREG_component|dffs[1]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst8|LPM_SHIFTREG_component|dffs[1]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst8|LPM_SHIFTREG_component|dffs[2]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst8|LPM_SHIFTREG_component|dffs[2]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst8|LPM_SHIFTREG_component|dffs[3]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst8|LPM_SHIFTREG_component|dffs[3]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst8|LPM_SHIFTREG_component|dffs[4]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst8|LPM_SHIFTREG_component|dffs[4]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst8|LPM_SHIFTREG_component|dffs[5]|clk                                                   ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; DIN[*]    ; CK         ; 4.218 ; 4.218 ; Rise       ; CK              ;
+;  DIN[0]   ; CK         ; 0.305 ; 0.305 ; Rise       ; CK              ;
+;  DIN[1]   ; CK         ; 3.421 ; 3.421 ; Rise       ; CK              ;
+;  DIN[2]   ; CK         ; 4.218 ; 4.218 ; Rise       ; CK              ;
+;  DIN[3]   ; CK         ; 3.461 ; 3.461 ; Rise       ; CK              ;
+;  DIN[4]   ; CK         ; 3.712 ; 3.712 ; Rise       ; CK              ;
+;  DIN[5]   ; CK         ; 3.441 ; 3.441 ; Rise       ; CK              ;
+;  DIN[6]   ; CK         ; 3.800 ; 3.800 ; Rise       ; CK              ;
+;  DIN[7]   ; CK         ; 3.940 ; 3.940 ; Rise       ; CK              ;
+; WR        ; CK         ; 1.140 ; 1.140 ; Rise       ; CK              ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; DIN[*]    ; CK         ; -0.075 ; -0.075 ; Rise       ; CK              ;
+;  DIN[0]   ; CK         ; -0.075 ; -0.075 ; Rise       ; CK              ;
+;  DIN[1]   ; CK         ; -3.191 ; -3.191 ; Rise       ; CK              ;
+;  DIN[2]   ; CK         ; -3.988 ; -3.988 ; Rise       ; CK              ;
+;  DIN[3]   ; CK         ; -3.231 ; -3.231 ; Rise       ; CK              ;
+;  DIN[4]   ; CK         ; -3.482 ; -3.482 ; Rise       ; CK              ;
+;  DIN[5]   ; CK         ; -3.211 ; -3.211 ; Rise       ; CK              ;
+;  DIN[6]   ; CK         ; -3.570 ; -3.570 ; Rise       ; CK              ;
+;  DIN[7]   ; CK         ; -3.710 ; -3.710 ; Rise       ; CK              ;
+; WR        ; CK         ; -0.549 ; -0.549 ; Rise       ; CK              ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; TX        ; CK         ; 8.341 ; 8.341 ; Rise       ; CK              ;
+; TXRDY     ; CK         ; 7.665 ; 7.665 ; Rise       ; CK              ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; TX        ; CK         ; 8.065 ; 8.065 ; Rise       ; CK              ;
+; TXRDY     ; CK         ; 7.665 ; 7.665 ; Rise       ; CK              ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; CK    ; -0.089 ; -1.061        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CK    ; 0.244 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; CK    ; -1.380 ; -32.380               ;
++-------+--------+-----------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CK'                                                                                                                                                                                                                                                             ;
++--------+--------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                                        ; To Node                                                                                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.089 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ; CK           ; CK          ; 1.000        ; 0.012      ; 1.133      ;
+; -0.089 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ; CK           ; CK          ; 1.000        ; 0.012      ; 1.133      ;
+; -0.089 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; CK           ; CK          ; 1.000        ; 0.012      ; 1.133      ;
+; -0.089 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ; CK           ; CK          ; 1.000        ; 0.012      ; 1.133      ;
+; -0.089 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[0] ; CK           ; CK          ; 1.000        ; 0.012      ; 1.133      ;
+; -0.089 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[1] ; CK           ; CK          ; 1.000        ; 0.012      ; 1.133      ;
+; -0.089 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ; CK           ; CK          ; 1.000        ; 0.012      ; 1.133      ;
+; -0.089 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ; CK           ; CK          ; 1.000        ; 0.012      ; 1.133      ;
+; -0.053 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]                         ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; 0.001      ; 1.086      ;
+; -0.053 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]                         ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; 0.001      ; 1.086      ;
+; -0.037 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]                         ; CK           ; CK          ; 1.000        ; -0.001     ; 1.068      ;
+; -0.037 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]                         ; CK           ; CK          ; 1.000        ; -0.001     ; 1.068      ;
+; -0.037 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]                         ; CK           ; CK          ; 1.000        ; -0.001     ; 1.068      ;
+; -0.037 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]                         ; CK           ; CK          ; 1.000        ; -0.001     ; 1.068      ;
+; -0.037 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]                         ; CK           ; CK          ; 1.000        ; -0.001     ; 1.068      ;
+; -0.037 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]                         ; CK           ; CK          ; 1.000        ; -0.001     ; 1.068      ;
+; -0.037 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]                         ; CK           ; CK          ; 1.000        ; -0.001     ; 1.068      ;
+; -0.037 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]                         ; CK           ; CK          ; 1.000        ; -0.001     ; 1.068      ;
+; -0.015 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; -0.001     ; 1.046      ;
+; -0.006 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ; CK           ; CK          ; 1.000        ; 0.001      ; 1.039      ;
+; -0.006 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ; CK           ; CK          ; 1.000        ; 0.001      ; 1.039      ;
+; -0.006 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; CK           ; CK          ; 1.000        ; 0.001      ; 1.039      ;
+; -0.006 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ; CK           ; CK          ; 1.000        ; 0.001      ; 1.039      ;
+; -0.006 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[0] ; CK           ; CK          ; 1.000        ; 0.001      ; 1.039      ;
+; -0.006 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[1] ; CK           ; CK          ; 1.000        ; 0.001      ; 1.039      ;
+; -0.006 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ; CK           ; CK          ; 1.000        ; 0.001      ; 1.039      ;
+; -0.006 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ; CK           ; CK          ; 1.000        ; 0.001      ; 1.039      ;
+; -0.004 ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ; CK           ; CK          ; 1.000        ; 0.001      ; 1.037      ;
+; -0.004 ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ; CK           ; CK          ; 1.000        ; 0.001      ; 1.037      ;
+; -0.004 ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; CK           ; CK          ; 1.000        ; 0.001      ; 1.037      ;
+; -0.004 ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ; CK           ; CK          ; 1.000        ; 0.001      ; 1.037      ;
+; -0.004 ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[0] ; CK           ; CK          ; 1.000        ; 0.001      ; 1.037      ;
+; -0.004 ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[1] ; CK           ; CK          ; 1.000        ; 0.001      ; 1.037      ;
+; -0.004 ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ; CK           ; CK          ; 1.000        ; 0.001      ; 1.037      ;
+; -0.004 ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ; CK           ; CK          ; 1.000        ; 0.001      ; 1.037      ;
+; 0.000  ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; -0.001     ; 1.031      ;
+; 0.025  ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[0] ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; -0.001     ; 1.006      ;
+; 0.034  ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[1] ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; -0.001     ; 0.997      ;
+; 0.041  ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]                         ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; 0.001      ; 0.992      ;
+; 0.044  ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]                         ; CK           ; CK          ; 1.000        ; 0.000      ; 0.988      ;
+; 0.044  ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[9]                         ; CK           ; CK          ; 1.000        ; 0.000      ; 0.988      ;
+; 0.056  ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; -0.001     ; 0.975      ;
+; 0.060  ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; -0.001     ; 0.971      ;
+; 0.070  ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]                         ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; 0.001      ; 0.963      ;
+; 0.079  ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; -0.001     ; 0.952      ;
+; 0.100  ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[0] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ; CK           ; CK          ; 1.000        ; 0.000      ; 0.932      ;
+; 0.112  ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]                         ; CK           ; CK          ; 1.000        ; -0.001     ; 0.919      ;
+; 0.112  ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]                         ; CK           ; CK          ; 1.000        ; -0.001     ; 0.919      ;
+; 0.112  ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]                         ; CK           ; CK          ; 1.000        ; -0.001     ; 0.919      ;
+; 0.112  ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]                         ; CK           ; CK          ; 1.000        ; -0.001     ; 0.919      ;
+; 0.112  ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]                         ; CK           ; CK          ; 1.000        ; -0.001     ; 0.919      ;
+; 0.112  ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]                         ; CK           ; CK          ; 1.000        ; -0.001     ; 0.919      ;
+; 0.112  ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]                         ; CK           ; CK          ; 1.000        ; -0.001     ; 0.919      ;
+; 0.112  ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]                         ; CK           ; CK          ; 1.000        ; -0.001     ; 0.919      ;
+; 0.118  ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[0] ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; CK           ; CK          ; 1.000        ; -0.001     ; 0.913      ;
+; 0.121  ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; -0.001     ; 0.910      ;
+; 0.122  ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]                         ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 1.000        ; 0.001      ; 0.911      ;
+; 0.122  ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]                         ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 1.000        ; 0.001      ; 0.911      ;
+; 0.127  ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[1] ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; CK           ; CK          ; 1.000        ; -0.001     ; 0.904      ;
+; 0.135  ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[0] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ; CK           ; CK          ; 1.000        ; 0.000      ; 0.897      ;
+; 0.145  ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]                         ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; 0.001      ; 0.888      ;
+; 0.148  ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]                         ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; 0.000      ; 0.884      ;
+; 0.150  ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[1] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ; CK           ; CK          ; 1.000        ; 0.000      ; 0.882      ;
+; 0.153  ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; CK           ; CK          ; 1.000        ; -0.001     ; 0.878      ;
+; 0.159  ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[9]                         ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; 0.000      ; 0.873      ;
+; 0.169  ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ; CK           ; CK          ; 1.000        ; 0.000      ; 0.863      ;
+; 0.170  ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[0] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ; CK           ; CK          ; 1.000        ; 0.000      ; 0.862      ;
+; 0.171  ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; CK           ; CK          ; 1.000        ; -0.001     ; 0.860      ;
+; 0.172  ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; CK           ; CK          ; 1.000        ; -0.001     ; 0.859      ;
+; 0.185  ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[1] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ; CK           ; CK          ; 1.000        ; 0.000      ; 0.847      ;
+; 0.186  ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; CK           ; CK          ; 1.000        ; -0.001     ; 0.845      ;
+; 0.191  ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 1.000        ; 0.011      ; 0.852      ;
+; 0.193  ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]                         ; CK           ; CK          ; 1.000        ; 0.000      ; 0.839      ;
+; 0.193  ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[9]                         ; CK           ; CK          ; 1.000        ; 0.000      ; 0.839      ;
+; 0.197  ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]                         ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; 0.001      ; 0.836      ;
+; 0.202  ; uartTX_CU:inst|PRESENT_STATE.LOAD                                                                ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; 0.001      ; 0.831      ;
+; 0.204  ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ; CK           ; CK          ; 1.000        ; 0.000      ; 0.828      ;
+; 0.204  ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ; CK           ; CK          ; 1.000        ; 0.000      ; 0.828      ;
+; 0.210  ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 1.000        ; 0.000      ; 0.822      ;
+; 0.216  ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]                         ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 1.000        ; 0.001      ; 0.817      ;
+; 0.219  ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; 0.000      ; 0.813      ;
+; 0.219  ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]                         ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 1.000        ; 0.001      ; 0.814      ;
+; 0.220  ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[1] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ; CK           ; CK          ; 1.000        ; 0.000      ; 0.812      ;
+; 0.221  ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]                         ; CK           ; CK          ; 1.000        ; 0.010      ; 0.821      ;
+; 0.221  ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]                         ; CK           ; CK          ; 1.000        ; 0.010      ; 0.821      ;
+; 0.221  ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]                         ; CK           ; CK          ; 1.000        ; 0.010      ; 0.821      ;
+; 0.221  ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]                         ; CK           ; CK          ; 1.000        ; 0.010      ; 0.821      ;
+; 0.221  ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]                         ; CK           ; CK          ; 1.000        ; 0.010      ; 0.821      ;
+; 0.221  ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]                         ; CK           ; CK          ; 1.000        ; 0.010      ; 0.821      ;
+; 0.221  ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]                         ; CK           ; CK          ; 1.000        ; 0.010      ; 0.821      ;
+; 0.221  ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]                         ; CK           ; CK          ; 1.000        ; 0.010      ; 0.821      ;
+; 0.239  ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ; CK           ; CK          ; 1.000        ; 0.000      ; 0.793      ;
+; 0.239  ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ; CK           ; CK          ; 1.000        ; 0.000      ; 0.793      ;
+; 0.242  ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; CK           ; CK          ; 1.000        ; -0.001     ; 0.789      ;
+; 0.245  ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]                         ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 1.000        ; 0.001      ; 0.788      ;
+; 0.257  ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]                         ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 1.000        ; 0.001      ; 0.776      ;
+; 0.259  ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ; CK           ; CK          ; 1.000        ; 0.000      ; 0.773      ;
+; 0.264  ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[0] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; CK           ; CK          ; 1.000        ; 0.000      ; 0.768      ;
+; 0.266  ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]                           ; CK           ; CK          ; 1.000        ; 0.010      ; 0.776      ;
+; 0.268  ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]                         ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 1.000        ; 0.001      ; 0.765      ;
++--------+--------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CK'                                                                                                                                                                                                                                                             ;
++-------+--------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                                        ; To Node                                                                                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.244 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]                         ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 0.396      ;
+; 0.261 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; CK           ; CK          ; 0.000        ; 0.000      ; 0.413      ;
+; 0.269 ; uartTX_CU:inst|PRESENT_STATE.LOAD                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 0.421      ;
+; 0.269 ; uartTX_CU:inst|PRESENT_STATE.LOAD                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 0.421      ;
+; 0.271 ; uartTX_CU:inst|PRESENT_STATE.LOAD                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 0.423      ;
+; 0.274 ; uartTX_CU:inst|PRESENT_STATE.LOAD                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 0.426      ;
+; 0.277 ; uartTX_CU:inst|PRESENT_STATE.LOAD                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 0.429      ;
+; 0.277 ; uartTX_CU:inst|PRESENT_STATE.LOAD                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 0.429      ;
+; 0.290 ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]                           ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 0.442      ;
+; 0.294 ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]                           ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 0.446      ;
+; 0.295 ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]                           ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 0.447      ;
+; 0.326 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[9]                         ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]                         ; CK           ; CK          ; 0.000        ; -0.001     ; 0.477      ;
+; 0.356 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.508      ;
+; 0.358 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[1] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[1] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.510      ;
+; 0.359 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]                         ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 0.511      ;
+; 0.362 ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]                           ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 0.514      ;
+; 0.366 ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]                           ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 0.518      ;
+; 0.368 ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]                           ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 0.520      ;
+; 0.371 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[0] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[0] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]                           ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]                         ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 0.523      ;
+; 0.372 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.524      ;
+; 0.375 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]                         ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 0.527      ;
+; 0.375 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]                         ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 0.527      ;
+; 0.383 ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 0.000        ; 0.000      ; 0.535      ;
+; 0.387 ; uartTX_CU:inst|PRESENT_STATE.LOAD                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]                         ; CK           ; CK          ; 0.000        ; 0.001      ; 0.540      ;
+; 0.387 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.539      ;
+; 0.388 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.540      ;
+; 0.389 ; uartTX_CU:inst|PRESENT_STATE.LOAD                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 0.541      ;
+; 0.393 ; uartTX_CU:inst|PRESENT_STATE.LOAD                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 0.545      ;
+; 0.399 ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; uartTX_CU:inst|PRESENT_STATE.LOAD                                                                ; CK           ; CK          ; 0.000        ; -0.001     ; 0.550      ;
+; 0.423 ; uartTX_CU:inst|PRESENT_STATE.LOAD                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[9]                         ; CK           ; CK          ; 0.000        ; 0.001      ; 0.576      ;
+; 0.446 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]                         ; CK           ; CK          ; 0.000        ; 0.011      ; 0.609      ;
+; 0.449 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]                         ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]                         ; CK           ; CK          ; 0.000        ; 0.001      ; 0.602      ;
+; 0.459 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]                         ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 0.611      ;
+; 0.459 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]                         ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 0.611      ;
+; 0.461 ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]                           ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]                         ; CK           ; CK          ; 0.000        ; 0.001      ; 0.614      ;
+; 0.494 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.646      ;
+; 0.496 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[1] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.648      ;
+; 0.509 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]                         ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 0.000        ; 0.001      ; 0.662      ;
+; 0.509 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]                           ; CK           ; CK          ; 0.000        ; 0.009      ; 0.670      ;
+; 0.511 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[0] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[1] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.663      ;
+; 0.512 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.664      ;
+; 0.527 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.679      ;
+; 0.531 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[1] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.683      ;
+; 0.546 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[0] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.698      ;
+; 0.547 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[9]                         ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 0.000        ; 0.000      ; 0.699      ;
+; 0.547 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.699      ;
+; 0.548 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]                           ; CK           ; CK          ; 0.000        ; 0.010      ; 0.710      ;
+; 0.549 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]                           ; CK           ; CK          ; 0.000        ; 0.010      ; 0.711      ;
+; 0.551 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]                           ; CK           ; CK          ; 0.000        ; 0.010      ; 0.713      ;
+; 0.551 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]                         ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 0.000        ; 0.001      ; 0.704      ;
+; 0.551 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.703      ;
+; 0.553 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]                           ; CK           ; CK          ; 0.000        ; 0.010      ; 0.715      ;
+; 0.554 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]                           ; CK           ; CK          ; 0.000        ; 0.010      ; 0.716      ;
+; 0.558 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]                         ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 0.000        ; 0.000      ; 0.710      ;
+; 0.561 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]                         ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 0.000        ; 0.001      ; 0.714      ;
+; 0.562 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.714      ;
+; 0.566 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[1] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.718      ;
+; 0.573 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; CK           ; CK          ; 0.000        ; -0.001     ; 0.724      ;
+; 0.581 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[0] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.733      ;
+; 0.586 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.738      ;
+; 0.595 ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 0.000        ; 0.000      ; 0.747      ;
+; 0.606 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.758      ;
+; 0.608 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]                           ; CK           ; CK          ; 0.000        ; 0.010      ; 0.770      ;
+; 0.612 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]                         ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 0.000        ; 0.001      ; 0.765      ;
+; 0.614 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]                           ; CK           ; CK          ; 0.000        ; 0.010      ; 0.776      ;
+; 0.616 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[0] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.768      ;
+; 0.621 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.773      ;
+; 0.623 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]                         ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 0.000        ; 0.001      ; 0.776      ;
+; 0.635 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]                         ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 0.000        ; 0.001      ; 0.788      ;
+; 0.638 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; CK           ; CK          ; 0.000        ; -0.001     ; 0.789      ;
+; 0.641 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.793      ;
+; 0.641 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.793      ;
+; 0.659 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]                         ; CK           ; CK          ; 0.000        ; 0.010      ; 0.821      ;
+; 0.659 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]                         ; CK           ; CK          ; 0.000        ; 0.010      ; 0.821      ;
+; 0.659 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]                         ; CK           ; CK          ; 0.000        ; 0.010      ; 0.821      ;
+; 0.659 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]                         ; CK           ; CK          ; 0.000        ; 0.010      ; 0.821      ;
+; 0.659 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]                         ; CK           ; CK          ; 0.000        ; 0.010      ; 0.821      ;
+; 0.659 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]                         ; CK           ; CK          ; 0.000        ; 0.010      ; 0.821      ;
+; 0.659 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]                         ; CK           ; CK          ; 0.000        ; 0.010      ; 0.821      ;
+; 0.659 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]                         ; CK           ; CK          ; 0.000        ; 0.010      ; 0.821      ;
+; 0.660 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[1] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.812      ;
+; 0.661 ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 0.000        ; 0.000      ; 0.813      ;
+; 0.661 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]                         ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 0.000        ; 0.001      ; 0.814      ;
+; 0.664 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]                         ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 0.000        ; 0.001      ; 0.817      ;
+; 0.670 ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 0.000        ; 0.000      ; 0.822      ;
+; 0.676 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.828      ;
+; 0.676 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.828      ;
+; 0.678 ; uartTX_CU:inst|PRESENT_STATE.LOAD                                                                ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 0.000        ; 0.001      ; 0.831      ;
+; 0.683 ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]                         ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ; CK           ; CK          ; 0.000        ; 0.001      ; 0.836      ;
+; 0.687 ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 0.839      ;
+; 0.687 ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[9]                         ; CK           ; CK          ; 0.000        ; 0.000      ; 0.839      ;
+; 0.689 ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ; CK           ; CK          ; 0.000        ; 0.011      ; 0.852      ;
+; 0.694 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; CK           ; CK          ; 0.000        ; -0.001     ; 0.845      ;
+; 0.695 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[1] ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ; CK           ; CK          ; 0.000        ; 0.000      ; 0.847      ;
+; 0.708 ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ; CK           ; CK          ; 0.000        ; -0.001     ; 0.859      ;
++-------+--------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CK'                                                                                                                                              ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                                           ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CK    ; Rise       ; CK                                                                                               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_CU:inst|PRESENT_STATE.IDLE                                                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_CU:inst|PRESENT_STATE.LOAD                                                                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_CU:inst|PRESENT_STATE.LOAD                                                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_CU:inst|PRESENT_STATE.NEXT_TX                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_CU:inst|PRESENT_STATE.RESET                                                               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_CU:inst|PRESENT_STATE.START_TX                                                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated|safe_q[7] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1]                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2]                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3]                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4]                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5]                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6]                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[8]                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[9]                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CK    ; Rise       ; uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component|dffs[9]                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; CK|combout                                                                                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; CK|combout                                                                                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; CK~clkctrl|inclk[0]                                                                              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; CK~clkctrl|inclk[0]                                                                              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; CK~clkctrl|outclk                                                                                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; CK~clkctrl|outclk                                                                                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[0]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[0]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[1]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[1]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[2]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[2]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[3]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[3]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[4]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[4]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[5]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[5]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[6]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[6]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[7]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[7]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[8]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[8]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[9]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst1|LPM_SHIFTREG_component|dffs[9]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst8|LPM_SHIFTREG_component|dffs[0]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst8|LPM_SHIFTREG_component|dffs[0]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst8|LPM_SHIFTREG_component|dffs[1]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst8|LPM_SHIFTREG_component|dffs[1]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst8|LPM_SHIFTREG_component|dffs[2]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst8|LPM_SHIFTREG_component|dffs[2]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst8|LPM_SHIFTREG_component|dffs[3]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst8|LPM_SHIFTREG_component|dffs[3]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst8|LPM_SHIFTREG_component|dffs[4]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CK    ; Rise       ; inst1|inst8|LPM_SHIFTREG_component|dffs[4]|clk                                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CK    ; Rise       ; inst1|inst8|LPM_SHIFTREG_component|dffs[5]|clk                                                   ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; DIN[*]    ; CK         ; 2.296  ; 2.296  ; Rise       ; CK              ;
+;  DIN[0]   ; CK         ; -0.059 ; -0.059 ; Rise       ; CK              ;
+;  DIN[1]   ; CK         ; 1.866  ; 1.866  ; Rise       ; CK              ;
+;  DIN[2]   ; CK         ; 2.296  ; 2.296  ; Rise       ; CK              ;
+;  DIN[3]   ; CK         ; 1.893  ; 1.893  ; Rise       ; CK              ;
+;  DIN[4]   ; CK         ; 2.034  ; 2.034  ; Rise       ; CK              ;
+;  DIN[5]   ; CK         ; 1.857  ; 1.857  ; Rise       ; CK              ;
+;  DIN[6]   ; CK         ; 2.083  ; 2.083  ; Rise       ; CK              ;
+;  DIN[7]   ; CK         ; 2.112  ; 2.112  ; Rise       ; CK              ;
+; WR        ; CK         ; 0.286  ; 0.286  ; Rise       ; CK              ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; DIN[*]    ; CK         ; 0.179  ; 0.179  ; Rise       ; CK              ;
+;  DIN[0]   ; CK         ; 0.179  ; 0.179  ; Rise       ; CK              ;
+;  DIN[1]   ; CK         ; -1.746 ; -1.746 ; Rise       ; CK              ;
+;  DIN[2]   ; CK         ; -2.176 ; -2.176 ; Rise       ; CK              ;
+;  DIN[3]   ; CK         ; -1.773 ; -1.773 ; Rise       ; CK              ;
+;  DIN[4]   ; CK         ; -1.914 ; -1.914 ; Rise       ; CK              ;
+;  DIN[5]   ; CK         ; -1.737 ; -1.737 ; Rise       ; CK              ;
+;  DIN[6]   ; CK         ; -1.963 ; -1.963 ; Rise       ; CK              ;
+;  DIN[7]   ; CK         ; -1.992 ; -1.992 ; Rise       ; CK              ;
+; WR        ; CK         ; -0.017 ; -0.017 ; Rise       ; CK              ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; TX        ; CK         ; 4.570 ; 4.570 ; Rise       ; CK              ;
+; TXRDY     ; CK         ; 4.272 ; 4.272 ; Rise       ; CK              ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; TX        ; CK         ; 4.450 ; 4.450 ; Rise       ; CK              ;
+; TXRDY     ; CK         ; 4.272 ; 4.272 ; Rise       ; CK              ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -1.383  ; 0.244 ; N/A      ; N/A     ; -1.380              ;
+;  CK              ; -1.383  ; 0.244 ; N/A      ; N/A     ; -1.380              ;
+; Design-wide TNS  ; -26.45  ; 0.0   ; 0.0      ; 0.0     ; -32.38              ;
+;  CK              ; -26.450 ; 0.000 ; N/A      ; N/A     ; -32.380             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; DIN[*]    ; CK         ; 4.218 ; 4.218 ; Rise       ; CK              ;
+;  DIN[0]   ; CK         ; 0.305 ; 0.305 ; Rise       ; CK              ;
+;  DIN[1]   ; CK         ; 3.421 ; 3.421 ; Rise       ; CK              ;
+;  DIN[2]   ; CK         ; 4.218 ; 4.218 ; Rise       ; CK              ;
+;  DIN[3]   ; CK         ; 3.461 ; 3.461 ; Rise       ; CK              ;
+;  DIN[4]   ; CK         ; 3.712 ; 3.712 ; Rise       ; CK              ;
+;  DIN[5]   ; CK         ; 3.441 ; 3.441 ; Rise       ; CK              ;
+;  DIN[6]   ; CK         ; 3.800 ; 3.800 ; Rise       ; CK              ;
+;  DIN[7]   ; CK         ; 3.940 ; 3.940 ; Rise       ; CK              ;
+; WR        ; CK         ; 1.140 ; 1.140 ; Rise       ; CK              ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; DIN[*]    ; CK         ; 0.179  ; 0.179  ; Rise       ; CK              ;
+;  DIN[0]   ; CK         ; 0.179  ; 0.179  ; Rise       ; CK              ;
+;  DIN[1]   ; CK         ; -1.746 ; -1.746 ; Rise       ; CK              ;
+;  DIN[2]   ; CK         ; -2.176 ; -2.176 ; Rise       ; CK              ;
+;  DIN[3]   ; CK         ; -1.773 ; -1.773 ; Rise       ; CK              ;
+;  DIN[4]   ; CK         ; -1.914 ; -1.914 ; Rise       ; CK              ;
+;  DIN[5]   ; CK         ; -1.737 ; -1.737 ; Rise       ; CK              ;
+;  DIN[6]   ; CK         ; -1.963 ; -1.963 ; Rise       ; CK              ;
+;  DIN[7]   ; CK         ; -1.992 ; -1.992 ; Rise       ; CK              ;
+; WR        ; CK         ; -0.017 ; -0.017 ; Rise       ; CK              ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; TX        ; CK         ; 8.341 ; 8.341 ; Rise       ; CK              ;
+; TXRDY     ; CK         ; 7.665 ; 7.665 ; Rise       ; CK              ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; TX        ; CK         ; 4.450 ; 4.450 ; Rise       ; CK              ;
+; TXRDY     ; CK         ; 4.272 ; 4.272 ; Rise       ; CK              ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CK         ; CK       ; 184      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CK         ; CK       ; 184      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 10    ; 10   ;
+; Unconstrained Input Port Paths  ; 15    ; 15   ;
+; Unconstrained Output Ports      ; 2     ; 2    ;
+; Unconstrained Output Port Paths ; 4     ; 4    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit TimeQuest Timing Analyzer
+    Info: Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sun Dec 09 11:20:58 2018
+Info: Command: quartus_sta uartTX -c uartTX
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'uartTX.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CK CK
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.383
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.383       -26.450 CK 
+Info (332146): Worst-case hold slack is 0.532
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.532         0.000 CK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -32.380 CK 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (306004): Started post-fitting delay annotation
+Warning (306006): Found 2 output pins without output pin load capacitance assignment
+    Info (306007): Pin "TX" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "TXRDY" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+Info (306005): Delay annotation completed successfully
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.089
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.089        -1.061 CK 
+Info (332146): Worst-case hold slack is 0.244
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.244         0.000 CK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -32.380 CK 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 32-bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 320 megabytes
+    Info: Processing ended: Sun Dec 09 11:21:01 2018
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+

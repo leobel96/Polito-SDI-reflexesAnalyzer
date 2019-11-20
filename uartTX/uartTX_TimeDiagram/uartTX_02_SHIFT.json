@@ -1,0 +1,19 @@
+{signal: [
+  {name: 'CK', wave:'p....|.....'},
+  {name: 'Q_TX_REG', wave:'x=...|..=..', data:['"1DTX0"','"01DTX"'], node:'.a......i'},
+  {name: 'EN_TX_REG', wave:'0....|.10..', node:'.......g'},
+  {name: 'EN_CNT_216', wave:'0.1..|.01..', node:'..b'},
+  {name: 'IDLE_TX',wave:'1.0..|.....', node:'..c'},
+  {name: 'TX', wave:'=.=..|..=..',data:["'1'","'0'",'DTX(0)'], node:'..d.....j'},
+  {name: 'Q_CNT_216', wave:'=..==|=====',data:['0','1','2~214','215','216','0','1','2'], node:'...e....k'},
+  {name: 'TC_216', wave:'0....|10...', node:'......f'},
+  {name: 'SCLEAR_CNT_216', wave:'0....|.10..', node:'.......h'}
+],
+ edge: [
+ 	'a-~>b', 'a-~>c', 'a-~>d',
+  	'b-~>e',
+    'f-~>g', 'f-~>h',
+    'g-~>i', 'g-~>j',
+   	'h-~>k'
+ ]
+}

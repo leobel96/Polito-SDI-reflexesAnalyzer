@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat Dec 08 17:29:27 2018
+Quartus II 32-bit Version : 11.1 Build 259 01/25/2012 SP 2 SJ Web Edition
+Revision Name : DE2_test_uartTX
+Top-level Entity Name : DE2_test_uartTX
+Family : Cyclone II
+Total logic elements : 50
+    Total combinational functions : 48
+    Dedicated logic registers : 36
+Total registers : 36
+Total pins : 31
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

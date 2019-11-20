@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="ASCIIConverter">
+		<CBX_INST_ENTRY INSTANCE_NAME="|ASCIIConverter|add_in_mux:add_in_mux_imp|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_73e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ASCIIConverter|const87:const87_imp|lpm_constant:LPM_CONSTANT_component" CBX_FILE_NAME="lpm_constant_6g6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ASCIIConverter|main_adder:main_adder_imp|lpm_add_sub:LPM_ADD_SUB_component" CBX_FILE_NAME="add_sub_ckh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ASCIIConverter|out_cmp:out_cmp_imp|lpm_compare:LPM_COMPARE_component" CBX_FILE_NAME="cmpr_m7j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ASCIIConverter|reg_out_mux:reg_out_mux_imp|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_63e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ASCIIConverter|const48:coinst48_imp|lpm_constant:LPM_CONSTANT_component" CBX_FILE_NAME="lpm_constant_tf6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ASCIIConverter|const84:const84_imp|lpm_constant:LPM_CONSTANT_component" CBX_FILE_NAME="lpm_constant_3g6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ASCIIConverter|out_mux:out_mux_imp|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_73e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ASCIIConverter|reg_mux_in:reg_mux_in_imp|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_m4e.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

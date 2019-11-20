@@ -1,0 +1,3525 @@
+|total_test_DE2
+CLOCK_50 => clockDiv2:inst11.CK_in
+SW[0] => clockDiv2:inst11.reset
+SW[0] => uartTX:inst13.RST
+SW[0] => ASCIIConverter:inst9.RST
+SW[0] => reflexes:inst.RST
+SW[0] => parser:inst2.RST
+SW[0] => uartRX:inst12.RST
+UART_RXD => uartRX:inst12.RX
+KEY[0] => reflexes:inst.KEY0
+KEY[1] => reflexes:inst.KEY1
+KEY[2] => reflexes:inst.KEY2
+KEY[3] => reflexes:inst.KEY3
+
+
+|total_test_DE2|uartTX:inst13
+CK => uartTX_DP:inst1.CK
+CK => uartTX_CU:inst.CK
+RST => uartTX_CU:inst.RST
+WR => uartTX_CU:inst.WR
+DIN[0] => uartTX_DP:inst1.DIN[0]
+DIN[1] => uartTX_DP:inst1.DIN[1]
+DIN[2] => uartTX_DP:inst1.DIN[2]
+DIN[3] => uartTX_DP:inst1.DIN[3]
+DIN[4] => uartTX_DP:inst1.DIN[4]
+DIN[5] => uartTX_DP:inst1.DIN[5]
+DIN[6] => uartTX_DP:inst1.DIN[6]
+DIN[7] => uartTX_DP:inst1.DIN[7]
+
+
+|total_test_DE2|uartTX:inst13|uartTX_DP:inst1
+SCLEAR_ALL => TX_REG:inst1.sclr
+SCLEAR_ALL => D_FF:inst8.sclr
+EN_LOAD_TX_REG => TX_REG:inst1.load
+CK => TX_REG:inst1.clock
+CK => D_FF:inst8.clock
+CK => CNT_216:inst.clock
+EN_TX_REG => TX_REG:inst1.enable
+DIN[0] => D_FF:inst8.data[0]
+DIN[1] => D_FF:inst8.data[1]
+DIN[2] => D_FF:inst8.data[2]
+DIN[3] => D_FF:inst8.data[3]
+DIN[4] => D_FF:inst8.data[4]
+DIN[5] => D_FF:inst8.data[5]
+DIN[6] => D_FF:inst8.data[6]
+DIN[7] => D_FF:inst8.data[7]
+IDLE_TX => inst5.IN1
+SCLEAR_CNT_216 => CNT_216:inst.sclr
+EN_CNT_216 => CNT_216:inst.cnt_en
+
+
+|total_test_DE2|uartTX:inst13|uartTX_DP:inst1|TX_REG:inst1
+clock => lpm_shiftreg:LPM_SHIFTREG_component.clock
+data[0] => lpm_shiftreg:LPM_SHIFTREG_component.data[0]
+data[1] => lpm_shiftreg:LPM_SHIFTREG_component.data[1]
+data[2] => lpm_shiftreg:LPM_SHIFTREG_component.data[2]
+data[3] => lpm_shiftreg:LPM_SHIFTREG_component.data[3]
+data[4] => lpm_shiftreg:LPM_SHIFTREG_component.data[4]
+data[5] => lpm_shiftreg:LPM_SHIFTREG_component.data[5]
+data[6] => lpm_shiftreg:LPM_SHIFTREG_component.data[6]
+data[7] => lpm_shiftreg:LPM_SHIFTREG_component.data[7]
+data[8] => lpm_shiftreg:LPM_SHIFTREG_component.data[8]
+data[9] => lpm_shiftreg:LPM_SHIFTREG_component.data[9]
+enable => lpm_shiftreg:LPM_SHIFTREG_component.enable
+load => lpm_shiftreg:LPM_SHIFTREG_component.load
+sclr => lpm_shiftreg:LPM_SHIFTREG_component.sclr
+shiftin => lpm_shiftreg:LPM_SHIFTREG_component.shiftin
+
+
+|total_test_DE2|uartTX:inst13|uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component
+data[0] => _.IN1
+data[1] => _.IN1
+data[2] => _.IN1
+data[3] => _.IN1
+data[4] => _.IN1
+data[5] => _.IN1
+data[6] => _.IN1
+data[7] => _.IN1
+data[8] => _.IN1
+data[9] => _.IN1
+clock => dffs[9].CLK
+clock => dffs[8].CLK
+clock => dffs[7].CLK
+clock => dffs[6].CLK
+clock => dffs[5].CLK
+clock => dffs[4].CLK
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[9].ENA
+enable => dffs[8].ENA
+enable => dffs[7].ENA
+enable => dffs[6].ENA
+enable => dffs[5].ENA
+enable => dffs[4].ENA
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+shiftin => _.IN1
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+sclr => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+
+
+|total_test_DE2|uartTX:inst13|uartTX_DP:inst1|D_FF:inst8
+clock => lpm_shiftreg:LPM_SHIFTREG_component.clock
+data[0] => lpm_shiftreg:LPM_SHIFTREG_component.data[0]
+data[1] => lpm_shiftreg:LPM_SHIFTREG_component.data[1]
+data[2] => lpm_shiftreg:LPM_SHIFTREG_component.data[2]
+data[3] => lpm_shiftreg:LPM_SHIFTREG_component.data[3]
+data[4] => lpm_shiftreg:LPM_SHIFTREG_component.data[4]
+data[5] => lpm_shiftreg:LPM_SHIFTREG_component.data[5]
+data[6] => lpm_shiftreg:LPM_SHIFTREG_component.data[6]
+data[7] => lpm_shiftreg:LPM_SHIFTREG_component.data[7]
+enable => lpm_shiftreg:LPM_SHIFTREG_component.enable
+load => lpm_shiftreg:LPM_SHIFTREG_component.load
+sclr => lpm_shiftreg:LPM_SHIFTREG_component.sclr
+
+
+|total_test_DE2|uartTX:inst13|uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component
+data[0] => _.IN1
+data[1] => _.IN1
+data[2] => _.IN1
+data[3] => _.IN1
+data[4] => _.IN1
+data[5] => _.IN1
+data[6] => _.IN1
+data[7] => _.IN1
+clock => dffs[7].CLK
+clock => dffs[6].CLK
+clock => dffs[5].CLK
+clock => dffs[4].CLK
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[7].ENA
+enable => dffs[6].ENA
+enable => dffs[5].ENA
+enable => dffs[4].ENA
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+shiftin => _.IN1
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+sclr => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+
+
+|total_test_DE2|uartTX:inst13|uartTX_DP:inst1|endTX_gen:inst2
+Q_TX_REG[0] => END_TX.IN0
+Q_TX_REG[1] => END_TX.IN1
+Q_TX_REG[2] => END_TX.IN1
+Q_TX_REG[3] => END_TX.IN1
+Q_TX_REG[4] => END_TX.IN1
+Q_TX_REG[5] => END_TX.IN1
+Q_TX_REG[6] => END_TX.IN1
+Q_TX_REG[7] => END_TX.IN1
+Q_TX_REG[8] => END_TX.IN1
+Q_TX_REG[9] => END_TX.IN1
+
+
+|total_test_DE2|uartTX:inst13|uartTX_DP:inst1|terminal_count_216:inst3
+Q_CNT_216[0] => TC_216.IN0
+Q_CNT_216[1] => TC_216.IN1
+Q_CNT_216[2] => TC_216.IN1
+Q_CNT_216[3] => TC_216.IN1
+Q_CNT_216[4] => TC_216.IN1
+Q_CNT_216[5] => TC_216.IN1
+Q_CNT_216[6] => TC_216.IN1
+Q_CNT_216[7] => TC_216.IN1
+
+
+|total_test_DE2|uartTX:inst13|uartTX_DP:inst1|CNT_216:inst
+clock => lpm_counter:LPM_COUNTER_component.clock
+cnt_en => lpm_counter:LPM_COUNTER_component.cnt_en
+sclr => lpm_counter:LPM_COUNTER_component.sclr
+
+
+|total_test_DE2|uartTX:inst13|uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component
+clock => cntr_7oi:auto_generated.clock
+clk_en => ~NO_FANOUT~
+cnt_en => cntr_7oi:auto_generated.cnt_en
+updown => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => cntr_7oi:auto_generated.sclr
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+data[0] => ~NO_FANOUT~
+data[1] => ~NO_FANOUT~
+data[2] => ~NO_FANOUT~
+data[3] => ~NO_FANOUT~
+data[4] => ~NO_FANOUT~
+data[5] => ~NO_FANOUT~
+data[6] => ~NO_FANOUT~
+data[7] => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+
+
+|total_test_DE2|uartTX:inst13|uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated
+clock => counter_reg_bit1a[7].CLK
+clock => counter_reg_bit1a[6].CLK
+clock => counter_reg_bit1a[5].CLK
+clock => counter_reg_bit1a[4].CLK
+clock => counter_reg_bit1a[3].CLK
+clock => counter_reg_bit1a[2].CLK
+clock => counter_reg_bit1a[1].CLK
+clock => counter_reg_bit1a[0].CLK
+cnt_en => _.IN1
+sclr => _.IN0
+sclr => _.IN0
+sclr => _.IN0
+
+
+|total_test_DE2|uartTX:inst13|uartTX_CU:inst
+CK => PRESENT_STATE~1.DATAIN
+RST => PRESENT_STATE~3.DATAIN
+WR => NEXT_STATE.LOAD.DATAB
+WR => Selector0.IN2
+TC_216 => NEXT_STATE.NEXT_TX.DATAB
+TC_216 => Selector1.IN2
+END_TX => Selector0.IN4
+END_TX => Selector1.IN3
+
+
+|total_test_DE2|clockDiv2:inst11
+CK_in => CK_div2_int.CLK
+reset => CK_div2_int.ACLR
+
+
+|total_test_DE2|ASCIIConverter:inst9
+CLK => MainFSM:inst.Clk
+CLK => reg_in:reg_in_imp.clock
+RST => MainFSM:inst.Reset
+TOUT[0] => reg_mux_in:reg_mux_in_imp.data1x[0]
+TOUT[1] => reg_mux_in:reg_mux_in_imp.data1x[1]
+TOUT[2] => reg_mux_in:reg_mux_in_imp.data1x[2]
+TOUT[3] => reg_mux_in:reg_mux_in_imp.data1x[3]
+TOUT[4] => reg_mux_in:reg_mux_in_imp.data1x[4]
+TOUT[5] => reg_mux_in:reg_mux_in_imp.data1x[5]
+TOUT[6] => reg_mux_in:reg_mux_in_imp.data1x[6]
+TOUT[7] => reg_mux_in:reg_mux_in_imp.data1x[7]
+TOUT[8] => reg_mux_in:reg_mux_in_imp.data1x[8]
+TOUT[9] => reg_mux_in:reg_mux_in_imp.data1x[9]
+TOUT[10] => reg_mux_in:reg_mux_in_imp.data1x[10]
+TOUT[11] => reg_mux_in:reg_mux_in_imp.data1x[11]
+TOUT[12] => reg_mux_in:reg_mux_in_imp.data1x[12]
+TOUT[13] => reg_mux_in:reg_mux_in_imp.data1x[13]
+TOUT[14] => reg_mux_in:reg_mux_in_imp.data1x[14]
+TOUT[15] => reg_mux_in:reg_mux_in_imp.data1x[15]
+TX_RDY => MainFSM:inst.TxReady
+TAV => MainFSM:inst.DataAvaible
+
+
+|total_test_DE2|ASCIIConverter:inst9|MainFSM:inst
+Clk => CurrentState~1.DATAIN
+Reset => CurrentState~3.DATAIN
+MoreThanNine => AddValueSel.DATAIN
+TxReady => Selector2.IN3
+TxReady => Selector3.IN3
+TxReady => Selector4.IN3
+TxReady => Selector5.IN3
+TxReady => NextState.DoneState.DATAB
+TxReady => Selector1.IN1
+TxReady => Selector2.IN1
+TxReady => Selector3.IN1
+TxReady => Selector4.IN1
+TxReady => Selector5.IN1
+DataAvaible => Selector1.IN3
+DataAvaible => Selector0.IN2
+
+
+|total_test_DE2|ASCIIConverter:inst9|out_cmp:out_cmp_imp
+dataa[0] => lpm_compare:LPM_COMPARE_component.dataa[0]
+dataa[1] => lpm_compare:LPM_COMPARE_component.dataa[1]
+dataa[2] => lpm_compare:LPM_COMPARE_component.dataa[2]
+dataa[3] => lpm_compare:LPM_COMPARE_component.dataa[3]
+dataa[4] => lpm_compare:LPM_COMPARE_component.dataa[4]
+dataa[5] => lpm_compare:LPM_COMPARE_component.dataa[5]
+dataa[6] => lpm_compare:LPM_COMPARE_component.dataa[6]
+dataa[7] => lpm_compare:LPM_COMPARE_component.dataa[7]
+
+
+|total_test_DE2|ASCIIConverter:inst9|out_cmp:out_cmp_imp|lpm_compare:LPM_COMPARE_component
+dataa[0] => cmpr_m7j:auto_generated.dataa[0]
+dataa[1] => cmpr_m7j:auto_generated.dataa[1]
+dataa[2] => cmpr_m7j:auto_generated.dataa[2]
+dataa[3] => cmpr_m7j:auto_generated.dataa[3]
+dataa[4] => cmpr_m7j:auto_generated.dataa[4]
+dataa[5] => cmpr_m7j:auto_generated.dataa[5]
+dataa[6] => cmpr_m7j:auto_generated.dataa[6]
+dataa[7] => cmpr_m7j:auto_generated.dataa[7]
+datab[0] => cmpr_m7j:auto_generated.datab[0]
+datab[1] => cmpr_m7j:auto_generated.datab[1]
+datab[2] => cmpr_m7j:auto_generated.datab[2]
+datab[3] => cmpr_m7j:auto_generated.datab[3]
+datab[4] => cmpr_m7j:auto_generated.datab[4]
+datab[5] => cmpr_m7j:auto_generated.datab[5]
+datab[6] => cmpr_m7j:auto_generated.datab[6]
+datab[7] => cmpr_m7j:auto_generated.datab[7]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+
+
+|total_test_DE2|ASCIIConverter:inst9|out_cmp:out_cmp_imp|lpm_compare:LPM_COMPARE_component|cmpr_m7j:auto_generated
+dataa[0] => op_1.IN16
+dataa[1] => op_1.IN14
+dataa[2] => op_1.IN12
+dataa[3] => op_1.IN10
+dataa[4] => op_1.IN8
+dataa[5] => op_1.IN6
+dataa[6] => op_1.IN4
+dataa[7] => op_1.IN2
+datab[0] => op_1.IN15
+datab[1] => op_1.IN13
+datab[2] => op_1.IN11
+datab[3] => op_1.IN9
+datab[4] => op_1.IN7
+datab[5] => op_1.IN5
+datab[6] => op_1.IN3
+datab[7] => op_1.IN1
+
+
+|total_test_DE2|ASCIIConverter:inst9|reg_out_mux:reg_out_mux_imp
+data0x[0] => LPM_MUX:LPM_MUX_component.DATA[0][0]
+data0x[1] => LPM_MUX:LPM_MUX_component.DATA[0][1]
+data0x[2] => LPM_MUX:LPM_MUX_component.DATA[0][2]
+data0x[3] => LPM_MUX:LPM_MUX_component.DATA[0][3]
+data1x[0] => LPM_MUX:LPM_MUX_component.DATA[1][0]
+data1x[1] => LPM_MUX:LPM_MUX_component.DATA[1][1]
+data1x[2] => LPM_MUX:LPM_MUX_component.DATA[1][2]
+data1x[3] => LPM_MUX:LPM_MUX_component.DATA[1][3]
+data2x[0] => LPM_MUX:LPM_MUX_component.DATA[2][0]
+data2x[1] => LPM_MUX:LPM_MUX_component.DATA[2][1]
+data2x[2] => LPM_MUX:LPM_MUX_component.DATA[2][2]
+data2x[3] => LPM_MUX:LPM_MUX_component.DATA[2][3]
+data3x[0] => LPM_MUX:LPM_MUX_component.DATA[3][0]
+data3x[1] => LPM_MUX:LPM_MUX_component.DATA[3][1]
+data3x[2] => LPM_MUX:LPM_MUX_component.DATA[3][2]
+data3x[3] => LPM_MUX:LPM_MUX_component.DATA[3][3]
+sel[0] => LPM_MUX:LPM_MUX_component.SEL[0]
+sel[1] => LPM_MUX:LPM_MUX_component.SEL[1]
+
+
+|total_test_DE2|ASCIIConverter:inst9|reg_out_mux:reg_out_mux_imp|LPM_MUX:LPM_MUX_component
+data[0][0] => mux_63e:auto_generated.data[0]
+data[0][1] => mux_63e:auto_generated.data[1]
+data[0][2] => mux_63e:auto_generated.data[2]
+data[0][3] => mux_63e:auto_generated.data[3]
+data[1][0] => mux_63e:auto_generated.data[4]
+data[1][1] => mux_63e:auto_generated.data[5]
+data[1][2] => mux_63e:auto_generated.data[6]
+data[1][3] => mux_63e:auto_generated.data[7]
+data[2][0] => mux_63e:auto_generated.data[8]
+data[2][1] => mux_63e:auto_generated.data[9]
+data[2][2] => mux_63e:auto_generated.data[10]
+data[2][3] => mux_63e:auto_generated.data[11]
+data[3][0] => mux_63e:auto_generated.data[12]
+data[3][1] => mux_63e:auto_generated.data[13]
+data[3][2] => mux_63e:auto_generated.data[14]
+data[3][3] => mux_63e:auto_generated.data[15]
+sel[0] => mux_63e:auto_generated.sel[0]
+sel[1] => mux_63e:auto_generated.sel[1]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+
+
+|total_test_DE2|ASCIIConverter:inst9|reg_out_mux:reg_out_mux_imp|LPM_MUX:LPM_MUX_component|mux_63e:auto_generated
+data[0] => _.IN0
+data[0] => _.IN0
+data[1] => _.IN0
+data[1] => _.IN0
+data[2] => _.IN0
+data[2] => _.IN0
+data[3] => _.IN0
+data[3] => _.IN0
+data[4] => _.IN0
+data[5] => _.IN0
+data[6] => _.IN0
+data[7] => _.IN0
+data[8] => _.IN1
+data[8] => _.IN1
+data[9] => _.IN1
+data[9] => _.IN1
+data[10] => _.IN1
+data[10] => _.IN1
+data[11] => _.IN1
+data[11] => _.IN1
+data[12] => _.IN0
+data[13] => _.IN0
+data[14] => _.IN0
+data[15] => _.IN0
+sel[0] => _.IN1
+sel[0] => _.IN0
+sel[0] => _.IN0
+sel[0] => _.IN0
+sel[0] => _.IN0
+sel[0] => _.IN0
+sel[0] => _.IN1
+sel[0] => _.IN0
+sel[0] => _.IN0
+sel[0] => _.IN0
+sel[0] => _.IN0
+sel[0] => _.IN0
+sel[0] => _.IN1
+sel[0] => _.IN0
+sel[0] => _.IN0
+sel[0] => _.IN0
+sel[0] => _.IN0
+sel[0] => _.IN0
+sel[0] => _.IN1
+sel[0] => _.IN0
+sel[0] => _.IN0
+sel[0] => _.IN0
+sel[0] => _.IN0
+sel[0] => _.IN0
+sel[1] => _.IN0
+sel[1] => _.IN0
+sel[1] => _.IN0
+sel[1] => _.IN0
+sel[1] => _.IN0
+sel[1] => _.IN0
+sel[1] => _.IN0
+sel[1] => _.IN0
+sel[1] => _.IN0
+sel[1] => _.IN0
+sel[1] => _.IN0
+sel[1] => _.IN0
+sel[1] => _.IN0
+sel[1] => _.IN0
+sel[1] => _.IN0
+sel[1] => _.IN0
+
+
+|total_test_DE2|ASCIIConverter:inst9|reg_in:reg_in_imp
+clock => lpm_shiftreg:LPM_SHIFTREG_component.clock
+data[0] => lpm_shiftreg:LPM_SHIFTREG_component.data[0]
+data[1] => lpm_shiftreg:LPM_SHIFTREG_component.data[1]
+data[2] => lpm_shiftreg:LPM_SHIFTREG_component.data[2]
+data[3] => lpm_shiftreg:LPM_SHIFTREG_component.data[3]
+data[4] => lpm_shiftreg:LPM_SHIFTREG_component.data[4]
+data[5] => lpm_shiftreg:LPM_SHIFTREG_component.data[5]
+data[6] => lpm_shiftreg:LPM_SHIFTREG_component.data[6]
+data[7] => lpm_shiftreg:LPM_SHIFTREG_component.data[7]
+data[8] => lpm_shiftreg:LPM_SHIFTREG_component.data[8]
+data[9] => lpm_shiftreg:LPM_SHIFTREG_component.data[9]
+data[10] => lpm_shiftreg:LPM_SHIFTREG_component.data[10]
+data[11] => lpm_shiftreg:LPM_SHIFTREG_component.data[11]
+data[12] => lpm_shiftreg:LPM_SHIFTREG_component.data[12]
+data[13] => lpm_shiftreg:LPM_SHIFTREG_component.data[13]
+data[14] => lpm_shiftreg:LPM_SHIFTREG_component.data[14]
+data[15] => lpm_shiftreg:LPM_SHIFTREG_component.data[15]
+enable => lpm_shiftreg:LPM_SHIFTREG_component.enable
+load => lpm_shiftreg:LPM_SHIFTREG_component.load
+sclr => lpm_shiftreg:LPM_SHIFTREG_component.sclr
+
+
+|total_test_DE2|ASCIIConverter:inst9|reg_in:reg_in_imp|lpm_shiftreg:LPM_SHIFTREG_component
+data[0] => _.IN1
+data[1] => _.IN1
+data[2] => _.IN1
+data[3] => _.IN1
+data[4] => _.IN1
+data[5] => _.IN1
+data[6] => _.IN1
+data[7] => _.IN1
+data[8] => _.IN1
+data[9] => _.IN1
+data[10] => _.IN1
+data[11] => _.IN1
+data[12] => _.IN1
+data[13] => _.IN1
+data[14] => _.IN1
+data[15] => _.IN1
+clock => dffs[15].CLK
+clock => dffs[14].CLK
+clock => dffs[13].CLK
+clock => dffs[12].CLK
+clock => dffs[11].CLK
+clock => dffs[10].CLK
+clock => dffs[9].CLK
+clock => dffs[8].CLK
+clock => dffs[7].CLK
+clock => dffs[6].CLK
+clock => dffs[5].CLK
+clock => dffs[4].CLK
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[15].ENA
+enable => dffs[14].ENA
+enable => dffs[13].ENA
+enable => dffs[12].ENA
+enable => dffs[11].ENA
+enable => dffs[10].ENA
+enable => dffs[9].ENA
+enable => dffs[8].ENA
+enable => dffs[7].ENA
+enable => dffs[6].ENA
+enable => dffs[5].ENA
+enable => dffs[4].ENA
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+shiftin => _.IN1
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+sclr => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+
+
+|total_test_DE2|ASCIIConverter:inst9|reg_mux_in:reg_mux_in_imp
+data0x[0] => LPM_MUX:LPM_MUX_component.DATA[0][0]
+data0x[1] => LPM_MUX:LPM_MUX_component.DATA[0][1]
+data0x[2] => LPM_MUX:LPM_MUX_component.DATA[0][2]
+data0x[3] => LPM_MUX:LPM_MUX_component.DATA[0][3]
+data0x[4] => LPM_MUX:LPM_MUX_component.DATA[0][4]
+data0x[5] => LPM_MUX:LPM_MUX_component.DATA[0][5]
+data0x[6] => LPM_MUX:LPM_MUX_component.DATA[0][6]
+data0x[7] => LPM_MUX:LPM_MUX_component.DATA[0][7]
+data0x[8] => LPM_MUX:LPM_MUX_component.DATA[0][8]
+data0x[9] => LPM_MUX:LPM_MUX_component.DATA[0][9]
+data0x[10] => LPM_MUX:LPM_MUX_component.DATA[0][10]
+data0x[11] => LPM_MUX:LPM_MUX_component.DATA[0][11]
+data0x[12] => LPM_MUX:LPM_MUX_component.DATA[0][12]
+data0x[13] => LPM_MUX:LPM_MUX_component.DATA[0][13]
+data0x[14] => LPM_MUX:LPM_MUX_component.DATA[0][14]
+data0x[15] => LPM_MUX:LPM_MUX_component.DATA[0][15]
+data1x[0] => LPM_MUX:LPM_MUX_component.DATA[1][0]
+data1x[1] => LPM_MUX:LPM_MUX_component.DATA[1][1]
+data1x[2] => LPM_MUX:LPM_MUX_component.DATA[1][2]
+data1x[3] => LPM_MUX:LPM_MUX_component.DATA[1][3]
+data1x[4] => LPM_MUX:LPM_MUX_component.DATA[1][4]
+data1x[5] => LPM_MUX:LPM_MUX_component.DATA[1][5]
+data1x[6] => LPM_MUX:LPM_MUX_component.DATA[1][6]
+data1x[7] => LPM_MUX:LPM_MUX_component.DATA[1][7]
+data1x[8] => LPM_MUX:LPM_MUX_component.DATA[1][8]
+data1x[9] => LPM_MUX:LPM_MUX_component.DATA[1][9]
+data1x[10] => LPM_MUX:LPM_MUX_component.DATA[1][10]
+data1x[11] => LPM_MUX:LPM_MUX_component.DATA[1][11]
+data1x[12] => LPM_MUX:LPM_MUX_component.DATA[1][12]
+data1x[13] => LPM_MUX:LPM_MUX_component.DATA[1][13]
+data1x[14] => LPM_MUX:LPM_MUX_component.DATA[1][14]
+data1x[15] => LPM_MUX:LPM_MUX_component.DATA[1][15]
+sel => LPM_MUX:LPM_MUX_component.SEL[0]
+
+
+|total_test_DE2|ASCIIConverter:inst9|reg_mux_in:reg_mux_in_imp|LPM_MUX:LPM_MUX_component
+data[0][0] => mux_m4e:auto_generated.data[0]
+data[0][1] => mux_m4e:auto_generated.data[1]
+data[0][2] => mux_m4e:auto_generated.data[2]
+data[0][3] => mux_m4e:auto_generated.data[3]
+data[0][4] => mux_m4e:auto_generated.data[4]
+data[0][5] => mux_m4e:auto_generated.data[5]
+data[0][6] => mux_m4e:auto_generated.data[6]
+data[0][7] => mux_m4e:auto_generated.data[7]
+data[0][8] => mux_m4e:auto_generated.data[8]
+data[0][9] => mux_m4e:auto_generated.data[9]
+data[0][10] => mux_m4e:auto_generated.data[10]
+data[0][11] => mux_m4e:auto_generated.data[11]
+data[0][12] => mux_m4e:auto_generated.data[12]
+data[0][13] => mux_m4e:auto_generated.data[13]
+data[0][14] => mux_m4e:auto_generated.data[14]
+data[0][15] => mux_m4e:auto_generated.data[15]
+data[1][0] => mux_m4e:auto_generated.data[16]
+data[1][1] => mux_m4e:auto_generated.data[17]
+data[1][2] => mux_m4e:auto_generated.data[18]
+data[1][3] => mux_m4e:auto_generated.data[19]
+data[1][4] => mux_m4e:auto_generated.data[20]
+data[1][5] => mux_m4e:auto_generated.data[21]
+data[1][6] => mux_m4e:auto_generated.data[22]
+data[1][7] => mux_m4e:auto_generated.data[23]
+data[1][8] => mux_m4e:auto_generated.data[24]
+data[1][9] => mux_m4e:auto_generated.data[25]
+data[1][10] => mux_m4e:auto_generated.data[26]
+data[1][11] => mux_m4e:auto_generated.data[27]
+data[1][12] => mux_m4e:auto_generated.data[28]
+data[1][13] => mux_m4e:auto_generated.data[29]
+data[1][14] => mux_m4e:auto_generated.data[30]
+data[1][15] => mux_m4e:auto_generated.data[31]
+sel[0] => mux_m4e:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+
+
+|total_test_DE2|ASCIIConverter:inst9|reg_mux_in:reg_mux_in_imp|LPM_MUX:LPM_MUX_component|mux_m4e:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[1].IN1
+data[2] => result_node[2].IN1
+data[3] => result_node[3].IN1
+data[4] => result_node[4].IN1
+data[5] => result_node[5].IN1
+data[6] => result_node[6].IN1
+data[7] => result_node[7].IN1
+data[8] => result_node[8].IN1
+data[9] => result_node[9].IN1
+data[10] => result_node[10].IN1
+data[11] => result_node[11].IN1
+data[12] => result_node[12].IN1
+data[13] => result_node[13].IN1
+data[14] => result_node[14].IN1
+data[15] => result_node[15].IN1
+data[16] => result_node[0].IN1
+data[17] => result_node[1].IN1
+data[18] => result_node[2].IN1
+data[19] => result_node[3].IN1
+data[20] => result_node[4].IN1
+data[21] => result_node[5].IN1
+data[22] => result_node[6].IN1
+data[23] => result_node[7].IN1
+data[24] => result_node[8].IN1
+data[25] => result_node[9].IN1
+data[26] => result_node[10].IN1
+data[27] => result_node[11].IN1
+data[28] => result_node[12].IN1
+data[29] => result_node[13].IN1
+data[30] => result_node[14].IN1
+data[31] => result_node[15].IN1
+sel[0] => result_node[15].IN0
+sel[0] => _.IN0
+sel[0] => result_node[14].IN0
+sel[0] => _.IN0
+sel[0] => result_node[13].IN0
+sel[0] => _.IN0
+sel[0] => result_node[12].IN0
+sel[0] => _.IN0
+sel[0] => result_node[11].IN0
+sel[0] => _.IN0
+sel[0] => result_node[10].IN0
+sel[0] => _.IN0
+sel[0] => result_node[9].IN0
+sel[0] => _.IN0
+sel[0] => result_node[8].IN0
+sel[0] => _.IN0
+sel[0] => result_node[7].IN0
+sel[0] => _.IN0
+sel[0] => result_node[6].IN0
+sel[0] => _.IN0
+sel[0] => result_node[5].IN0
+sel[0] => _.IN0
+sel[0] => result_node[4].IN0
+sel[0] => _.IN0
+sel[0] => result_node[3].IN0
+sel[0] => _.IN0
+sel[0] => result_node[2].IN0
+sel[0] => _.IN0
+sel[0] => result_node[1].IN0
+sel[0] => _.IN0
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|total_test_DE2|ASCIIConverter:inst9|out_mux:out_mux_imp
+data0x[0] => LPM_MUX:LPM_MUX_component.DATA[0][0]
+data0x[1] => LPM_MUX:LPM_MUX_component.DATA[0][1]
+data0x[2] => LPM_MUX:LPM_MUX_component.DATA[0][2]
+data0x[3] => LPM_MUX:LPM_MUX_component.DATA[0][3]
+data0x[4] => LPM_MUX:LPM_MUX_component.DATA[0][4]
+data0x[5] => LPM_MUX:LPM_MUX_component.DATA[0][5]
+data0x[6] => LPM_MUX:LPM_MUX_component.DATA[0][6]
+data0x[7] => LPM_MUX:LPM_MUX_component.DATA[0][7]
+data1x[0] => LPM_MUX:LPM_MUX_component.DATA[1][0]
+data1x[1] => LPM_MUX:LPM_MUX_component.DATA[1][1]
+data1x[2] => LPM_MUX:LPM_MUX_component.DATA[1][2]
+data1x[3] => LPM_MUX:LPM_MUX_component.DATA[1][3]
+data1x[4] => LPM_MUX:LPM_MUX_component.DATA[1][4]
+data1x[5] => LPM_MUX:LPM_MUX_component.DATA[1][5]
+data1x[6] => LPM_MUX:LPM_MUX_component.DATA[1][6]
+data1x[7] => LPM_MUX:LPM_MUX_component.DATA[1][7]
+sel => LPM_MUX:LPM_MUX_component.SEL[0]
+
+
+|total_test_DE2|ASCIIConverter:inst9|out_mux:out_mux_imp|LPM_MUX:LPM_MUX_component
+data[0][0] => mux_73e:auto_generated.data[0]
+data[0][1] => mux_73e:auto_generated.data[1]
+data[0][2] => mux_73e:auto_generated.data[2]
+data[0][3] => mux_73e:auto_generated.data[3]
+data[0][4] => mux_73e:auto_generated.data[4]
+data[0][5] => mux_73e:auto_generated.data[5]
+data[0][6] => mux_73e:auto_generated.data[6]
+data[0][7] => mux_73e:auto_generated.data[7]
+data[1][0] => mux_73e:auto_generated.data[8]
+data[1][1] => mux_73e:auto_generated.data[9]
+data[1][2] => mux_73e:auto_generated.data[10]
+data[1][3] => mux_73e:auto_generated.data[11]
+data[1][4] => mux_73e:auto_generated.data[12]
+data[1][5] => mux_73e:auto_generated.data[13]
+data[1][6] => mux_73e:auto_generated.data[14]
+data[1][7] => mux_73e:auto_generated.data[15]
+sel[0] => mux_73e:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+
+
+|total_test_DE2|ASCIIConverter:inst9|out_mux:out_mux_imp|LPM_MUX:LPM_MUX_component|mux_73e:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[1].IN1
+data[2] => result_node[2].IN1
+data[3] => result_node[3].IN1
+data[4] => result_node[4].IN1
+data[5] => result_node[5].IN1
+data[6] => result_node[6].IN1
+data[7] => result_node[7].IN1
+data[8] => result_node[0].IN1
+data[9] => result_node[1].IN1
+data[10] => result_node[2].IN1
+data[11] => result_node[3].IN1
+data[12] => result_node[4].IN1
+data[13] => result_node[5].IN1
+data[14] => result_node[6].IN1
+data[15] => result_node[7].IN1
+sel[0] => result_node[7].IN0
+sel[0] => _.IN0
+sel[0] => result_node[6].IN0
+sel[0] => _.IN0
+sel[0] => result_node[5].IN0
+sel[0] => _.IN0
+sel[0] => result_node[4].IN0
+sel[0] => _.IN0
+sel[0] => result_node[3].IN0
+sel[0] => _.IN0
+sel[0] => result_node[2].IN0
+sel[0] => _.IN0
+sel[0] => result_node[1].IN0
+sel[0] => _.IN0
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|total_test_DE2|ASCIIConverter:inst9|const84:const84_imp
+
+
+|total_test_DE2|ASCIIConverter:inst9|const84:const84_imp|lpm_constant:LPM_CONSTANT_component
+
+
+|total_test_DE2|ASCIIConverter:inst9|main_adder:main_adder_imp
+dataa[0] => lpm_add_sub:LPM_ADD_SUB_component.dataa[0]
+dataa[1] => lpm_add_sub:LPM_ADD_SUB_component.dataa[1]
+dataa[2] => lpm_add_sub:LPM_ADD_SUB_component.dataa[2]
+dataa[3] => lpm_add_sub:LPM_ADD_SUB_component.dataa[3]
+dataa[4] => lpm_add_sub:LPM_ADD_SUB_component.dataa[4]
+dataa[5] => lpm_add_sub:LPM_ADD_SUB_component.dataa[5]
+dataa[6] => lpm_add_sub:LPM_ADD_SUB_component.dataa[6]
+dataa[7] => lpm_add_sub:LPM_ADD_SUB_component.dataa[7]
+datab[0] => lpm_add_sub:LPM_ADD_SUB_component.datab[0]
+datab[1] => lpm_add_sub:LPM_ADD_SUB_component.datab[1]
+datab[2] => lpm_add_sub:LPM_ADD_SUB_component.datab[2]
+datab[3] => lpm_add_sub:LPM_ADD_SUB_component.datab[3]
+datab[4] => lpm_add_sub:LPM_ADD_SUB_component.datab[4]
+datab[5] => lpm_add_sub:LPM_ADD_SUB_component.datab[5]
+datab[6] => lpm_add_sub:LPM_ADD_SUB_component.datab[6]
+datab[7] => lpm_add_sub:LPM_ADD_SUB_component.datab[7]
+
+
+|total_test_DE2|ASCIIConverter:inst9|main_adder:main_adder_imp|lpm_add_sub:LPM_ADD_SUB_component
+dataa[0] => add_sub_ckh:auto_generated.dataa[0]
+dataa[1] => add_sub_ckh:auto_generated.dataa[1]
+dataa[2] => add_sub_ckh:auto_generated.dataa[2]
+dataa[3] => add_sub_ckh:auto_generated.dataa[3]
+dataa[4] => add_sub_ckh:auto_generated.dataa[4]
+dataa[5] => add_sub_ckh:auto_generated.dataa[5]
+dataa[6] => add_sub_ckh:auto_generated.dataa[6]
+dataa[7] => add_sub_ckh:auto_generated.dataa[7]
+datab[0] => add_sub_ckh:auto_generated.datab[0]
+datab[1] => add_sub_ckh:auto_generated.datab[1]
+datab[2] => add_sub_ckh:auto_generated.datab[2]
+datab[3] => add_sub_ckh:auto_generated.datab[3]
+datab[4] => add_sub_ckh:auto_generated.datab[4]
+datab[5] => add_sub_ckh:auto_generated.datab[5]
+datab[6] => add_sub_ckh:auto_generated.datab[6]
+datab[7] => add_sub_ckh:auto_generated.datab[7]
+cin => ~NO_FANOUT~
+add_sub => ~NO_FANOUT~
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+
+
+|total_test_DE2|ASCIIConverter:inst9|main_adder:main_adder_imp|lpm_add_sub:LPM_ADD_SUB_component|add_sub_ckh:auto_generated
+dataa[0] => op_1.IN14
+dataa[1] => op_1.IN12
+dataa[2] => op_1.IN10
+dataa[3] => op_1.IN8
+dataa[4] => op_1.IN6
+dataa[5] => op_1.IN4
+dataa[6] => op_1.IN2
+dataa[7] => op_1.IN0
+datab[0] => op_1.IN15
+datab[1] => op_1.IN13
+datab[2] => op_1.IN11
+datab[3] => op_1.IN9
+datab[4] => op_1.IN7
+datab[5] => op_1.IN5
+datab[6] => op_1.IN3
+datab[7] => op_1.IN1
+
+
+|total_test_DE2|ASCIIConverter:inst9|add_in_mux:add_in_mux_imp
+data0x[0] => LPM_MUX:LPM_MUX_component.DATA[0][0]
+data0x[1] => LPM_MUX:LPM_MUX_component.DATA[0][1]
+data0x[2] => LPM_MUX:LPM_MUX_component.DATA[0][2]
+data0x[3] => LPM_MUX:LPM_MUX_component.DATA[0][3]
+data0x[4] => LPM_MUX:LPM_MUX_component.DATA[0][4]
+data0x[5] => LPM_MUX:LPM_MUX_component.DATA[0][5]
+data0x[6] => LPM_MUX:LPM_MUX_component.DATA[0][6]
+data0x[7] => LPM_MUX:LPM_MUX_component.DATA[0][7]
+data1x[0] => LPM_MUX:LPM_MUX_component.DATA[1][0]
+data1x[1] => LPM_MUX:LPM_MUX_component.DATA[1][1]
+data1x[2] => LPM_MUX:LPM_MUX_component.DATA[1][2]
+data1x[3] => LPM_MUX:LPM_MUX_component.DATA[1][3]
+data1x[4] => LPM_MUX:LPM_MUX_component.DATA[1][4]
+data1x[5] => LPM_MUX:LPM_MUX_component.DATA[1][5]
+data1x[6] => LPM_MUX:LPM_MUX_component.DATA[1][6]
+data1x[7] => LPM_MUX:LPM_MUX_component.DATA[1][7]
+sel => LPM_MUX:LPM_MUX_component.SEL[0]
+
+
+|total_test_DE2|ASCIIConverter:inst9|add_in_mux:add_in_mux_imp|LPM_MUX:LPM_MUX_component
+data[0][0] => mux_73e:auto_generated.data[0]
+data[0][1] => mux_73e:auto_generated.data[1]
+data[0][2] => mux_73e:auto_generated.data[2]
+data[0][3] => mux_73e:auto_generated.data[3]
+data[0][4] => mux_73e:auto_generated.data[4]
+data[0][5] => mux_73e:auto_generated.data[5]
+data[0][6] => mux_73e:auto_generated.data[6]
+data[0][7] => mux_73e:auto_generated.data[7]
+data[1][0] => mux_73e:auto_generated.data[8]
+data[1][1] => mux_73e:auto_generated.data[9]
+data[1][2] => mux_73e:auto_generated.data[10]
+data[1][3] => mux_73e:auto_generated.data[11]
+data[1][4] => mux_73e:auto_generated.data[12]
+data[1][5] => mux_73e:auto_generated.data[13]
+data[1][6] => mux_73e:auto_generated.data[14]
+data[1][7] => mux_73e:auto_generated.data[15]
+sel[0] => mux_73e:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+
+
+|total_test_DE2|ASCIIConverter:inst9|add_in_mux:add_in_mux_imp|LPM_MUX:LPM_MUX_component|mux_73e:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[1].IN1
+data[2] => result_node[2].IN1
+data[3] => result_node[3].IN1
+data[4] => result_node[4].IN1
+data[5] => result_node[5].IN1
+data[6] => result_node[6].IN1
+data[7] => result_node[7].IN1
+data[8] => result_node[0].IN1
+data[9] => result_node[1].IN1
+data[10] => result_node[2].IN1
+data[11] => result_node[3].IN1
+data[12] => result_node[4].IN1
+data[13] => result_node[5].IN1
+data[14] => result_node[6].IN1
+data[15] => result_node[7].IN1
+sel[0] => result_node[7].IN0
+sel[0] => _.IN0
+sel[0] => result_node[6].IN0
+sel[0] => _.IN0
+sel[0] => result_node[5].IN0
+sel[0] => _.IN0
+sel[0] => result_node[4].IN0
+sel[0] => _.IN0
+sel[0] => result_node[3].IN0
+sel[0] => _.IN0
+sel[0] => result_node[2].IN0
+sel[0] => _.IN0
+sel[0] => result_node[1].IN0
+sel[0] => _.IN0
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|total_test_DE2|ASCIIConverter:inst9|const48:coinst48_imp
+
+
+|total_test_DE2|ASCIIConverter:inst9|const48:coinst48_imp|lpm_constant:LPM_CONSTANT_component
+
+
+|total_test_DE2|ASCIIConverter:inst9|const87:const87_imp
+
+
+|total_test_DE2|ASCIIConverter:inst9|const87:const87_imp|lpm_constant:LPM_CONSTANT_component
+
+
+|total_test_DE2|reflexes:inst
+CK => reflexes_cu:b2v_inst.CK
+CK => reflexes_dp:b2v_inst1.CK
+RST => reflexes_cu:b2v_inst.RST
+LNUMAV => reflexes_cu:b2v_inst.LNUMAV
+FIN => reflexes_cu:b2v_inst.FIN
+KEY0 => reflexes_dp:b2v_inst1.KEY0
+KEY1 => reflexes_dp:b2v_inst1.KEY1
+KEY2 => reflexes_dp:b2v_inst1.KEY2
+KEY3 => reflexes_dp:b2v_inst1.KEY3
+LNUM[0] => reflexes_dp:b2v_inst1.LNUM[0]
+LNUM[1] => reflexes_dp:b2v_inst1.LNUM[1]
+
+
+|total_test_DE2|reflexes:inst|Reflexes_CU:b2v_inst
+TC_CNT_1ms => NEXT_STATE.DATAA
+TC_CNT_1ms => NEXT_STATE.DATAA
+TC_CNT_1ms => NEXT_STATE.DATAA
+TC_CNT_1ms => NEXT_STATE.DATAA
+TC_CNT_16bit => NEXT_STATE.OUTPUTSELECT
+TC_CNT_16bit => NEXT_STATE.OUTPUTSELECT
+TC_CNT_16bit => NEXT_STATE.OUTPUTSELECT
+TC_CNT_16bit => NEXT_STATE.OUTPUTSELECT
+SKEY => NEXT_STATE.OUTPUTSELECT
+SKEY => NEXT_STATE.OUTPUTSELECT
+SKEY => NEXT_STATE.DATAB
+BUTTON => NEXT_STATE.OUTPUTSELECT
+BUTTON => NEXT_STATE.OUTPUTSELECT
+BUTTON => NEXT_STATE.OUTPUTSELECT
+BUTTON => NEXT_STATE.DATAB
+BUTTON => NEXT_STATE.DATAB
+CK => PRESENT_STATE~1.DATAIN
+RST => PRESENT_STATE.OUTPUTSELECT
+RST => PRESENT_STATE.OUTPUTSELECT
+RST => PRESENT_STATE.OUTPUTSELECT
+RST => PRESENT_STATE.OUTPUTSELECT
+RST => PRESENT_STATE.OUTPUTSELECT
+RST => PRESENT_STATE.OUTPUTSELECT
+RST => PRESENT_STATE.OUTPUTSELECT
+RST => PRESENT_STATE.OUTPUTSELECT
+LNUMAV => NEXT_STATE.LOAD_LED_TIME.DATAB
+LNUMAV => Selector0.IN2
+FIN => NEXT_STATE.RESET.DATAB
+FIN => Selector2.IN2
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1
+SCLR_CNT_1ms => CNT_1ms:inst3.sclr
+CK => CNT_1ms:inst3.clock
+CK => FF_LNUM:inst1.clock
+CK => FF_BUTTON:inst4.clock
+CK => CNT_16bit:inst19.clock
+CK => Random_10000:inst.CK
+EN_CNT_1ms => CNT_1ms:inst3.cnt_en
+KEY0 => mux4to1_1bit:MUX_KEY.A
+KEY1 => mux4to1_1bit:MUX_KEY.B
+KEY2 => mux4to1_1bit:MUX_KEY.C
+KEY3 => mux4to1_1bit:MUX_KEY.D
+SCLR_FF_LNUM => FF_LNUM:inst1.sclr
+EN_FF_LNUM => FF_LNUM:inst1.enable
+LNUM[0] => FF_LNUM:inst1.data[0]
+LNUM[1] => FF_LNUM:inst1.data[1]
+DATA_FF_BUTTON => FF_BUTTON:inst4.data
+EN_FF_BUTTON => FF_BUTTON:inst4.enable
+SCLR_CNT_16bit => CNT_16bit:inst19.sclr
+SLOAD_CNT_16bit => CNT_16bit:inst19.sload
+EN_CNT_16bit => CNT_16bit:inst19.cnt_en
+SEED_LOAD => Random_10000:inst.SEED_LOAD
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|AND_15bit:inst23
+data0 => LPM_AND:lpm_and_component.DATA[0][0]
+data1 => LPM_AND:lpm_and_component.DATA[1][0]
+data10 => LPM_AND:lpm_and_component.DATA[10][0]
+data11 => LPM_AND:lpm_and_component.DATA[11][0]
+data12 => LPM_AND:lpm_and_component.DATA[12][0]
+data13 => LPM_AND:lpm_and_component.DATA[13][0]
+data14 => LPM_AND:lpm_and_component.DATA[14][0]
+data2 => LPM_AND:lpm_and_component.DATA[2][0]
+data3 => LPM_AND:lpm_and_component.DATA[3][0]
+data4 => LPM_AND:lpm_and_component.DATA[4][0]
+data5 => LPM_AND:lpm_and_component.DATA[5][0]
+data6 => LPM_AND:lpm_and_component.DATA[6][0]
+data7 => LPM_AND:lpm_and_component.DATA[7][0]
+data8 => LPM_AND:lpm_and_component.DATA[8][0]
+data9 => LPM_AND:lpm_and_component.DATA[9][0]
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|AND_15bit:inst23|LPM_AND:lpm_and_component
+data[0][0] => and_node[0][1].IN1
+data[1][0] => and_node[0][1].IN0
+data[2][0] => and_node[0][2].IN0
+data[3][0] => and_node[0][3].IN0
+data[4][0] => and_node[0][4].IN0
+data[5][0] => and_node[0][5].IN0
+data[6][0] => and_node[0][6].IN0
+data[7][0] => and_node[0][7].IN0
+data[8][0] => and_node[0][8].IN0
+data[9][0] => and_node[0][9].IN0
+data[10][0] => and_node[0][10].IN0
+data[11][0] => and_node[0][11].IN0
+data[12][0] => and_node[0][12].IN0
+data[13][0] => and_node[0][13].IN0
+data[14][0] => and_node[0][14].IN0
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|CNT_1ms:inst3
+clock => lpm_counter:lpm_counter_component.clock
+cnt_en => lpm_counter:lpm_counter_component.cnt_en
+sclr => lpm_counter:lpm_counter_component.sclr
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|CNT_1ms:inst3|lpm_counter:lpm_counter_component
+clock => cntr_lpi:auto_generated.clock
+clk_en => ~NO_FANOUT~
+cnt_en => cntr_lpi:auto_generated.cnt_en
+updown => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => cntr_lpi:auto_generated.sclr
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+data[0] => ~NO_FANOUT~
+data[1] => ~NO_FANOUT~
+data[2] => ~NO_FANOUT~
+data[3] => ~NO_FANOUT~
+data[4] => ~NO_FANOUT~
+data[5] => ~NO_FANOUT~
+data[6] => ~NO_FANOUT~
+data[7] => ~NO_FANOUT~
+data[8] => ~NO_FANOUT~
+data[9] => ~NO_FANOUT~
+data[10] => ~NO_FANOUT~
+data[11] => ~NO_FANOUT~
+data[12] => ~NO_FANOUT~
+data[13] => ~NO_FANOUT~
+data[14] => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|CNT_1ms:inst3|lpm_counter:lpm_counter_component|cntr_lpi:auto_generated
+clock => counter_reg_bit1a[14].CLK
+clock => counter_reg_bit1a[13].CLK
+clock => counter_reg_bit1a[12].CLK
+clock => counter_reg_bit1a[11].CLK
+clock => counter_reg_bit1a[10].CLK
+clock => counter_reg_bit1a[9].CLK
+clock => counter_reg_bit1a[8].CLK
+clock => counter_reg_bit1a[7].CLK
+clock => counter_reg_bit1a[6].CLK
+clock => counter_reg_bit1a[5].CLK
+clock => counter_reg_bit1a[4].CLK
+clock => counter_reg_bit1a[3].CLK
+clock => counter_reg_bit1a[2].CLK
+clock => counter_reg_bit1a[1].CLK
+clock => counter_reg_bit1a[0].CLK
+cnt_en => _.IN1
+sclr => _.IN0
+sclr => _.IN0
+sclr => _.IN0
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|mux4to1_1bit:MUX_KEY
+A => O.DATAB
+B => O.DATAB
+C => O.DATAB
+D => O.DATAA
+S[0] => Equal0.IN0
+S[0] => Equal1.IN1
+S[0] => Equal2.IN1
+S[1] => Equal0.IN1
+S[1] => Equal1.IN0
+S[1] => Equal2.IN0
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|FF_LNUM:inst1
+clock => lpm_ff:lpm_ff_component.clock
+data[0] => lpm_ff:lpm_ff_component.data[0]
+data[1] => lpm_ff:lpm_ff_component.data[1]
+enable => lpm_ff:lpm_ff_component.enable
+sclr => lpm_ff:lpm_ff_component.sclr
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|FF_LNUM:inst1|lpm_ff:lpm_ff_component
+data[0] => dffs[0].DATAIN
+data[1] => dffs[1].DATAIN
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => dffs[1].SCLR
+sclr => dffs[0].SCLR
+sset => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|FF_BUTTON:inst4
+clock => lpm_ff:lpm_ff_component.clock
+data => lpm_ff:lpm_ff_component.data[0]
+enable => lpm_ff:lpm_ff_component.enable
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|FF_BUTTON:inst4|lpm_ff:lpm_ff_component
+data[0] => dffs[0].DATAIN
+clock => dffs[0].CLK
+enable => dffs[0].ENA
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|DEC_LED:inst6
+data[0] => lpm_decode:lpm_decode_component.data[0]
+data[1] => lpm_decode:lpm_decode_component.data[1]
+enable => lpm_decode:lpm_decode_component.enable
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|DEC_LED:inst6|lpm_decode:lpm_decode_component
+data[0] => decode_uqf:auto_generated.data[0]
+data[1] => decode_uqf:auto_generated.data[1]
+enable => decode_uqf:auto_generated.enable
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|DEC_LED:inst6|lpm_decode:lpm_decode_component|decode_uqf:auto_generated
+data[0] => w_anode14w[1].IN1
+data[0] => w_anode1w[1].IN0
+data[0] => w_anode22w[1].IN0
+data[0] => w_anode30w[1].IN1
+data[1] => w_anode14w[2].IN0
+data[1] => w_anode1w[2].IN0
+data[1] => w_anode22w[2].IN1
+data[1] => w_anode30w[2].IN1
+enable => w_anode14w[1].IN0
+enable => w_anode1w[1].IN0
+enable => w_anode22w[1].IN0
+enable => w_anode30w[1].IN0
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|AND_16bit:inst22
+data0 => LPM_AND:lpm_and_component.DATA[0][0]
+data1 => LPM_AND:lpm_and_component.DATA[1][0]
+data10 => LPM_AND:lpm_and_component.DATA[10][0]
+data11 => LPM_AND:lpm_and_component.DATA[11][0]
+data12 => LPM_AND:lpm_and_component.DATA[12][0]
+data13 => LPM_AND:lpm_and_component.DATA[13][0]
+data14 => LPM_AND:lpm_and_component.DATA[14][0]
+data15 => LPM_AND:lpm_and_component.DATA[15][0]
+data2 => LPM_AND:lpm_and_component.DATA[2][0]
+data3 => LPM_AND:lpm_and_component.DATA[3][0]
+data4 => LPM_AND:lpm_and_component.DATA[4][0]
+data5 => LPM_AND:lpm_and_component.DATA[5][0]
+data6 => LPM_AND:lpm_and_component.DATA[6][0]
+data7 => LPM_AND:lpm_and_component.DATA[7][0]
+data8 => LPM_AND:lpm_and_component.DATA[8][0]
+data9 => LPM_AND:lpm_and_component.DATA[9][0]
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|AND_16bit:inst22|LPM_AND:lpm_and_component
+data[0][0] => and_node[0][1].IN1
+data[1][0] => and_node[0][1].IN0
+data[2][0] => and_node[0][2].IN0
+data[3][0] => and_node[0][3].IN0
+data[4][0] => and_node[0][4].IN0
+data[5][0] => and_node[0][5].IN0
+data[6][0] => and_node[0][6].IN0
+data[7][0] => and_node[0][7].IN0
+data[8][0] => and_node[0][8].IN0
+data[9][0] => and_node[0][9].IN0
+data[10][0] => and_node[0][10].IN0
+data[11][0] => and_node[0][11].IN0
+data[12][0] => and_node[0][12].IN0
+data[13][0] => and_node[0][13].IN0
+data[14][0] => and_node[0][14].IN0
+data[15][0] => and_node[0][15].IN0
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|CNT_16bit:inst19
+clock => lpm_counter:lpm_counter_component.clock
+cnt_en => lpm_counter:lpm_counter_component.cnt_en
+data[0] => lpm_counter:lpm_counter_component.data[0]
+data[1] => lpm_counter:lpm_counter_component.data[1]
+data[2] => lpm_counter:lpm_counter_component.data[2]
+data[3] => lpm_counter:lpm_counter_component.data[3]
+data[4] => lpm_counter:lpm_counter_component.data[4]
+data[5] => lpm_counter:lpm_counter_component.data[5]
+data[6] => lpm_counter:lpm_counter_component.data[6]
+data[7] => lpm_counter:lpm_counter_component.data[7]
+data[8] => lpm_counter:lpm_counter_component.data[8]
+data[9] => lpm_counter:lpm_counter_component.data[9]
+data[10] => lpm_counter:lpm_counter_component.data[10]
+data[11] => lpm_counter:lpm_counter_component.data[11]
+data[12] => lpm_counter:lpm_counter_component.data[12]
+data[13] => lpm_counter:lpm_counter_component.data[13]
+data[14] => lpm_counter:lpm_counter_component.data[14]
+data[15] => lpm_counter:lpm_counter_component.data[15]
+sclr => lpm_counter:lpm_counter_component.sclr
+sload => lpm_counter:lpm_counter_component.sload
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|CNT_16bit:inst19|lpm_counter:lpm_counter_component
+clock => cntr_3pj:auto_generated.clock
+clk_en => ~NO_FANOUT~
+cnt_en => cntr_3pj:auto_generated.cnt_en
+updown => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => cntr_3pj:auto_generated.sclr
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => cntr_3pj:auto_generated.sload
+data[0] => cntr_3pj:auto_generated.data[0]
+data[1] => cntr_3pj:auto_generated.data[1]
+data[2] => cntr_3pj:auto_generated.data[2]
+data[3] => cntr_3pj:auto_generated.data[3]
+data[4] => cntr_3pj:auto_generated.data[4]
+data[5] => cntr_3pj:auto_generated.data[5]
+data[6] => cntr_3pj:auto_generated.data[6]
+data[7] => cntr_3pj:auto_generated.data[7]
+data[8] => cntr_3pj:auto_generated.data[8]
+data[9] => cntr_3pj:auto_generated.data[9]
+data[10] => cntr_3pj:auto_generated.data[10]
+data[11] => cntr_3pj:auto_generated.data[11]
+data[12] => cntr_3pj:auto_generated.data[12]
+data[13] => cntr_3pj:auto_generated.data[13]
+data[14] => cntr_3pj:auto_generated.data[14]
+data[15] => cntr_3pj:auto_generated.data[15]
+cin => ~NO_FANOUT~
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|CNT_16bit:inst19|lpm_counter:lpm_counter_component|cntr_3pj:auto_generated
+clock => counter_reg_bit1a[15].CLK
+clock => counter_reg_bit1a[14].CLK
+clock => counter_reg_bit1a[13].CLK
+clock => counter_reg_bit1a[12].CLK
+clock => counter_reg_bit1a[11].CLK
+clock => counter_reg_bit1a[10].CLK
+clock => counter_reg_bit1a[9].CLK
+clock => counter_reg_bit1a[8].CLK
+clock => counter_reg_bit1a[7].CLK
+clock => counter_reg_bit1a[6].CLK
+clock => counter_reg_bit1a[5].CLK
+clock => counter_reg_bit1a[4].CLK
+clock => counter_reg_bit1a[3].CLK
+clock => counter_reg_bit1a[2].CLK
+clock => counter_reg_bit1a[1].CLK
+clock => counter_reg_bit1a[0].CLK
+cnt_en => _.IN1
+data[0] => _.IN1
+data[1] => _.IN1
+data[2] => _.IN1
+data[3] => _.IN1
+data[4] => _.IN1
+data[5] => _.IN1
+data[6] => _.IN1
+data[7] => _.IN1
+data[8] => _.IN1
+data[9] => _.IN1
+data[10] => _.IN1
+data[11] => _.IN1
+data[12] => _.IN1
+data[13] => _.IN1
+data[14] => _.IN1
+data[15] => _.IN1
+sclr => _.IN0
+sclr => _.IN0
+sclr => _.IN0
+sload => _.IN1
+sload => counter_reg_bit1a[15].IN1
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|ADD_45535:inst24
+datab[0] => lpm_add_sub:lpm_add_sub_component.datab[0]
+datab[1] => lpm_add_sub:lpm_add_sub_component.datab[1]
+datab[2] => lpm_add_sub:lpm_add_sub_component.datab[2]
+datab[3] => lpm_add_sub:lpm_add_sub_component.datab[3]
+datab[4] => lpm_add_sub:lpm_add_sub_component.datab[4]
+datab[5] => lpm_add_sub:lpm_add_sub_component.datab[5]
+datab[6] => lpm_add_sub:lpm_add_sub_component.datab[6]
+datab[7] => lpm_add_sub:lpm_add_sub_component.datab[7]
+datab[8] => lpm_add_sub:lpm_add_sub_component.datab[8]
+datab[9] => lpm_add_sub:lpm_add_sub_component.datab[9]
+datab[10] => lpm_add_sub:lpm_add_sub_component.datab[10]
+datab[11] => lpm_add_sub:lpm_add_sub_component.datab[11]
+datab[12] => lpm_add_sub:lpm_add_sub_component.datab[12]
+datab[13] => lpm_add_sub:lpm_add_sub_component.datab[13]
+datab[14] => lpm_add_sub:lpm_add_sub_component.datab[14]
+datab[15] => lpm_add_sub:lpm_add_sub_component.datab[15]
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|ADD_45535:inst24|lpm_add_sub:lpm_add_sub_component
+dataa[0] => add_sub_fph:auto_generated.dataa[0]
+dataa[1] => add_sub_fph:auto_generated.dataa[1]
+dataa[2] => add_sub_fph:auto_generated.dataa[2]
+dataa[3] => add_sub_fph:auto_generated.dataa[3]
+dataa[4] => add_sub_fph:auto_generated.dataa[4]
+dataa[5] => add_sub_fph:auto_generated.dataa[5]
+dataa[6] => add_sub_fph:auto_generated.dataa[6]
+dataa[7] => add_sub_fph:auto_generated.dataa[7]
+dataa[8] => add_sub_fph:auto_generated.dataa[8]
+dataa[9] => add_sub_fph:auto_generated.dataa[9]
+dataa[10] => add_sub_fph:auto_generated.dataa[10]
+dataa[11] => add_sub_fph:auto_generated.dataa[11]
+dataa[12] => add_sub_fph:auto_generated.dataa[12]
+dataa[13] => add_sub_fph:auto_generated.dataa[13]
+dataa[14] => add_sub_fph:auto_generated.dataa[14]
+dataa[15] => add_sub_fph:auto_generated.dataa[15]
+datab[0] => add_sub_fph:auto_generated.datab[0]
+datab[1] => add_sub_fph:auto_generated.datab[1]
+datab[2] => add_sub_fph:auto_generated.datab[2]
+datab[3] => add_sub_fph:auto_generated.datab[3]
+datab[4] => add_sub_fph:auto_generated.datab[4]
+datab[5] => add_sub_fph:auto_generated.datab[5]
+datab[6] => add_sub_fph:auto_generated.datab[6]
+datab[7] => add_sub_fph:auto_generated.datab[7]
+datab[8] => add_sub_fph:auto_generated.datab[8]
+datab[9] => add_sub_fph:auto_generated.datab[9]
+datab[10] => add_sub_fph:auto_generated.datab[10]
+datab[11] => add_sub_fph:auto_generated.datab[11]
+datab[12] => add_sub_fph:auto_generated.datab[12]
+datab[13] => add_sub_fph:auto_generated.datab[13]
+datab[14] => add_sub_fph:auto_generated.datab[14]
+datab[15] => add_sub_fph:auto_generated.datab[15]
+cin => ~NO_FANOUT~
+add_sub => ~NO_FANOUT~
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|ADD_45535:inst24|lpm_add_sub:lpm_add_sub_component|add_sub_fph:auto_generated
+dataa[0] => op_1.IN30
+dataa[1] => op_1.IN28
+dataa[2] => op_1.IN26
+dataa[3] => op_1.IN24
+dataa[4] => op_1.IN22
+dataa[5] => op_1.IN20
+dataa[6] => op_1.IN18
+dataa[7] => op_1.IN16
+dataa[8] => op_1.IN14
+dataa[9] => op_1.IN12
+dataa[10] => op_1.IN10
+dataa[11] => op_1.IN8
+dataa[12] => op_1.IN6
+dataa[13] => op_1.IN4
+dataa[14] => op_1.IN2
+dataa[15] => op_1.IN0
+datab[0] => op_1.IN31
+datab[1] => op_1.IN29
+datab[2] => op_1.IN27
+datab[3] => op_1.IN25
+datab[4] => op_1.IN23
+datab[5] => op_1.IN21
+datab[6] => op_1.IN19
+datab[7] => op_1.IN17
+datab[8] => op_1.IN15
+datab[9] => op_1.IN13
+datab[10] => op_1.IN11
+datab[11] => op_1.IN9
+datab[12] => op_1.IN7
+datab[13] => op_1.IN5
+datab[14] => op_1.IN3
+datab[15] => op_1.IN1
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst
+CK => FF_1bit:inst1.clock
+CK => FF_1bit:inst2.clock
+CK => FF_1bit:inst3.clock
+CK => FF_1bit:inst4.clock
+CK => FF_1bit:inst5.clock
+CK => FF_1bit:inst6.clock
+CK => FF_1bit:inst7.clock
+CK => FF_1bit:inst8.clock
+CK => FF_1bit:inst9.clock
+CK => FF_1bit:inst10.clock
+CK => FF_1bit:inst11.clock
+CK => FF_1bit:inst12.clock
+CK => FF_1bit:inst13.clock
+CK => FF_1bit:inst14.clock
+SEED_LOAD => mux2to1_1bit:inst68.S
+SEED_LOAD => mux2to1_1bit:inst69.S
+SEED_LOAD => mux2to1_1bit:inst70.S
+SEED_LOAD => mux2to1_1bit:inst80.S
+SEED_LOAD => mux2to1_1bit:inst71.S
+SEED_LOAD => mux2to1_1bit:inst72.S
+SEED_LOAD => mux2to1_1bit:inst73.S
+SEED_LOAD => mux2to1_1bit:inst74.S
+SEED_LOAD => mux2to1_1bit:inst75.S
+SEED_LOAD => mux2to1_1bit:inst76.S
+SEED_LOAD => mux2to1_1bit:inst77.S
+SEED_LOAD => mux2to1_1bit:inst78.S
+SEED_LOAD => mux2to1_1bit:inst79.S
+SEED_LOAD => mux2to1_1bit:inst67.S
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|rshifter_14:inst90
+input[0] => ~NO_FANOUT~
+input[1] => ~NO_FANOUT~
+input[2] => ~NO_FANOUT~
+input[3] => ~NO_FANOUT~
+input[4] => ~NO_FANOUT~
+input[5] => ~NO_FANOUT~
+input[6] => ~NO_FANOUT~
+input[7] => ~NO_FANOUT~
+input[8] => ~NO_FANOUT~
+input[9] => ~NO_FANOUT~
+input[10] => ~NO_FANOUT~
+input[11] => ~NO_FANOUT~
+input[12] => ~NO_FANOUT~
+input[13] => ~NO_FANOUT~
+input[14] => output[0].DATAIN
+input[15] => output[1].DATAIN
+input[16] => output[2].DATAIN
+input[17] => output[3].DATAIN
+input[18] => output[4].DATAIN
+input[19] => output[5].DATAIN
+input[20] => output[6].DATAIN
+input[21] => output[7].DATAIN
+input[22] => output[8].DATAIN
+input[23] => output[9].DATAIN
+input[24] => output[10].DATAIN
+input[25] => output[11].DATAIN
+input[26] => output[12].DATAIN
+input[27] => output[13].DATAIN
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|MULT_10000:inst
+dataa[0] => lpm_mult:lpm_mult_component.dataa[0]
+dataa[1] => lpm_mult:lpm_mult_component.dataa[1]
+dataa[2] => lpm_mult:lpm_mult_component.dataa[2]
+dataa[3] => lpm_mult:lpm_mult_component.dataa[3]
+dataa[4] => lpm_mult:lpm_mult_component.dataa[4]
+dataa[5] => lpm_mult:lpm_mult_component.dataa[5]
+dataa[6] => lpm_mult:lpm_mult_component.dataa[6]
+dataa[7] => lpm_mult:lpm_mult_component.dataa[7]
+dataa[8] => lpm_mult:lpm_mult_component.dataa[8]
+dataa[9] => lpm_mult:lpm_mult_component.dataa[9]
+dataa[10] => lpm_mult:lpm_mult_component.dataa[10]
+dataa[11] => lpm_mult:lpm_mult_component.dataa[11]
+dataa[12] => lpm_mult:lpm_mult_component.dataa[12]
+dataa[13] => lpm_mult:lpm_mult_component.dataa[13]
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|MULT_10000:inst|lpm_mult:lpm_mult_component
+dataa[0] => multcore:mult_core.dataa[0]
+dataa[1] => multcore:mult_core.dataa[1]
+dataa[2] => multcore:mult_core.dataa[2]
+dataa[3] => multcore:mult_core.dataa[3]
+dataa[4] => multcore:mult_core.dataa[4]
+dataa[5] => multcore:mult_core.dataa[5]
+dataa[6] => multcore:mult_core.dataa[6]
+dataa[7] => multcore:mult_core.dataa[7]
+dataa[8] => multcore:mult_core.dataa[8]
+dataa[9] => multcore:mult_core.dataa[9]
+dataa[10] => multcore:mult_core.dataa[10]
+dataa[11] => multcore:mult_core.dataa[11]
+dataa[12] => multcore:mult_core.dataa[12]
+dataa[13] => multcore:mult_core.dataa[13]
+datab[0] => multcore:mult_core.datab[0]
+datab[1] => multcore:mult_core.datab[1]
+datab[2] => multcore:mult_core.datab[2]
+datab[3] => multcore:mult_core.datab[3]
+datab[4] => multcore:mult_core.datab[4]
+datab[5] => multcore:mult_core.datab[5]
+datab[6] => multcore:mult_core.datab[6]
+datab[7] => multcore:mult_core.datab[7]
+datab[8] => multcore:mult_core.datab[8]
+datab[9] => multcore:mult_core.datab[9]
+datab[10] => multcore:mult_core.datab[10]
+datab[11] => multcore:mult_core.datab[11]
+datab[12] => multcore:mult_core.datab[12]
+datab[13] => multcore:mult_core.datab[13]
+sum[0] => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clock => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|MULT_10000:inst|lpm_mult:lpm_mult_component|multcore:mult_core
+dataa[0] => _.IN0
+dataa[0] => _.IN3
+dataa[0] => _.IN0
+dataa[0] => _.IN3
+dataa[0] => _.IN0
+dataa[0] => _.IN3
+dataa[0] => _.IN0
+dataa[0] => _.IN3
+dataa[0] => _.IN0
+dataa[0] => _.IN3
+dataa[0] => _.IN0
+dataa[0] => _.IN3
+dataa[0] => _.IN0
+dataa[0] => _.IN3
+dataa[0] => _.IN0
+dataa[0] => _.IN3
+dataa[1] => _.IN0
+dataa[1] => _.IN0
+dataa[1] => _.IN2
+dataa[1] => _.IN2
+dataa[1] => _.IN0
+dataa[1] => _.IN0
+dataa[1] => _.IN2
+dataa[1] => _.IN2
+dataa[1] => _.IN0
+dataa[1] => _.IN0
+dataa[1] => _.IN2
+dataa[1] => _.IN2
+dataa[1] => _.IN0
+dataa[1] => _.IN0
+dataa[1] => _.IN2
+dataa[1] => _.IN2
+dataa[2] => _.IN0
+dataa[2] => _.IN0
+dataa[2] => _.IN0
+dataa[2] => _.IN0
+dataa[2] => _.IN1
+dataa[2] => _.IN1
+dataa[2] => _.IN1
+dataa[2] => _.IN1
+dataa[2] => _.IN0
+dataa[2] => _.IN0
+dataa[2] => _.IN0
+dataa[2] => _.IN0
+dataa[2] => _.IN1
+dataa[2] => _.IN1
+dataa[2] => _.IN1
+dataa[2] => _.IN1
+dataa[3] => _.IN0
+dataa[3] => _.IN0
+dataa[3] => _.IN0
+dataa[3] => _.IN0
+dataa[3] => _.IN0
+dataa[3] => _.IN0
+dataa[3] => _.IN0
+dataa[3] => _.IN0
+dataa[3] => _.IN0
+dataa[3] => _.IN0
+dataa[3] => _.IN0
+dataa[3] => _.IN0
+dataa[3] => _.IN0
+dataa[3] => _.IN0
+dataa[3] => _.IN0
+dataa[3] => _.IN0
+dataa[4] => _.IN0
+dataa[4] => _.IN3
+dataa[4] => _.IN0
+dataa[4] => _.IN3
+dataa[4] => _.IN0
+dataa[4] => _.IN3
+dataa[4] => _.IN0
+dataa[4] => _.IN3
+dataa[4] => _.IN0
+dataa[4] => _.IN3
+dataa[4] => _.IN0
+dataa[4] => _.IN3
+dataa[4] => _.IN0
+dataa[4] => _.IN3
+dataa[4] => _.IN0
+dataa[4] => _.IN3
+dataa[5] => _.IN0
+dataa[5] => _.IN0
+dataa[5] => _.IN2
+dataa[5] => _.IN2
+dataa[5] => _.IN0
+dataa[5] => _.IN0
+dataa[5] => _.IN2
+dataa[5] => _.IN2
+dataa[5] => _.IN0
+dataa[5] => _.IN0
+dataa[5] => _.IN2
+dataa[5] => _.IN2
+dataa[5] => _.IN0
+dataa[5] => _.IN0
+dataa[5] => _.IN2
+dataa[5] => _.IN2
+dataa[6] => _.IN0
+dataa[6] => _.IN0
+dataa[6] => _.IN0
+dataa[6] => _.IN0
+dataa[6] => _.IN1
+dataa[6] => _.IN1
+dataa[6] => _.IN1
+dataa[6] => _.IN1
+dataa[6] => _.IN0
+dataa[6] => _.IN0
+dataa[6] => _.IN0
+dataa[6] => _.IN0
+dataa[6] => _.IN1
+dataa[6] => _.IN1
+dataa[6] => _.IN1
+dataa[6] => _.IN1
+dataa[7] => _.IN0
+dataa[7] => _.IN0
+dataa[7] => _.IN0
+dataa[7] => _.IN0
+dataa[7] => _.IN0
+dataa[7] => _.IN0
+dataa[7] => _.IN0
+dataa[7] => _.IN0
+dataa[7] => _.IN0
+dataa[7] => _.IN0
+dataa[7] => _.IN0
+dataa[7] => _.IN0
+dataa[7] => _.IN0
+dataa[7] => _.IN0
+dataa[7] => _.IN0
+dataa[7] => _.IN0
+dataa[8] => _.IN0
+dataa[8] => _.IN3
+dataa[8] => _.IN0
+dataa[8] => _.IN3
+dataa[8] => _.IN0
+dataa[8] => _.IN3
+dataa[8] => _.IN0
+dataa[8] => _.IN3
+dataa[8] => _.IN0
+dataa[8] => _.IN3
+dataa[8] => _.IN0
+dataa[8] => _.IN3
+dataa[8] => _.IN0
+dataa[8] => _.IN3
+dataa[8] => _.IN0
+dataa[8] => _.IN3
+dataa[9] => _.IN0
+dataa[9] => _.IN0
+dataa[9] => _.IN2
+dataa[9] => _.IN2
+dataa[9] => _.IN0
+dataa[9] => _.IN0
+dataa[9] => _.IN2
+dataa[9] => _.IN2
+dataa[9] => _.IN0
+dataa[9] => _.IN0
+dataa[9] => _.IN2
+dataa[9] => _.IN2
+dataa[9] => _.IN0
+dataa[9] => _.IN0
+dataa[9] => _.IN2
+dataa[9] => _.IN2
+dataa[10] => _.IN0
+dataa[10] => _.IN0
+dataa[10] => _.IN0
+dataa[10] => _.IN0
+dataa[10] => _.IN1
+dataa[10] => _.IN1
+dataa[10] => _.IN1
+dataa[10] => _.IN1
+dataa[10] => _.IN0
+dataa[10] => _.IN0
+dataa[10] => _.IN0
+dataa[10] => _.IN0
+dataa[10] => _.IN1
+dataa[10] => _.IN1
+dataa[10] => _.IN1
+dataa[10] => _.IN1
+dataa[11] => _.IN0
+dataa[11] => _.IN0
+dataa[11] => _.IN0
+dataa[11] => _.IN0
+dataa[11] => _.IN0
+dataa[11] => _.IN0
+dataa[11] => _.IN0
+dataa[11] => _.IN0
+dataa[11] => _.IN0
+dataa[11] => _.IN0
+dataa[11] => _.IN0
+dataa[11] => _.IN0
+dataa[11] => _.IN0
+dataa[11] => _.IN0
+dataa[11] => _.IN0
+dataa[11] => _.IN0
+dataa[12] => _.IN0
+dataa[12] => _.IN3
+dataa[12] => _.IN0
+dataa[12] => _.IN3
+dataa[12] => _.IN0
+dataa[12] => _.IN3
+dataa[12] => _.IN0
+dataa[12] => _.IN3
+dataa[12] => _.IN0
+dataa[12] => _.IN3
+dataa[12] => _.IN0
+dataa[12] => _.IN3
+dataa[12] => _.IN0
+dataa[12] => _.IN3
+dataa[12] => _.IN0
+dataa[12] => _.IN3
+dataa[13] => ina_reg_clkd[1].IN0
+datab[0] => op_1.IN34
+datab[0] => op_2.IN35
+datab[0] => op_4.IN35
+datab[0] => op_5.IN35
+datab[0] => op_6.IN35
+datab[0] => op_7.IN35
+datab[0] => op_8.IN35
+datab[0] => op_9.IN35
+datab[0] => op_10.IN35
+datab[0] => op_11.IN35
+datab[0] => romout[0][0].IN1
+datab[0] => romout[1][0].IN1
+datab[0] => romout[2][0].IN1
+datab[0] => op_1.IN33
+datab[0] => op_3.IN33
+datab[0] => romout[0][1].IN1
+datab[0] => romout[1][1].IN1
+datab[0] => romout[2][1].IN1
+datab[0] => op_2.IN30
+datab[0] => op_3.IN30
+datab[0] => romout[0][2].IN1
+datab[0] => romout[1][2].IN1
+datab[0] => romout[2][2].IN1
+datab[0] => op_5.IN28
+datab[0] => romout[0][3].IN1
+datab[0] => romout[1][3].IN1
+datab[0] => romout[2][3].IN1
+datab[0] => romout[3][0].IN1
+datab[0] => romout[3][1].IN1
+datab[0] => romout[3][2].IN1
+datab[0] => romout[3][3].IN1
+datab[1] => op_1.IN32
+datab[1] => op_2.IN33
+datab[1] => op_4.IN33
+datab[1] => op_5.IN33
+datab[1] => op_6.IN33
+datab[1] => op_7.IN33
+datab[1] => op_8.IN33
+datab[1] => op_9.IN33
+datab[1] => op_10.IN33
+datab[1] => op_11.IN33
+datab[1] => romout[0][1].IN1
+datab[1] => romout[1][1].IN1
+datab[1] => romout[2][1].IN1
+datab[1] => op_1.IN31
+datab[1] => op_3.IN31
+datab[1] => romout[0][2].IN1
+datab[1] => romout[1][2].IN1
+datab[1] => romout[2][2].IN1
+datab[1] => op_2.IN28
+datab[1] => op_3.IN28
+datab[1] => romout[0][3].IN1
+datab[1] => romout[1][3].IN1
+datab[1] => romout[2][3].IN1
+datab[1] => op_5.IN26
+datab[1] => romout[0][4].IN1
+datab[1] => romout[1][4].IN1
+datab[1] => romout[2][4].IN1
+datab[1] => romout[3][1].IN1
+datab[1] => romout[3][2].IN1
+datab[1] => romout[3][3].IN1
+datab[1] => romout[3][4].IN1
+datab[2] => op_1.IN30
+datab[2] => op_2.IN31
+datab[2] => op_4.IN31
+datab[2] => op_5.IN31
+datab[2] => op_6.IN31
+datab[2] => op_7.IN31
+datab[2] => op_8.IN31
+datab[2] => op_9.IN31
+datab[2] => op_10.IN31
+datab[2] => op_11.IN31
+datab[2] => romout[0][2].IN1
+datab[2] => romout[1][2].IN1
+datab[2] => romout[2][2].IN1
+datab[2] => op_1.IN29
+datab[2] => op_3.IN29
+datab[2] => romout[0][3].IN1
+datab[2] => romout[1][3].IN1
+datab[2] => romout[2][3].IN1
+datab[2] => op_2.IN26
+datab[2] => op_3.IN26
+datab[2] => romout[0][4].IN1
+datab[2] => romout[1][4].IN1
+datab[2] => romout[2][4].IN1
+datab[2] => op_5.IN24
+datab[2] => romout[0][5].IN1
+datab[2] => romout[1][5].IN1
+datab[2] => romout[2][5].IN1
+datab[2] => romout[3][2].IN1
+datab[2] => romout[3][3].IN1
+datab[2] => romout[3][4].IN1
+datab[2] => romout[3][5].IN1
+datab[3] => op_1.IN28
+datab[3] => op_2.IN29
+datab[3] => op_4.IN29
+datab[3] => op_5.IN29
+datab[3] => op_6.IN29
+datab[3] => op_7.IN29
+datab[3] => op_8.IN29
+datab[3] => op_9.IN29
+datab[3] => op_10.IN29
+datab[3] => op_11.IN29
+datab[3] => romout[0][3].IN1
+datab[3] => romout[1][3].IN1
+datab[3] => romout[2][3].IN1
+datab[3] => op_1.IN27
+datab[3] => op_3.IN27
+datab[3] => romout[0][4].IN1
+datab[3] => romout[1][4].IN1
+datab[3] => romout[2][4].IN1
+datab[3] => op_2.IN24
+datab[3] => op_3.IN24
+datab[3] => romout[0][5].IN1
+datab[3] => romout[1][5].IN1
+datab[3] => romout[2][5].IN1
+datab[3] => op_5.IN22
+datab[3] => romout[0][6].IN1
+datab[3] => romout[1][6].IN1
+datab[3] => romout[2][6].IN1
+datab[3] => romout[3][3].IN1
+datab[3] => romout[3][4].IN1
+datab[3] => romout[3][5].IN1
+datab[3] => romout[3][6].IN1
+datab[4] => op_1.IN26
+datab[4] => op_2.IN27
+datab[4] => op_4.IN27
+datab[4] => op_5.IN27
+datab[4] => op_6.IN27
+datab[4] => op_7.IN27
+datab[4] => op_8.IN27
+datab[4] => op_9.IN27
+datab[4] => op_10.IN27
+datab[4] => op_11.IN27
+datab[4] => romout[0][4].IN1
+datab[4] => romout[1][4].IN1
+datab[4] => romout[2][4].IN1
+datab[4] => op_1.IN25
+datab[4] => op_3.IN25
+datab[4] => romout[0][5].IN1
+datab[4] => romout[1][5].IN1
+datab[4] => romout[2][5].IN1
+datab[4] => op_2.IN22
+datab[4] => op_3.IN22
+datab[4] => romout[0][6].IN1
+datab[4] => romout[1][6].IN1
+datab[4] => romout[2][6].IN1
+datab[4] => op_5.IN20
+datab[4] => romout[0][7].IN1
+datab[4] => romout[1][7].IN1
+datab[4] => romout[2][7].IN1
+datab[4] => romout[3][4].IN1
+datab[4] => romout[3][5].IN1
+datab[4] => romout[3][6].IN1
+datab[4] => romout[3][7].IN1
+datab[5] => op_1.IN24
+datab[5] => op_2.IN25
+datab[5] => op_4.IN25
+datab[5] => op_5.IN25
+datab[5] => op_6.IN25
+datab[5] => op_7.IN25
+datab[5] => op_8.IN25
+datab[5] => op_9.IN25
+datab[5] => op_10.IN25
+datab[5] => op_11.IN25
+datab[5] => romout[0][5].IN1
+datab[5] => romout[1][5].IN1
+datab[5] => romout[2][5].IN1
+datab[5] => op_1.IN23
+datab[5] => op_3.IN23
+datab[5] => romout[0][6].IN1
+datab[5] => romout[1][6].IN1
+datab[5] => romout[2][6].IN1
+datab[5] => op_2.IN20
+datab[5] => op_3.IN20
+datab[5] => romout[0][7].IN1
+datab[5] => romout[1][7].IN1
+datab[5] => romout[2][7].IN1
+datab[5] => op_5.IN18
+datab[5] => romout[0][8].IN1
+datab[5] => romout[1][8].IN1
+datab[5] => romout[2][8].IN1
+datab[5] => romout[3][5].IN1
+datab[5] => romout[3][6].IN1
+datab[5] => romout[3][7].IN1
+datab[5] => romout[3][8].IN1
+datab[6] => op_1.IN22
+datab[6] => op_2.IN23
+datab[6] => op_4.IN23
+datab[6] => op_5.IN23
+datab[6] => op_6.IN23
+datab[6] => op_7.IN23
+datab[6] => op_8.IN23
+datab[6] => op_9.IN23
+datab[6] => op_10.IN23
+datab[6] => op_11.IN23
+datab[6] => romout[0][6].IN1
+datab[6] => romout[1][6].IN1
+datab[6] => romout[2][6].IN1
+datab[6] => op_1.IN21
+datab[6] => op_3.IN21
+datab[6] => romout[0][7].IN1
+datab[6] => romout[1][7].IN1
+datab[6] => romout[2][7].IN1
+datab[6] => op_2.IN18
+datab[6] => op_3.IN18
+datab[6] => romout[0][8].IN1
+datab[6] => romout[1][8].IN1
+datab[6] => romout[2][8].IN1
+datab[6] => op_5.IN16
+datab[6] => romout[0][9].IN1
+datab[6] => romout[1][9].IN1
+datab[6] => romout[2][9].IN1
+datab[6] => romout[3][6].IN1
+datab[6] => romout[3][7].IN1
+datab[6] => romout[3][8].IN1
+datab[6] => romout[3][9].IN1
+datab[7] => op_1.IN20
+datab[7] => op_2.IN21
+datab[7] => op_4.IN21
+datab[7] => op_5.IN21
+datab[7] => op_6.IN21
+datab[7] => op_7.IN21
+datab[7] => op_8.IN21
+datab[7] => op_9.IN21
+datab[7] => op_10.IN21
+datab[7] => op_11.IN21
+datab[7] => romout[0][7].IN1
+datab[7] => romout[1][7].IN1
+datab[7] => romout[2][7].IN1
+datab[7] => op_1.IN19
+datab[7] => op_3.IN19
+datab[7] => romout[0][8].IN1
+datab[7] => romout[1][8].IN1
+datab[7] => romout[2][8].IN1
+datab[7] => op_2.IN16
+datab[7] => op_3.IN16
+datab[7] => romout[0][9].IN1
+datab[7] => romout[1][9].IN1
+datab[7] => romout[2][9].IN1
+datab[7] => op_5.IN14
+datab[7] => romout[0][10].IN1
+datab[7] => romout[1][10].IN1
+datab[7] => romout[2][10].IN1
+datab[7] => romout[3][7].IN1
+datab[7] => romout[3][8].IN1
+datab[7] => romout[3][9].IN1
+datab[7] => romout[3][10].IN1
+datab[8] => op_1.IN18
+datab[8] => op_2.IN19
+datab[8] => op_4.IN19
+datab[8] => op_5.IN19
+datab[8] => op_6.IN19
+datab[8] => op_7.IN19
+datab[8] => op_8.IN19
+datab[8] => op_9.IN19
+datab[8] => op_10.IN19
+datab[8] => op_11.IN19
+datab[8] => romout[0][8].IN1
+datab[8] => romout[1][8].IN1
+datab[8] => romout[2][8].IN1
+datab[8] => op_1.IN17
+datab[8] => op_3.IN17
+datab[8] => romout[0][9].IN1
+datab[8] => romout[1][9].IN1
+datab[8] => romout[2][9].IN1
+datab[8] => op_2.IN14
+datab[8] => op_3.IN14
+datab[8] => romout[0][10].IN1
+datab[8] => romout[1][10].IN1
+datab[8] => romout[2][10].IN1
+datab[8] => op_5.IN12
+datab[8] => romout[0][11].IN1
+datab[8] => romout[1][11].IN1
+datab[8] => romout[2][11].IN1
+datab[8] => romout[3][8].IN1
+datab[8] => romout[3][9].IN1
+datab[8] => romout[3][10].IN1
+datab[8] => romout[3][11].IN1
+datab[9] => op_1.IN16
+datab[9] => op_2.IN17
+datab[9] => op_4.IN17
+datab[9] => op_5.IN17
+datab[9] => op_6.IN17
+datab[9] => op_7.IN17
+datab[9] => op_8.IN17
+datab[9] => op_9.IN17
+datab[9] => op_10.IN17
+datab[9] => op_11.IN17
+datab[9] => romout[0][9].IN1
+datab[9] => romout[1][9].IN1
+datab[9] => romout[2][9].IN1
+datab[9] => op_1.IN15
+datab[9] => op_3.IN15
+datab[9] => romout[0][10].IN1
+datab[9] => romout[1][10].IN1
+datab[9] => romout[2][10].IN1
+datab[9] => op_2.IN12
+datab[9] => op_3.IN12
+datab[9] => romout[0][11].IN1
+datab[9] => romout[1][11].IN1
+datab[9] => romout[2][11].IN1
+datab[9] => op_5.IN10
+datab[9] => romout[0][12].IN1
+datab[9] => romout[1][12].IN1
+datab[9] => romout[2][12].IN1
+datab[9] => romout[3][9].IN1
+datab[9] => romout[3][10].IN1
+datab[9] => romout[3][11].IN1
+datab[9] => romout[3][12].IN1
+datab[10] => op_1.IN14
+datab[10] => op_2.IN15
+datab[10] => op_4.IN15
+datab[10] => op_5.IN15
+datab[10] => op_6.IN15
+datab[10] => op_7.IN15
+datab[10] => op_8.IN15
+datab[10] => op_9.IN15
+datab[10] => op_10.IN15
+datab[10] => op_11.IN15
+datab[10] => romout[0][10].IN1
+datab[10] => romout[1][10].IN1
+datab[10] => romout[2][10].IN1
+datab[10] => op_1.IN13
+datab[10] => op_3.IN13
+datab[10] => romout[0][11].IN1
+datab[10] => romout[1][11].IN1
+datab[10] => romout[2][11].IN1
+datab[10] => op_2.IN10
+datab[10] => op_3.IN10
+datab[10] => romout[0][12].IN1
+datab[10] => romout[1][12].IN1
+datab[10] => romout[2][12].IN1
+datab[10] => op_5.IN8
+datab[10] => romout[0][13].IN1
+datab[10] => romout[1][13].IN1
+datab[10] => romout[2][13].IN1
+datab[10] => romout[3][10].IN1
+datab[10] => romout[3][11].IN1
+datab[10] => romout[3][12].IN1
+datab[10] => romout[3][13].IN1
+datab[11] => op_1.IN12
+datab[11] => op_2.IN13
+datab[11] => op_4.IN13
+datab[11] => op_5.IN13
+datab[11] => op_6.IN13
+datab[11] => op_7.IN13
+datab[11] => op_8.IN13
+datab[11] => op_9.IN13
+datab[11] => op_10.IN13
+datab[11] => op_11.IN13
+datab[11] => romout[0][11].IN1
+datab[11] => romout[1][11].IN1
+datab[11] => romout[2][11].IN1
+datab[11] => op_1.IN11
+datab[11] => op_3.IN11
+datab[11] => romout[0][12].IN1
+datab[11] => romout[1][12].IN1
+datab[11] => romout[2][12].IN1
+datab[11] => op_2.IN8
+datab[11] => op_3.IN8
+datab[11] => romout[0][13].IN1
+datab[11] => romout[1][13].IN1
+datab[11] => romout[2][13].IN1
+datab[11] => op_5.IN6
+datab[11] => romout[0][14].IN1
+datab[11] => romout[1][14].IN1
+datab[11] => romout[2][14].IN1
+datab[11] => romout[3][11].IN1
+datab[11] => romout[3][12].IN1
+datab[11] => romout[3][13].IN1
+datab[11] => romout[3][14].IN1
+datab[12] => op_1.IN10
+datab[12] => op_2.IN11
+datab[12] => op_4.IN11
+datab[12] => op_5.IN11
+datab[12] => op_6.IN11
+datab[12] => op_7.IN11
+datab[12] => op_8.IN11
+datab[12] => op_9.IN11
+datab[12] => op_10.IN11
+datab[12] => op_11.IN11
+datab[12] => romout[0][12].IN1
+datab[12] => romout[1][12].IN1
+datab[12] => romout[2][12].IN1
+datab[12] => op_1.IN9
+datab[12] => op_3.IN9
+datab[12] => romout[0][13].IN1
+datab[12] => romout[1][13].IN1
+datab[12] => romout[2][13].IN1
+datab[12] => op_2.IN6
+datab[12] => op_3.IN6
+datab[12] => romout[0][14].IN1
+datab[12] => romout[1][14].IN1
+datab[12] => romout[2][14].IN1
+datab[12] => op_5.IN4
+datab[12] => romout[0][15].IN1
+datab[12] => romout[1][15].IN1
+datab[12] => romout[2][15].IN1
+datab[12] => romout[3][12].IN1
+datab[12] => romout[3][13].IN1
+datab[12] => romout[3][14].IN1
+datab[12] => romout[3][15].IN1
+datab[13] => op_1.IN8
+datab[13] => op_2.IN9
+datab[13] => op_4.IN9
+datab[13] => op_5.IN9
+datab[13] => op_6.IN9
+datab[13] => op_7.IN9
+datab[13] => op_8.IN9
+datab[13] => op_9.IN9
+datab[13] => op_10.IN9
+datab[13] => op_11.IN9
+datab[13] => romout[0][13].IN1
+datab[13] => romout[1][13].IN1
+datab[13] => romout[2][13].IN1
+datab[13] => op_1.IN7
+datab[13] => op_3.IN7
+datab[13] => romout[0][14].IN1
+datab[13] => romout[1][14].IN1
+datab[13] => romout[2][14].IN1
+datab[13] => op_2.IN4
+datab[13] => op_3.IN4
+datab[13] => romout[0][15].IN1
+datab[13] => romout[1][15].IN1
+datab[13] => romout[2][15].IN1
+datab[13] => op_5.IN2
+datab[13] => romout[0][16].IN1
+datab[13] => romout[1][16].IN1
+datab[13] => romout[2][16].IN1
+datab[13] => romout[3][13].IN1
+datab[13] => romout[3][14].IN1
+datab[13] => romout[3][15].IN1
+datab[13] => romout[3][16].IN1
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|MULT_10000:inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder
+data[0][0] => mpar_add:sub_par_add.data[0][0]
+data[0][1] => mpar_add:sub_par_add.data[0][1]
+data[0][2] => mpar_add:sub_par_add.data[0][2]
+data[0][3] => mpar_add:sub_par_add.data[0][3]
+data[0][4] => lpm_add_sub:adder[0].dataa[0]
+data[0][5] => lpm_add_sub:adder[0].dataa[1]
+data[0][6] => lpm_add_sub:adder[0].dataa[2]
+data[0][7] => lpm_add_sub:adder[0].dataa[3]
+data[0][8] => lpm_add_sub:adder[0].dataa[4]
+data[0][9] => lpm_add_sub:adder[0].dataa[5]
+data[0][10] => lpm_add_sub:adder[0].dataa[6]
+data[0][11] => lpm_add_sub:adder[0].dataa[7]
+data[0][12] => lpm_add_sub:adder[0].dataa[8]
+data[0][13] => lpm_add_sub:adder[0].dataa[9]
+data[0][14] => lpm_add_sub:adder[0].dataa[10]
+data[0][15] => lpm_add_sub:adder[0].dataa[11]
+data[0][16] => lpm_add_sub:adder[0].dataa[12]
+data[0][17] => lpm_add_sub:adder[0].dataa[13]
+data[1][0] => lpm_add_sub:adder[0].datab[0]
+data[1][1] => lpm_add_sub:adder[0].datab[1]
+data[1][2] => lpm_add_sub:adder[0].datab[2]
+data[1][3] => lpm_add_sub:adder[0].datab[3]
+data[1][4] => lpm_add_sub:adder[0].datab[4]
+data[1][5] => lpm_add_sub:adder[0].datab[5]
+data[1][6] => lpm_add_sub:adder[0].datab[6]
+data[1][7] => lpm_add_sub:adder[0].datab[7]
+data[1][8] => lpm_add_sub:adder[0].datab[8]
+data[1][9] => lpm_add_sub:adder[0].datab[9]
+data[1][10] => lpm_add_sub:adder[0].datab[10]
+data[1][11] => lpm_add_sub:adder[0].datab[11]
+data[1][12] => lpm_add_sub:adder[0].datab[12]
+data[1][13] => lpm_add_sub:adder[0].datab[13]
+data[1][14] => lpm_add_sub:adder[0].datab[14]
+data[1][15] => lpm_add_sub:adder[0].datab[15]
+data[1][16] => lpm_add_sub:adder[0].datab[16]
+data[1][17] => lpm_add_sub:adder[0].datab[17]
+data[2][0] => mpar_add:sub_par_add.data[1][0]
+data[2][1] => mpar_add:sub_par_add.data[1][1]
+data[2][2] => mpar_add:sub_par_add.data[1][2]
+data[2][3] => mpar_add:sub_par_add.data[1][3]
+data[2][4] => lpm_add_sub:adder[1].dataa[0]
+data[2][5] => lpm_add_sub:adder[1].dataa[1]
+data[2][6] => lpm_add_sub:adder[1].dataa[2]
+data[2][7] => lpm_add_sub:adder[1].dataa[3]
+data[2][8] => lpm_add_sub:adder[1].dataa[4]
+data[2][9] => lpm_add_sub:adder[1].dataa[5]
+data[2][10] => lpm_add_sub:adder[1].dataa[6]
+data[2][11] => lpm_add_sub:adder[1].dataa[7]
+data[2][12] => lpm_add_sub:adder[1].dataa[8]
+data[2][13] => lpm_add_sub:adder[1].dataa[9]
+data[2][14] => lpm_add_sub:adder[1].dataa[10]
+data[2][15] => lpm_add_sub:adder[1].dataa[11]
+data[2][16] => lpm_add_sub:adder[1].dataa[12]
+data[2][17] => lpm_add_sub:adder[1].dataa[13]
+data[3][0] => lpm_add_sub:adder[1].datab[0]
+data[3][1] => lpm_add_sub:adder[1].datab[1]
+data[3][2] => lpm_add_sub:adder[1].datab[2]
+data[3][3] => lpm_add_sub:adder[1].datab[3]
+data[3][4] => lpm_add_sub:adder[1].datab[4]
+data[3][5] => lpm_add_sub:adder[1].datab[5]
+data[3][6] => lpm_add_sub:adder[1].datab[6]
+data[3][7] => lpm_add_sub:adder[1].datab[7]
+data[3][8] => lpm_add_sub:adder[1].datab[8]
+data[3][9] => lpm_add_sub:adder[1].datab[9]
+data[3][10] => lpm_add_sub:adder[1].datab[10]
+data[3][11] => lpm_add_sub:adder[1].datab[11]
+data[3][12] => lpm_add_sub:adder[1].datab[12]
+data[3][13] => lpm_add_sub:adder[1].datab[13]
+data[3][14] => lpm_add_sub:adder[1].datab[14]
+data[3][15] => lpm_add_sub:adder[1].datab[15]
+data[3][16] => lpm_add_sub:adder[1].datab[16]
+data[3][17] => lpm_add_sub:adder[1].datab[17]
+cin => ~NO_FANOUT~
+clk => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|MULT_10000:inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]
+dataa[0] => add_sub_9ch:auto_generated.dataa[0]
+dataa[1] => add_sub_9ch:auto_generated.dataa[1]
+dataa[2] => add_sub_9ch:auto_generated.dataa[2]
+dataa[3] => add_sub_9ch:auto_generated.dataa[3]
+dataa[4] => add_sub_9ch:auto_generated.dataa[4]
+dataa[5] => add_sub_9ch:auto_generated.dataa[5]
+dataa[6] => add_sub_9ch:auto_generated.dataa[6]
+dataa[7] => add_sub_9ch:auto_generated.dataa[7]
+dataa[8] => add_sub_9ch:auto_generated.dataa[8]
+dataa[9] => add_sub_9ch:auto_generated.dataa[9]
+dataa[10] => add_sub_9ch:auto_generated.dataa[10]
+dataa[11] => add_sub_9ch:auto_generated.dataa[11]
+dataa[12] => add_sub_9ch:auto_generated.dataa[12]
+dataa[13] => add_sub_9ch:auto_generated.dataa[13]
+dataa[14] => add_sub_9ch:auto_generated.dataa[14]
+dataa[15] => add_sub_9ch:auto_generated.dataa[15]
+dataa[16] => add_sub_9ch:auto_generated.dataa[16]
+dataa[17] => add_sub_9ch:auto_generated.dataa[17]
+datab[0] => add_sub_9ch:auto_generated.datab[0]
+datab[1] => add_sub_9ch:auto_generated.datab[1]
+datab[2] => add_sub_9ch:auto_generated.datab[2]
+datab[3] => add_sub_9ch:auto_generated.datab[3]
+datab[4] => add_sub_9ch:auto_generated.datab[4]
+datab[5] => add_sub_9ch:auto_generated.datab[5]
+datab[6] => add_sub_9ch:auto_generated.datab[6]
+datab[7] => add_sub_9ch:auto_generated.datab[7]
+datab[8] => add_sub_9ch:auto_generated.datab[8]
+datab[9] => add_sub_9ch:auto_generated.datab[9]
+datab[10] => add_sub_9ch:auto_generated.datab[10]
+datab[11] => add_sub_9ch:auto_generated.datab[11]
+datab[12] => add_sub_9ch:auto_generated.datab[12]
+datab[13] => add_sub_9ch:auto_generated.datab[13]
+datab[14] => add_sub_9ch:auto_generated.datab[14]
+datab[15] => add_sub_9ch:auto_generated.datab[15]
+datab[16] => add_sub_9ch:auto_generated.datab[16]
+datab[17] => add_sub_9ch:auto_generated.datab[17]
+cin => ~NO_FANOUT~
+add_sub => ~NO_FANOUT~
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|MULT_10000:inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|add_sub_9ch:auto_generated
+dataa[0] => op_1.IN34
+dataa[1] => op_1.IN32
+dataa[2] => op_1.IN30
+dataa[3] => op_1.IN28
+dataa[4] => op_1.IN26
+dataa[5] => op_1.IN24
+dataa[6] => op_1.IN22
+dataa[7] => op_1.IN20
+dataa[8] => op_1.IN18
+dataa[9] => op_1.IN16
+dataa[10] => op_1.IN14
+dataa[11] => op_1.IN12
+dataa[12] => op_1.IN10
+dataa[13] => op_1.IN8
+dataa[14] => op_1.IN6
+dataa[15] => op_1.IN4
+dataa[16] => op_1.IN2
+dataa[17] => op_1.IN0
+datab[0] => op_1.IN35
+datab[1] => op_1.IN33
+datab[2] => op_1.IN31
+datab[3] => op_1.IN29
+datab[4] => op_1.IN27
+datab[5] => op_1.IN25
+datab[6] => op_1.IN23
+datab[7] => op_1.IN21
+datab[8] => op_1.IN19
+datab[9] => op_1.IN17
+datab[10] => op_1.IN15
+datab[11] => op_1.IN13
+datab[12] => op_1.IN11
+datab[13] => op_1.IN9
+datab[14] => op_1.IN7
+datab[15] => op_1.IN5
+datab[16] => op_1.IN3
+datab[17] => op_1.IN1
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|MULT_10000:inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]
+dataa[0] => add_sub_9ch:auto_generated.dataa[0]
+dataa[1] => add_sub_9ch:auto_generated.dataa[1]
+dataa[2] => add_sub_9ch:auto_generated.dataa[2]
+dataa[3] => add_sub_9ch:auto_generated.dataa[3]
+dataa[4] => add_sub_9ch:auto_generated.dataa[4]
+dataa[5] => add_sub_9ch:auto_generated.dataa[5]
+dataa[6] => add_sub_9ch:auto_generated.dataa[6]
+dataa[7] => add_sub_9ch:auto_generated.dataa[7]
+dataa[8] => add_sub_9ch:auto_generated.dataa[8]
+dataa[9] => add_sub_9ch:auto_generated.dataa[9]
+dataa[10] => add_sub_9ch:auto_generated.dataa[10]
+dataa[11] => add_sub_9ch:auto_generated.dataa[11]
+dataa[12] => add_sub_9ch:auto_generated.dataa[12]
+dataa[13] => add_sub_9ch:auto_generated.dataa[13]
+dataa[14] => add_sub_9ch:auto_generated.dataa[14]
+dataa[15] => add_sub_9ch:auto_generated.dataa[15]
+dataa[16] => add_sub_9ch:auto_generated.dataa[16]
+dataa[17] => add_sub_9ch:auto_generated.dataa[17]
+datab[0] => add_sub_9ch:auto_generated.datab[0]
+datab[1] => add_sub_9ch:auto_generated.datab[1]
+datab[2] => add_sub_9ch:auto_generated.datab[2]
+datab[3] => add_sub_9ch:auto_generated.datab[3]
+datab[4] => add_sub_9ch:auto_generated.datab[4]
+datab[5] => add_sub_9ch:auto_generated.datab[5]
+datab[6] => add_sub_9ch:auto_generated.datab[6]
+datab[7] => add_sub_9ch:auto_generated.datab[7]
+datab[8] => add_sub_9ch:auto_generated.datab[8]
+datab[9] => add_sub_9ch:auto_generated.datab[9]
+datab[10] => add_sub_9ch:auto_generated.datab[10]
+datab[11] => add_sub_9ch:auto_generated.datab[11]
+datab[12] => add_sub_9ch:auto_generated.datab[12]
+datab[13] => add_sub_9ch:auto_generated.datab[13]
+datab[14] => add_sub_9ch:auto_generated.datab[14]
+datab[15] => add_sub_9ch:auto_generated.datab[15]
+datab[16] => add_sub_9ch:auto_generated.datab[16]
+datab[17] => add_sub_9ch:auto_generated.datab[17]
+cin => ~NO_FANOUT~
+add_sub => ~NO_FANOUT~
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|MULT_10000:inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_9ch:auto_generated
+dataa[0] => op_1.IN34
+dataa[1] => op_1.IN32
+dataa[2] => op_1.IN30
+dataa[3] => op_1.IN28
+dataa[4] => op_1.IN26
+dataa[5] => op_1.IN24
+dataa[6] => op_1.IN22
+dataa[7] => op_1.IN20
+dataa[8] => op_1.IN18
+dataa[9] => op_1.IN16
+dataa[10] => op_1.IN14
+dataa[11] => op_1.IN12
+dataa[12] => op_1.IN10
+dataa[13] => op_1.IN8
+dataa[14] => op_1.IN6
+dataa[15] => op_1.IN4
+dataa[16] => op_1.IN2
+dataa[17] => op_1.IN0
+datab[0] => op_1.IN35
+datab[1] => op_1.IN33
+datab[2] => op_1.IN31
+datab[3] => op_1.IN29
+datab[4] => op_1.IN27
+datab[5] => op_1.IN25
+datab[6] => op_1.IN23
+datab[7] => op_1.IN21
+datab[8] => op_1.IN19
+datab[9] => op_1.IN17
+datab[10] => op_1.IN15
+datab[11] => op_1.IN13
+datab[12] => op_1.IN11
+datab[13] => op_1.IN9
+datab[14] => op_1.IN7
+datab[15] => op_1.IN5
+datab[16] => op_1.IN3
+datab[17] => op_1.IN1
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|MULT_10000:inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add
+data[0][0] => result[0].DATAIN
+data[0][1] => result[1].DATAIN
+data[0][2] => result[2].DATAIN
+data[0][3] => result[3].DATAIN
+data[0][4] => result[4].DATAIN
+data[0][5] => result[5].DATAIN
+data[0][6] => result[6].DATAIN
+data[0][7] => result[7].DATAIN
+data[0][8] => lpm_add_sub:adder[0].dataa[0]
+data[0][9] => lpm_add_sub:adder[0].dataa[1]
+data[0][10] => lpm_add_sub:adder[0].dataa[2]
+data[0][11] => lpm_add_sub:adder[0].dataa[3]
+data[0][12] => lpm_add_sub:adder[0].dataa[4]
+data[0][13] => lpm_add_sub:adder[0].dataa[5]
+data[0][14] => lpm_add_sub:adder[0].dataa[6]
+data[0][15] => lpm_add_sub:adder[0].dataa[7]
+data[0][16] => lpm_add_sub:adder[0].dataa[8]
+data[0][17] => lpm_add_sub:adder[0].dataa[9]
+data[0][18] => lpm_add_sub:adder[0].dataa[10]
+data[0][19] => lpm_add_sub:adder[0].dataa[11]
+data[0][20] => lpm_add_sub:adder[0].dataa[12]
+data[0][21] => lpm_add_sub:adder[0].dataa[13]
+data[1][0] => lpm_add_sub:adder[0].datab[0]
+data[1][1] => lpm_add_sub:adder[0].datab[1]
+data[1][2] => lpm_add_sub:adder[0].datab[2]
+data[1][3] => lpm_add_sub:adder[0].datab[3]
+data[1][4] => lpm_add_sub:adder[0].datab[4]
+data[1][5] => lpm_add_sub:adder[0].datab[5]
+data[1][6] => lpm_add_sub:adder[0].datab[6]
+data[1][7] => lpm_add_sub:adder[0].datab[7]
+data[1][8] => lpm_add_sub:adder[0].datab[8]
+data[1][9] => lpm_add_sub:adder[0].datab[9]
+data[1][10] => lpm_add_sub:adder[0].datab[10]
+data[1][11] => lpm_add_sub:adder[0].datab[11]
+data[1][12] => lpm_add_sub:adder[0].datab[12]
+data[1][13] => lpm_add_sub:adder[0].datab[13]
+data[1][14] => lpm_add_sub:adder[0].datab[14]
+data[1][15] => lpm_add_sub:adder[0].datab[15]
+data[1][16] => lpm_add_sub:adder[0].datab[16]
+data[1][17] => lpm_add_sub:adder[0].datab[17]
+data[1][18] => lpm_add_sub:adder[0].datab[18]
+data[1][19] => lpm_add_sub:adder[0].datab[19]
+data[1][20] => lpm_add_sub:adder[0].datab[20]
+data[1][21] => lpm_add_sub:adder[0].datab[21]
+cin => ~NO_FANOUT~
+clk => clk_out.IN0
+aclr => aclr_out.IN0
+clken => clken_out.IN0
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|MULT_10000:inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]
+dataa[0] => add_sub_4ch:auto_generated.dataa[0]
+dataa[1] => add_sub_4ch:auto_generated.dataa[1]
+dataa[2] => add_sub_4ch:auto_generated.dataa[2]
+dataa[3] => add_sub_4ch:auto_generated.dataa[3]
+dataa[4] => add_sub_4ch:auto_generated.dataa[4]
+dataa[5] => add_sub_4ch:auto_generated.dataa[5]
+dataa[6] => add_sub_4ch:auto_generated.dataa[6]
+dataa[7] => add_sub_4ch:auto_generated.dataa[7]
+dataa[8] => add_sub_4ch:auto_generated.dataa[8]
+dataa[9] => add_sub_4ch:auto_generated.dataa[9]
+dataa[10] => add_sub_4ch:auto_generated.dataa[10]
+dataa[11] => add_sub_4ch:auto_generated.dataa[11]
+dataa[12] => add_sub_4ch:auto_generated.dataa[12]
+dataa[13] => add_sub_4ch:auto_generated.dataa[13]
+dataa[14] => add_sub_4ch:auto_generated.dataa[14]
+dataa[15] => add_sub_4ch:auto_generated.dataa[15]
+dataa[16] => add_sub_4ch:auto_generated.dataa[16]
+dataa[17] => add_sub_4ch:auto_generated.dataa[17]
+dataa[18] => add_sub_4ch:auto_generated.dataa[18]
+dataa[19] => add_sub_4ch:auto_generated.dataa[19]
+dataa[20] => add_sub_4ch:auto_generated.dataa[20]
+dataa[21] => add_sub_4ch:auto_generated.dataa[21]
+datab[0] => add_sub_4ch:auto_generated.datab[0]
+datab[1] => add_sub_4ch:auto_generated.datab[1]
+datab[2] => add_sub_4ch:auto_generated.datab[2]
+datab[3] => add_sub_4ch:auto_generated.datab[3]
+datab[4] => add_sub_4ch:auto_generated.datab[4]
+datab[5] => add_sub_4ch:auto_generated.datab[5]
+datab[6] => add_sub_4ch:auto_generated.datab[6]
+datab[7] => add_sub_4ch:auto_generated.datab[7]
+datab[8] => add_sub_4ch:auto_generated.datab[8]
+datab[9] => add_sub_4ch:auto_generated.datab[9]
+datab[10] => add_sub_4ch:auto_generated.datab[10]
+datab[11] => add_sub_4ch:auto_generated.datab[11]
+datab[12] => add_sub_4ch:auto_generated.datab[12]
+datab[13] => add_sub_4ch:auto_generated.datab[13]
+datab[14] => add_sub_4ch:auto_generated.datab[14]
+datab[15] => add_sub_4ch:auto_generated.datab[15]
+datab[16] => add_sub_4ch:auto_generated.datab[16]
+datab[17] => add_sub_4ch:auto_generated.datab[17]
+datab[18] => add_sub_4ch:auto_generated.datab[18]
+datab[19] => add_sub_4ch:auto_generated.datab[19]
+datab[20] => add_sub_4ch:auto_generated.datab[20]
+datab[21] => add_sub_4ch:auto_generated.datab[21]
+cin => ~NO_FANOUT~
+add_sub => ~NO_FANOUT~
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|MULT_10000:inst|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_4ch:auto_generated
+dataa[0] => op_1.IN42
+dataa[1] => op_1.IN40
+dataa[2] => op_1.IN38
+dataa[3] => op_1.IN36
+dataa[4] => op_1.IN34
+dataa[5] => op_1.IN32
+dataa[6] => op_1.IN30
+dataa[7] => op_1.IN28
+dataa[8] => op_1.IN26
+dataa[9] => op_1.IN24
+dataa[10] => op_1.IN22
+dataa[11] => op_1.IN20
+dataa[12] => op_1.IN18
+dataa[13] => op_1.IN16
+dataa[14] => op_1.IN14
+dataa[15] => op_1.IN12
+dataa[16] => op_1.IN10
+dataa[17] => op_1.IN8
+dataa[18] => op_1.IN6
+dataa[19] => op_1.IN4
+dataa[20] => op_1.IN2
+dataa[21] => op_1.IN0
+datab[0] => op_1.IN43
+datab[1] => op_1.IN41
+datab[2] => op_1.IN39
+datab[3] => op_1.IN37
+datab[4] => op_1.IN35
+datab[5] => op_1.IN33
+datab[6] => op_1.IN31
+datab[7] => op_1.IN29
+datab[8] => op_1.IN27
+datab[9] => op_1.IN25
+datab[10] => op_1.IN23
+datab[11] => op_1.IN21
+datab[12] => op_1.IN19
+datab[13] => op_1.IN17
+datab[14] => op_1.IN15
+datab[15] => op_1.IN13
+datab[16] => op_1.IN11
+datab[17] => op_1.IN9
+datab[18] => op_1.IN7
+datab[19] => op_1.IN5
+datab[20] => op_1.IN3
+datab[21] => op_1.IN1
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|MULT_10000:inst|lpm_mult:lpm_mult_component|altshift:external_latency_ffs
+data[0] => result[0].DATAIN
+data[1] => result[1].DATAIN
+data[2] => result[2].DATAIN
+data[3] => result[3].DATAIN
+data[4] => result[4].DATAIN
+data[5] => result[5].DATAIN
+data[6] => result[6].DATAIN
+data[7] => result[7].DATAIN
+data[8] => result[8].DATAIN
+data[9] => result[9].DATAIN
+data[10] => result[10].DATAIN
+data[11] => result[11].DATAIN
+data[12] => result[12].DATAIN
+data[13] => result[13].DATAIN
+data[14] => result[14].DATAIN
+data[15] => result[15].DATAIN
+data[16] => result[16].DATAIN
+data[17] => result[17].DATAIN
+data[18] => result[18].DATAIN
+data[19] => result[19].DATAIN
+data[20] => result[20].DATAIN
+data[21] => result[21].DATAIN
+data[22] => result[22].DATAIN
+data[23] => result[23].DATAIN
+data[24] => result[24].DATAIN
+data[25] => result[25].DATAIN
+data[26] => result[26].DATAIN
+data[27] => result[27].DATAIN
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|mux2to1_1bit:inst67
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|XOR_4bit:inst15
+data0 => LPM_XOR:lpm_xor_component.DATA[0][0]
+data1 => LPM_XOR:lpm_xor_component.DATA[1][0]
+data2 => LPM_XOR:lpm_xor_component.DATA[2][0]
+data3 => LPM_XOR:lpm_xor_component.DATA[3][0]
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|XOR_4bit:inst15|LPM_XOR:lpm_xor_component
+data[0][0] => xor_cascade[0][1].IN1
+data[1][0] => xor_cascade[0][1].IN0
+data[2][0] => xor_cascade[0][2].IN0
+data[3][0] => xor_cascade[0][3].IN0
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|mux2to1_1bit:inst69
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|FF_1bit:inst2
+clock => lpm_ff:lpm_ff_component.clock
+data => lpm_ff:lpm_ff_component.data[0]
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|FF_1bit:inst2|lpm_ff:lpm_ff_component
+data[0] => dffs[0].DATAIN
+clock => dffs[0].CLK
+enable => dffs[0].ENA
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|mux2to1_1bit:inst68
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|FF_1bit:inst1
+clock => lpm_ff:lpm_ff_component.clock
+data => lpm_ff:lpm_ff_component.data[0]
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|FF_1bit:inst1|lpm_ff:lpm_ff_component
+data[0] => dffs[0].DATAIN
+clock => dffs[0].CLK
+enable => dffs[0].ENA
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|mux2to1_1bit:inst80
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|FF_1bit:inst4
+clock => lpm_ff:lpm_ff_component.clock
+data => lpm_ff:lpm_ff_component.data[0]
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|FF_1bit:inst4|lpm_ff:lpm_ff_component
+data[0] => dffs[0].DATAIN
+clock => dffs[0].CLK
+enable => dffs[0].ENA
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|mux2to1_1bit:inst70
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|FF_1bit:inst3
+clock => lpm_ff:lpm_ff_component.clock
+data => lpm_ff:lpm_ff_component.data[0]
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|FF_1bit:inst3|lpm_ff:lpm_ff_component
+data[0] => dffs[0].DATAIN
+clock => dffs[0].CLK
+enable => dffs[0].ENA
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|mux2to1_1bit:inst76
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|FF_1bit:inst10
+clock => lpm_ff:lpm_ff_component.clock
+data => lpm_ff:lpm_ff_component.data[0]
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|FF_1bit:inst10|lpm_ff:lpm_ff_component
+data[0] => dffs[0].DATAIN
+clock => dffs[0].CLK
+enable => dffs[0].ENA
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|mux2to1_1bit:inst75
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|FF_1bit:inst9
+clock => lpm_ff:lpm_ff_component.clock
+data => lpm_ff:lpm_ff_component.data[0]
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|FF_1bit:inst9|lpm_ff:lpm_ff_component
+data[0] => dffs[0].DATAIN
+clock => dffs[0].CLK
+enable => dffs[0].ENA
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|mux2to1_1bit:inst74
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|FF_1bit:inst8
+clock => lpm_ff:lpm_ff_component.clock
+data => lpm_ff:lpm_ff_component.data[0]
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|FF_1bit:inst8|lpm_ff:lpm_ff_component
+data[0] => dffs[0].DATAIN
+clock => dffs[0].CLK
+enable => dffs[0].ENA
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|mux2to1_1bit:inst73
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|FF_1bit:inst7
+clock => lpm_ff:lpm_ff_component.clock
+data => lpm_ff:lpm_ff_component.data[0]
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|FF_1bit:inst7|lpm_ff:lpm_ff_component
+data[0] => dffs[0].DATAIN
+clock => dffs[0].CLK
+enable => dffs[0].ENA
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|mux2to1_1bit:inst72
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|FF_1bit:inst6
+clock => lpm_ff:lpm_ff_component.clock
+data => lpm_ff:lpm_ff_component.data[0]
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|FF_1bit:inst6|lpm_ff:lpm_ff_component
+data[0] => dffs[0].DATAIN
+clock => dffs[0].CLK
+enable => dffs[0].ENA
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|mux2to1_1bit:inst71
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|FF_1bit:inst5
+clock => lpm_ff:lpm_ff_component.clock
+data => lpm_ff:lpm_ff_component.data[0]
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|FF_1bit:inst5|lpm_ff:lpm_ff_component
+data[0] => dffs[0].DATAIN
+clock => dffs[0].CLK
+enable => dffs[0].ENA
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|FF_1bit:inst14
+clock => lpm_ff:lpm_ff_component.clock
+data => lpm_ff:lpm_ff_component.data[0]
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|FF_1bit:inst14|lpm_ff:lpm_ff_component
+data[0] => dffs[0].DATAIN
+clock => dffs[0].CLK
+enable => dffs[0].ENA
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|mux2to1_1bit:inst79
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|FF_1bit:inst13
+clock => lpm_ff:lpm_ff_component.clock
+data => lpm_ff:lpm_ff_component.data[0]
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|FF_1bit:inst13|lpm_ff:lpm_ff_component
+data[0] => dffs[0].DATAIN
+clock => dffs[0].CLK
+enable => dffs[0].ENA
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|mux2to1_1bit:inst78
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|FF_1bit:inst12
+clock => lpm_ff:lpm_ff_component.clock
+data => lpm_ff:lpm_ff_component.data[0]
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|FF_1bit:inst12|lpm_ff:lpm_ff_component
+data[0] => dffs[0].DATAIN
+clock => dffs[0].CLK
+enable => dffs[0].ENA
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|mux2to1_1bit:inst77
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|FF_1bit:inst11
+clock => lpm_ff:lpm_ff_component.clock
+data => lpm_ff:lpm_ff_component.data[0]
+
+
+|total_test_DE2|reflexes:inst|reflexes_DP:b2v_inst1|random_10000:inst|FF_1bit:inst11|lpm_ff:lpm_ff_component
+data[0] => dffs[0].DATAIN
+clock => dffs[0].CLK
+enable => dffs[0].ENA
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+
+
+|total_test_DE2|parser:inst2
+CK => parser_CU:inst.CK
+CK => parser_DP:inst1.CK
+RST => parser_CU:inst.RST
+START => parser_CU:inst.START
+CHARIN[0] => parser_DP:inst1.CHARIN[0]
+CHARIN[1] => parser_DP:inst1.CHARIN[1]
+CHARIN[2] => parser_DP:inst1.CHARIN[2]
+CHARIN[3] => parser_DP:inst1.CHARIN[3]
+CHARIN[4] => parser_DP:inst1.CHARIN[4]
+CHARIN[5] => parser_DP:inst1.CHARIN[5]
+CHARIN[6] => parser_DP:inst1.CHARIN[6]
+CHARIN[7] => parser_DP:inst1.CHARIN[7]
+
+
+|total_test_DE2|parser:inst2|parser_CU:inst
+CK => PRESENT_STATE~1.DATAIN
+RST => PRESENT_STATE.OUTPUTSELECT
+RST => PRESENT_STATE.OUTPUTSELECT
+RST => PRESENT_STATE.OUTPUTSELECT
+RST => PRESENT_STATE.OUTPUTSELECT
+RST => PRESENT_STATE.OUTPUTSELECT
+RST => PRESENT_STATE.OUTPUTSELECT
+RST => PRESENT_STATE.OUTPUTSELECT
+RST => PRESENT_STATE.OUTPUTSELECT
+RST => PRESENT_STATE.OUTPUTSELECT
+START => NEXT_STATE.STORE_CHAR.DATAB
+START => Selector0.IN2
+START => Selector2.IN2
+out_ff_L => NEXT_STATE.OUTPUTSELECT
+out_ff_L => NEXT_STATE.OUTPUTSELECT
+out_ff_L => NEXT_STATE.OUTPUTSELECT
+match_L => NEXT_STATE.DATAA
+match_L => NEXT_STATE.DATAA
+match_1234 => NEXT_STATE.DATAB
+match_1234 => NEXT_STATE.DATAB
+
+
+|total_test_DE2|parser:inst2|parser_DP:inst1
+sclr_ff_L => ff_L:inst1.sclr
+en_ff_L => ff_L:inst1.load
+en_ff_L => ff_L:inst1.enable
+CK => ff_L:inst1.clock
+CK => reg_char:inst.clock
+sclr_reg_char => reg_char:inst.sclr
+en_reg_char => reg_char:inst.load
+en_reg_char => reg_char:inst.enable
+CHARIN[0] => reg_char:inst.data[0]
+CHARIN[1] => reg_char:inst.data[1]
+CHARIN[2] => reg_char:inst.data[2]
+CHARIN[3] => reg_char:inst.data[3]
+CHARIN[4] => reg_char:inst.data[4]
+CHARIN[5] => reg_char:inst.data[5]
+CHARIN[6] => reg_char:inst.data[6]
+CHARIN[7] => reg_char:inst.data[7]
+
+
+|total_test_DE2|parser:inst2|parser_DP:inst1|ff_L:inst1
+clock => lpm_shiftreg:LPM_SHIFTREG_component.clock
+data[0] => lpm_shiftreg:LPM_SHIFTREG_component.data[0]
+enable => lpm_shiftreg:LPM_SHIFTREG_component.enable
+load => lpm_shiftreg:LPM_SHIFTREG_component.load
+sclr => lpm_shiftreg:LPM_SHIFTREG_component.sclr
+
+
+|total_test_DE2|parser:inst2|parser_DP:inst1|ff_L:inst1|lpm_shiftreg:LPM_SHIFTREG_component
+data[0] => _.IN1
+clock => dffs[0].CLK
+enable => dffs[0].ENA
+shiftin => _.IN1
+load => _.IN0
+load => _.IN0
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+sclr => _.IN0
+sset => _.IN0
+
+
+|total_test_DE2|parser:inst2|parser_DP:inst1|ASCII_L_match:inst2
+char_in[0] => match.IN0
+char_in[1] => match.IN1
+char_in[2] => match.IN1
+char_in[3] => match.IN1
+char_in[4] => match.IN1
+char_in[5] => match.IN1
+char_in[6] => match.IN1
+char_in[7] => match.IN1
+
+
+|total_test_DE2|parser:inst2|parser_DP:inst1|reg_char:inst
+clock => lpm_shiftreg:LPM_SHIFTREG_component.clock
+data[0] => lpm_shiftreg:LPM_SHIFTREG_component.data[0]
+data[1] => lpm_shiftreg:LPM_SHIFTREG_component.data[1]
+data[2] => lpm_shiftreg:LPM_SHIFTREG_component.data[2]
+data[3] => lpm_shiftreg:LPM_SHIFTREG_component.data[3]
+data[4] => lpm_shiftreg:LPM_SHIFTREG_component.data[4]
+data[5] => lpm_shiftreg:LPM_SHIFTREG_component.data[5]
+data[6] => lpm_shiftreg:LPM_SHIFTREG_component.data[6]
+data[7] => lpm_shiftreg:LPM_SHIFTREG_component.data[7]
+enable => lpm_shiftreg:LPM_SHIFTREG_component.enable
+load => lpm_shiftreg:LPM_SHIFTREG_component.load
+sclr => lpm_shiftreg:LPM_SHIFTREG_component.sclr
+
+
+|total_test_DE2|parser:inst2|parser_DP:inst1|reg_char:inst|lpm_shiftreg:LPM_SHIFTREG_component
+data[0] => _.IN1
+data[1] => _.IN1
+data[2] => _.IN1
+data[3] => _.IN1
+data[4] => _.IN1
+data[5] => _.IN1
+data[6] => _.IN1
+data[7] => _.IN1
+clock => dffs[7].CLK
+clock => dffs[6].CLK
+clock => dffs[5].CLK
+clock => dffs[4].CLK
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[7].ENA
+enable => dffs[6].ENA
+enable => dffs[5].ENA
+enable => dffs[4].ENA
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+shiftin => _.IN1
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+sclr => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+
+
+|total_test_DE2|parser:inst2|parser_DP:inst1|ASCII_1_2_3_4_match:inst3
+char_in[0] => matchSingleChar[1].IN1
+char_in[0] => matchSingleChar[3].IN1
+char_in[0] => matchSingleChar[2].IN1
+char_in[0] => matchSingleChar[4].IN1
+char_in[1] => matchSingleChar.IN0
+char_in[1] => matchSingleChar.IN0
+char_in[1] => matchSingleChar.IN0
+char_in[2] => matchSingleChar.IN1
+char_in[2] => matchSingleChar.IN1
+char_in[2] => matchSingleChar.IN1
+char_in[3] => matchSingleChar[0].IN1
+char_in[4] => matchSingleChar.IN1
+char_in[5] => matchSingleChar.IN1
+char_in[6] => matchSingleChar.IN0
+char_in[7] => matchSingleChar.IN1
+
+
+|total_test_DE2|parser:inst2|parser_DP:inst1|cmd_encoder:inst4
+char_1to0_in[0] => cmd.IN0
+char_1to0_in[0] => cmd[0].DATAIN
+char_1to0_in[1] => cmd.IN1
+
+
+|total_test_DE2|uartRX:inst12
+CK => uartRX_CU:inst6.CK
+CK => uartRX_DP:inst.CK
+RST => uartRX_CU:inst6.RST
+RD => uartRX_CU:inst6.RD
+RX => uartRX_DP:inst.RX
+
+
+|total_test_DE2|uartRX:inst12|uartRX_CU:inst6
+CK => PRESENT_STATE~1.DATAIN
+RST => PRESENT_STATE~3.DATAIN
+RD => NEXT_STATE.DATAB
+RD => NEXT_STATE.DATAA
+RD => Selector6.IN3
+RD => NEXT_STATE.DATAA
+RD => Selector5.IN2
+RD => NEXT_STATE.DATAB
+TC_8 => NEXT_STATE.OUTPUTSELECT
+TC_8 => NEXT_STATE.OUTPUTSELECT
+TC_8 => NEXT_STATE.DATAB
+TC_12 => NEXT_STATE.OUTPUTSELECT
+TC_12 => NEXT_STATE.OUTPUTSELECT
+TC_12 => NEXT_STATE.OUTPUTSELECT
+TC_12 => NEXT_STATE.OUTPUTSELECT
+TC_12 => NEXT_STATE.OUTPUTSELECT
+TC_26 => NEXT_STATE.OUTPUTSELECT
+TC_26 => NEXT_STATE.OUTPUTSELECT
+TC_26 => NEXT_STATE.DATAA
+TC_26 => NEXT_STATE.OUTPUTSELECT
+TC_26 => NEXT_STATE.OUTPUTSELECT
+TC_26 => NEXT_STATE.OUTPUTSELECT
+TC_26 => NEXT_STATE.OUTPUTSELECT
+TC_26 => Selector1.IN3
+TC_26 => NEXT_STATE.SHIFT_IN_3.DATAB
+TC_26 => Selector0.IN2
+TC_26 => Selector0.IN3
+TC_26 => NEXT_STATE.DATAA
+TC_26 => Selector4.IN2
+VOTER_OUT => NEXT_STATE.DATAB
+VOTER_OUT => NEXT_STATE.DATAB
+START_BIT_CHECK => NEXT_STATE.DATAB
+START_BIT_CHECK => NEXT_STATE.DATAB
+
+
+|total_test_DE2|uartRX:inst12|uartRX_DP:inst
+SCLEAR_ALL => RX_REG:inst8.sclr
+SCLEAR_ALL => CNT_8:inst3.sclr
+SCLEAR_ALL => CNT_12:inst15.sclr
+CK => RX_REG:inst8.clock
+CK => CNT_26:inst14.clock
+CK => CNT_8:inst3.clock
+CK => CNT_12:inst15.clock
+CK => DOUT_REG:inst9.clock
+EN_RX_REG => RX_REG:inst8.enable
+RX => RX_REG:inst8.shiftin
+SCLEAR_CNT_26 => CNT_26:inst14.sclr
+EN_CNT_26 => CNT_26:inst14.cnt_en
+EN_CNT_8 => CNT_8:inst3.cnt_en
+LOAD_CNT_12 => CNT_12:inst15.sload
+EN_CNT_12 => CNT_12:inst15.cnt_en
+SCLEAR_DOUT_REG => DOUT_REG:inst9.sclr
+EN_DOUT_REG => DOUT_REG:inst9.enable
+
+
+|total_test_DE2|uartRX:inst12|uartRX_DP:inst|voter:inst1
+Q_RX_REG[0] => ~NO_FANOUT~
+Q_RX_REG[1] => ~NO_FANOUT~
+Q_RX_REG[2] => VOTER_OUT.IN0
+Q_RX_REG[2] => VOTER_OUT.IN0
+Q_RX_REG[2] => VOTER_OUT.IN0
+Q_RX_REG[3] => VOTER_OUT.IN0
+Q_RX_REG[3] => VOTER_OUT.IN0
+Q_RX_REG[3] => VOTER_OUT.IN1
+Q_RX_REG[4] => VOTER_OUT.IN0
+Q_RX_REG[4] => VOTER_OUT.IN1
+Q_RX_REG[4] => VOTER_OUT.IN1
+Q_RX_REG[4] => VOTER_OUT.IN1
+Q_RX_REG[5] => VOTER_OUT.IN1
+Q_RX_REG[5] => VOTER_OUT.IN1
+Q_RX_REG[5] => VOTER_OUT.IN1
+Q_RX_REG[5] => VOTER_OUT.IN1
+Q_RX_REG[5] => VOTER_OUT.IN1
+Q_RX_REG[5] => VOTER_OUT.IN1
+Q_RX_REG[6] => VOTER_OUT.IN1
+Q_RX_REG[6] => VOTER_OUT.IN1
+Q_RX_REG[6] => VOTER_OUT.IN1
+Q_RX_REG[6] => VOTER_OUT.IN1
+Q_RX_REG[6] => VOTER_OUT.IN1
+Q_RX_REG[6] => VOTER_OUT.IN1
+Q_RX_REG[7] => ~NO_FANOUT~
+
+
+|total_test_DE2|uartRX:inst12|uartRX_DP:inst|RX_REG:inst8
+clock => lpm_shiftreg:LPM_SHIFTREG_component.clock
+enable => lpm_shiftreg:LPM_SHIFTREG_component.enable
+sclr => lpm_shiftreg:LPM_SHIFTREG_component.sclr
+shiftin => lpm_shiftreg:LPM_SHIFTREG_component.shiftin
+
+
+|total_test_DE2|uartRX:inst12|uartRX_DP:inst|RX_REG:inst8|lpm_shiftreg:LPM_SHIFTREG_component
+data[0] => _.IN1
+data[1] => _.IN1
+data[2] => _.IN1
+data[3] => _.IN1
+data[4] => _.IN1
+data[5] => _.IN1
+data[6] => _.IN1
+data[7] => _.IN1
+clock => dffs[7].CLK
+clock => dffs[6].CLK
+clock => dffs[5].CLK
+clock => dffs[4].CLK
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[7].ENA
+enable => dffs[6].ENA
+enable => dffs[5].ENA
+enable => dffs[4].ENA
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+shiftin => _.IN1
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+sclr => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+
+
+|total_test_DE2|uartRX:inst12|uartRX_DP:inst|start_bit_detector:inst
+Q_RX_REG[0] => START_BIT_CHECK.IN0
+Q_RX_REG[1] => START_BIT_CHECK.IN1
+Q_RX_REG[2] => START_BIT_CHECK.IN1
+Q_RX_REG[3] => START_BIT_CHECK.IN1
+Q_RX_REG[4] => START_BIT_CHECK.IN1
+Q_RX_REG[5] => START_BIT_CHECK.IN1
+Q_RX_REG[6] => START_BIT_CHECK.IN1
+Q_RX_REG[7] => START_BIT_CHECK.IN1
+
+
+|total_test_DE2|uartRX:inst12|uartRX_DP:inst|terminal_counter_26:inst4
+Q_CNT_26[0] => TC_26.IN0
+Q_CNT_26[1] => TC_26.IN1
+Q_CNT_26[2] => TC_26.IN1
+Q_CNT_26[3] => TC_26.IN1
+Q_CNT_26[4] => TC_26.IN1
+
+
+|total_test_DE2|uartRX:inst12|uartRX_DP:inst|CNT_26:inst14
+clock => lpm_counter:LPM_COUNTER_component.clock
+cnt_en => lpm_counter:LPM_COUNTER_component.cnt_en
+sclr => lpm_counter:LPM_COUNTER_component.sclr
+
+
+|total_test_DE2|uartRX:inst12|uartRX_DP:inst|CNT_26:inst14|lpm_counter:LPM_COUNTER_component
+clock => cntr_4oi:auto_generated.clock
+clk_en => ~NO_FANOUT~
+cnt_en => cntr_4oi:auto_generated.cnt_en
+updown => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => cntr_4oi:auto_generated.sclr
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+data[0] => ~NO_FANOUT~
+data[1] => ~NO_FANOUT~
+data[2] => ~NO_FANOUT~
+data[3] => ~NO_FANOUT~
+data[4] => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+
+
+|total_test_DE2|uartRX:inst12|uartRX_DP:inst|CNT_26:inst14|lpm_counter:LPM_COUNTER_component|cntr_4oi:auto_generated
+clock => counter_reg_bit1a[4].CLK
+clock => counter_reg_bit1a[3].CLK
+clock => counter_reg_bit1a[2].CLK
+clock => counter_reg_bit1a[1].CLK
+clock => counter_reg_bit1a[0].CLK
+cnt_en => _.IN1
+sclr => _.IN0
+sclr => _.IN0
+sclr => _.IN0
+
+
+|total_test_DE2|uartRX:inst12|uartRX_DP:inst|terminal_counter_8:inst5
+Q_CNT_8[0] => TC_8.IN0
+Q_CNT_8[1] => TC_8.IN1
+Q_CNT_8[2] => TC_8.IN1
+Q_CNT_8[3] => TC_8.IN1
+
+
+|total_test_DE2|uartRX:inst12|uartRX_DP:inst|CNT_8:inst3
+clock => lpm_counter:LPM_COUNTER_component.clock
+cnt_en => lpm_counter:LPM_COUNTER_component.cnt_en
+sclr => lpm_counter:LPM_COUNTER_component.sclr
+
+
+|total_test_DE2|uartRX:inst12|uartRX_DP:inst|CNT_8:inst3|lpm_counter:LPM_COUNTER_component
+clock => cntr_3oi:auto_generated.clock
+clk_en => ~NO_FANOUT~
+cnt_en => cntr_3oi:auto_generated.cnt_en
+updown => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => cntr_3oi:auto_generated.sclr
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+data[0] => ~NO_FANOUT~
+data[1] => ~NO_FANOUT~
+data[2] => ~NO_FANOUT~
+data[3] => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+
+
+|total_test_DE2|uartRX:inst12|uartRX_DP:inst|CNT_8:inst3|lpm_counter:LPM_COUNTER_component|cntr_3oi:auto_generated
+clock => counter_reg_bit1a[3].CLK
+clock => counter_reg_bit1a[2].CLK
+clock => counter_reg_bit1a[1].CLK
+clock => counter_reg_bit1a[0].CLK
+cnt_en => _.IN1
+sclr => _.IN0
+sclr => _.IN0
+sclr => _.IN0
+
+
+|total_test_DE2|uartRX:inst12|uartRX_DP:inst|terminal_counter_12:inst6
+Q_CNT_12[0] => TC_12.IN0
+Q_CNT_12[1] => TC_12.IN1
+Q_CNT_12[2] => TC_12.IN1
+Q_CNT_12[3] => TC_12.IN1
+
+
+|total_test_DE2|uartRX:inst12|uartRX_DP:inst|CNT_12:inst15
+clock => lpm_counter:LPM_COUNTER_component.clock
+cnt_en => lpm_counter:LPM_COUNTER_component.cnt_en
+data[0] => lpm_counter:LPM_COUNTER_component.data[0]
+data[1] => lpm_counter:LPM_COUNTER_component.data[1]
+data[2] => lpm_counter:LPM_COUNTER_component.data[2]
+data[3] => lpm_counter:LPM_COUNTER_component.data[3]
+sclr => lpm_counter:LPM_COUNTER_component.sclr
+sload => lpm_counter:LPM_COUNTER_component.sload
+
+
+|total_test_DE2|uartRX:inst12|uartRX_DP:inst|CNT_12:inst15|lpm_counter:LPM_COUNTER_component
+clock => cntr_gnj:auto_generated.clock
+clk_en => ~NO_FANOUT~
+cnt_en => cntr_gnj:auto_generated.cnt_en
+updown => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => cntr_gnj:auto_generated.sclr
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => cntr_gnj:auto_generated.sload
+data[0] => cntr_gnj:auto_generated.data[0]
+data[1] => cntr_gnj:auto_generated.data[1]
+data[2] => cntr_gnj:auto_generated.data[2]
+data[3] => cntr_gnj:auto_generated.data[3]
+cin => ~NO_FANOUT~
+
+
+|total_test_DE2|uartRX:inst12|uartRX_DP:inst|CNT_12:inst15|lpm_counter:LPM_COUNTER_component|cntr_gnj:auto_generated
+clock => counter_reg_bit1a[3].CLK
+clock => counter_reg_bit1a[2].CLK
+clock => counter_reg_bit1a[1].CLK
+clock => counter_reg_bit1a[0].CLK
+cnt_en => _.IN1
+data[0] => _.IN1
+data[1] => _.IN1
+data[2] => _.IN1
+data[3] => _.IN1
+sclr => _.IN0
+sclr => _.IN0
+sclr => _.IN0
+sload => _.IN1
+sload => counter_reg_bit1a[3].IN1
+
+
+|total_test_DE2|uartRX:inst12|uartRX_DP:inst|DOUT_REG:inst9
+clock => lpm_shiftreg:LPM_SHIFTREG_component.clock
+enable => lpm_shiftreg:LPM_SHIFTREG_component.enable
+sclr => lpm_shiftreg:LPM_SHIFTREG_component.sclr
+shiftin => lpm_shiftreg:LPM_SHIFTREG_component.shiftin
+
+
+|total_test_DE2|uartRX:inst12|uartRX_DP:inst|DOUT_REG:inst9|lpm_shiftreg:LPM_SHIFTREG_component
+data[0] => _.IN1
+data[1] => _.IN1
+data[2] => _.IN1
+data[3] => _.IN1
+data[4] => _.IN1
+data[5] => _.IN1
+data[6] => _.IN1
+data[7] => _.IN1
+clock => dffs[7].CLK
+clock => dffs[6].CLK
+clock => dffs[5].CLK
+clock => dffs[4].CLK
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[7].ENA
+enable => dffs[6].ENA
+enable => dffs[5].ENA
+enable => dffs[4].ENA
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+shiftin => _.IN1
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+sclr => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+
+

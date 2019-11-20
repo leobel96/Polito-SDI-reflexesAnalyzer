@@ -1,0 +1,337 @@
+m255
+K3
+13
+cModel Technology
+dC:\Users\Edoardo Bollea\Desktop
+Eascii_1_2_3_4_match
+Z0 w1546531921
+Z1 DPx3 std 6 textio 0 22 G^o2zK;Vh4eVdKTVo98653
+Z2 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z3 dC:\Users\Edoardo Bollea\Desktop\RR_project\parser\parser_modelsim
+Z4 8C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/ASCII_1_2_3_4_match.vhd
+Z5 FC:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/ASCII_1_2_3_4_match.vhd
+l0
+L4
+VOSU3GQBeAXACbKF_Y::031
+Z6 OV;C;10.0c;49
+32
+Z7 !s108 1547829935.476000
+Z8 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/ASCII_1_2_3_4_match.vhd|
+Z9 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/ASCII_1_2_3_4_match.vhd|
+Z10 o-work work -2002 -explicit -O0
+Z11 tExplicit 1
+!s100 7>G>=b8R6U2[[nWYna:H[0
+Astructure
+R1
+R2
+DEx4 work 19 ascii_1_2_3_4_match 0 22 OSU3GQBeAXACbKF_Y::031
+l13
+L11
+VkHQK9iAAAWA1ZFMQI[S?J3
+R6
+32
+R7
+R8
+R9
+R10
+R11
+!s100 id=58egdS=bWWHSJWL3hS3
+Eascii_l_match
+Z12 w1545578405
+R1
+R2
+R3
+Z13 8C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/ASCII_L_match.vhd
+Z14 FC:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/ASCII_L_match.vhd
+l0
+L4
+VbP`lOBIMmIU6J5ECoc[K83
+R6
+32
+Z15 !s108 1547829935.625000
+Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/ASCII_L_match.vhd|
+Z17 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/ASCII_L_match.vhd|
+R10
+R11
+!s100 FK>U<bPCeX<=]a]DDAnC`2
+Astructure
+R1
+R2
+DEx4 work 13 ascii_l_match 0 22 bP`lOBIMmIU6J5ECoc[K83
+l12
+L11
+V:5QVjVkZL:PMYYl^>2A7G3
+R6
+32
+R15
+R16
+R17
+R10
+R11
+!s100 F0UVgWJ_BFPgg:H=AV=d71
+Ecmd_encoder
+Z18 w1545579161
+R1
+R2
+R3
+Z19 8C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/cmd_encoder.vhd
+Z20 FC:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/cmd_encoder.vhd
+l0
+L4
+VTRkLJoo3O6Mol7EAH@m8P2
+R6
+32
+Z21 !s108 1547829935.738000
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/cmd_encoder.vhd|
+Z23 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/cmd_encoder.vhd|
+R10
+R11
+!s100 ?@mUJSej7:`kf=VgQMkHa3
+Astructure
+R1
+R2
+DEx4 work 11 cmd_encoder 0 22 TRkLJoo3O6Mol7EAH@m8P2
+l12
+L11
+V`l8[X4G7McN_G61fc0;KK3
+R6
+32
+R21
+R22
+R23
+R10
+R11
+!s100 nE2?m4Z2dR@l]D1f8ZkF`3
+Eff_l
+Z24 w1546436124
+R1
+R2
+R3
+Z25 8C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/ff_L.vhd
+Z26 FC:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/ff_L.vhd
+l0
+L42
+VFhJOJ]Y5kaSLO_]D9JkAT2
+R6
+32
+Z27 !s108 1547829935.841000
+Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/ff_L.vhd|
+Z29 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/ff_L.vhd|
+R10
+R11
+!s100 A^BG=TiVFezQkYi_ciUE70
+Asyn
+R1
+R2
+DEx4 work 4 ff_l 0 22 FhJOJ]Y5kaSLO_]D9JkAT2
+l77
+L55
+VnRObX7zDo8B70k[4ac?cI1
+R6
+32
+R27
+R28
+R29
+R10
+R11
+!s100 XQ]bfHJ@d:G5oek:RDgZ^0
+Eparser
+Z30 w1546438868
+R1
+R2
+R3
+Z31 8C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/parser.vhd
+Z32 FC:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/parser.vhd
+l0
+L24
+VbJ0zN<X7z0om=[D2O>B<U3
+R6
+32
+Z33 !s108 1547829935.939000
+Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/parser.vhd|
+Z35 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/parser.vhd|
+R10
+R11
+!s100 HC12<M[lXEWGgZK?=M@611
+Abdf_type
+R1
+R2
+DEx4 work 6 parser 0 22 bJ0zN<X7z0om=[D2O>B<U3
+l78
+L37
+VGOI2AT1aMg[30ERYkncH71
+R6
+32
+R33
+R34
+R35
+R10
+R11
+!s100 zc:UY?AWjGJIlbcMRj`PU0
+Eparser_cu
+Z36 w1547829840
+R1
+R2
+R3
+Z37 8C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/parser_CU.vhd
+Z38 FC:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/parser_CU.vhd
+l0
+L4
+V;K_fz0_nU_3a<B57jmDnf2
+!s100 ]hXn?je24mE1aMzU3m4?D1
+R6
+32
+Z39 !s108 1547829936.477000
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/parser_CU.vhd|
+Z41 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/parser_CU.vhd|
+R10
+R11
+Astructure
+R1
+R2
+Z42 DEx4 work 9 parser_cu 0 22 ;K_fz0_nU_3a<B57jmDnf2
+l20
+L14
+VZLi>Z0eW:hCJE4Bn<>Cl?3
+!s100 JZ;SHZaio2Q=ePGFEQF5Y3
+R6
+32
+R39
+R40
+R41
+R10
+R11
+Eparser_dp
+Z43 w1546530663
+R1
+R2
+R3
+Z44 8C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/parser_DP.vhd
+Z45 FC:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/parser_DP.vhd
+l0
+L24
+V:`Je]A3doHETU2R=3?HoH3
+R6
+32
+Z46 !s108 1547829936.039000
+Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/parser_DP.vhd|
+Z48 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/parser_DP.vhd|
+R10
+R11
+!s100 K7IEz?0cL>CnP`IjRc3fO3
+Abdf_type
+R1
+R2
+DEx4 work 9 parser_dp 0 22 :`Je]A3doHETU2R=3?HoH3
+l85
+L40
+V@b`zYm2@I7l=B8AcCV>@b3
+R6
+32
+R46
+R47
+R48
+R10
+R11
+!s100 Va9`6RIJRHhUU50K7BQSo2
+Ereg_char
+Z49 w1546436046
+R1
+R2
+R3
+Z50 8C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/reg_char.vhd
+Z51 FC:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/reg_char.vhd
+l0
+L42
+VJ?EMlkHGXjWkd4bkfRn;W1
+R6
+32
+Z52 !s108 1547829936.142000
+Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/reg_char.vhd|
+Z54 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/reg_char.vhd|
+R10
+R11
+!s100 BK3lgPZeCdocP]1XT6nN[3
+Asyn
+R1
+R2
+DEx4 work 8 reg_char 0 22 J?EMlkHGXjWkd4bkfRn;W1
+l77
+L55
+Vgl^ST`LXmf=]L>=l@^?8o1
+R6
+32
+R52
+R53
+R54
+R10
+R11
+!s100 ;NUk_P>VJ1:S=hQEVDnRU1
+Etest_parser
+Z55 w1546531489
+Z56 DPx4 ieee 11 numeric_std 0 22 k7B<7GmYYYmX;0X]XHFD10
+R1
+R2
+R3
+Z57 8C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/test_parser.vhd
+Z58 FC:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/test_parser.vhd
+l0
+L5
+VR?B9@7CFbbgCiWF6SJTBN0
+R6
+32
+Z59 !s108 1547829936.243000
+Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/test_parser.vhd|
+Z61 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/test_parser.vhd|
+R10
+R11
+!s100 RK0f^5C=nEm@bad9;clc92
+Atestbench
+R56
+R1
+R2
+DEx4 work 11 test_parser 0 22 R?B9@7CFbbgCiWF6SJTBN0
+l41
+L8
+Vlj8:Y80L21dDPRg@cWm;k2
+R6
+32
+R59
+R60
+R61
+R10
+R11
+!s100 0KD=8i9dcADdV8KQIHoN40
+Etest_parser_cu
+Z62 w1546532321
+R1
+R2
+R3
+Z63 8C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/test_parser_CU.vhd
+Z64 FC:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/test_parser_CU.vhd
+l0
+L4
+VeH;9[HLmTe@^8ELoTlOOi0
+R6
+32
+Z65 !s108 1547829936.364000
+Z66 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/test_parser_CU.vhd|
+Z67 !s107 C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/test_parser_CU.vhd|
+R10
+R11
+!s100 0O>jZ6F>=Qd:GM>ghP6a03
+Astate_machine
+R1
+R2
+DEx4 work 14 test_parser_cu 0 22 eH;9[HLmTe@^8ELoTlOOi0
+l21
+L15
+VXXPPem;e[5^F64YEQ7HAQ1
+!s100 9CkBJlGE2cB`IZO@2d:j>0
+R6
+32
+R65
+R66
+R67
+R10
+R11

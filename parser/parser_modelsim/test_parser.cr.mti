@@ -1,0 +1,83 @@
+{C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/test_parser.vhd} {2 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/test_parser.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity test_parser
+-- Compiling architecture testbench of test_parser
+** Warning: C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/test_parser.vhd(56): (vcom-1083) Implicit array operator "=" always returns FALSE (left length 8 is not equal to right length 7).
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/parser_DP.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/parser_DP.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity parser_DP
+-- Compiling architecture bdf_type of parser_DP
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/ASCII_L_match.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/ASCII_L_match.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity ASCII_L_match
+-- Compiling architecture structure of ASCII_L_match
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/parser_CU.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/parser_CU.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity parser_CU
+-- Compiling architecture structure of parser_CU
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/parser.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/parser.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity parser
+-- Compiling architecture bdf_type of parser
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/test_parser_CU.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/test_parser_CU.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity test_parser_CU
+-- Compiling architecture state_machine of test_parser_CU
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/ASCII_1_2_3_4_match.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/ASCII_1_2_3_4_match.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity ASCII_1_2_3_4_match
+-- Compiling architecture structure of ASCII_1_2_3_4_match
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/reg_char.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/reg_char.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity reg_char
+-- Compiling architecture SYN of reg_char
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/ff_L.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/ff_L.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity ff_L
+-- Compiling architecture SYN of ff_l
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/cmd_encoder.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/cmd_encoder.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity cmd_encoder
+-- Compiling architecture structure of cmd_encoder
+
+} {} {}}

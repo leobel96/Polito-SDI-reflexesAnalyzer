@@ -1,0 +1,255 @@
+|uartTX
+CK => uartTX_DP:inst1.CK
+CK => uartTX_CU:inst.CK
+RST => uartTX_CU:inst.RST
+WR => uartTX_CU:inst.WR
+DIN[0] => uartTX_DP:inst1.DIN[0]
+DIN[1] => uartTX_DP:inst1.DIN[1]
+DIN[2] => uartTX_DP:inst1.DIN[2]
+DIN[3] => uartTX_DP:inst1.DIN[3]
+DIN[4] => uartTX_DP:inst1.DIN[4]
+DIN[5] => uartTX_DP:inst1.DIN[5]
+DIN[6] => uartTX_DP:inst1.DIN[6]
+DIN[7] => uartTX_DP:inst1.DIN[7]
+
+
+|uartTX|uartTX_DP:inst1
+SCLEAR_ALL => TX_REG:inst1.sclr
+SCLEAR_ALL => D_FF:inst8.sclr
+EN_LOAD_TX_REG => TX_REG:inst1.load
+CK => TX_REG:inst1.clock
+CK => D_FF:inst8.clock
+CK => CNT_216:inst.clock
+EN_TX_REG => TX_REG:inst1.enable
+DIN[0] => D_FF:inst8.data[0]
+DIN[1] => D_FF:inst8.data[1]
+DIN[2] => D_FF:inst8.data[2]
+DIN[3] => D_FF:inst8.data[3]
+DIN[4] => D_FF:inst8.data[4]
+DIN[5] => D_FF:inst8.data[5]
+DIN[6] => D_FF:inst8.data[6]
+DIN[7] => D_FF:inst8.data[7]
+IDLE_TX => inst5.IN1
+SCLEAR_CNT_216 => CNT_216:inst.sclr
+EN_CNT_216 => CNT_216:inst.cnt_en
+
+
+|uartTX|uartTX_DP:inst1|TX_REG:inst1
+clock => lpm_shiftreg:LPM_SHIFTREG_component.clock
+data[0] => lpm_shiftreg:LPM_SHIFTREG_component.data[0]
+data[1] => lpm_shiftreg:LPM_SHIFTREG_component.data[1]
+data[2] => lpm_shiftreg:LPM_SHIFTREG_component.data[2]
+data[3] => lpm_shiftreg:LPM_SHIFTREG_component.data[3]
+data[4] => lpm_shiftreg:LPM_SHIFTREG_component.data[4]
+data[5] => lpm_shiftreg:LPM_SHIFTREG_component.data[5]
+data[6] => lpm_shiftreg:LPM_SHIFTREG_component.data[6]
+data[7] => lpm_shiftreg:LPM_SHIFTREG_component.data[7]
+data[8] => lpm_shiftreg:LPM_SHIFTREG_component.data[8]
+data[9] => lpm_shiftreg:LPM_SHIFTREG_component.data[9]
+enable => lpm_shiftreg:LPM_SHIFTREG_component.enable
+load => lpm_shiftreg:LPM_SHIFTREG_component.load
+sclr => lpm_shiftreg:LPM_SHIFTREG_component.sclr
+shiftin => lpm_shiftreg:LPM_SHIFTREG_component.shiftin
+
+
+|uartTX|uartTX_DP:inst1|TX_REG:inst1|lpm_shiftreg:LPM_SHIFTREG_component
+data[0] => _.IN1
+data[1] => _.IN1
+data[2] => _.IN1
+data[3] => _.IN1
+data[4] => _.IN1
+data[5] => _.IN1
+data[6] => _.IN1
+data[7] => _.IN1
+data[8] => _.IN1
+data[9] => _.IN1
+clock => dffs[9].CLK
+clock => dffs[8].CLK
+clock => dffs[7].CLK
+clock => dffs[6].CLK
+clock => dffs[5].CLK
+clock => dffs[4].CLK
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[9].ENA
+enable => dffs[8].ENA
+enable => dffs[7].ENA
+enable => dffs[6].ENA
+enable => dffs[5].ENA
+enable => dffs[4].ENA
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+shiftin => _.IN1
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+sclr => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+
+
+|uartTX|uartTX_DP:inst1|D_FF:inst8
+clock => lpm_shiftreg:LPM_SHIFTREG_component.clock
+data[0] => lpm_shiftreg:LPM_SHIFTREG_component.data[0]
+data[1] => lpm_shiftreg:LPM_SHIFTREG_component.data[1]
+data[2] => lpm_shiftreg:LPM_SHIFTREG_component.data[2]
+data[3] => lpm_shiftreg:LPM_SHIFTREG_component.data[3]
+data[4] => lpm_shiftreg:LPM_SHIFTREG_component.data[4]
+data[5] => lpm_shiftreg:LPM_SHIFTREG_component.data[5]
+data[6] => lpm_shiftreg:LPM_SHIFTREG_component.data[6]
+data[7] => lpm_shiftreg:LPM_SHIFTREG_component.data[7]
+enable => lpm_shiftreg:LPM_SHIFTREG_component.enable
+load => lpm_shiftreg:LPM_SHIFTREG_component.load
+sclr => lpm_shiftreg:LPM_SHIFTREG_component.sclr
+
+
+|uartTX|uartTX_DP:inst1|D_FF:inst8|lpm_shiftreg:LPM_SHIFTREG_component
+data[0] => _.IN1
+data[1] => _.IN1
+data[2] => _.IN1
+data[3] => _.IN1
+data[4] => _.IN1
+data[5] => _.IN1
+data[6] => _.IN1
+data[7] => _.IN1
+clock => dffs[7].CLK
+clock => dffs[6].CLK
+clock => dffs[5].CLK
+clock => dffs[4].CLK
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[7].ENA
+enable => dffs[6].ENA
+enable => dffs[5].ENA
+enable => dffs[4].ENA
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+shiftin => _.IN1
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+sclr => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+
+
+|uartTX|uartTX_DP:inst1|endTX_gen:inst2
+Q_TX_REG[0] => END_TX.IN0
+Q_TX_REG[1] => END_TX.IN1
+Q_TX_REG[2] => END_TX.IN1
+Q_TX_REG[3] => END_TX.IN1
+Q_TX_REG[4] => END_TX.IN1
+Q_TX_REG[5] => END_TX.IN1
+Q_TX_REG[6] => END_TX.IN1
+Q_TX_REG[7] => END_TX.IN1
+Q_TX_REG[8] => END_TX.IN1
+Q_TX_REG[9] => END_TX.IN1
+
+
+|uartTX|uartTX_DP:inst1|terminal_count_216:inst3
+Q_CNT_216[0] => TC_216.IN0
+Q_CNT_216[1] => TC_216.IN1
+Q_CNT_216[2] => TC_216.IN1
+Q_CNT_216[3] => TC_216.IN1
+Q_CNT_216[4] => TC_216.IN1
+Q_CNT_216[5] => TC_216.IN1
+Q_CNT_216[6] => TC_216.IN1
+Q_CNT_216[7] => TC_216.IN1
+
+
+|uartTX|uartTX_DP:inst1|CNT_216:inst
+clock => lpm_counter:LPM_COUNTER_component.clock
+cnt_en => lpm_counter:LPM_COUNTER_component.cnt_en
+sclr => lpm_counter:LPM_COUNTER_component.sclr
+
+
+|uartTX|uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component
+clock => cntr_7oi:auto_generated.clock
+clk_en => ~NO_FANOUT~
+cnt_en => cntr_7oi:auto_generated.cnt_en
+updown => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => cntr_7oi:auto_generated.sclr
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+data[0] => ~NO_FANOUT~
+data[1] => ~NO_FANOUT~
+data[2] => ~NO_FANOUT~
+data[3] => ~NO_FANOUT~
+data[4] => ~NO_FANOUT~
+data[5] => ~NO_FANOUT~
+data[6] => ~NO_FANOUT~
+data[7] => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+
+
+|uartTX|uartTX_DP:inst1|CNT_216:inst|lpm_counter:LPM_COUNTER_component|cntr_7oi:auto_generated
+clock => counter_reg_bit1a[7].CLK
+clock => counter_reg_bit1a[6].CLK
+clock => counter_reg_bit1a[5].CLK
+clock => counter_reg_bit1a[4].CLK
+clock => counter_reg_bit1a[3].CLK
+clock => counter_reg_bit1a[2].CLK
+clock => counter_reg_bit1a[1].CLK
+clock => counter_reg_bit1a[0].CLK
+cnt_en => _.IN1
+sclr => _.IN0
+sclr => _.IN0
+sclr => _.IN0
+
+
+|uartTX|uartTX_CU:inst
+CK => PRESENT_STATE~1.DATAIN
+RST => PRESENT_STATE~3.DATAIN
+WR => NEXT_STATE.LOAD.DATAB
+WR => Selector0.IN2
+TC_216 => NEXT_STATE.NEXT_TX.DATAB
+TC_216 => Selector1.IN2
+END_TX => Selector0.IN4
+END_TX => Selector1.IN3
+
+

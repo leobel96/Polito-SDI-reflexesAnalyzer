@@ -1,0 +1,27 @@
+{signal: [
+  {name: 'clk', wave: 'p....|...|...|...|..|..'},
+  {name: 'SCLR_CNT_16bit', wave: '010..|...|.10|...|..|.1'},
+  {name: 'SCLR_CNT_1ms', wave: '010..|.10|.10|.10|..|.1'},
+  {name: 'SKEY', wave: '1....|...|...|...|0.|1.'},
+  {name: 'EN_FF_BUTTON', wave: '010..|...|.10|...|..|.1'},
+  {name: 'DATA_FF_BUTTON', wave: '010..|...|.10|...|..|..'},
+  {name: 'BUTTON', wave: '0....|...|..1|...|..|.0'},
+  {name: 'SEED_LOAD', wave: '101..|...|...|...|..|.0'},
+  {name: 'EN_FF_LNUM', wave: '01010|...|...|...|..|.1'},
+  {name: 'SCLR_FF_LNUM', wave: '010..|...|...|...|..|.1'},
+  {name: 'LNUMAV', wave: '0.10.|...|...|...|..|..'},
+  {name: 'LNUM', wave: 'xxx=x|xxx|xxx|...|..|..',data:['01']},
+  {name: 'SLOAD_CNT_16bit', wave: '0..10|...|...|...|..|..'},
+  {name: 'EN_CNT_1ms', wave: '0..1.|...|...|...|..|.0'},
+  {name: 'TC_CNT_1ms', wave: '0....|10.|...|10.|..|..'},
+  {name: 'EN_CNT_16bit', wave: '0....|.10|...|.10|..|..'},
+  {name: 'TC_CNT_16bit',wave:'0....|...|10.|...|..|..'}, 
+  {name: 'EN_LED', wave: '0....|...|.10|...|..|..'},
+  {name: 'TIMEAV', wave: '0....|...|...|...|.1|.0'},
+  {name: 'TIME', wave: 'x....|.=x|.=x|...|..|..',data:['1','65535']},
+  {name: 'FIN', wave: '0....|...|...|...|..|10'}  
+],
+ head:{
+   text:''
+ }
+}

@@ -1,0 +1,106 @@
+{C:/Users/Edoardo Bollea/Desktop/RR_project/uart/uartRX/uartRX_modelsim/lpm_counter0.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/uart/uartRX/uartRX_modelsim/lpm_counter0.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity lpm_counter0
+-- Compiling architecture SYN of lpm_counter0
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/uart/uartRX/uartRX_modelsim/lpm_counter1.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/uart/uartRX/uartRX_modelsim/lpm_counter1.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity lpm_counter1
+-- Compiling architecture SYN of lpm_counter1
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/uart/uartRX/uartRX_modelsim/terminal_counter_8.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/uart/uartRX/uartRX_modelsim/terminal_counter_8.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity terminal_counter_8
+-- Compiling architecture structural of terminal_counter_8
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/uart/uartRX/uartRX_modelsim/lpm_counter2.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/uart/uartRX/uartRX_modelsim/lpm_counter2.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity lpm_counter2
+-- Compiling architecture SYN of lpm_counter2
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/uart/uartRX/uartRX_modelsim/uartRX_CU.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/uart/uartRX/uartRX_modelsim/uartRX_CU.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity uartRX_CU
+-- Compiling architecture behavioural of uartRX_CU
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/uart/uartRX/uartRX_modelsim/start_bit_detector.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/uart/uartRX/uartRX_modelsim/start_bit_detector.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity start_bit_detector
+-- Compiling architecture structural of start_bit_detector
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/uart/uartRX/uartRX_modelsim/modelsim_test_uartRX.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/uart/uartRX/uartRX_modelsim/modelsim_test_uartRX.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity modelsim_test_uartRX
+-- Compiling architecture behaviour of modelsim_test_uartRX
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/uart/uartRX/uartRX_modelsim/voter.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/uart/uartRX/uartRX_modelsim/voter.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity voter
+-- Compiling architecture structural of voter
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/uart/uartRX/uartRX_modelsim/uartRX_DP.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/uart/uartRX/uartRX_modelsim/uartRX_DP.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity uartRX_DP
+-- Compiling architecture bdf_type of uartRX_DP
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/uart/uartRX/uartRX_modelsim/terminal_counter_26.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/uart/uartRX/uartRX_modelsim/terminal_counter_26.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity terminal_counter_26
+-- Compiling architecture structural of terminal_counter_26
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/uart/uartRX/uartRX_modelsim/lpm_shiftreg0.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/uart/uartRX/uartRX_modelsim/lpm_shiftreg0.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity lpm_shiftreg0
+-- Compiling architecture SYN of lpm_shiftreg0
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/uart/uartRX/uartRX_modelsim/terminal_counter_12.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/uart/uartRX/uartRX_modelsim/terminal_counter_12.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity terminal_counter_12
+-- Compiling architecture structural of terminal_counter_12
+
+} {} {}} {C:/Users/Edoardo Bollea/Desktop/RR_project/uart/uartRX/uartRX_modelsim/uartRX.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Edoardo Bollea/Desktop/RR_project/uart/uartRX/uartRX_modelsim/uartRX.vhd}
+Model Technology ModelSim ALTERA vcom 10.0c Compiler 2011.09 Sep 21 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity uartRX
+-- Compiling architecture bdf_type of uartRX
+
+} {} {}}

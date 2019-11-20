@@ -1,0 +1,15 @@
+# Reading C:/altera/11.1sp2/modelsim_ase/tcl/vsim/pref.tcl 
+# OpenFile C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/modelsim_test_uartTX.mpf 
+# Loading project modelsim_test_uartTX
+#  
+# 0 compiles, 9 failed with no errors. 
+# Compile of CNT_216.vhd was successful.
+# Compile of D_FF.vhd was successful.
+# Compile of endTX_gen.vhd was successful.
+# Compile of modelsim_test_uartTX.vhd was successful.
+# Compile of terminal_count_216.vhd was successful.
+# Compile of TX_REG.vhd was successful.
+# Compile of uartTX.vhd was successful.
+# Compile of uartTX_CU.vhd was successful.
+# Compile of uartTX_DP.vhd was successful.
+# 9 compiles, 0 failed with no errors. 

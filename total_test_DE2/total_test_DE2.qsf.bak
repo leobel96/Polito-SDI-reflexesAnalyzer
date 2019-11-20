@@ -1,0 +1,114 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2011 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 32-bit
+# Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
+# Date created = 18:34:32  January 18, 2019
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		total_test_DE2_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C35F672C6
+set_global_assignment -name TOP_LEVEL_ENTITY total_test_DE2
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "11.1 SP2"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:34:32  JANUARY 18, 2019"
+set_global_assignment -name LAST_QUARTUS_VERSION "11.1 SP2"
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VHDL_FILE clockDiv2.vhd
+set_global_assignment -name BDF_FILE uartTX/uartTX_quartus/uartTX_DP.bdf
+set_global_assignment -name VHDL_FILE uartTX/uartTX_quartus/uartTX_CU.vhd
+set_global_assignment -name BDF_FILE uartTX/uartTX_quartus/uartTX.bdf
+set_global_assignment -name VHDL_FILE uartTX/uartTX_quartus/TX_REG.vhd
+set_global_assignment -name VHDL_FILE uartTX/uartTX_quartus/terminal_count_216.vhd
+set_global_assignment -name VHDL_FILE uartTX/uartTX_quartus/endTX_gen.vhd
+set_global_assignment -name VHDL_FILE uartTX/uartTX_quartus/D_FF.vhd
+set_global_assignment -name VHDL_FILE uartTX/uartTX_quartus/CNT_216.vhd
+set_global_assignment -name VHDL_FILE uartRX/uartRX_quartus/voter.vhd
+set_global_assignment -name BDF_FILE uartRX/uartRX_quartus/uartRX_DP.bdf
+set_global_assignment -name VHDL_FILE uartRX/uartRX_quartus/uartRX_CU.vhd
+set_global_assignment -name BDF_FILE uartRX/uartRX_quartus/uartRX.bdf
+set_global_assignment -name VHDL_FILE uartRX/uartRX_quartus/terminal_counter_26.vhd
+set_global_assignment -name VHDL_FILE uartRX/uartRX_quartus/terminal_counter_12.vhd
+set_global_assignment -name VHDL_FILE uartRX/uartRX_quartus/terminal_counter_8.vhd
+set_global_assignment -name VHDL_FILE uartRX/uartRX_quartus/start_bit_detector.vhd
+set_global_assignment -name VHDL_FILE uartRX/uartRX_quartus/lpm_counter2.vhd
+set_global_assignment -name VHDL_FILE uartRX/uartRX_quartus/lpm_counter0.vhd
+set_global_assignment -name VHDL_FILE uartRX/uartRX_quartus/DOUT_REG.vhd
+set_global_assignment -name VHDL_FILE uartRX/uartRX_quartus/CNT_8.vhd
+set_global_assignment -name VHDL_FILE reflexes/reflexes_quartus/XOR_4bit.vhd
+set_global_assignment -name VHDL_FILE reflexes/reflexes_quartus/rshifter_14.vhd
+set_global_assignment -name BDF_FILE reflexes/reflexes_quartus/reflexes_DP.bdf
+set_global_assignment -name VHDL_FILE reflexes/reflexes_quartus/reflexes_CU.vhd
+set_global_assignment -name VHDL_FILE reflexes/reflexes_quartus/reflexes.vhd
+set_global_assignment -name BDF_FILE reflexes/reflexes_quartus/random_10000.bdf
+set_global_assignment -name VHDL_FILE reflexes/reflexes_quartus/mux4to1_1bit.vhd
+set_global_assignment -name VHDL_FILE reflexes/reflexes_quartus/mux2to1_1bit.vhd
+set_global_assignment -name VHDL_FILE reflexes/reflexes_quartus/mux_2to1.vhd
+set_global_assignment -name VHDL_FILE reflexes/reflexes_quartus/MULT_10000.vhd
+set_global_assignment -name VHDL_FILE reflexes/reflexes_quartus/FF_LNUM.vhd
+set_global_assignment -name VHDL_FILE reflexes/reflexes_quartus/FF_BUTTON.vhd
+set_global_assignment -name VHDL_FILE reflexes/reflexes_quartus/FF_1bit.vhd
+set_global_assignment -name VHDL_FILE reflexes/reflexes_quartus/DEC_LED.vhd
+set_global_assignment -name VHDL_FILE reflexes/reflexes_quartus/CNT_16bit.vhd
+set_global_assignment -name VHDL_FILE reflexes/reflexes_quartus/CNT_1ms.vhd
+set_global_assignment -name VHDL_FILE reflexes/reflexes_quartus/AND_16bit.vhd
+set_global_assignment -name VHDL_FILE reflexes/reflexes_quartus/AND_15bit.vhd
+set_global_assignment -name VHDL_FILE reflexes/reflexes_quartus/ADD_45535.vhd
+set_global_assignment -name VHDL_FILE parser/parser_quartus/reg_char.vhd
+set_global_assignment -name BDF_FILE parser/parser_quartus/parser_DP.bdf
+set_global_assignment -name VHDL_FILE parser/parser_quartus/parser_CU.vhd
+set_global_assignment -name BDF_FILE parser/parser_quartus/parser.bdf
+set_global_assignment -name VHDL_FILE parser/parser_quartus/ff_L.vhd
+set_global_assignment -name VHDL_FILE parser/parser_quartus/cmd_encoder.vhd
+set_global_assignment -name VHDL_FILE parser/parser_quartus/ASCII_L_match.vhd
+set_global_assignment -name VHDL_FILE parser/parser_quartus/ASCII_1_2_3_4_match.vhd
+set_global_assignment -name VHDL_FILE ASCIIConverter/ASCIIConverter_quartus/components/reg_out_mux.vhd
+set_global_assignment -name VHDL_FILE ASCIIConverter/ASCIIConverter_quartus/components/reg_mux_in.vhd
+set_global_assignment -name VHDL_FILE ASCIIConverter/ASCIIConverter_quartus/components/reg_in.vhd
+set_global_assignment -name VHDL_FILE ASCIIConverter/ASCIIConverter_quartus/components/out_mux.vhd
+set_global_assignment -name VHDL_FILE ASCIIConverter/ASCIIConverter_quartus/components/out_cmp.vhd
+set_global_assignment -name VHDL_FILE ASCIIConverter/ASCIIConverter_quartus/components/main_adder.vhd
+set_global_assignment -name VHDL_FILE ASCIIConverter/ASCIIConverter_quartus/components/const87.vhd
+set_global_assignment -name VHDL_FILE ASCIIConverter/ASCIIConverter_quartus/components/const84.vhd
+set_global_assignment -name VHDL_FILE ASCIIConverter/ASCIIConverter_quartus/components/const48.vhd
+set_global_assignment -name VHDL_FILE ASCIIConverter/ASCIIConverter_quartus/components/add_in_mux.vhd
+set_global_assignment -name VHDL_FILE ASCIIConverter/ASCIIConverter_quartus/fsm.vhd
+set_global_assignment -name BDF_FILE ASCIIConverter/ASCIIConverter_quartus/ASCIIConverter.bdf
+set_global_assignment -name BDF_FILE total_test_DE2.bdf

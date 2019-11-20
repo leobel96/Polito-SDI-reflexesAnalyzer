@@ -1,0 +1,302 @@
+m255
+K3
+13
+cModel Technology
+dC:\Users\Ek\Desktop\Master\SDI\RR_project\uart\uartTX\modelsim
+Ecnt_216
+Z0 w1543925936
+Z1 DPx3 std 6 textio 0 22 G^o2zK;Vh4eVdKTVo98653
+Z2 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z3 dC:\Users\Ek\Desktop\uart_Bellettini_Bollea_Valloni_Vaudagna\uartTX\uartTX_modelsim
+Z4 8C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/CNT_216.vhd
+Z5 FC:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/CNT_216.vhd
+l0
+L42
+V:koo8NgU=3<F3:SzXaFSg2
+Z6 OV;C;10.0c;49
+32
+Z7 !s108 1544364121.921000
+Z8 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/CNT_216.vhd|
+Z9 !s107 C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/CNT_216.vhd|
+Z10 o-work work -2002 -explicit -O0
+Z11 tExplicit 1
+!s100 Di<_FaAfz9TQEl;eKAz>02
+Asyn
+R1
+R2
+DEx4 work 7 cnt_216 0 22 :koo8NgU=3<F3:SzXaFSg2
+l74
+L53
+V9I:Ynz8?EoYH3aG72enLo0
+R6
+32
+R7
+R8
+R9
+R10
+R11
+!s100 cme9YZ_Z7KcnR:N4cOgW<3
+Ed_ff
+Z12 w1543925531
+R1
+R2
+R3
+Z13 8C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/D_FF.vhd
+Z14 FC:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/D_FF.vhd
+l0
+L42
+VVikoa;=e[N_39<O0IZjdU3
+R6
+32
+Z15 !s108 1544364122.048000
+Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/D_FF.vhd|
+Z17 !s107 C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/D_FF.vhd|
+R10
+R11
+!s100 Z^LU6eWKO>YMF7US11dWO0
+Asyn
+R1
+R2
+DEx4 work 4 d_ff 0 22 Vikoa;=e[N_39<O0IZjdU3
+l77
+L55
+VBA[Tf3X16aiY2>D6f6]>l2
+R6
+32
+R15
+R16
+R17
+R10
+R11
+!s100 GVR24fH;b1i88V^>JgRS51
+Eendtx_gen
+Z18 w1544105208
+R1
+R2
+R3
+Z19 8C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/endTX_gen.vhd
+Z20 FC:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/endTX_gen.vhd
+l0
+L4
+V=QN;9cIR9X^]jkM>>g3?I2
+R6
+32
+Z21 !s108 1544364122.188000
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/endTX_gen.vhd|
+Z23 !s107 C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/endTX_gen.vhd|
+R10
+R11
+!s100 C^Z9Io1dKV9d]l6Wca>In3
+Astructural
+R1
+R2
+DEx4 work 9 endtx_gen 0 22 =QN;9cIR9X^]jkM>>g3?I2
+l13
+L12
+VTkfiaLZQLlYKR5kgh8z9_3
+R6
+32
+R21
+R22
+R23
+R10
+R11
+!s100 SdFjOOLQ1P5ENP2GFd9hK1
+Emodelsim_test_uarttx
+Z24 w1544353109
+R1
+R2
+R3
+Z25 8C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/modelsim_test_uartTX.vhd
+Z26 FC:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/modelsim_test_uartTX.vhd
+l0
+L4
+VlH`7me=TSjC?;lGJ8Pe;H2
+R6
+32
+Z27 !s108 1544364122.329000
+Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/modelsim_test_uartTX.vhd|
+Z29 !s107 C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/modelsim_test_uartTX.vhd|
+R10
+R11
+!s100 zE9<1X=0fdmC?88G8cBM41
+Abehaviour
+R1
+R2
+DEx4 work 20 modelsim_test_uarttx 0 22 lH`7me=TSjC?;lGJ8Pe;H2
+l23
+L8
+VLVRaN8SED8m13Mmz6e7E71
+R6
+32
+R27
+R28
+R29
+R10
+R11
+!s100 FT9Q=7]BoS5NN76B_XzAz2
+Eterminal_count_216
+Z30 w1544104291
+R1
+R2
+R3
+Z31 8C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/terminal_count_216.vhd
+Z32 FC:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/terminal_count_216.vhd
+l0
+L4
+Vk@=aKHzXDI<l;_LN_ISTB0
+R6
+32
+Z33 !s108 1544364122.472000
+Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/terminal_count_216.vhd|
+Z35 !s107 C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/terminal_count_216.vhd|
+R10
+R11
+!s100 L[ciTDEdFR=g=nB==B3`T1
+Astructural
+R1
+R2
+DEx4 work 18 terminal_count_216 0 22 k@=aKHzXDI<l;_LN_ISTB0
+l13
+L12
+V`UzKEGUA>?1bnUnT``mLG0
+R6
+32
+R33
+R34
+R35
+R10
+R11
+!s100 b@e:D?m3`DE0njOgd?5P>3
+Etx_reg
+Z36 w1543925616
+R1
+R2
+R3
+Z37 8C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/TX_REG.vhd
+Z38 FC:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/TX_REG.vhd
+l0
+L42
+V_K1998:cZcdoNMUnPV?7P1
+R6
+32
+Z39 !s108 1544364122.603000
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/TX_REG.vhd|
+Z41 !s107 C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/TX_REG.vhd|
+R10
+R11
+!s100 zoQXJVm0>CJI:NmQd[hNI0
+Asyn
+R1
+R2
+DEx4 work 6 tx_reg 0 22 _K1998:cZcdoNMUnPV?7P1
+l82
+L57
+VLj^7[IliFE[UWfdJ0nmI21
+R6
+32
+R39
+R40
+R41
+R10
+R11
+!s100 K58aK8IFi@AieJe4`oEdF3
+Euarttx
+Z42 w1544105316
+R1
+R2
+R3
+Z43 8C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/uartTX.vhd
+Z44 FC:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/uartTX.vhd
+l0
+L24
+V^d<VPTifSDT7laWQYzPD81
+R6
+32
+Z45 !s108 1544364122.737000
+Z46 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/uartTX.vhd|
+Z47 !s107 C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/uartTX.vhd|
+R10
+R11
+!s100 AFUJ5NheKLc[bH1BnL1V53
+Abdf_type
+R1
+R2
+DEx4 work 6 uarttx 0 22 ^d<VPTifSDT7laWQYzPD81
+l79
+L36
+VnDADG8LISk168c02LgR`51
+R6
+32
+R45
+R46
+R47
+R10
+R11
+!s100 nJ_<h1z_J2_P^dYF<IN;>3
+Euarttx_cu
+Z48 w1544285561
+R1
+R2
+R3
+Z49 8C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/uartTX_CU.vhd
+Z50 FC:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/uartTX_CU.vhd
+l0
+L4
+V;jfKDn_fT6l@ChaJ97D^W3
+R6
+32
+Z51 !s108 1544364122.875000
+Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/uartTX_CU.vhd|
+Z53 !s107 C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/uartTX_CU.vhd|
+R10
+R11
+!s100 C8dTd[7h]AiBcSW1Tm=gB1
+Abehavioural
+R1
+R2
+DEx4 work 9 uarttx_cu 0 22 ;jfKDn_fT6l@ChaJ97D^W3
+l26
+L19
+V2nRZ3`mcBBk:TZjIkb8Tz3
+!s100 ]ghiRS=dDLWRIo5R1fQ@?3
+R6
+32
+R51
+R52
+R53
+R10
+R11
+Euarttx_dp
+Z54 w1544105260
+R1
+R2
+R3
+Z55 8C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/uartTX_DP.vhd
+Z56 FC:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/uartTX_DP.vhd
+l0
+L24
+VKk2Z<iY52GfO87E?Rf^i^3
+!s100 PH^oKTQ]gP1JkSCCQk54:2
+R6
+32
+Z57 !s108 1544364123.020000
+Z58 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/uartTX_DP.vhd|
+Z59 !s107 C:/Users/Ek/Desktop/uart_Bellettini_Bollea_Valloni_Vaudagna/uartTX/uartTX_modelsim/uartTX_DP.vhd|
+R10
+R11
+Abdf_type
+R1
+R2
+Z60 DEx4 work 9 uarttx_dp 0 22 Kk2Z<iY52GfO87E?Rf^i^3
+l94
+L42
+Z61 V5:Zn82=;zD8FiA<12nS880
+Z62 !s100 ;Udn=iUzj4BM_cJ37Z;Um3
+R6
+32
+R57
+R58
+R59
+R10
+R11

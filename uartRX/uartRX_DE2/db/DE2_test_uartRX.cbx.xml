@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="DE2_test_uartRX">
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_test_uartRX|uartRX:DUT|uartRX_DP:inst|CNT_12:inst15|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_gnj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_test_uartRX|uartRX:DUT|uartRX_DP:inst|CNT_26:inst14|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_4oi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_test_uartRX|uartRX:DUT|uartRX_DP:inst|CNT_8:inst3|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_3oi.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

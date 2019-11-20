@@ -1,0 +1,37 @@
+# Reading C:/altera/11.1sp2/modelsim_ase/tcl/vsim/pref.tcl 
+# OpenFile {C:/Users/Edoardo Bollea/Desktop/RR_project/parser/parser_modelsim/test_parser.mpf} 
+# Loading project test_parser
+#  
+# Compile of ASCII_1_2_3_4_match.vhd was successful.
+# Compile of ASCII_L_match.vhd was successful.
+# Compile of cmd_encoder.vhd was successful.
+# Compile of ff_L.vhd was successful.
+# Compile of parser.vhd was successful.
+# Compile of parser_DP.vhd was successful.
+# Compile of reg_char.vhd was successful.
+# Compile of test_parser.vhd was successful with warnings.
+# Compile of test_parser_CU.vhd was successful.
+# Compile of parser_CU.vhd was successful.
+# 10 compiles, 0 failed with no errors. 
+vsim work.test_parser
+# vsim work.test_parser 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.test_parser(testbench)
+# Loading work.test_parser_cu(state_machine)
+# Loading work.parser(bdf_type)
+# Loading work.parser_cu(structure)
+# Loading work.parser_dp(bdf_type)
+# Loading work.reg_char(syn)
+# Loading ieee.std_logic_arith(body)
+# Loading lpm.lpm_components
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_shiftreg(lpm_syn)
+# Loading work.ff_l(syn)
+# Loading work.ascii_l_match(structure)
+# Loading work.ascii_1_2_3_4_match(structure)
+# Loading work.cmd_encoder(structure)
+add wave *
+run 75 us

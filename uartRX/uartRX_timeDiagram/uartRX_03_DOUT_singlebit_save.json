@@ -1,0 +1,17 @@
+{signal: [
+  {name: 'CK', wave: 'p...|.|.....'},
+  {name: 'TC_12', wave: '01..|0|1....', node:'.a.....g'},
+  {name: 'EN_CNT_8', wave: '0.10|.|.10..', node:'..b.....h'},
+  {name: 'Q_CNT_8', wave:'=..=|.|..=..', data:[0,1,2], node:'...f.....l'},
+  {name: 'VOTER_OUT', wave:'01..|.|0....', node:'..e.....k'}, 
+  {name: 'EN_DOUT_REG', wave:'0.10|.|.10..', node:'..c.....i'}, 
+  {name: 'DOUT', wave:'=..=|.|..=..', data: ['"00000000"','"10000000"','"01000000"'], node:'...d.....j'}, 
+  ],
+  edge:[
+	'a-~>b', 'a-~>c',
+  	'c-~>d', 'e-~>d',
+  	'b-~>f',
+  	'g-~>h', 'g-~>i',
+  	'i-~>j', 'k-~>j',
+  	'h-~>l'
+]}

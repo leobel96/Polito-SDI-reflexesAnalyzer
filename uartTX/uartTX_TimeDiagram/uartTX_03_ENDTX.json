@@ -1,0 +1,15 @@
+{signal: [
+  {name: 'CK', wave:'p.....'},
+  {name: 'Q_TX_REG', wave:'=..=..', data:['"0000000001"','"0000000000"']},
+  {name: 'END_TX', wave:'1..0..', node:'..d'},
+  {name: 'EN_TX_REG', wave:'0.10..', node:'..b'},
+  {name: 'TC_216', wave:'010...', node:'.a'},
+  {name: 'SCLEAR_CNT_216', wave:'0.10..', node:'..c'},
+  {name: 'IDLE_TX', wave:'0..1..', node:'...e'},
+  {name: 'TXRDY', wave:'0..1..', node:'...f'}
+],
+ edge: [
+   'a-~>b', 'a-~>c',
+   'd-~>e', 'd-~>f', ]
+ 
+}

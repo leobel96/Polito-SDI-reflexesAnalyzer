@@ -1,0 +1,10 @@
+L = 0100 1100
+1 = 0011 0001
+2 = 0011 0010
+3 = 0011 0011
+4 = 0011 0100
+
+LNUM(0) <= DIN(0);
+LNUM(1) <= (not DIN(0) and not DIN(1) and DIN(2)) or (DIN(0) and DIN(1) and not DIN(2));
+
+numCheck <= (DIN(1) and not DIN(2)) or (DIN(0) xor DIN(2));
